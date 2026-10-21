@@ -43,7 +43,7 @@
 
 上游 [Issue #3493](https://github.com/Niko1221/Strata/issues/3493) 附上 Deepseek Harness 的 12 条请求，均显示 Reused=0。仅凭日志不能确认是模板不稳定、会话交错、检查点失效还是客户端行为，不能宣称找到其根因。
 
-本机探针：`probe_prefix_reuse.py`，原始响应 `prefix-reuse-probe.json`，使用合成文档和唯一标签，不重启服务，不更改配置。一次执行结果：
+本机探针：`flash-next/probe_prefix_reuse.py`，原始响应 `flash-next/prefix-reuse-probe.json`，使用合成文档和唯一标签，不重启服务，不更改配置。一次执行结果：
 
 | 请求 | 提示 token | 缓存 token | 引擎 prompt_ms |
 | --- | ---: | ---: | ---: |

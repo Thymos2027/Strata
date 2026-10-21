@@ -2,9 +2,10 @@
 *
 !.gitignore
 !REPORT.md
-!runtime-pr-description.md
-!confirm_affinity.py
-!tune_pcie_mtp.py
-!verify_final.py
 !INFERENCE_OPTIMIZATION.md
-!probe_prefix_reuse.py
+!README.md
+!flash-next/
+!runtime/
+!downloads/
+!github/
+!qwen36-q4/

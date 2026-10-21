@@ -1,6 +1,6 @@
 import json,time,threading,hashlib,statistics,sys,os
 from pathlib import Path
-ROOT=Path(__file__).resolve().parents[2]
+ROOT=Path(__file__).resolve().parents[3]
 sys.path.insert(0,str(ROOT));sys.path.insert(0,str(ROOT/'tools'))
 import calibrate as C
 import strata_tokenizer as ST
