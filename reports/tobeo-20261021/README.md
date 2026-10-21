@@ -8,6 +8,7 @@
 | 推理优化选题 | [INFERENCE_OPTIMIZATION.md](INFERENCE_OPTIMIZATION.md) | 研究假设、源码入口和后续实验方案 |
 | Flash-Next IQ3_S | [flash-next/README.md](flash-next/README.md) | P 核、PCIe/MTP 调参、缓存探针和资源采样 |
 | Qwen3.6 Q4 | [qwen36-q4/README.md](qwen36-q4/README.md) | 短基准、MTP 三组对照和 HTTP 验证 |
+| Qwen3.6 源码基线 | [qwen36-source-baseline/README.md](qwen36-source-baseline/README.md) | WSL 独立构建、工具链准备与正确性门禁 |
 | Windows runtime 修复 | [runtime/README.md](runtime/README.md) | PR 描述、基线失败、修复验证与组合测试日志 |
 | 模型下载 | [downloads/README.md](downloads/README.md) | 来源测速、下载状态、校验和续传脚本 |
 | GitHub 项目热度 | [github/README.md](github/README.md) | 仓库指标与 PR 活动快照 |
