@@ -99,3 +99,8 @@ follow it whether a person or an agent writes the text. The short version:
   [docs/COMMUNITY_BENCHMARKS.md](docs/COMMUNITY_BENCHMARKS.md), compare against a same-day run of the build you are
   testing, and say what you did not test.
 - Open test requests and the hardware that is wanted are listed in [docs/TEST_REQUESTS.md](docs/TEST_REQUESTS.md).
+
+## 本机研究计划的任务收尾
+
+- 每次完成本仓库任务前，检查 [reports/INFERENCE_RESEARCH_PLAN.md](reports/INFERENCE_RESEARCH_PLAN.md) 的清单，并将本次实际完成的项目标记为 `[x]`。
+- 以真实运行结果和报告为依据，注明完成日期、证据入口与验证范围。部分完成的项目保留 `[ ]` 并说明进度；不把准备步骤、旧测量或局部验证当作整个阶段完成。
