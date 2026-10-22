@@ -1,7 +1,9 @@
 """Run the repository solo gate on one unchanged WSL source build.
 
-Uses fixed CPU/GPU expert slots to separate kernel/graph/MTP correctness from
-dynamic placement rounding. This does not validate daily dynamic routing or quality.
+Uses fixed CPU/GPU expert slots to separate kernel/MTP correctness from dynamic
+placement rounding. Historical graph-* labels request the default graph mode,
+but this revision disables actual graphs in main-hybrid mode. This does not
+validate CUDA Graph execution, daily dynamic routing, or quality.
 """
 import hashlib
 import json

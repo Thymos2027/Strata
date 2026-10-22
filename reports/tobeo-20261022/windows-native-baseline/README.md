@@ -2,6 +2,8 @@
 
 日期：2026-10-22。设备：Windows 11、i7-12700、RTX 5060 Ti 16GB、128GB DDR4，驱动 610.88。此目录单独保存 Windows 原生结果，[前一天的 WSL 实测](../../tobeo-20261021/qwen36-source-baseline/README.md)保持独立。
 
+2026-10-22 阶段 C 覆盖范围更正：本轮固定 64/256 专家槽位进入 main-hybrid；固定 revision 的 `q36_engine.cu:2887–2889` 在此将 `use_graph`、`mtp_graph` 关闭。因此下文历史组名 `graph-mtp0/2` 表示未传 `--no-graph`，不证明实际执行 CUDA Graph。三组 10/10 输出一致和 VERIFY 结果不变；独立 Graph 路径验证仍未完成。
+
 ## 工具链检测更正
 
 之前 `vswhere -all` 未带 `-products *`，遗漏了独立的 Build Tools。正确查询应包含：
@@ -48,8 +50,8 @@ python -u reports/tobeo-20261022/windows-native-baseline/run_correctness_native.
 | --- | --- |
 | 参考 | old kernels、no graph、MTP 0 |
 | 内核验证 | current kernels、no graph、VERIFY、MTP 0 |
-| Graph | current kernels、graph、MTP 0 |
-| MTP | current kernels、graph、MTP 2 |
+| 默认 Graph 请求 | current kernels、未传 --no-graph、MTP 0；hybrid 自动关闭 Graph |
+| MTP | current kernels、未传 --no-graph、MTP 2；hybrid 自动关闭 Graph |
 
 每臂运行仓库 10 个 parity prompt，各最多 128 token。固定 8K 最大上下文、prefill 512、7 workers、每层 64 expert slots，设置 `STRATA_Q36_FIXED_SLOTS=1`。既检查全部 token，也检查两侧都有 10 个 prompt，以及 VERIFY 实际比较次数和 mismatch 数。
 
@@ -70,7 +72,7 @@ python reports/tobeo-20261022/windows-native-baseline/run_engine_native.py --ver
 - 选定的 14 项 host/conversation 测试全部通过，CTest 共约 14.36 s。
 - 构建完成后 Ninja dry run 返回 `no work to do`，未发现无改动时仍要求重编译的情况。
 - 原生 VERIFY 完成 436,050 次内核比较，0 mismatch。该计数来自本次 Windows 日志，不沿用 WSL 的计数。
-- 四组 GPU gate 均正常退出。当前内核、CUDA Graph、MTP 2 三组分别与 Windows 旧内核参考输出 10/10 prompt 完全一致。
+- 四组 GPU gate 均正常退出。当前内核验证组、默认 Graph 请求组、MTP 2 组分别与 Windows 旧内核参考输出 10/10 prompt 完全一致；实际计算处于 hybrid、Graph 关闭的路径。
 - 参考输出长度为 128/128/128/128/16/128/85/67/128/23，共 959 token，另外三组逐 token 相同。
 - MTP 2 的 10 条请求实际接受 567/786 个草稿；接受率不是模型质量或正确率。
 - 检查包装脚本退出 0，原 Flash-Next IQ3_S 服务已恢复，健康接口 `loaded=true`；日常配置未修改。
@@ -78,8 +80,8 @@ python reports/tobeo-20261022/windows-native-baseline/run_engine_native.py --ver
 | 对照 Windows 旧内核参考 | prompt 数 | token 结果 | 退出码 |
 | --- | ---: | --- | ---: |
 | current、no graph、VERIFY、MTP 0 | 10 | 10/10 完全相同 | 0 |
-| current、graph、MTP 0 | 10 | 10/10 完全相同 | 0 |
-| current、graph、MTP 2 | 10 | 10/10 完全相同 | 0 |
+| current、默认 Graph 请求（hybrid 关闭）、MTP 0 | 10 | 10/10 完全相同 | 0 |
+| current、默认 Graph 请求（hybrid 关闭）、MTP 2 | 10 | 10/10 完全相同 | 0 |
 
 Windows 原生基线阶段已完成。后续本机优化可以使用这套源码、编译参数和原生输出作参考；不能将这些单次 gate 的吞吐写成优化收益，也不能据此断言 Linux/Windows 的数值路径、速度或质量等价。
 

@@ -16,6 +16,8 @@
 
 实际布局以每次启动日志为准；请求预算 `--expert-vram 10.0` 不代表实际 10 GiB 专家驻留。MTP 是否执行以每条请求的 offered/accepted 核对。
 
+2026-10-22 阶段 C 补充：该 revision 在本轮 main-hybrid（64/256 专家）布局下自动关闭主模型和 MTP 的 CUDA Graph。因此本曲线对应 hybrid 的普通 kernel launch 路径；未传 `--no-graph` 不能作为 Graph 实际启用的证据。阶段 A 报告已同步更正相应覆盖范围，原始测量不变。
+
 本轮选择 prefill 512 延续阶段 A 的路径控制。此前报告中 auto/2048 chunk 的 TTFT 与本轮配置不同，不能直接据此判断版本退化。
 
 ## Workload 与运行顺序

@@ -43,7 +43,7 @@ Flash-Next 已有固定实际缓存后的 P 核收益记录。该记录支持继
 
 ## 3. 阶段 A：建立可信的构建与测量环境
 
-完成记录：[WSL 基线（2026-10-21）](tobeo-20261021/qwen36-source-baseline/README.md)、[Windows 原生基线（2026-10-22）](tobeo-20261022/windows-native-baseline/README.md)。后续本机优化以 Windows 原生构建为参考，WSL 结果独立保存。已确认原生源码构建、选定测试及固定布局下四臂一致性；具体范围和未测项以两份报告为准。
+完成记录：[WSL 基线（2026-10-21）](tobeo-20261021/qwen36-source-baseline/README.md)、[Windows 原生基线（2026-10-22）](tobeo-20261022/windows-native-baseline/README.md)。后续本机优化以 Windows 原生构建为参考，WSL 结果独立保存。已确认原生源码构建、选定测试及固定布局下四臂一致性；具体范围和未测项以两份报告为准。阶段 C 已更正 Graph 覆盖范围：64/256 专家槽位触发 hybrid 并自动关闭主模型/MTP Graph，不能把历史组名当作真实 Graph 执行证据。
 
 建议用时：1–2 天。环境问题未解决时，不急于修改内核。
 
@@ -102,6 +102,8 @@ Flash-Next 已有固定实际缓存后的 P 核收益记录。该记录支持继
 验收：得到 decode 每 token 耗时随实际上下文长度变化的图，并能解释测量边界。此时只陈述本机现象，不把 V100 或 L4 的结论直接移植到 5060 Ti。
 
 ## 5. 阶段 C：Profiling 与决定是否动内核
+
+2026-10-22 进展：[Nsight Systems 报告](tobeo-20261022/qwen36-profiling/README.md)与[瓶颈观察](tobeo-20261022/qwen36-profiling/bottleneck-notes.md)。已完成原生 1K/16K × MTP 0/2 四组完整进程采集，分析仅筛选预热后 decode；每条输出 64 token，与阶段 B 对应前缀一致。16K 的 k_attn_part 区间占所选窗口约 22.05%/34.45%，支持下一步 Compute 检查；CPU 时间线和访存根因未测，尚未决定最终内核改动。旧工具兼容试采和触发截短试采均独立保留，未混入结论。
 
 建议用时：2–3 天。
 
@@ -253,19 +255,21 @@ upstream-notes.md         # 查重、相关讨论、拟提交范围
 
 每次任务结束前复核本清单：已实际完成的项目打勾，并记录日期、证据与范围；部分完成保留未勾选并说明进度。后续扩展配置或 workload 时，已有勾选不替代新条件下的验证。
 
-最近复核：2026-10-22。阶段 A 及阶段 B 最小矩阵已完成；阶段 C profiling、瓶颈归因和优化交付尚未开展。原 Flash-Next 服务已恢复。
+最近复核：2026-10-22。阶段 A、阶段 B 最小矩阵及阶段 C 的 Systems 时间线已完成；Compute、CPU 栈、访存根因和优化交付未完成。Graph 覆盖范围已更正，原 Flash-Next 服务已恢复。
 
 - [x] 核对最新上游、相关讨论和工作区改动。
   - 2026-10-22 已核对工作区，重新读取 #2464 及后续评论，并查询包含 k_attn_part 的相关 PR（包括 #3084、#2698）；快照保留在阶段 B 目录。实验继续固定阶段 A revision，未声称运行最新 main；后续实现前仍需重新查重。
 - [x] 确认源码基线、工具链、模型哈希和独立构建目录。
   - 2026-10-21 至 2026-10-22 完成，见 [WSL 基线](tobeo-20261021/qwen36-source-baseline/README.md)与 [Windows 原生基线](tobeo-20261022/windows-native-baseline/README.md)。后续主用 Windows 原生构建。
 - [x] 跑通适用的基线正确性门禁。
-  - Windows 原生：14 项选定测试通过；VERIFY 436,050 次比较、0 mismatch；当前内核、Graph、MTP 三组各 10/10 prompt 与参考逐 token 一致。范围为固定专家布局、8K 上限和短 prompt，未覆盖全量测试套件。
+  - Windows 原生：14 项选定测试通过；VERIFY 436,050 次比较、0 mismatch；当前内核验证、默认 Graph 请求、MTP 三组各 10/10 prompt 与参考逐 token 一致。固定 64/256 专家布局会自动关闭 Graph，故独立 Graph 路径仍未验证。范围为 8K 上限和短 prompt，未覆盖全量测试套件。
 - [x] 建立固定最大上下文的 1K/4K/8K/16K 实验矩阵。
   - 2026-10-22 完成 24/24 条请求，每格 3 次、均输出 256 token；曲线、中位数、范围及测量边界见[阶段 B 报告](tobeo-20261022/qwen36-context-curve/README.md)。固定配置上限 32768，实际输入为 1025、4096–4097、8193、16385 token。
 - [x] 核对真实 MTP 状态、专家布局和前缀复用状态。
   - 2026-10-22 原生短 prompt 基线：MTP 2 接受 567/786 个草稿，每层固定 64/256 专家驻留 GPU，fresh 请求日志 reused=0。新实验矩阵仍须逐次记录这些状态；本项不代表多会话缓存验证完成。
   - 同日阶段 B：24 条请求均 reused=0；MTP 0 全部 offered=0，MTP 2 全部 offered>0；6 次启动均为 64/256 固定专家槽位、slot replacements=0。12 对输出哈希一致，范围限于本轮配置和 workload。
-- [ ] 采集加载/预热之后的 decode trace。
+- [x] 采集加载/预热之后的 decode trace。
+  - 2026-10-22：Nsight 2026.1.3 四组完整生命周期采集后，按 NVTX 筛选预热后的 decode；图、kernel 明细和诊断见[阶段 C 报告](tobeo-20261022/qwen36-profiling/README.md)。实际 Graph 关闭；未采 CPU sampling/context switch。六项汇总检查通过，未将两批有问题的试采当作正式结果。
 - [ ] 写出一个瓶颈结论，再决定最小改动。
+  - 已写出[观察与待验证假设](tobeo-20261022/qwen36-profiling/bottleneck-notes.md)，确认长上下文 attention 值得深入；尚缺 Compute 访存计数和未覆盖时间的归因，故本项保留未勾选，不将 GPU 热点当作已确认根因。
 - [ ] 按正确性、配对测量和上游范围要求完成交付。

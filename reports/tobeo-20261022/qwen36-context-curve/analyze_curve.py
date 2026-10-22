@@ -132,6 +132,9 @@ def main():
     fig.text(0.5, 0.015, "3 repetitions per cell; lines = medians, bands = min/max; one synthetic mixed workload; no profiler", ha="center", fontsize=9)
     fig.tight_layout(rect=(0, 0.04, 1, 0.94))
     fig.savefig(OUT / "context-curve.svg")
+    svg = OUT / "context-curve.svg"
+    svg.write_text("\n".join(line.rstrip() for line in svg.read_text(encoding="utf-8").splitlines()) + "\n",
+                   encoding="utf-8")
     fig.savefig(OUT / "context-curve.png", dpi=180)
     print(json.dumps({"checks": checks, "telemetry": telemetry, "groups": [
         {"tokens": g["actual_prompt_tokens"], "mtp": g["mtp"], "decode": g["decode_tok_s"],

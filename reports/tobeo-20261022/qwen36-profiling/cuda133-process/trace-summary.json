@@ -1,0 +1,1119 @@
+{
+  "reports": [
+    {
+      "tag": "r0-l1024-mtp0",
+      "window_ms": 1827.432153,
+      "prompt_ids_sha256": "f8c9fc3607d833a7c3d03e85bc52a11d86017e89663b2ed562b1837236cb0631",
+      "output_sha256": "916be811c6156cb34a324fb194896f9449852fb5ffa25500e5df4d4107152d3e",
+      "source_revision": "83e6b05cd7b97ee194f330f0247faa76deb73f1b",
+      "exe_sha256": "7abadfdbac3888b520cb00be77a5f2e70887acc95c8b98ab45316726f78a728b",
+      "capture_validation": {
+        "counts": true,
+        "fresh": true,
+        "mtp": true,
+        "finish_length": true,
+        "baseline_prefix": true,
+        "input_hash": true
+      },
+      "request_subsequent_output_tokens": 63,
+      "kernel_count": 42517,
+      "copy_count": 10004,
+      "memset_count": 0,
+      "graph_node_kernel_count": 0,
+      "kernel_process_ids": [
+        281948832399360
+      ],
+      "kernel_union_ms": 501.513071,
+      "copy_union_ms": 15.755759,
+      "kernel_copy_overlap_ms": 0.0,
+      "gpu_activity_union_ms": 517.26883,
+      "gpu_uncovered_ms": 1310.163323,
+      "attention_part_union_ms": 48.071553,
+      "attention_part_wall_fraction": 0.02630551997297598,
+      "top_kernels": [
+        {
+          "name": "native_q8_0_packed_kernel",
+          "calls_intersecting_window": 6771,
+          "sum_ms": 289.887389,
+          "mean_us": 42.81308359178851,
+          "median_us": 23.136,
+          "union_ms": 289.887389
+        },
+        {
+          "name": "k_attn_part",
+          "calls_intersecting_window": 610,
+          "sum_ms": 48.071553,
+          "mean_us": 78.80582459016394,
+          "median_us": 78.784,
+          "union_ms": 48.071553
+        },
+        {
+          "name": "k_sh_gu",
+          "calls_intersecting_window": 2440,
+          "sum_ms": 21.714811,
+          "mean_us": 8.899512704918031,
+          "median_us": 8.832,
+          "union_ms": 21.714811
+        },
+        {
+          "name": "native_gu_kernel",
+          "calls_intersecting_window": 2440,
+          "sum_ms": 21.664872,
+          "mean_us": 8.879045901639344,
+          "median_us": 9.344,
+          "union_ms": 21.664872
+        },
+        {
+          "name": "k_add_rms_q",
+          "calls_intersecting_window": 2440,
+          "sum_ms": 16.762376,
+          "mean_us": 6.869826229508197,
+          "median_us": 6.816,
+          "union_ms": 16.762376
+        },
+        {
+          "name": "native_down_kernel",
+          "calls_intersecting_window": 2440,
+          "sum_ms": 15.656746,
+          "mean_us": 6.416699180327869,
+          "median_us": 6.272,
+          "union_ms": 15.656746
+        },
+        {
+          "name": "k_q8_rows",
+          "calls_intersecting_window": 3660,
+          "sum_ms": 15.271789,
+          "mean_us": 4.1726199453551915,
+          "median_us": 4.064,
+          "union_ms": 15.271789
+        },
+        {
+          "name": "k_gdn_seq",
+          "calls_intersecting_window": 1830,
+          "sum_ms": 15.086511,
+          "mean_us": 8.243995081967213,
+          "median_us": 8.256,
+          "union_ms": 15.086511
+        },
+        {
+          "name": "k_gemv_f32",
+          "calls_intersecting_window": 2440,
+          "sum_ms": 14.914225,
+          "mean_us": 6.112387295081967,
+          "median_us": 6.112,
+          "union_ms": 14.914225
+        },
+        {
+          "name": "k_moe_out_small",
+          "calls_intersecting_window": 2440,
+          "sum_ms": 12.964436,
+          "mean_us": 5.3132934426229514,
+          "median_us": 5.312,
+          "union_ms": 12.964436
+        },
+        {
+          "name": "k_route_group",
+          "calls_intersecting_window": 2440,
+          "sum_ms": 7.884663,
+          "mean_us": 3.231419262295082,
+          "median_us": 3.232,
+          "union_ms": 7.884663
+        },
+        {
+          "name": "k_gdn_ab",
+          "calls_intersecting_window": 1830,
+          "sum_ms": 7.026937,
+          "mean_us": 3.8398562841530057,
+          "median_us": 3.808,
+          "union_ms": 7.026937
+        },
+        {
+          "name": "k_merge_cpu",
+          "calls_intersecting_window": 2440,
+          "sum_ms": 4.101277,
+          "mean_us": 1.6808512295081965,
+          "median_us": 1.664,
+          "union_ms": 4.101277
+        },
+        {
+          "name": "k_conv_seq",
+          "calls_intersecting_window": 1830,
+          "sum_ms": 2.956412,
+          "mean_us": 1.6155256830601092,
+          "median_us": 1.568,
+          "union_ms": 2.956412
+        },
+        {
+          "name": "swiglu_q8_1_entries_kernel",
+          "calls_intersecting_window": 2440,
+          "sum_ms": 2.503546,
+          "mean_us": 1.0260434426229508,
+          "median_us": 1.056,
+          "union_ms": 2.503546
+        },
+        {
+          "name": "native_quantize_q8_1_kernel",
+          "calls_intersecting_window": 2562,
+          "sum_ms": 1.812379,
+          "mean_us": 0.7074078844652615,
+          "median_us": 0.704,
+          "union_ms": 1.812379
+        },
+        {
+          "name": "k_attn_prep",
+          "calls_intersecting_window": 610,
+          "sum_ms": 1.382367,
+          "mean_us": 2.2661754098360656,
+          "median_us": 2.24,
+          "union_ms": 1.382367
+        },
+        {
+          "name": "k_attn_merge",
+          "calls_intersecting_window": 610,
+          "sum_ms": 1.206206,
+          "mean_us": 1.9773868852459016,
+          "median_us": 1.984,
+          "union_ms": 1.206206
+        },
+        {
+          "name": "k_rms",
+          "calls_intersecting_window": 61,
+          "sum_ms": 0.285376,
+          "mean_us": 4.678295081967213,
+          "median_us": 4.64,
+          "union_ms": 0.285376
+        },
+        {
+          "name": "k_argmax",
+          "calls_intersecting_window": 122,
+          "sum_ms": 0.277344,
+          "mean_us": 2.273311475409836,
+          "median_us": 2.224,
+          "union_ms": 0.277344
+        },
+        {
+          "name": "embed_rows_kernel",
+          "calls_intersecting_window": 61,
+          "sum_ms": 0.081856,
+          "mean_us": 1.3419016393442624,
+          "median_us": 1.344,
+          "union_ms": 0.081856
+        }
+      ],
+      "runtime_apis": [
+        {
+          "name": "cudaEventQuery_v3020",
+          "calls": 1492295,
+          "sum_ms": 498.268064
+        },
+        {
+          "name": "cudaLaunchKernel_v7000",
+          "calls": 42504,
+          "sum_ms": 206.053977
+        },
+        {
+          "name": "cudaStreamSynchronize_v3020",
+          "calls": 123,
+          "sum_ms": 92.043788
+        },
+        {
+          "name": "cudaMemcpyAsync_v3020",
+          "calls": 10001,
+          "sum_ms": 46.473325
+        },
+        {
+          "name": "cuKernelGetName",
+          "calls": 42504,
+          "sum_ms": 5.624326
+        },
+        {
+          "name": "cudaEventRecord_v3020",
+          "calls": 2440,
+          "sum_ms": 3.968037
+        }
+      ],
+      "cuda_graph_launch_calls": 0,
+      "diagnostic_warnings": [
+        {
+          "timestamp": 14132922900,
+          "timestampType": 2,
+          "source": 3,
+          "severity": 2,
+          "text": "No NVTX events collected. Does the process use NVTX?",
+          "globalPid": 281948832399360
+        },
+        {
+          "timestamp": 14132930500,
+          "timestampType": 2,
+          "source": 3,
+          "severity": 2,
+          "text": "Not all NVTX events might have been collected.",
+          "globalPid": 281991983398912
+        },
+        {
+          "timestamp": 14132942500,
+          "timestampType": 2,
+          "source": 3,
+          "severity": 2,
+          "text": "CUDA profiling might have not been started correctly.",
+          "globalPid": 281991983398912
+        },
+        {
+          "timestamp": 14132943500,
+          "timestampType": 2,
+          "source": 3,
+          "severity": 2,
+          "text": "No CUDA events collected. Does the process use CUDA?",
+          "globalPid": 281991983398912
+        }
+      ],
+      "driver_compatibility_warnings": [],
+      "explicit_loss_or_error_diagnostics": [],
+      "same_output_as_phase_b_prefix": true,
+      "engine_cuda_diagnostic_warnings": []
+    },
+    {
+      "tag": "r0-l16384-mtp0",
+      "window_ms": 2510.755767,
+      "prompt_ids_sha256": "27296bac175f6162cbd64c8698a32c1833a662f8a9357cd467893931ee6517e7",
+      "output_sha256": "e50a7d7e5c57e05208833b7903e0feb0f7b060896e81eb43995b030360ba1612",
+      "source_revision": "83e6b05cd7b97ee194f330f0247faa76deb73f1b",
+      "exe_sha256": "7abadfdbac3888b520cb00be77a5f2e70887acc95c8b98ab45316726f78a728b",
+      "capture_validation": {
+        "counts": true,
+        "fresh": true,
+        "mtp": true,
+        "finish_length": true,
+        "baseline_prefix": true,
+        "input_hash": true
+      },
+      "request_subsequent_output_tokens": 63,
+      "kernel_count": 43255,
+      "copy_count": 10180,
+      "memset_count": 0,
+      "graph_node_kernel_count": 0,
+      "kernel_process_ids": [
+        281902527283200
+      ],
+      "kernel_union_ms": 1017.735091,
+      "copy_union_ms": 21.599405,
+      "kernel_copy_overlap_ms": 0.0,
+      "gpu_activity_union_ms": 1039.334496,
+      "gpu_uncovered_ms": 1471.421271,
+      "attention_part_union_ms": 553.578116,
+      "attention_part_wall_fraction": 0.22048266234252167,
+      "top_kernels": [
+        {
+          "name": "k_attn_part",
+          "calls_intersecting_window": 621,
+          "sum_ms": 553.578116,
+          "mean_us": 891.4301384863123,
+          "median_us": 878.432,
+          "union_ms": 553.578116
+        },
+        {
+          "name": "native_q8_0_packed_kernel",
+          "calls_intersecting_window": 6888,
+          "sum_ms": 292.906741,
+          "mean_us": 42.524207462253194,
+          "median_us": 22.784,
+          "union_ms": 292.906741
+        },
+        {
+          "name": "k_sh_gu",
+          "calls_intersecting_window": 2482,
+          "sum_ms": 21.798488,
+          "mean_us": 8.7826301369863,
+          "median_us": 8.736,
+          "union_ms": 21.798488
+        },
+        {
+          "name": "native_gu_kernel",
+          "calls_intersecting_window": 2482,
+          "sum_ms": 21.440723,
+          "mean_us": 8.638486301369863,
+          "median_us": 9.184,
+          "union_ms": 21.440723
+        },
+        {
+          "name": "k_add_rms_q",
+          "calls_intersecting_window": 2482,
+          "sum_ms": 18.09391,
+          "mean_us": 7.290052377115229,
+          "median_us": 6.912,
+          "union_ms": 18.09391
+        },
+        {
+          "name": "native_down_kernel",
+          "calls_intersecting_window": 2482,
+          "sum_ms": 15.74793,
+          "mean_us": 6.344854955680902,
+          "median_us": 6.336,
+          "union_ms": 15.74793
+        },
+        {
+          "name": "k_gdn_seq",
+          "calls_intersecting_window": 1861,
+          "sum_ms": 15.370584,
+          "mean_us": 8.259314347125203,
+          "median_us": 8.288,
+          "union_ms": 15.370584
+        },
+        {
+          "name": "k_q8_rows",
+          "calls_intersecting_window": 3724,
+          "sum_ms": 15.349724,
+          "mean_us": 4.121837808807733,
+          "median_us": 3.936,
+          "union_ms": 15.349724
+        },
+        {
+          "name": "k_gemv_f32",
+          "calls_intersecting_window": 2482,
+          "sum_ms": 14.934492,
+          "mean_us": 6.017120064464142,
+          "median_us": 6.016,
+          "union_ms": 14.934492
+        },
+        {
+          "name": "k_moe_out_small",
+          "calls_intersecting_window": 2483,
+          "sum_ms": 13.46406,
+          "mean_us": 5.42249697946033,
+          "median_us": 5.376,
+          "union_ms": 13.46406
+        },
+        {
+          "name": "k_route_group",
+          "calls_intersecting_window": 2482,
+          "sum_ms": 8.067643,
+          "mean_us": 3.2504605157131348,
+          "median_us": 3.264,
+          "union_ms": 8.067643
+        },
+        {
+          "name": "k_gdn_ab",
+          "calls_intersecting_window": 1861,
+          "sum_ms": 7.221984,
+          "mean_us": 3.880700698549167,
+          "median_us": 3.84,
+          "union_ms": 7.221984
+        },
+        {
+          "name": "k_attn_merge",
+          "calls_intersecting_window": 621,
+          "sum_ms": 6.063934,
+          "mean_us": 9.764789049919486,
+          "median_us": 9.76,
+          "union_ms": 6.063934
+        },
+        {
+          "name": "k_merge_cpu",
+          "calls_intersecting_window": 2483,
+          "sum_ms": 4.237758,
+          "mean_us": 1.7067088199758358,
+          "median_us": 1.696,
+          "union_ms": 4.237758
+        },
+        {
+          "name": "k_conv_seq",
+          "calls_intersecting_window": 1861,
+          "sum_ms": 2.997152,
+          "mean_us": 1.6105061794734012,
+          "median_us": 1.568,
+          "union_ms": 2.997152
+        },
+        {
+          "name": "swiglu_q8_1_entries_kernel",
+          "calls_intersecting_window": 2482,
+          "sum_ms": 2.555836,
+          "mean_us": 1.0297485898468977,
+          "median_us": 1.056,
+          "union_ms": 2.555836
+        },
+        {
+          "name": "native_quantize_q8_1_kernel",
+          "calls_intersecting_window": 2607,
+          "sum_ms": 1.89376,
+          "mean_us": 0.7264135021097046,
+          "median_us": 0.704,
+          "union_ms": 1.89376
+        },
+        {
+          "name": "k_attn_prep",
+          "calls_intersecting_window": 621,
+          "sum_ms": 1.348992,
+          "mean_us": 2.172289855072464,
+          "median_us": 2.144,
+          "union_ms": 1.348992
+        },
+        {
+          "name": "k_rms",
+          "calls_intersecting_window": 62,
+          "sum_ms": 0.293792,
+          "mean_us": 4.73858064516129,
+          "median_us": 4.736,
+          "union_ms": 0.293792
+        },
+        {
+          "name": "k_argmax",
+          "calls_intersecting_window": 126,
+          "sum_ms": 0.286304,
+          "mean_us": 2.272253968253968,
+          "median_us": 2.208,
+          "union_ms": 0.286304
+        },
+        {
+          "name": "embed_rows_kernel",
+          "calls_intersecting_window": 62,
+          "sum_ms": 0.083168,
+          "mean_us": 1.3414193548387097,
+          "median_us": 1.312,
+          "union_ms": 0.083168
+        }
+      ],
+      "runtime_apis": [
+        {
+          "name": "cudaEventQuery_v3020",
+          "calls": 2576382,
+          "sum_ms": 897.980621
+        },
+        {
+          "name": "cudaLaunchKernel_v7000",
+          "calls": 43238,
+          "sum_ms": 238.057924
+        },
+        {
+          "name": "cudaStreamSynchronize_v3020",
+          "calls": 127,
+          "sum_ms": 95.048474
+        },
+        {
+          "name": "cudaMemcpyAsync_v3020",
+          "calls": 10176,
+          "sum_ms": 52.054884
+        },
+        {
+          "name": "cuKernelGetName",
+          "calls": 43238,
+          "sum_ms": 6.571996
+        },
+        {
+          "name": "cudaEventRecord_v3020",
+          "calls": 2481,
+          "sum_ms": 5.318811
+        }
+      ],
+      "cuda_graph_launch_calls": 0,
+      "diagnostic_warnings": [
+        {
+          "timestamp": 22893251600,
+          "timestampType": 2,
+          "source": 3,
+          "severity": 2,
+          "text": "No NVTX events collected. Does the process use NVTX?",
+          "globalPid": 281902527283200
+        },
+        {
+          "timestamp": 22893257900,
+          "timestampType": 2,
+          "source": 3,
+          "severity": 2,
+          "text": "Not all NVTX events might have been collected.",
+          "globalPid": 281908567080960
+        },
+        {
+          "timestamp": 22893264300,
+          "timestampType": 2,
+          "source": 3,
+          "severity": 2,
+          "text": "CUDA profiling might have not been started correctly.",
+          "globalPid": 281908567080960
+        },
+        {
+          "timestamp": 22893265300,
+          "timestampType": 2,
+          "source": 3,
+          "severity": 2,
+          "text": "No CUDA events collected. Does the process use CUDA?",
+          "globalPid": 281908567080960
+        }
+      ],
+      "driver_compatibility_warnings": [],
+      "explicit_loss_or_error_diagnostics": [],
+      "same_output_as_phase_b_prefix": true,
+      "engine_cuda_diagnostic_warnings": []
+    },
+    {
+      "tag": "r0-l1024-mtp2",
+      "window_ms": 1628.120083,
+      "prompt_ids_sha256": "f8c9fc3607d833a7c3d03e85bc52a11d86017e89663b2ed562b1837236cb0631",
+      "output_sha256": "916be811c6156cb34a324fb194896f9449852fb5ffa25500e5df4d4107152d3e",
+      "source_revision": "83e6b05cd7b97ee194f330f0247faa76deb73f1b",
+      "exe_sha256": "7abadfdbac3888b520cb00be77a5f2e70887acc95c8b98ab45316726f78a728b",
+      "capture_validation": {
+        "counts": true,
+        "fresh": true,
+        "mtp": true,
+        "finish_length": true,
+        "baseline_prefix": true,
+        "input_hash": true
+      },
+      "request_subsequent_output_tokens": 63,
+      "kernel_count": 24166,
+      "copy_count": 5350,
+      "memset_count": 0,
+      "graph_node_kernel_count": 0,
+      "kernel_process_ids": [
+        281954536652800
+      ],
+      "kernel_union_ms": 443.167643,
+      "copy_union_ms": 17.60368,
+      "kernel_copy_overlap_ms": 0.0,
+      "gpu_activity_union_ms": 460.771323,
+      "gpu_uncovered_ms": 1167.34876,
+      "attention_part_union_ms": 56.280184,
+      "attention_part_wall_fraction": 0.034567587850336715,
+      "top_kernels": [
+        {
+          "name": "native_q8_0_packed_kernel",
+          "calls_intersecting_window": 3526,
+          "sum_ms": 259.099267,
+          "mean_us": 73.48249205899036,
+          "median_us": 30.88,
+          "union_ms": 259.099267
+        },
+        {
+          "name": "k_attn_part",
+          "calls_intersecting_window": 354,
+          "sum_ms": 56.280184,
+          "mean_us": 158.9835706214689,
+          "median_us": 160.304,
+          "union_ms": 56.280184
+        },
+        {
+          "name": "native_gu_kernel",
+          "calls_intersecting_window": 1247,
+          "sum_ms": 21.97559,
+          "mean_us": 17.622766639935847,
+          "median_us": 17.856,
+          "union_ms": 21.97559
+        },
+        {
+          "name": "native_down_kernel",
+          "calls_intersecting_window": 1247,
+          "sum_ms": 18.167655,
+          "mean_us": 14.569089815557337,
+          "median_us": 14.624,
+          "union_ms": 18.167655
+        },
+        {
+          "name": "k_gdn_seq",
+          "calls_intersecting_window": 1792,
+          "sum_ms": 17.402033,
+          "mean_us": 9.710955915178571,
+          "median_us": 8.832,
+          "union_ms": 17.402033
+        },
+        {
+          "name": "k_sh_gu",
+          "calls_intersecting_window": 1247,
+          "sum_ms": 16.38989,
+          "mean_us": 13.143456295108258,
+          "median_us": 13.44,
+          "union_ms": 16.38989
+        },
+        {
+          "name": "k_q8_rows",
+          "calls_intersecting_window": 1955,
+          "sum_ms": 11.054482,
+          "mean_us": 5.654466496163683,
+          "median_us": 5.44,
+          "union_ms": 11.054482
+        },
+        {
+          "name": "k_add_rms_q",
+          "calls_intersecting_window": 1247,
+          "sum_ms": 8.454804,
+          "mean_us": 6.780115477145149,
+          "median_us": 6.752,
+          "union_ms": 8.454804
+        },
+        {
+          "name": "k_gemv_f32",
+          "calls_intersecting_window": 1247,
+          "sum_ms": 7.564084,
+          "mean_us": 6.065825180433039,
+          "median_us": 6.08,
+          "union_ms": 7.564084
+        },
+        {
+          "name": "k_moe_out_small",
+          "calls_intersecting_window": 1247,
+          "sum_ms": 6.532925,
+          "mean_us": 5.238913392141138,
+          "median_us": 5.248,
+          "union_ms": 6.532925
+        },
+        {
+          "name": "k_route_group",
+          "calls_intersecting_window": 1247,
+          "sum_ms": 4.715513,
+          "mean_us": 3.781485966319166,
+          "median_us": 3.808,
+          "union_ms": 4.715513
+        },
+        {
+          "name": "k_conv_seq",
+          "calls_intersecting_window": 1792,
+          "sum_ms": 4.560446,
+          "mean_us": 2.5448917410714285,
+          "median_us": 2.336,
+          "union_ms": 4.560446
+        },
+        {
+          "name": "k_gdn_ab",
+          "calls_intersecting_window": 892,
+          "sum_ms": 3.360349,
+          "mean_us": 3.767207399103139,
+          "median_us": 3.744,
+          "union_ms": 3.360349
+        },
+        {
+          "name": "k_merge_cpu",
+          "calls_intersecting_window": 1247,
+          "sum_ms": 2.104381,
+          "mean_us": 1.6875549318364074,
+          "median_us": 1.664,
+          "union_ms": 2.104381
+        },
+        {
+          "name": "swiglu_q8_1_entries_kernel",
+          "calls_intersecting_window": 1247,
+          "sum_ms": 1.360095,
+          "mean_us": 1.0906936647955092,
+          "median_us": 1.056,
+          "union_ms": 1.360095
+        },
+        {
+          "name": "native_quantize_q8_1_kernel",
+          "calls_intersecting_window": 1472,
+          "sum_ms": 1.11446,
+          "mean_us": 0.7571059782608697,
+          "median_us": 0.768,
+          "union_ms": 1.11446
+        },
+        {
+          "name": "k_attn_prep",
+          "calls_intersecting_window": 354,
+          "sum_ms": 0.783327,
+          "mean_us": 2.2127881355932204,
+          "median_us": 2.208,
+          "union_ms": 0.783327
+        },
+        {
+          "name": "k_attn_merge",
+          "calls_intersecting_window": 354,
+          "sum_ms": 0.741279,
+          "mean_us": 2.0940084745762713,
+          "median_us": 2.08,
+          "union_ms": 0.741279
+        },
+        {
+          "name": "k_rms_ld",
+          "calls_intersecting_window": 112,
+          "sum_ms": 0.532351,
+          "mean_us": 4.753133928571429,
+          "median_us": 4.736,
+          "union_ms": 0.532351
+        },
+        {
+          "name": "k_argmax",
+          "calls_intersecting_window": 170,
+          "sum_ms": 0.460512,
+          "mean_us": 2.708894117647059,
+          "median_us": 2.208,
+          "union_ms": 0.460512
+        },
+        {
+          "name": "k_rms",
+          "calls_intersecting_window": 85,
+          "sum_ms": 0.398336,
+          "mean_us": 4.686305882352941,
+          "median_us": 4.64,
+          "union_ms": 0.398336
+        },
+        {
+          "name": "embed_rows_kernel",
+          "calls_intersecting_window": 85,
+          "sum_ms": 0.11568,
+          "mean_us": 1.3609411764705883,
+          "median_us": 1.344,
+          "union_ms": 0.11568
+        }
+      ],
+      "runtime_apis": [
+        {
+          "name": "cudaEventQuery_v3020",
+          "calls": 792980,
+          "sum_ms": 307.160153
+        },
+        {
+          "name": "cudaStreamSynchronize_v3020",
+          "calls": 116,
+          "sum_ms": 156.316288
+        },
+        {
+          "name": "cudaLaunchKernel_v7000",
+          "calls": 24157,
+          "sum_ms": 138.364557
+        },
+        {
+          "name": "cudaMemcpyAsync_v3020",
+          "calls": 5348,
+          "sum_ms": 25.31702
+        },
+        {
+          "name": "cuKernelGetName",
+          "calls": 24157,
+          "sum_ms": 4.043343
+        },
+        {
+          "name": "cudaEventRecord_v3020",
+          "calls": 1246,
+          "sum_ms": 2.594653
+        }
+      ],
+      "cuda_graph_launch_calls": 0,
+      "diagnostic_warnings": [
+        {
+          "timestamp": 4184583900,
+          "timestampType": 2,
+          "source": 3,
+          "severity": 2,
+          "text": "Not all NVTX events might have been collected.",
+          "globalPid": 281879911596032
+        },
+        {
+          "timestamp": 4184592000,
+          "timestampType": 2,
+          "source": 3,
+          "severity": 2,
+          "text": "No NVTX events collected. Does the process use NVTX?",
+          "globalPid": 281954536652800
+        },
+        {
+          "timestamp": 4184594900,
+          "timestampType": 2,
+          "source": 3,
+          "severity": 2,
+          "text": "CUDA profiling might have not been started correctly.",
+          "globalPid": 281879911596032
+        },
+        {
+          "timestamp": 4184595900,
+          "timestampType": 2,
+          "source": 3,
+          "severity": 2,
+          "text": "No CUDA events collected. Does the process use CUDA?",
+          "globalPid": 281879911596032
+        }
+      ],
+      "driver_compatibility_warnings": [],
+      "explicit_loss_or_error_diagnostics": [],
+      "same_output_as_phase_b_prefix": true,
+      "engine_cuda_diagnostic_warnings": []
+    },
+    {
+      "tag": "r0-l16384-mtp2",
+      "window_ms": 2480.019076,
+      "prompt_ids_sha256": "27296bac175f6162cbd64c8698a32c1833a662f8a9357cd467893931ee6517e7",
+      "output_sha256": "e50a7d7e5c57e05208833b7903e0feb0f7b060896e81eb43995b030360ba1612",
+      "source_revision": "83e6b05cd7b97ee194f330f0247faa76deb73f1b",
+      "exe_sha256": "7abadfdbac3888b520cb00be77a5f2e70887acc95c8b98ab45316726f78a728b",
+      "capture_validation": {
+        "counts": true,
+        "fresh": true,
+        "mtp": true,
+        "finish_length": true,
+        "baseline_prefix": true,
+        "input_hash": true
+      },
+      "request_subsequent_output_tokens": 63,
+      "kernel_count": 24188,
+      "copy_count": 5354,
+      "memset_count": 0,
+      "graph_node_kernel_count": 0,
+      "kernel_process_ids": [
+        281917895213056
+      ],
+      "kernel_union_ms": 1249.153785,
+      "copy_union_ms": 18.07161,
+      "kernel_copy_overlap_ms": 0.0,
+      "gpu_activity_union_ms": 1267.225395,
+      "gpu_uncovered_ms": 1212.793681,
+      "attention_part_union_ms": 854.358651,
+      "attention_part_wall_fraction": 0.3444968062011794,
+      "top_kernels": [
+        {
+          "name": "k_attn_part",
+          "calls_intersecting_window": 355,
+          "sum_ms": 854.358651,
+          "mean_us": 2406.6440873239435,
+          "median_us": 2597.086,
+          "union_ms": 854.358651
+        },
+        {
+          "name": "native_q8_0_packed_kernel",
+          "calls_intersecting_window": 3530,
+          "sum_ms": 262.450251,
+          "mean_us": 74.34851303116147,
+          "median_us": 30.912,
+          "union_ms": 262.450251
+        },
+        {
+          "name": "native_gu_kernel",
+          "calls_intersecting_window": 1247,
+          "sum_ms": 21.666295,
+          "mean_us": 17.3747353648757,
+          "median_us": 17.472,
+          "union_ms": 21.666295
+        },
+        {
+          "name": "native_down_kernel",
+          "calls_intersecting_window": 1247,
+          "sum_ms": 18.324779,
+          "mean_us": 14.695091419406575,
+          "median_us": 14.688,
+          "union_ms": 18.324779
+        },
+        {
+          "name": "k_gdn_seq",
+          "calls_intersecting_window": 1792,
+          "sum_ms": 17.452847,
+          "mean_us": 9.739311941964287,
+          "median_us": 8.832,
+          "union_ms": 17.452847
+        },
+        {
+          "name": "k_sh_gu",
+          "calls_intersecting_window": 1247,
+          "sum_ms": 16.5374,
+          "mean_us": 13.261748195669606,
+          "median_us": 13.44,
+          "union_ms": 16.5374
+        },
+        {
+          "name": "k_q8_rows",
+          "calls_intersecting_window": 1957,
+          "sum_ms": 11.184085,
+          "mean_us": 5.714913132345426,
+          "median_us": 5.472,
+          "union_ms": 11.184085
+        },
+        {
+          "name": "k_add_rms_q",
+          "calls_intersecting_window": 1247,
+          "sum_ms": 9.038586,
+          "mean_us": 7.248264635124299,
+          "median_us": 6.816,
+          "union_ms": 9.038586
+        },
+        {
+          "name": "k_gemv_f32",
+          "calls_intersecting_window": 1247,
+          "sum_ms": 7.533876,
+          "mean_us": 6.041600641539695,
+          "median_us": 6.048,
+          "union_ms": 7.533876
+        },
+        {
+          "name": "k_moe_out_small",
+          "calls_intersecting_window": 1247,
+          "sum_ms": 6.57574,
+          "mean_us": 5.273247794707298,
+          "median_us": 5.28,
+          "union_ms": 6.57574
+        },
+        {
+          "name": "k_route_group",
+          "calls_intersecting_window": 1247,
+          "sum_ms": 4.80851,
+          "mean_us": 3.8560625501202885,
+          "median_us": 3.872,
+          "union_ms": 4.80851
+        },
+        {
+          "name": "k_conv_seq",
+          "calls_intersecting_window": 1792,
+          "sum_ms": 4.599483,
+          "mean_us": 2.56667578125,
+          "median_us": 2.336,
+          "union_ms": 4.599483
+        },
+        {
+          "name": "k_attn_merge",
+          "calls_intersecting_window": 355,
+          "sum_ms": 4.210141,
+          "mean_us": 11.859552112676056,
+          "median_us": 12.128,
+          "union_ms": 4.210141
+        },
+        {
+          "name": "k_gdn_ab",
+          "calls_intersecting_window": 892,
+          "sum_ms": 3.357596,
+          "mean_us": 3.764121076233184,
+          "median_us": 3.744,
+          "union_ms": 3.357596
+        },
+        {
+          "name": "k_merge_cpu",
+          "calls_intersecting_window": 1247,
+          "sum_ms": 2.187515,
+          "mean_us": 1.7542221331194867,
+          "median_us": 1.696,
+          "union_ms": 2.187515
+        },
+        {
+          "name": "swiglu_q8_1_entries_kernel",
+          "calls_intersecting_window": 1247,
+          "sum_ms": 1.386335,
+          "mean_us": 1.1117361668003207,
+          "median_us": 1.088,
+          "union_ms": 1.386335
+        },
+        {
+          "name": "native_quantize_q8_1_kernel",
+          "calls_intersecting_window": 1477,
+          "sum_ms": 1.150336,
+          "mean_us": 0.778832769126608,
+          "median_us": 0.768,
+          "union_ms": 1.150336
+        },
+        {
+          "name": "k_attn_prep",
+          "calls_intersecting_window": 355,
+          "sum_ms": 0.797376,
+          "mean_us": 2.2461295774647887,
+          "median_us": 2.208,
+          "union_ms": 0.797376
+        },
+        {
+          "name": "k_rms_ld",
+          "calls_intersecting_window": 114,
+          "sum_ms": 0.53472,
+          "mean_us": 4.690526315789473,
+          "median_us": 4.672,
+          "union_ms": 0.53472
+        },
+        {
+          "name": "k_argmax",
+          "calls_intersecting_window": 174,
+          "sum_ms": 0.481248,
+          "mean_us": 2.7657931034482757,
+          "median_us": 2.208,
+          "union_ms": 0.481248
+        },
+        {
+          "name": "k_rms",
+          "calls_intersecting_window": 86,
+          "sum_ms": 0.400608,
+          "mean_us": 4.658232558139535,
+          "median_us": 4.64,
+          "union_ms": 0.400608
+        },
+        {
+          "name": "embed_rows_kernel",
+          "calls_intersecting_window": 86,
+          "sum_ms": 0.117407,
+          "mean_us": 1.3651976744186047,
+          "median_us": 1.344,
+          "union_ms": 0.117407
+        }
+      ],
+      "runtime_apis": [
+        {
+          "name": "cudaEventQuery_v3020",
+          "calls": 2418582,
+          "sum_ms": 922.783992
+        },
+        {
+          "name": "cudaLaunchKernel_v7000",
+          "calls": 24173,
+          "sum_ms": 179.442291
+        },
+        {
+          "name": "cudaStreamSynchronize_v3020",
+          "calls": 118,
+          "sum_ms": 156.739226
+        },
+        {
+          "name": "cudaMemcpyAsync_v3020",
+          "calls": 5352,
+          "sum_ms": 30.803176
+        },
+        {
+          "name": "cuKernelGetName",
+          "calls": 24173,
+          "sum_ms": 5.915314
+        },
+        {
+          "name": "cudaEventRecord_v3020",
+          "calls": 1246,
+          "sum_ms": 3.452503
+        }
+      ],
+      "cuda_graph_launch_calls": 0,
+      "diagnostic_warnings": [
+        {
+          "timestamp": 18023252100,
+          "timestampType": 2,
+          "source": 3,
+          "severity": 2,
+          "text": "No NVTX events collected. Does the process use NVTX?",
+          "globalPid": 281917895213056
+        },
+        {
+          "timestamp": 18023258600,
+          "timestampType": 2,
+          "source": 3,
+          "severity": 2,
+          "text": "Not all NVTX events might have been collected.",
+          "globalPid": 282008559288320
+        },
+        {
+          "timestamp": 18023265000,
+          "timestampType": 2,
+          "source": 3,
+          "severity": 2,
+          "text": "CUDA profiling might have not been started correctly.",
+          "globalPid": 282008559288320
+        },
+        {
+          "timestamp": 18023267100,
+          "timestampType": 2,
+          "source": 3,
+          "severity": 2,
+          "text": "No CUDA events collected. Does the process use CUDA?",
+          "globalPid": 282008559288320
+        }
+      ],
+      "driver_compatibility_warnings": [],
+      "explicit_loss_or_error_diagnostics": [],
+      "same_output_as_phase_b_prefix": true,
+      "engine_cuda_diagnostic_warnings": []
+    }
+  ],
+  "nsight_archive_sha256": "d05b7735036b96689dc10fc0899454fbe0edcc3ac10e4c7f52f98d29c327f192",
+  "nsight_version": "2026.1.3.425",
+  "checks": {
+    "four_reports": true,
+    "all_input_output_protocol_checks": true,
+    "all_have_engine_gpu_activity": true,
+    "no_driver_fallback": true,
+    "no_engine_cuda_warnings": true,
+    "no_explicit_loss_or_error_diagnostics": true
+  },
+  "notes": "All intervals clipped to client decode NVTX range; union is not critical-path attribution."
+}

@@ -2,6 +2,8 @@
 
 日期：2026-10-21。对应[实践计划](../../INFERENCE_RESEARCH_PLAN.md)的阶段 A。本目录用于基线准备，不是性能优化或模型质量报告。
 
+2026-10-22 阶段 C 覆盖范围更正：固定 64/256 专家槽位使该 revision 进入 main-hybrid，源码在 `q36_engine.cu:2887–2889` 自动关闭主模型和 MTP Graph。历史组名 `graph-mtp0/2` 仅表示未传 `--no-graph`，不代表实际 Graph 路径已被验证。原始 token 对照与 VERIFY 结果保持不变。
+
 ## 环境与隔离
 
 主机为 Windows 11、i7-12700、RTX 5060 Ti 16GB、128GB DDR4，驱动 610.88。当轮采用本机已有 WSL Ubuntu 26.04 建立独立 Linux 源码基线。
@@ -68,8 +70,8 @@ wsl -d Ubuntu -- python3 -u /mnt/e/Coder/LLM/Strata/reports/tobeo-20261021/qwen3
 | --- | --- |
 | old kernels / no graph / MTP 0 | 同一源码中的旧 kernel 参考路径 |
 | current kernels / no graph / VERIFY / MTP 0 | 逐项内核比较及输出对照 |
-| current kernels / graph / MTP 0 | CUDA Graph 路径对照 |
-| current kernels / graph / MTP 2 | 固定专家布局下的 MTP 输出对照 |
+| current kernels / 默认 Graph 请求 / MTP 0 | hybrid 自动关闭 Graph，默认请求的输出对照 |
+| current kernels / 默认 Graph 请求 / MTP 2 | hybrid 自动关闭 Graph，固定专家布局下的 MTP 输出对照 |
 
 不仅检查退出码和生成 token，还要求 VERIFY 真正完成正数次比较且 mismatch=0。检查两份结果都包含 10 个 prompt，避免比较器的 `zip` 截断漏检。
 
@@ -93,8 +95,8 @@ wsl -d Ubuntu -- python3 -u /mnt/e/Coder/LLM/Strata/reports/tobeo-20261021/qwen3
 | 对照旧内核参考路径 | prompt 数 | token 一致性 | 退出码 |
 | --- | ---: | --- | ---: |
 | 当前内核，no graph，VERIFY，MTP 0 | 10 | 10/10 完全相同 | 0 |
-| 当前内核，graph，MTP 0 | 10 | 10/10 完全相同 | 0 |
-| 当前内核，graph，MTP 2 | 10 | 10/10 完全相同 | 0 |
+| 当前内核，默认 Graph 请求（hybrid 关闭），MTP 0 | 10 | 10/10 完全相同 | 0 |
+| 当前内核，默认 Graph 请求（hybrid 关闭），MTP 2 | 10 | 10/10 完全相同 | 0 |
 
 本机 `correctness-summary.json` 记录二进制/提示文件 SHA-256、完整命令、环境覆盖、退出码、VERIFY 和严格比较结论；各臂 `.json` 保留完整 token。`service-transition.json` 保存服务切换前后状态，`.console.log` 与 `.engine.log` 保留原始输出。
 
