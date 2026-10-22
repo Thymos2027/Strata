@@ -1,0 +1,52 @@
+{
+  "method": "same zero-based filtered launch ordinal, at least 200 ms inside both decode ranges",
+  "kernel_name": "k_attn_part",
+  "kernel_name_base": "function",
+  "mtp": 0,
+  "launch_skip": 760,
+  "launch_count": 1,
+  "cases": [
+    {
+      "case": "r0-l1024",
+      "tag": "r0-l1024-mtp0",
+      "decode_start_ns": 23978469642,
+      "decode_end_ns": 25805901795,
+      "first_measured_request_ordinal": 650,
+      "selected": {
+        "start": 24196447361,
+        "end": 24196526176,
+        "gridX": 5,
+        "gridY": 16,
+        "gridZ": 1,
+        "blockX": 256,
+        "blockY": 1,
+        "blockZ": 1,
+        "registersPerThread": 40
+      },
+      "prompt_ids_sha256": "f8c9fc3607d833a7c3d03e85bc52a11d86017e89663b2ed562b1837236cb0631",
+      "reference_report_sha256": "0b4a714c4132a23d0c5f8c706f804f7f2c34940f9392f98f22659de4c4250332",
+      "matching_kernel_count": 1290
+    },
+    {
+      "case": "r0-l16384",
+      "tag": "r0-l16384-mtp0",
+      "decode_start_ns": 47633106485,
+      "decode_end_ns": 50143862252,
+      "first_measured_request_ordinal": 650,
+      "selected": {
+        "start": 47963755065,
+        "end": 47964634841,
+        "gridX": 65,
+        "gridY": 16,
+        "gridZ": 1,
+        "blockX": 256,
+        "blockY": 1,
+        "blockZ": 1,
+        "registersPerThread": 40
+      },
+      "prompt_ids_sha256": "27296bac175f6162cbd64c8698a32c1833a662f8a9357cd467893931ee6517e7",
+      "reference_report_sha256": "c9ca435660566fd059d16e40eb60799c02fdce9ad03b4a4b35caa62efc95ad75",
+      "matching_kernel_count": 1290
+    }
+  ]
+}

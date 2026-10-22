@@ -1,0 +1,33 @@
+{
+  "tag": "counter-probe-mtp0-application-smoke-01",
+  "timestamp_utc": "2026-10-22T16:27:21.615342+00:00",
+  "process_is_admin": true,
+  "python_executable": "D:\\Program Files\\Anaconda\\python.exe",
+  "tool_version": "2026.2.1.5",
+  "tool_archive_sha256": "42749828322bcdec2bd641e910042c562ca6f8d9e2d9623b9368e9a83d0bc94a",
+  "probe_exe_sha256": "2702642551740433c30db0a7add548842e1518eea7c307a235aeaa9487eb8793",
+  "command": [
+    "E:\\Coder\\LLM\\Strata\\build-native-baseline\\toolchains\\nsight-compute-2026.2.1.5\\nsight_compute-windows-x86_64-2026.2.1.5-archive\\nsight-compute\\2026.2.1\\target\\windows-desktop-win7-x64\\ncu.exe",
+    "--target-processes",
+    "all",
+    "--kernel-name",
+    "counter_probe",
+    "--launch-count",
+    "1",
+    "--metrics",
+    "sm__cycles_elapsed.avg",
+    "--clock-control",
+    "none",
+    "--cache-control",
+    "none",
+    "--export",
+    "E:\\Coder\\LLM\\Strata\\reports\\tobeo-20261022\\qwen36-compute\\counter-probe-mtp0-application-smoke-01",
+    "E:\\Coder\\LLM\\Strata\\reports\\tobeo-20261022\\qwen36-compute\\counter-probe-mtp0-application-smoke-01.exe"
+  ],
+  "exit_code": 0,
+  "permission_denied": false,
+  "report_exists": true,
+  "log": "==WARNING== Note: Running with uncontrolled GPU caches. Profiling results may be inconsistent.\n==WARNING== Note: Running with unmodified GPU clocks. If not controlled otherwise, profiling results may be inconsistent.\n==PROF== Connected to process 27768 (E:\\Coder\\LLM\\Strata\\reports\\tobeo-20261022\\qwen36-compute\\counter-probe-mtp0-application-smoke-01.exe)\n==PROF== Profiling \"counter_probe\": 0%....50%....100% - 1 pass\nCUDA probe passed: 1.000244\n==PROF== Disconnected from process 27768\n==PROF== Report: E:\\Coder\\LLM\\Strata\\reports\\tobeo-20261022\\qwen36-compute\\counter-probe-mtp0-application-smoke-01.ncu-rep\n",
+  "clock_control": "none",
+  "cache_control": "none"
+}

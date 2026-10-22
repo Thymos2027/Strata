@@ -19,6 +19,17 @@ sys.path.insert(0, str(BASE))
 import run_curve as baseline
 
 
+def replay_directory(root):
+    index = 1
+    while True:
+        directory = root / f'pass-{index:04d}'
+        try:
+            directory.mkdir()
+            return directory
+        except FileExistsError:
+            index += 1
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--probe', action='store_true')
@@ -37,6 +48,12 @@ def main():
         return
     if not args.case:
         parser.error('--case is required for model capture')
+    global OUT
+    if os.environ.get('STRATA_PROFILE_REPLAY') == 'application':
+        # ncu reruns this controller for every application replay pass.
+        # Preserve every pass separately; never reuse an earlier validation.
+        OUT = replay_directory(OUT)
+        print('Application replay evidence: '+str(OUT),flush=True)
     if baseline.request('/health').get('loaded'):
         raise RuntimeError('Release the daily model through run_profiling.py before capture')
     if baseline.digest(baseline.EXE) != baseline.EXPECTED_EXE:
@@ -53,12 +70,15 @@ def main():
                                    str(baseline.BUILD), env.get('PATH', '')])
     engine = None
     try:
+        print('Stage: loading native engine',flush=True)
         engine = Eng(str(baseline.EXE), ['--native', str(baseline.MODEL), '--max-context', '32768',
                      '--prefill', '512', '--pool-workers', '7', '--expert-vram', '10.0',
                      '--expert-slots', '64', '--mtp', str(args.mtp)], env=env,
                      log=str(OUT / (tag + '.engine.log')))
+        print(f'Stage: engine ready ({engine.load_s:.1f}s); warming up 64 tokens',flush=True)
         warm_ids = json.loads((BASE / 'r1-l1024.ids.json').read_text())
         warmup = baseline.measured_request(engine, warm_ids, cap=64)
+        print('Stage: warm-up complete; starting measured request '+tag,flush=True)
         ids = json.loads((BASE / (args.case + '.ids.json')).read_text())
         output = []
         range_push('request')
@@ -78,6 +98,8 @@ def main():
                             range_pop()
                             range_push('decode-after-first-token')
                         output.append(int(line.split()[1]))
+                        if len(output) == 1 or len(output) % 16 == 0:
+                            print(f'Stage: measured request {len(output)}/{args.cap} tokens',flush=True)
                     elif line.startswith('DONE '):
                         done = line
                         break

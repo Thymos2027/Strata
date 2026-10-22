@@ -1,0 +1,8 @@
+*
+!.gitignore
+!*.md
+!*.py
+!*.cu
+!*.ps1
+!counter-status.json
+!kernel-selection.json

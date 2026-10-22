@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-23",
+  "timezone": "Asia/Shanghai",
+  "probe_started_at": "2026-10-23T00:27:21.615342+08:00",
+  "run_id": "mtp0-application-smoke-01",
+  "case": "r0-l1024",
+  "replay_mode": "application",
+  "application_passes": 1,
+  "validation_passed": true,
+  "output_tokens": 64,
+  "same_output_as_phase_b": true,
+  "daily_model_restored": true,
+  "export": {
+    "one_kernel": true,
+    "shape_matches": true,
+    "scope": "smoke",
+    "metrics": {
+      "gpu__time_duration.sum": "82,144",
+      "dram__bytes_op_read.sum": "4,271,104",
+      "dram__bytes_op_write.sum": "0"
+    },
+    "metric_units": {
+      "gpu__time_duration.sum": "ns",
+      "dram__bytes_op_read.sum": "byte",
+      "dram__bytes_op_write.sum": "byte"
+    },
+    "note": "Smoke metrics do not establish L2, stalls or occupancy; full sections require further review."
+  },
+  "source_revision": "83e6b05cd7b97ee194f330f0247faa76deb73f1b",
+  "exe_sha256": "7abadfdbac3888b520cb00be77a5f2e70887acc95c8b98ab45316726f78a728b",
+  "ncu_report_sha256": "6d81b74290349e47dd9883ad68dccda6cecf6d07af883a9fe94165331ca7fb9a",
+  "scope": "One invocation at 1K/MTP0; no 16K, L2, stalls, occupancy or end-to-end improvement established",
+  "legacy_archive": "E:\\Coder\\LLM\\Strata\\reports\\tobeo-20261022\\qwen36-compute\\mtp0-application-smoke-01",
+  "copied_file_hashes_verified": true
+}
