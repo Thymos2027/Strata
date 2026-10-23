@@ -105,7 +105,7 @@ Flash-Next 已有固定实际缓存后的 P 核收益记录。该记录支持继
 
 2026-10-22 进展：[Nsight Systems 报告](tobeo-20261022/qwen36-profiling/README.md)与[瓶颈观察](tobeo-20261022/qwen36-profiling/bottleneck-notes.md)。已完成原生 1K/16K × MTP 0/2 四组完整进程采集，分析仅筛选预热后 decode；每条输出 64 token，与阶段 B 对应前缀一致。16K 的 k_attn_part 区间占所选窗口约 22.05%/34.45%，支持下一步 Compute 检查；CPU 时间线和访存根因未测，尚未决定最终内核改动。旧工具兼容试采和触发截短试采均独立保留，未混入结论。
 
-同日下一步：[Compute 预检与采集准备](tobeo-20261022/qwen36-compute/README.md)。官方工具整包校验、独立 CUDA 探针、matched launch 760 定位和脚本 dry-run 已完成；实际硬件计数探针报 ERR_NVGPUCTRPERM，当前非管理员会话缺少计数权限。已准备管理员可运行的采集入口，未卸载日常模型，未取得模型 DRAM/L2/stall/occupancy 数据；需启用权限后继续。
+2026-10-23 进展：[Compute 1K/16K 三指标](tobeo-20261023/qwen36-compute/README.md)均通过，代理管理员权限与实际计数探针也已验证。新增[1K CPU IP/调度试采及环境诊断](tobeo-20261023/qwen36-profiling/README.md)：同日无 profiler 的 prefill 也明显慢，独立 HtoD 约 1.73 GB/s，历史引擎探针约 25 GB/s；NVML 与 PnP 链路报告有冲突。环境恢复前暂缓正常条件的性能 A/B，尚缺 L2/L1/stall/occupancy 和完整 CPU 归因。已有上游 [PR #3641 的局部正确性验证](tobeo-20261023/qwen36-pr3641/README.md)通过，未声称自己的优化加速。
 
 建议用时：2–3 天。
 
@@ -257,9 +257,10 @@ upstream-notes.md         # 查重、相关讨论、拟提交范围
 
 每次任务结束前复核本清单：已实际完成的项目打勾，并记录日期、证据与范围；部分完成保留未勾选并说明进度。后续扩展配置或 workload 时，已有勾选不替代新条件下的验证。
 
-最近复核：2026-10-23。阶段 A、阶段 B 最小矩阵及阶段 C 的 Systems 时间线已完成；Compute application replay 的 1K 最小采集首次有效，单个 kernel 的三个指标及输出正确性已核对，Flash-Next 已恢复。16K 和更多硬件计数、CPU 栈、访存根因和优化交付未完成。归档改为按北京时间的运行开始日期，跨午夜保留完整运行并记录起止时间。
+最近复核：2026-10-23。阶段 A、阶段 B 最小矩阵及阶段 C 的原 Systems 时间线已完成；新增 1K/16K Compute 三指标、1K CPU IP/PDB 解析，以及上游 #3641 的 CUDA 构建/三个选定测试/真实 Q4 1K 对照。发现同日 HtoD 吞吐异常，NVML/PnP 报告冲突、具体原因未定，正常工况的完整 profiling 与五组性能 A/B 暂缓。Flash-Next 已恢复；按北京时间运行开始日期归档。
 
 - [x] 核对最新上游、相关讨论和工作区改动。
+  - 2026-10-23 通过 API 重新搜索 open/closed，阅读 #2464/#3700 后续评论，确认 #3641 已有 FP32 GQA 对照开关，#3678 也有重叠工作；固定 #3641 head f3f2136f 做已有方案验证，不另起重复实现。没有向外发送消息或提交 PR。
   - 2026-10-22 已核对工作区，重新读取 #2464 及后续评论，并查询包含 k_attn_part 的相关 PR（包括 #3084、#2698）；快照保留在阶段 B 目录。实验继续固定阶段 A revision，未声称运行最新 main；后续实现前仍需重新查重。
 - [x] 确认源码基线、工具链、模型哈希和独立构建目录。
   - 2026-10-21 至 2026-10-22 完成，见 [WSL 基线](tobeo-20261021/qwen36-source-baseline/README.md)与 [Windows 原生基线](tobeo-20261022/windows-native-baseline/README.md)。后续主用 Windows 原生构建。
@@ -273,13 +274,16 @@ upstream-notes.md         # 查重、相关讨论、拟提交范围
 - [x] 采集加载/预热之后的 decode trace。
   - 2026-10-22：Nsight 2026.1.3 四组完整生命周期采集后，按 NVTX 筛选预热后的 decode；图、kernel 明细和诊断见[阶段 C 报告](tobeo-20261022/qwen36-profiling/README.md)。实际 Graph 关闭；未采 CPU sampling/context switch。六项汇总检查通过，未将两批有问题的试采当作正式结果。
 - [x] 跑通 Compute 的 1K / MTP 0 最小硬件计数采集。
-  - 2026-10-23 完成：application replay 1 个 pass，三个指标有效、尺寸匹配，64-token 输出验证与服务恢复通过，见[1K 最小采集报告](tobeo-20261023/qwen36-compute/README.md)。范围仅为一个 kernel 调用，未覆盖 16K 或完整硬件指标。
+  - 2026-10-23 首次 1K 完成：application replay 1 个 pass，三个指标有效、尺寸匹配，64-token 输出验证与服务恢复通过，见[最小采集报告](tobeo-20261023/qwen36-compute/README.md)。后续 16K 见下一项；完整硬件指标仍未覆盖。
+- [x] 补齐 16K / MTP 0 的相同三个 Compute 指标。
+  - 2026-10-23，代理直接运行；874.176 μs、DRAM 读 91,881,216 bytes、写 1,098,752 bytes，shape、64-token 前缀和服务恢复均通过，见[两上下文汇总](tobeo-20261023/qwen36-compute/summary.json)。每个上下文只测一个调用，不代表 L2/stall/occupancy 已完成。
+- [x] 检查同日环境漂移，独立核对主机到 GPU 的传输通路。
+  - 2026-10-23 20:17 再测为 1.732420997 GB/s，512 次 64-MiB pinned copy、抽查通过；负载时 NVML/PnP 冲突仍在，环境尚未恢复。证据为本机 `tobeo-20261023/qwen36-profiling/pcie-diagnostic-03/result.json`，范围与[无重启续做安排](tobeo-20261023/qwen36-profiling/no-reboot-next-steps.md)已记录。用户仅能远程操作，暂不安排重启或驱动维护；日常服务仍已加载。
+  - 2026-10-23，无 profiler 控制 1K prefill 为 23,045.2 ms；两次 64-MiB copy 约 1.732/1.734 GB/s，卸载日常模型后仍慢；复现冻结引擎原始 256-MiB/四 burst 探针为 1.735 GB/s。NVML 负载报告 Gen1×8，PnP 速度编码仍为 5，底层原因未确定，见[环境诊断](tobeo-20261023/qwen36-profiling/README.md)。这完成的是异常识别，不是正常测量环境恢复。
+- [x] 对已有 FP32 GQA 方案完成本机局部构建与正确性验证。
+  - 2026-10-23，#3641 固定源码未修改，MSVC/CUDA 13.2/sm_120 构建与三个选定布局/数值测试通过；真实 Q4 的 1K/64-token、FP32 KV、GQA=0/1 输出一致，见[验证报告](tobeo-20261023/qwen36-pr3641/README.md)。只验证作者既有实现，16K 实模、五组配对和 HIP/SYCL 本机验证尚未完成。
 - [ ] 写出一个瓶颈结论，再决定最小改动。
-  - 2026-10-23：1K/MTP 0 application replay 最小采集通过，1 个 pass、grid/block 与 Systems 一致、64-token 输出与基线一致；82.144 μs、DRAM 读 4,271,104 bytes、写 0 bytes，见[当天报告与结果](tobeo-20261023/qwen36-compute/README.md)。已核对原始 CSV 单位并重新导出基础单位；尚缺 16K、L2/stall/occupancy 和 CPU 归因，因此本项不打勾。
-  - 已写出[观察与待验证假设](tobeo-20261022/qwen36-profiling/bottleneck-notes.md)，确认长上下文 attention 值得深入；尚缺 Compute 访存计数和未覆盖时间的归因，故本项保留未勾选，不将 GPU 热点当作已确认根因。
-  - Compute 下一步已准备：两个上下文均选 launch-skip=760、count=1；实际权限探针失败，见[预检证据及管理员采集入口](tobeo-20261022/qwen36-compute/README.md)。本次没有新增可完成的整项清单，保持未勾选直到拿到数据并完成解释。
-  - 2026-10-22 修正管理员终端重试时的默认编号冲突：自动跳过既有目录和探针记录，保留旧证据；新增探针进程管理员状态记录。截图中的 Evidence exists 与旧日志中的 ERR_NVGPUCTRPERM 分开记录；修复不代表计数权限已通过，瓶颈结论项仍未完成。
-  - 后续第 02、03 次管理员计数探针均通过；第 02 次正式采集的 64-token 预热生成用了 744.660 s，900 s 总预算超时，服务恢复已核对。默认预算调整为每上下文 3600 s，新增阶段日志与 30 s 进度提示；尚未取得有效模型计数，不将超时修复当作瓶颈研究完成。
-  - 用户已中断第 03 次，复核无采集进程残留，独立 health 确认 Flash-Next 已加载；原恢复日志记录 KeyboardInterrupt，另存后续健康检查，不改写失败证据。脚本增加恢复阶段 Ctrl+C 保护。新的超时等待与参数转发检查通过，完整 GPU 重跑仍待管理员终端执行。
-  - 第 04 次已定位：NCU 显存比较/恢复失败（999、LaunchFailed），同期 nvlddmkm Event 153 明确记录 TDR；残留报告尺寸与耗时均为 0，已拒绝作测量。失败日志和驱动事件已归档，服务恢复已核对。入口改为 application replay、单个 1K 上下文、三个硬件指标；新增每 pass 独立证据和 CSV 单位行/尺寸/有效值检查。脚本回归检查通过，新模式 GPU 采集尚未运行，故本项仍未勾选。
+  - 2026-10-23 夜间：1K CPU IP 采到 10,870 个周期样本，本地 PDB 显示大量等待循环 IP，不能把 on-CPU 全算作专家数学计算；只有一个受环境异常影响会话中的短请求，不能建立正常 Gen5 的关键路径结论。16K CPU、L2/L1/stall/occupancy 与缓存状态对照待继续。
+  - 继续使用[观察与待验证假设](tobeo-20261022/qwen36-profiling/bottleneck-notes.md)界定范围，不将 GPU 热点当作唯一瓶颈。权限、重复编号、超时、kernel replay/TDR 的历史排障见[原记录](tobeo-20261022/qwen36-compute/README.md)，不以早期失败覆盖后续成功，也不以三个计数代替最终归因。
 - [ ] 按正确性、配对测量和上游范围要求完成交付。
+  - 现有本地报告和续跑脚本已就绪；16K 实模门禁、至少五组交替配对和最终贡献范围仍待完成。主机到 GPU 的异常传输状态恢复前不填加速比，不把已有上游实现记作自写优化。
