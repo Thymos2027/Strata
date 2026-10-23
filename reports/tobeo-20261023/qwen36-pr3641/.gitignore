@@ -1,0 +1,7 @@
+*
+!.gitignore
+!*.py
+!*.md
+!build-summary.json
+!validation-summary.json
+!results.json

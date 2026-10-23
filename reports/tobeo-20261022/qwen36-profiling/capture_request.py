@@ -76,6 +76,12 @@ def main():
                      '--expert-slots', '64', '--mtp', str(args.mtp)], env=env,
                      log=str(OUT / (tag + '.engine.log')))
         print(f'Stage: engine ready ({engine.load_s:.1f}s); warming up 64 tokens',flush=True)
+        if os.environ.get('STRATA_PROFILE_CPU_MODULES'):
+            import importlib.util
+            spec = importlib.util.spec_from_file_location('cpu_modules',os.environ['STRATA_PROFILE_CPU_MODULES'])
+            helper = importlib.util.module_from_spec(spec)
+            spec.loader.exec_module(helper)
+            (OUT/(tag+'.modules.json')).write_text(json.dumps({'pid':engine.p.pid,'modules':helper.modules(engine.p.pid)},indent=2))
         warm_ids = json.loads((BASE / 'r1-l1024.ids.json').read_text())
         warmup = baseline.measured_request(engine, warm_ids, cap=64)
         print('Stage: warm-up complete; starting measured request '+tag,flush=True)

@@ -1,0 +1,57 @@
+{
+  "upstream_pr": 3641,
+  "revision": "f3f2136f194bdc42d07961bef0ce66b2811f58cb",
+  "source_unchanged": true,
+  "source": "E:\\Coder\\LLM\\Strata\\build-native-baseline\\src-pr3641-f3f2136f",
+  "build": "E:\\Coder\\LLM\\Strata\\build-native-baseline\\build-pr3641-f3f2136f-cuda132-sm120",
+  "cuda": "E:\\Coder\\LLM\\Strata\\build-native-baseline\\toolchains\\cuda-13.2.0",
+  "ggml_revision": "3cf03257f219afbe7334045ff7c6a06ac68c627d",
+  "started_at": "2026-10-23T02:02:26.763045+08:00",
+  "commands": [
+    {
+      "command": [
+        "D:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe",
+        "-S",
+        "E:\\Coder\\LLM\\Strata\\build-native-baseline\\src-pr3641-f3f2136f",
+        "-B",
+        "E:\\Coder\\LLM\\Strata\\build-native-baseline\\build-pr3641-f3f2136f-cuda132-sm120",
+        "-G",
+        "Ninja",
+        "-DCMAKE_BUILD_TYPE=Release",
+        "-DSTRATA_ENABLE_CUDA=ON",
+        "-DCMAKE_CUDA_ARCHITECTURES=120",
+        "-DCUDAToolkit_ROOT=E:/Coder/LLM/Strata/build-native-baseline/toolchains/cuda-13.2.0",
+        "-DCMAKE_CUDA_COMPILER=E:/Coder/LLM/Strata/build-native-baseline/toolchains/cuda-13.2.0/bin/nvcc.exe",
+        "-DCMAKE_C_COMPILER=D:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.42.34433/bin/HostX64/x64/cl.exe",
+        "-DCMAKE_CXX_COMPILER=D:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.42.34433/bin/HostX64/x64/cl.exe",
+        "-DCMAKE_CUDA_HOST_COMPILER=D:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.42.34433/bin/HostX64/x64/cl.exe",
+        "-DSTRATA_GGML_DIR=E:/Coder/LLM/Strata/build-native-baseline/src-83e6b05cd7b97ee194f330f0247faa76deb73f1b/third_party/llama.cpp",
+        "-DSTRATA_BUILD_TESTS=ON",
+        "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON"
+      ],
+      "exit_code": 0,
+      "wall_s": 14.297000000020489
+    },
+    {
+      "command": [
+        "D:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe",
+        "--build",
+        "E:\\Coder\\LLM\\Strata\\build-native-baseline\\build-pr3641-f3f2136f-cuda132-sm120",
+        "--target",
+        "strata-q36",
+        "strata_kq",
+        "q36_attn_parity",
+        "q36_f16_parity",
+        "model_family_test",
+        "--parallel",
+        "8"
+      ],
+      "exit_code": 0,
+      "wall_s": 161.0
+    }
+  ],
+  "passed": true,
+  "exe_sha256": "af7bb496fac2fb3a94737474e0a58d1870a3bee8af9026749a3406921fd14b6b",
+  "post_build_source_changes": "",
+  "finished_at": "2026-10-23T02:05:22.210421+08:00"
+}

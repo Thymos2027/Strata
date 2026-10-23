@@ -1,4 +1,5 @@
 *
 !.gitignore
 !*.md
+!*.py
 !summary.json

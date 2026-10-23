@@ -1,0 +1,40 @@
+{
+  "revision": "f3f2136f194bdc42d07961bef0ce66b2811f58cb",
+  "exe_sha256": "af7bb496fac2fb3a94737474e0a58d1870a3bee8af9026749a3406921fd14b6b",
+  "tests": [
+    {
+      "name": "model_family_test",
+      "command": [
+        "E:\\Coder\\LLM\\Strata\\build-native-baseline\\build-pr3641-f3f2136f-cuda132-sm120\\model_family_test.exe"
+      ],
+      "exit_code": 0,
+      "wall_s": 0.20300000000861473,
+      "stdout": "model_family_test\n  model_family: qwen35moe, qwen4exp, unknown                                                 ok\n  the architecture guard accepts qwen35moe                                                   ok\n  the architecture guard accepts qwen4exp                                                    ok\n  and refuses llama, naming it                                                               ok\n  the engine guard refuses Qwen3.6: recognised, not supported yet                            ok\n  the engine guard runs qwen4exp                                                             ok\n  a qwen35moe file without ssm.time_step_rank is refused, naming the key                     ok\n  Qwen3.6 geometry reads                                                                     ok\n  Qwen3.6: 40 trunk layers + 1 MTP block, hidden 2048                                        ok\n  Qwen3.6: 10 attention / 30 GDN layers, layer 40 is the MTP block                           ok\n  Qwen3.6 GDN: 16 K groups, 32 V heads, conv 8192, inner 4096                                ok\n  Qwen3.6 attention: 16 Q / 2 KV x 256, no indexer, no hyper-connections                     ok\n  Qwen3.6 MoE: 256 experts top-8, FF 512, shared 512; vocab 248320                           ok\n  Qwen3.6 does not match the compiled kernels                                                ok\n  Flash-Next's metadata gives exactly the compiled geometry                                  ok\n  the Coder's 256 experts are a run-time size, not a kernel mismatch                         ok\n  an inconsistent ssm.inner_size is refused                                                  ok\n  a complete qwen35moe file passes its layout (incl. the nextn MTP block)                    ok\n  a complete qwen4exp file passes its layout (hyper-connections, indexer)                    ok\n  the default layout still refuses a column-shaped gate vector                               ok\n  the F16 opt-in accepts the same contiguous vector with a singleton axis                    ok\n  the F16 opt-in still refuses an extra axis with more than one value                        ok\n  a wrong shape is refused, naming the tensor and both shapes                                ok\n  a missing MTP tensor is refused                                                            ok\n  a tensor the qwen35moe table does not name is refused                                      ok\n  Flash-Next: a missing indexer tensor is refused (missing blk.3.indexer.k_proj.weight)      ok\nALL PASSED\n",
+      "stderr": ""
+    },
+    {
+      "name": "q36_attn_parity",
+      "command": [
+        "E:\\Coder\\LLM\\Strata\\build-native-baseline\\build-pr3641-f3f2136f-cuda132-sm120\\q36_attn_parity.exe"
+      ],
+      "exit_code": 0,
+      "wall_s": 3.6410000000032596,
+      "stdout": "KV32 ctx5 G1 rows1 offset0 sessions0: 512 values, max error 7.22197319e-08\nKV16 ctx5 G1 rows1 offset0 sessions0: 512 values, max error 7.22197319e-08\nKV32 ctx257 G8 rows2 offset1 sessions1: 8192 values, max error 7.42687376e-08\nKV16 ctx257 G8 rows2 offset1 sessions1: 8192 values, max error 7.42687376e-08\nKV32 ctx4096 G8 rows3 offset0 sessions0: 12288 values, max error 1.38394274e-08\nKV16 ctx4096 G8 rows3 offset0 sessions0: 12288 values, max error 1.38394274e-08\nKV32 ctx262144 G8 rows1 offset0 sessions0: 1024 values, max error 1.27579467e-09\nKV16 ctx262144 G8 rows1 offset0 sessions0: 1024 values, max error 1.27579467e-09\nPASS\n",
+      "stderr": ""
+    },
+    {
+      "name": "q36_f16_parity",
+      "command": [
+        "E:\\Coder\\LLM\\Strata\\build-native-baseline\\build-pr3641-f3f2136f-cuda132-sm120\\q36_f16_parity.exe"
+      ],
+      "exit_code": 0,
+      "wall_s": 0.35899999999674037,
+      "stdout": "matrix: 257 values, max error 5.1813345e-09, scale 0.075919455\nmatrix: 771 values, max error 8.7456122e-09, scale 0.1060264\nmatrix: 2056 values, max error 8.6021714e-09, scale 0.097735622\nmatrix: 257 values, max error 9.2598004e-08, scale 0.8402386\nmatrix: 771 values, max error 1.3233132e-07, scale 0.61519683\nmatrix: 2056 values, max error 1.3349984e-07, scale 0.84228963\nmatrix: 257 values, max error 2.0067083e-07, scale 1.4046191\nmatrix: 771 values, max error 3.1997745e-07, scale 1.0345651\nmatrix: 2056 values, max error 2.8883979e-07, scale 1.2421656\ngrouped hidden: 4096 values, max error 6.633445e-08, scale 0.26488556\ngrouped output: 16384 values, max error 4.7694572e-08, scale 0.17981016\nempty groups: unchanged; PASS\n",
+      "stderr": ""
+    }
+  ],
+  "passed": true,
+  "started_at": "2026-10-23T02:10:20.587726+08:00",
+  "scope": "Existing upstream CUDA numeric tests and CPU model-layout test only; no HIP/SYCL or real-model long-context claim",
+  "finished_at": "2026-10-23T02:10:55.371701+08:00"
+}

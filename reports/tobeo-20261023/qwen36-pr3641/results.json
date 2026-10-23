@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-23",
+  "upstream_pr": 3641,
+  "revision": "f3f2136f194bdc42d07961bef0ce66b2811f58cb",
+  "exe_sha256": "af7bb496fac2fb3a94737474e0a58d1870a3bee8af9026749a3406921fd14b6b",
+  "implementation_author": "acrogenesis / upstream PR #3641; not an original kernel implementation by this report",
+  "source_unchanged": true,
+  "cuda_build_passed": true,
+  "cuda_architecture": "sm_120",
+  "cuda_toolkit": "13.2",
+  "backend_scope": "Windows CUDA only; HIP/SYCL not built or run locally",
+  "independent_oracles": [
+    {
+      "name": "model_family_test",
+      "exit_code": 0
+    },
+    {
+      "name": "q36_attn_parity",
+      "exit_code": 0
+    },
+    {
+      "name": "q36_f16_parity",
+      "exit_code": 0
+    }
+  ],
+  "real_model_gate": {
+    "case": "r0-l1024",
+    "prompt_tokens": 1025,
+    "kv": "FP32",
+    "mtp": 0,
+    "expert_slots": 64,
+    "output_tokens": 64,
+    "gqa_off_valid": true,
+    "gqa_on_valid": true,
+    "same_off_on_output": true,
+    "same_phase_b_prefix": true,
+    "output_sha256": "916be811c6156cb34a324fb194896f9449852fb5ffa25500e5df4d4107152d3e"
+  },
+  "daily_model_restored": true,
+  "performance_precondition_rejected": true,
+  "not_run": [
+    "16K real-model gate",
+    "five-pair alternating performance matrix",
+    "candidate GPU timeline",
+    "HIP/SYCL local builds",
+    "external issue/PR submission"
+  ],
+  "limit": "Real-model correctness scope is one 1K synthetic prompt and 64 outputs; no performance gain claimed in degraded-transfer conditions."
+}

@@ -1,5 +1,7 @@
 # 瓶颈观察与待验证假设
 
+2026-10-23 后续：已补 [1K/16K 的三个 Compute 指标](../../tobeo-20261023/qwen36-compute/README.md)与[1K CPU IP/环境诊断](../../tobeo-20261023/qwen36-profiling/README.md)。独立传输探针约 1.73 GB/s，低于历史约 25 GB/s；NVML/PnP 报告冲突、原因未定，正常条件的关键路径结论仍待复核。CPU 样本大量落在等待工作循环，不能将 GPU 空隙等同于专家数学计算。已有 [PR #3641](../../tobeo-20261023/qwen36-pr3641/README.md) 提供 FP32 GQA 开关，局部正确性验证通过；本轮优先验证已有方案，未声称自写内核或性能收益。以下保留最初观察。
+
 2026-10-22，RTX 5060 Ti 16GB、Windows 原生固定源码基线、Qwen3.6 UD-Q4_K_XL、64/256 固定专家槽位。实测依据和限制见[正式报告](README.md)，无 profiler 的速度依据仍为[阶段 B](../qwen36-context-curve/README.md)。
 
 已确认的现象：`k_attn_part` 从短上下文的小热点，变成长上下文中累计 GPU 耗时最高的 kernel。MTP 0 的均值从约 78.81 增至 891.43 μs/调用，而 native Q8 matvec 单次均值基本稳定。16K 的 attention 区间并集占所选 decode 窗口约 22.05%（MTP 0）或 34.45%（MTP 2）。这支持将下一项硬件计数分析集中在 attention，而不是同时修改多个算子。

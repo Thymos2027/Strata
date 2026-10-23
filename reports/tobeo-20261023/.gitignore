@@ -2,3 +2,5 @@
 !.gitignore
 !README.md
 !qwen36-compute/
+!qwen36-profiling/
+!qwen36-pr3641/

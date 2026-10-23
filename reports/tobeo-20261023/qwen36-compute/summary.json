@@ -1,35 +1,58 @@
 {
   "date": "2026-10-23",
   "timezone": "Asia/Shanghai",
-  "probe_started_at": "2026-10-23T00:27:21.615342+08:00",
-  "run_id": "mtp0-application-smoke-01",
-  "case": "r0-l1024",
-  "replay_mode": "application",
-  "application_passes": 1,
-  "validation_passed": true,
-  "output_tokens": 64,
-  "same_output_as_phase_b": true,
-  "daily_model_restored": true,
-  "export": {
-    "one_kernel": true,
-    "shape_matches": true,
-    "scope": "smoke",
-    "metrics": {
-      "gpu__time_duration.sum": "82,144",
-      "dram__bytes_op_read.sum": "4,271,104",
-      "dram__bytes_op_write.sum": "0"
+  "scope": "Two contexts, one selected invocation each; cold-cache diagnostics, not throughput",
+  "records": [
+    {
+      "run": "mtp0-application-smoke-01",
+      "case": "r0-l1024",
+      "prompt_tokens": 1025,
+      "mtp": 0,
+      "cache_control": "all",
+      "replay_mode": "application",
+      "passes": 1,
+      "grid": "(5, 16, 1)",
+      "block": "(256, 1, 1)",
+      "duration_us": 82.144,
+      "dram_read_bytes": 4271104,
+      "dram_write_bytes": 0,
+      "device_l2_bytes": 33554432,
+      "generated_tokens": 64,
+      "same_output_as_phase_b": true,
+      "output_sha256": "916be811c6156cb34a324fb194896f9449852fb5ffa25500e5df4d4107152d3e",
+      "prompt_sha256": "f8c9fc3607d833a7c3d03e85bc52a11d86017e89663b2ed562b1837236cb0631",
+      "exe_sha256": "7abadfdbac3888b520cb00be77a5f2e70887acc95c8b98ab45316726f78a728b",
+      "source_revision": "83e6b05cd7b97ee194f330f0247faa76deb73f1b",
+      "report_sha256": "6d81b74290349e47dd9883ad68dccda6cecf6d07af883a9fe94165331ca7fb9a",
+      "daily_model_restored": true
     },
-    "metric_units": {
-      "gpu__time_duration.sum": "ns",
-      "dram__bytes_op_read.sum": "byte",
-      "dram__bytes_op_write.sum": "byte"
-    },
-    "note": "Smoke metrics do not establish L2, stalls or occupancy; full sections require further review."
+    {
+      "run": "mtp0-application-smoke-02",
+      "case": "r0-l16384",
+      "prompt_tokens": 16385,
+      "mtp": 0,
+      "cache_control": "all",
+      "replay_mode": "application",
+      "passes": 1,
+      "grid": "(65, 16, 1)",
+      "block": "(256, 1, 1)",
+      "duration_us": 874.176,
+      "dram_read_bytes": 91881216,
+      "dram_write_bytes": 1098752,
+      "device_l2_bytes": 33554432,
+      "generated_tokens": 64,
+      "same_output_as_phase_b": true,
+      "output_sha256": "e50a7d7e5c57e05208833b7903e0feb0f7b060896e81eb43995b030360ba1612",
+      "prompt_sha256": "27296bac175f6162cbd64c8698a32c1833a662f8a9357cd467893931ee6517e7",
+      "exe_sha256": "7abadfdbac3888b520cb00be77a5f2e70887acc95c8b98ab45316726f78a728b",
+      "source_revision": "83e6b05cd7b97ee194f330f0247faa76deb73f1b",
+      "report_sha256": "a9d4d1c4423195106372650438098194d5e85c713fde2a418ccafde9d8334aa9",
+      "daily_model_restored": true
+    }
+  ],
+  "ratios_16k_over_1k": {
+    "duration": 10.641994546162836,
+    "dram_read": 21.51228722128986
   },
-  "source_revision": "83e6b05cd7b97ee194f330f0247faa76deb73f1b",
-  "exe_sha256": "7abadfdbac3888b520cb00be77a5f2e70887acc95c8b98ab45316726f78a728b",
-  "ncu_report_sha256": "6d81b74290349e47dd9883ad68dccda6cecf6d07af883a9fe94165331ca7fb9a",
-  "scope": "One invocation at 1K/MTP0; no 16K, L2, stalls, occupancy or end-to-end improvement established",
-  "legacy_archive": "E:\\Coder\\LLM\\Strata\\reports\\tobeo-20261022\\qwen36-compute\\mtp0-application-smoke-01",
-  "copied_file_hashes_verified": true
+  "limits": "No repetition distribution or proof of DRAM saturation. L2/L1/occupancy and CPU analysis are separate."
 }

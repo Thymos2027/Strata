@@ -25,6 +25,9 @@ import run_curve as baseline
 SECTIONS = ['LaunchStats','SpeedOfLight','MemoryWorkloadAnalysis','MemoryWorkloadAnalysis_Tables',
             'SchedulerStats','WarpStateStats','Occupancy']
 SMOKE_METRICS = ['gpu__time_duration.sum','dram__bytes_op_read.sum','dram__bytes_op_write.sum']
+MEMORY_METRICS = ['lts__t_sector_hit_rate.pct','l1tex__t_sectors_pipe_lsu_mem_global_op_ld.sum',
+                  'l1tex__t_requests_pipe_lsu_mem_global_op_ld.sum',
+                  'sm__warps_active.avg.pct_of_peak_sustained_active']
 SHANGHAI = timezone(timedelta(hours=8),'Asia/Shanghai')
 
 
@@ -64,15 +67,16 @@ def wait_for_capture(process, directory, timeout):
             print(f'[{directory.name}] {time.monotonic()-started:.0f}/{timeout}s: {latest}',flush=True)
 
 
-def command(ncu,selection,case,directory,replay_mode='application',scope='smoke'):
+def command(ncu,selection,case,directory,replay_mode='application',scope='smoke',cache_control='all'):
     cmd = [ncu,'--target-processes','all','--kernel-name-base','function',
            '--kernel-name',selection['kernel_name'],'--launch-skip',str(selection['launch_skip']),
-           '--launch-count','1','--replay-mode',replay_mode,'--cache-control','all','--clock-control','none',
+           '--launch-count','1','--replay-mode',replay_mode,'--cache-control',cache_control,'--clock-control','none',
            '--export',str(directory/'attention')]
     if replay_mode == 'application':
         cmd.extend(['--app-replay-match','grid','--app-replay-mode','strict'])
-    if scope == 'smoke':
-        cmd.extend(['--metrics',','.join(SMOKE_METRICS)])
+    if scope in ('smoke','memory'):
+        metrics = SMOKE_METRICS + (MEMORY_METRICS if scope == 'memory' else [])
+        cmd.extend(['--metrics',','.join(metrics)])
     else:
         for section in SECTIONS:
             cmd.extend(['--section',section])
@@ -98,14 +102,17 @@ def validate_export(raw_csv,selected,scope):
     if float(row.get('gpu__time_duration.sum','nan').replace(',','')) <= 0:
         raise RuntimeError('Nonpositive kernel duration; report is not a valid measurement')
     import math
-    for metric in SMOKE_METRICS:
+    required = SMOKE_METRICS + (MEMORY_METRICS if scope == 'memory' else [])
+    for metric in required:
         value = float(row.get(metric,'nan').replace(',',''))
         if not math.isfinite(value) or value < 0:
             raise RuntimeError('Missing/invalid hardware metric: '+metric)
+        if (metric.endswith('.pct') or '.pct_of_peak' in metric) and value>100:
+            raise RuntimeError('Percentage outside expected range: '+metric)
     return {'one_kernel':True,'shape_matches':True,'scope':scope,
-            'metrics':{k:row[k] for k in SMOKE_METRICS},
-            'metric_units':{k:units.get(k,'unknown') for k in SMOKE_METRICS},
-            'note':'Smoke metrics do not establish L2, stalls or occupancy; full sections require further review.'}
+            'metrics':{k:row[k] for k in required},
+            'metric_units':{k:units.get(k,'unknown') for k in required},
+            'note':'Selected counters describe one invocation; stalls, critical path and full-section completeness require separate validation.'}
 
 
 def main():
@@ -115,14 +122,16 @@ def main():
     parser.add_argument('--capture-timeout',type=int,default=3600,
                         help='Maximum seconds per context capture, including load and warm-up (default: 3600)')
     parser.add_argument('--replay-mode',choices=['application','kernel'],default='application')
-    parser.add_argument('--scope',choices=['smoke','full'],default='smoke')
+    parser.add_argument('--scope',choices=['smoke','memory','full'],default='smoke')
+    parser.add_argument('--cache-control',choices=['all','none'],default='all')
     parser.add_argument('--case',choices=['r0-l1024','r0-l16384','both'],default='r0-l1024')
     args = parser.parse_args()
     started = datetime.now(SHANGHAI)
     run_root = archive_root(started)
     if args.capture_timeout <= 0:
         parser.error('--capture-timeout must be positive')
-    args.run_id = args.run_id or next_run_id('mtp0-'+args.replay_mode+'-'+args.scope,run_root)
+    prefix = 'mtp0-'+args.replay_mode+'-'+args.scope+('-cache-none' if args.cache_control=='none' else '')
+    args.run_id = args.run_id or next_run_id(prefix,run_root)
     if not re.fullmatch(r'[a-zA-Z0-9-]+',args.run_id):
         parser.error('--run-id must contain letters, numbers and hyphens')
     if evidence_exists(args.run_id,run_root):
@@ -131,7 +140,7 @@ def main():
     selection = json.loads((OUT/'kernel-selection.json').read_text())
     run_dir = run_root/args.run_id
     plans = [{'case':c['case'],'expected_shape':c['selected'],
-              'command':command(installed['command'],selection,c['case'],run_dir/c['case'],args.replay_mode,args.scope)}
+              'command':command(installed['command'],selection,c['case'],run_dir/c['case'],args.replay_mode,args.scope,args.cache_control)}
              for c in selection['cases'] if args.case == 'both' or c['case'] == args.case]
     if args.dry_run:
         print(json.dumps({'run_directory':str(run_dir),'capture_timeout_s':args.capture_timeout,
@@ -139,7 +148,7 @@ def main():
     # Reserve the attempt before the probe. Failed preflights are attempts too.
     run_root.mkdir(parents=True,exist_ok=True)
     if not (run_root/'.gitignore').exists():
-        (run_root/'.gitignore').write_text('*\n!.gitignore\n!*.md\n!summary.json\n')
+        (run_root/'.gitignore').write_text('*\n!.gitignore\n!*.md\n!*.py\n!summary.json\n')
     run_dir.mkdir()
     timing = {'started_at':started.isoformat(),'timezone':'Asia/Shanghai',
               'archive_date':started.strftime('%Y-%m-%d'),'script_directory':str(OUT)}
@@ -147,7 +156,8 @@ def main():
     atexit.register(finish_timing,run_dir,timing)
     (run_dir/'plan.json').write_text(json.dumps(plans,indent=2))
     (run_dir/'settings.json').write_text(json.dumps({'capture_timeout_s':args.capture_timeout,
-        'replay_mode':args.replay_mode,'scope':args.scope,'case':args.case},indent=2))
+        'replay_mode':args.replay_mode,'scope':args.scope,'case':args.case,
+        'cache_control':args.cache_control},indent=2))
     print('Run ID: '+args.run_id+'; evidence: '+str(run_dir),flush=True)
     # Do this before any service change. A successful CUDA application alone is
     # insufficient: the probe must actually collect a hardware metric.

@@ -1,27 +1,30 @@
-# Qwen3.6：首次有效 Nsight Compute 最小采集
+# Qwen3.6：1K / 16K Nsight Compute 最小采集
 
-日期：2026-10-23，北京时间。RTX 5060 Ti 16GB、i7-12700、128GB RAM，驱动 610.88。接续 [10 月 22 日的准备与排障](../../tobeo-20261022/qwen36-compute/README.md)。本轮 application replay 成功，1 个 pass，正式请求输出 64 token，与阶段 B 前缀逐 token 一致。日常 Flash-Next 已恢复加载。
+日期：2026-10-23，北京时间。RTX 5060 Ti 16GB、i7-12700、128GB RAM，驱动 610.88。接续 [10 月 22 日的准备与排障](../../tobeo-20261022/qwen36-compute/README.md)。1K 与 16K 的 application replay 均成功，每个上下文 1 个 pass、正式输出 64 token，与阶段 B 对应前缀逐 token 一致。日常 Flash-Next 已恢复加载。
 
 ## 实际结果与范围
 
-固定源码 `83e6b05cd7b97ee194f330f0247faa76deb73f1b`，继续使用阶段 A 的 Windows 原生 exe，SHA-256 为 `7abadfdbac3888b520cb00be77a5f2e70887acc95c8b98ab45316726f78a728b`。工具、模型和其他参数见前日报告。1K / MTP 0：输入 1025 token、上限 32768、chunk 512、7 workers、64 专家槽位；实际 Graph 关闭。预热输出 64 token，正式请求输出 64 token。
+固定源码 `83e6b05cd7b97ee194f330f0247faa76deb73f1b`，继续使用阶段 A 的 Windows 原生 exe，SHA-256 为 `7abadfdbac3888b520cb00be77a5f2e70887acc95c8b98ab45316726f78a728b`。工具、模型和其他参数见前日报告。MTP 0、上限 32768、chunk 512、7 workers、64 专家槽位；既有 hybrid 配置实际关闭 Graph。预热输出 64 token，正式请求输出 64 token。
 
 过滤 `k_attn_part`，skip=760、count=1，application replay、strict/grid 匹配、cache-control=all、clock-control=none。只采三个 smoke 指标。
 
-| 检查或指标 | 实际结果 |
-| --- | --- |
-| 目标 kernel 数量 | 1 |
-| grid / block | (5, 16, 1) / (256, 1, 1)，与 Systems 一致 |
-| kernel GPU 耗时 | 82.144 μs |
-| DRAM 读字节 | 4,271,104 bytes |
-| DRAM 写字节 | 0 bytes |
-| 输入哈希、fresh、MTP、输出长度、输出前缀 | 全部通过 |
-| application pass 数 | 1 |
-| 原服务恢复 | 通过 |
+| 检查或指标 | 1K | 16K |
+| --- | --- | --- |
+| 实际输入 token | 1025 | 16385 |
+| 目标 kernel 数量 | 1 | 1 |
+| grid / block | (5, 16, 1) / (256, 1, 1) | (65, 16, 1) / (256, 1, 1) |
+| kernel GPU 耗时 | 82.144 μs | 874.176 μs |
+| DRAM 读字节 | 4,271,104 bytes | 91,881,216 bytes |
+| DRAM 写字节 | 0 bytes | 1,098,752 bytes |
+| 输入哈希、fresh、MTP、输出长度、输出前缀 | 全部通过 | 全部通过 |
+| application pass 数 | 1 | 1 |
+| 原服务恢复 | 通过 | 通过 |
 
-这是一个选定调用的计数，不是平均值。DRAM 写计数为零不代表 kernel 没有写入缓存或其他 GPU 内存层级。仅有三个指标不足以判断访存瓶颈；16K、L2、stall、occupancy 均未完成，不能据此宣称优化收益。
+每个上下文只测一个选定调用，不是平均值。16K/1K 的耗时比为 10.642、DRAM 读取比为 21.512；尚无重复分布。工具记录的 L2 容量为 33,554,432 bytes。DRAM 写计数为零不代表 kernel 没有写入缓存或其他 GPU 内存层级。仅有三个指标不足以判断带宽饱和或最终访存瓶颈；L2 命中、L1 访问效率、stall、occupancy 均未完成。
 
-公开的小型结果见 [summary.json](summary.json)，包含单位、验证范围和报告 SHA-256。原始 CSV 的自动缩放单位分别是 us、Mbyte、byte；本轮重新导出 `metrics-base.csv`，显式使用 `--print-units base`，得到 82,144 ns 和 4,271,104 byte。后续脚本也显式导出基础单位，并在验证结果中保留单位，避免只读数值产生误解。
+随后同日发现主机到 GPU 的传输吞吐异常，见[独立控制与诊断](../qwen36-profiling/README.md)。本页保留有效的隔离 kernel 数据，不将它与旧日无 profiler 测量直接拼成 A/B，也不据此推断正常传输条件的端到端收益。
+
+公开的小型结果见 [summary.json](summary.json)，包含基础单位、两个上下文、验证范围和报告 SHA-256，由 `summarize_contexts.py` 核对后生成。第一份 CSV 的自动缩放单位分别是 us、Mbyte、byte；重新导出 `metrics-base.csv` 得到 82,144 ns 和 4,271,104 byte。16K 及后续脚本显式使用 `--print-units base`，验证记录也保留单位。
 
 ## 日期与原始证据
 
@@ -35,10 +38,12 @@
 
 用户管理员终端的探针实测 `process_is_admin=true`；2026-10-23 检查时代理自身进程的 `IsUserAnAdmin()` 为 false。两者是不同进程，管理员终端的权限不会自动传给已运行的代理。脚本、离线 NCU 报告导出、结果核对和归档由代理直接执行；本机尚未给普通用户开放计数权限，因此新的 GPU 硬件采集仍需有权限的执行进程。
 
-下一项应先做 **16K、相同三个指标**，保持采集口径一致；之后再根据结果扩展 L2/stall/occupancy，逐项验证，避免立即恢复七个 section。入口仍为：
+随后以管理员身份重启宿主，代理在 01:10 的直接检测为 true，实际计数探针 `agent-permission-20261023-011026` 退出 0 并生成报告。16K 的 `mtp0-application-smoke-02` 由代理直接完成，不再需要用户复制采集命令。
+
+下一项先恢复并复核环境，然后分批补 1K/16K 的 L2/L1 及活跃 warp 指标，避免立即恢复七个 section。`memory` 分组的七个完整指标名已在本机工具目录中找到；这只是可用性检查，尚未成功采集该分组。恢复后的入口为：
 
 ```powershell
-& 'E:\Coder\LLM\Strata\reports\tobeo-20261022\qwen36-compute\collect.ps1' -Case r0-l16384
+& 'E:\Coder\LLM\Strata\reports\tobeo-20261022\qwen36-compute\collect.ps1' -Scope memory -Case both -CaptureTimeout 5400
 ```
 
-这是下一步命令，尚未执行。本轮只完成 1K 最小采集；研究计划的瓶颈结论和优化交付项继续保留未勾选。
+这是待执行命令。`-CacheControl none` 也已准备，用于后续与冷缓存计数分开做对照，尚未运行。当前仅完成两个上下文的三个最小指标；研究计划的最终瓶颈结论和优化交付项继续保留未勾选。
