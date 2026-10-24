@@ -2,6 +2,8 @@
 
 日期：2026-10-22。接续[阶段 B 上下文曲线](../qwen36-context-curve/README.md)。本目录保存工具准备、采集驱动及真实执行状态，不把准备完成当作 profiling 完成。
 
+后续状态（2026-10-23）：1K/16K 的三个 Compute 指标及 1K CPU IP/PDB 解析已有后续结果，但同日 HtoD 约 1.73 GB/s 的异常尚未恢复，完整访存和关键路径归因仍未完成。同步后的当前主线为 `7ddc17a3` / v0.2.3.1；后续执行以[总计划](../../INFERENCE_RESEARCH_PLAN.md)为准，以下保留当日 Systems 证据和原始边界。
+
 ## 目标与采集范围
 
 选取阶段 B repetition 0 的 1K、16K 输入，分别运行 MTP 0/2，固定相同源码二进制、模型、32K 配置上限、512 prompt chunk、7 workers、64 专家槽位及贪婪协议参数。每个采集进程重新加载引擎，先做引擎 warm-up，再用另一份约 1K 输入生成 64 token，最后生成 64 token，并采集首 token 之后的 decode。每条输出与阶段 B 对应请求的前 64 token 核对。这是短窗口诊断，正式吞吐仍使用阶段 B 的 256-token、三次重复矩阵。

@@ -1,0 +1,34 @@
+[
+  {
+    "Time": "2026-10-23T01:46:22.4695017+08:00",
+    "Id": 153,
+    "Data": [
+      "\\Device\\UVMLiteProcess28",
+      "Error occurred on GPUID: 100"
+    ]
+  },
+  {
+    "Time": "2026-10-22T13:26:04.7566590+08:00",
+    "Id": 153,
+    "Data": [
+      "\\Device\\UVMLiteProcess21",
+      "Restarting TDR occurred on GPUID:100"
+    ]
+  },
+  {
+    "Time": "2026-10-22T13:26:04.2379413+08:00",
+    "Id": 153,
+    "Data": [
+      "\\Device\\UVMLiteProcess21",
+      "Reset TDR occurred on GPUID:100"
+    ]
+  },
+  {
+    "Time": "2026-10-22T13:26:01.3971729+08:00",
+    "Id": 153,
+    "Data": [
+      "\\Device\\UVMLiteProcess21",
+      "Resetting TDR occurred on GPUID:100"
+    ]
+  }
+]

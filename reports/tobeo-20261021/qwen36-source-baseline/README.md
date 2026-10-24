@@ -112,7 +112,9 @@ wsl -d Ubuntu -- python3 -u /mnt/e/Coder/LLM/Strata/reports/tobeo-20261021/qwen3
 
 **Not run / 边界：** Windows 原生源码构建、HIP/SYCL、独立 llama.cpp oracle、日常动态专家布局的跨臂 parity、auto chunk、视觉、并发、长上下文、完整质量与长期稳定性。未安装或运行 Nsight，尚无 profiler trace 或正式速度 A/B。完整原生测试套件没有启用，不能把本次选定检查称为全量 CTest 通过。
 
-下一步按计划阶段 B，使用同一源码与工具链准备固定最大上下文的 1K/4K/8K/16K 曲线；输入与输出需容纳于新配置，记录实际布局。不要直接拿本次 8K 上限配置发送 16K 输入。当前基线阶段已完成，没有开始更改 attention 内核。
+后续状态（2026-10-23）：这里原定的阶段 B 已完成，见[Windows 原生上下文曲线](../../tobeo-20261022/qwen36-context-curve/README.md)；阶段 C 也已有 Systems 与部分 Compute 证据。本文固定的旧 revision 仍是历史构建证据，不是同步后 `7ddc17a3` / v0.2.3.1 的当前基线。新的执行入口见[总计划](../../INFERENCE_RESEARCH_PLAN.md)。
+
+原下一步为：按计划阶段 B，使用同一源码与工具链准备固定最大上下文的 1K/4K/8K/16K 曲线；输入与输出需容纳于新配置，记录实际布局。不要直接拿本次 8K 上限配置发送 16K 输入。该项现已按上述范围完成；当前仍没有自己的 attention 内核改动。
 
 本目录 `.gitignore` 仅允许报告、脚本和忽略规则进入 Git。本机 JSON、日志保留在磁盘；如要提交上游，需要将必要的小型原始证据脱敏后另行纳入报告 PR。
 

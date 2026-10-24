@@ -1,0 +1,6 @@
+# Keep the dated report index and selected public artifacts only.
+*
+!.gitignore
+!README.md
+!pcie-root-cause/
+!strata-restart/

@@ -1,0 +1,29 @@
+{
+  "nvmlDeviceGetPcieSpeed": {
+    "rc": 0,
+    "value": 32000
+  },
+  "nvmlDeviceGetPcieLinkMaxSpeed": {
+    "rc": 0,
+    "value": 5
+  },
+  "nvmlDeviceGetCurrPcieLinkGeneration": {
+    "rc": 0,
+    "value": 1
+  },
+  "nvmlDeviceGetMaxPcieLinkGeneration": {
+    "rc": 0,
+    "value": 1
+  },
+  "nvmlDeviceGetGpuMaxPcieLinkGeneration": {
+    "rc": 0,
+    "value": 1
+  },
+  "nvmlDeviceGetHostMaxPcieLinkGeneration": {
+    "unavailable": true
+  },
+  "nvmlDeviceGetPcieReplayCounter": {
+    "rc": 0,
+    "value": 0
+  }
+}

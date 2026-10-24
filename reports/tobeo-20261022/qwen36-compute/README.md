@@ -1,6 +1,6 @@
 # 阶段 C：Nsight Compute 预检与采集准备
 
-后续进展：北京时间 2026-10-23，application replay 的 1K 最小采集已成功，见[当天结果](../../tobeo-20261023/qwen36-compute/README.md)。以下保留准备与失败排障的历史范围。采集脚本仍在本目录，但后续结果和探针证据按北京时间的运行开始日期另行归档，`timing.json` 记录起止时间。
+后续进展：北京时间 2026-10-23，application replay 的 1K/16K 三项最小采集均已成功，见[当天结果](../../tobeo-20261023/qwen36-compute/README.md)。同日 HtoD 异常使最终归因和性能 A/B 继续暂缓；同步后的当前主线基线也尚未建立。以下保留准备与失败排障的历史范围。采集脚本仍在本目录，但后续结果和探针证据按北京时间的运行开始日期另行归档，`timing.json` 记录起止时间。
 
 日期：2026-10-22。接续 [Systems 报告](../qwen36-profiling/README.md)和[瓶颈假设](../qwen36-profiling/bottleneck-notes.md)。**管理员计数权限已通过；第 04 次在 kernel replay 的显存保存/恢复流程报 LaunchFailed，同期驱动记录 TDR。留下的报告无效，尚无可解释的模型硬件计数。** 当前入口改为 application replay、1K、三个硬件指标的最小验证，等待管理员终端实测。引擎未修改，日常模型已恢复。
 

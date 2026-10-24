@@ -1,0 +1,4 @@
+# Runtime responses and logs stay local; publish only the written review.
+*
+!.gitignore
+!*.md

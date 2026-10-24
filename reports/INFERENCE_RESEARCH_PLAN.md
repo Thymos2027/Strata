@@ -4,11 +4,11 @@
 
 设备依据已有记录：i7-12700、RTX 5060 Ti 16GB、128GB DDR4、Windows 11。主线使用现有 Qwen3.6-35B-A3B UD-Q4_K_XL，Flash-Next IQ3_S 用作混合调度研究的另一条路径。本计划不要求重新下载模型。
 
-这是一份待执行计划，不是性能报告。下面的时间是工作安排建议，验收条件是完成标准；没有承诺加速幅度或 PR 合并。上游状态来自 2026-10-21 的调研，实施前需重新核对。
+这是一份待执行计划，不是性能报告。下面的时间是工作安排建议，验收条件是完成标准；没有承诺加速幅度或 PR 合并。上游状态最初来自 2026-10-21 的调研，已在 2026-10-23 同步 `upstream/main` 后复核到 `7ddc17a3`（v0.2.3.1；发布引擎 0.1.48）。每次实施前仍需重新核对。
 
 ## 1. 目标与取舍
 
-主项目：**定位 Qwen3.6 长上下文 decode 的瓶颈，完成一个有测量依据的 attention 优化。**
+主项目：**定位 Qwen3.6 长上下文 decode 的瓶颈，先完成已有 attention 方案的独立硬件验证；只有确认仍有不重叠的改动空间并取得范围认同后，才实现自己的优化。**
 
 小贡献：**围绕 MTP 实际执行状态，补一项有用的诊断、回归验证或 benchmark。** 先检查是否与现有 PR 重叠，再决定具体改动。
 
@@ -21,6 +21,14 @@
 | P2 | Flash-Next 端到端亲和性校准 | 混合核调度、自动调优、实验设计 | attention 在本机不占关键路径，或主项目完成后 |
 | P3 | 多会话缓存与复制成本 | Serving、状态管理、RAM 与延迟取舍 | 有稳定的交错会话 workload 后 |
 | P4 | Flash-Next CUDA Graph 与执行空隙 | CPU/GPU 时间线、执行重叠 | trace 证明空隙确实值得优化后 |
+
+### 2026-10-23 上游同步后的执行约束
+
+- 当前主线是 `7ddc17a3` / v0.2.3.1。相对本机原 `9de04cd4` 基线，Qwen3.6 的 `q36_engine.cu` 只有一处 CUDA 12.0/12.1 兼容性修复；这没有推翻既有 attention 假设，但旧构建只能作为历史证据。新的性能结论必须先建立当前主线的源码基线。
+- [PR #3641](https://github.com/Niko1221/Strata/pull/3641) 仍 open、非 draft，固定 head `f3f2136f`，base `011c9e6`；[PR #3678](https://github.com/Niko1221/Strata/pull/3678) 仍 open、draft，base 同为 `011c9e6`。2026-10-23 GitHub API 对两者均返回当前不可直接合并；[#3700](https://github.com/Niko1221/Strata/issues/3700) 仍 open。旧 head 的验证可以保留为历史兼容性证据，但不能直接作为 v0.2.3.1 的候选性能结论。
+- v0.2.3 在未显式设置时会根据模型加载后的空闲 RAM 自动分配 conversation cache；`--conversation-cache-mib 0` 才明确关闭。所有缓存 A/B 必须显式固定 0、4 GiB、8 GiB 等预算，并记录引擎最终日志，不能再把“未传参数”解释为关闭。
+- v0.2.3 调整了 Work profile 的 CPU worker、显存余量和内存默认值，并新增 Flash-Next 专用、默认关闭的 DFlash2。跨版本或跨 profile 比较必须显式固定 worker、专家布局、缓存、MTP/drafting、上下文和采样；DFlash2 不是 Qwen3.6 attention 方案。
+- 标准 benchmark 协议仍标记为 draft。当前 Qwen3.6 专项 workload 继续称为本机实验，不冒充标准 benchmark。
 
 ## 2. 已有证据与不能混用的结论
 
@@ -44,6 +52,8 @@ Flash-Next 已有固定实际缓存后的 P 核收益记录。该记录支持继
 ## 3. 阶段 A：建立可信的构建与测量环境
 
 完成记录：[WSL 基线（2026-10-21）](tobeo-20261021/qwen36-source-baseline/README.md)、[Windows 原生基线（2026-10-22）](tobeo-20261022/windows-native-baseline/README.md)。后续本机优化以 Windows 原生构建为参考，WSL 结果独立保存。已确认原生源码构建、选定测试及固定布局下四臂一致性；具体范围和未测项以两份报告为准。阶段 C 已更正 Graph 覆盖范围：64/256 专家槽位触发 hybrid 并自动关闭主模型/MTP Graph，不能把历史组名当作真实 Graph 执行证据。
+
+上述两份基线固定的是旧 revision，完成状态只说明当时的构建链路可信。同步 v0.2.3.1 后须新增一份 `7ddc17a3` 基线；不要覆盖旧目录，也不要用“Qwen3.6 核心改动很少”替代重新构建和门禁。
 
 建议用时：1–2 天。环境问题未解决时，不急于修改内核。
 
@@ -145,7 +155,7 @@ Flash-Next 的 `--stage-timing` 文档明确提示其统计限制，不能把 ke
 
 ### 第一版范围
 
-优先选择一个机制：K 读取的协作加载或 tile 布局。先保持 K/V 精度、缓存容量、专家预算和外部行为不变。
+若上游重叠仍存在，第一版先做 #3641 的当前主线兼容性与 Blackwell 验证，不自行重写同一 GQA 共享读取。只有作者更新后的候选或清晰归属的本地移植在 `7ddc17a3` 上通过门禁后，才做性能比较。若最终需要独立实现，优先选择一个未被现有 PR 覆盖的机制，并先在相关 issue 商定范围；继续保持 K/V 精度、缓存容量、专家预算和外部行为不变。
 
 确认第一项有用后，才考虑 GQA 的 KV tile 复用或其他独立优化。第一版不同时加入 KV 量化、MTP 策略、缓存分配和多会话调度。
 
@@ -200,7 +210,7 @@ Flash-Next 的 `--stage-timing` 文档明确提示其统计限制，不能把 ke
 
 ### 多会话缓存：先做收益与成本实验
 
-测试 A→A、A→B→A、A→B→C→A、长会话夹短请求、真实工具调用回合。比较关闭与可容纳快照的缓存预算，测 reused tokens、TTFT、保存/恢复时间、复制字节和 RAM 峰值。
+测试 A→A、A→B→A、A→B→C→A、长会话夹短请求、真实工具调用回合。比较显式关闭（`--conversation-cache-mib 0`）与可容纳快照的显式缓存预算，另设“未传参数”的 v0.2.3 自动预算观察臂；测 reused tokens、TTFT、保存/恢复时间、复制字节和 RAM 峰值。
 
 [#3493](https://github.com/Niko1221/Strata/issues/3493) 作者已反馈启用现有缓存解决不命中问题。另有 [#3584](https://github.com/Niko1221/Strata/pull/3584)、[#3565](https://github.com/Niko1221/Strata/pull/3565)、[#3517](https://github.com/Niko1221/Strata/pull/3517) 在做相关工作。先定位模板/token 前缀、状态、停车预算和复制成本，再决定是否有独立修复空间。
 
@@ -257,13 +267,16 @@ upstream-notes.md         # 查重、相关讨论、拟提交范围
 
 每次任务结束前复核本清单：已实际完成的项目打勾，并记录日期、证据与范围；部分完成保留未勾选并说明进度。后续扩展配置或 workload 时，已有勾选不替代新条件下的验证。
 
-最近复核：2026-10-23。阶段 A、阶段 B 最小矩阵及阶段 C 的原 Systems 时间线已完成；新增 1K/16K Compute 三指标、1K CPU IP/PDB 解析，以及上游 #3641 的 CUDA 构建/三个选定测试/真实 Q4 1K 对照。发现同日 HtoD 吞吐异常，NVML/PnP 报告冲突、具体原因未定，正常工况的完整 profiling 与五组性能 A/B 暂缓。Flash-Next 已恢复；按北京时间运行开始日期归档。
+最近复核：2026-10-23。已同步并审查 `upstream/main` `7ddc17a3` / v0.2.3.1 及相关实时 PR/Issue 状态。阶段 A、阶段 B 最小矩阵及阶段 C 的原 Systems 时间线是在旧 revision 上完成的历史证据；新增 1K/16K Compute 三指标、1K CPU IP/PDB 解析，以及上游 #3641 固定旧 head 的 CUDA 构建/三个选定测试/真实 Q4 1K 对照。发现同日 HtoD 吞吐异常，NVML/PnP 报告冲突、具体原因未定，当前主线基线、正常工况的完整 profiling 与五组性能 A/B 均未完成。Flash-Next 已恢复；按北京时间运行开始日期归档。
 
 - [x] 核对最新上游、相关讨论和工作区改动。
+  - 2026-10-23 同步后复核 `upstream/main` `7ddc17a3`（v0.2.3.1）：Qwen3.6 核心仅见 CUDA 12.0/12.1 编译兼容修复；v0.2.3 改变 conversation cache 自动预算及 Work profile 默认值。GitHub 实时状态确认 #3641/#3678/#3700 均未关闭或合并，前两者仍基于 `011c9e6` 且 API 返回当前不可直接合并；#3542 已更新到当前 base。审查结果已写入本计划和各执行入口，没有向外发送消息或修改上游。
   - 2026-10-23 通过 API 重新搜索 open/closed，阅读 #2464/#3700 后续评论，确认 #3641 已有 FP32 GQA 对照开关，#3678 也有重叠工作；固定 #3641 head f3f2136f 做已有方案验证，不另起重复实现。没有向外发送消息或提交 PR。
   - 2026-10-22 已核对工作区，重新读取 #2464 及后续评论，并查询包含 k_attn_part 的相关 PR（包括 #3084、#2698）；快照保留在阶段 B 目录。实验继续固定阶段 A revision，未声称运行最新 main；后续实现前仍需重新查重。
 - [x] 确认源码基线、工具链、模型哈希和独立构建目录。
   - 2026-10-21 至 2026-10-22 完成，见 [WSL 基线](tobeo-20261021/qwen36-source-baseline/README.md)与 [Windows 原生基线](tobeo-20261022/windows-native-baseline/README.md)。后续主用 Windows 原生构建。
+- [ ] 建立同步后 `7ddc17a3` / v0.2.3.1 的 Windows 原生源码基线。
+  - 2026-10-23 已完成代码差异与发布说明审查，但尚未重新构建或运行门禁。新基线须显式固定 worker、专家布局、conversation cache、MTP/drafting、上下文和采样；历史 `9de04cd4` 数据保留，不与新结果拼接。
 - [x] 跑通适用的基线正确性门禁。
   - Windows 原生：14 项选定测试通过；VERIFY 436,050 次比较、0 mismatch；当前内核验证、默认 Graph 请求、MTP 三组各 10/10 prompt 与参考逐 token 一致。固定 64/256 专家布局会自动关闭 Graph，故独立 Graph 路径仍未验证。范围为 8K 上限和短 prompt，未覆盖全量测试套件。
 - [x] 建立固定最大上下文的 1K/4K/8K/16K 实验矩阵。
@@ -278,6 +291,12 @@ upstream-notes.md         # 查重、相关讨论、拟提交范围
 - [x] 补齐 16K / MTP 0 的相同三个 Compute 指标。
   - 2026-10-23，代理直接运行；874.176 μs、DRAM 读 91,881,216 bytes、写 1,098,752 bytes，shape、64-token 前缀和服务恢复均通过，见[两上下文汇总](tobeo-20261023/qwen36-compute/summary.json)。每个上下文只测一个调用，不代表 L2/stall/occupancy 已完成。
 - [x] 检查同日环境漂移，独立核对主机到 GPU 的传输通路。
+  - 2026-10-24 [进一步定位](tobeo-20261024/pcie-root-cause/README.md)：核对原始事件，13:26:01–04 TDR 紧接 13:26:07 首次慢探针；卸载模型后独立 H2D=1.726、D2H=1.807、mapped read=1.608 GB/s，D2D=186.7、CPU memcpy=17.24 GB/s，抽查通过。复现 NVML RX 峰值高于有效 payload 带宽。优先怀疑 TDR 后持久驱动/设备传输状态；物理代际仍有报告冲突，未执行系统/设备复位，不将相关性记作根因已证实或环境已恢复。
+  - 2026-10-24 完成 HtoD 症状的[上游 issues 检索](tobeo-20261024/strata-restart/github-related-issues.md)，核查 #485/#2137/#2453 正文及评论；找到探针低估、Gen1 限速与同卡 decode 降速的相关报告，但未确认完全同因案例。未发布消息或执行新测量，不代表本机环境恢复。
+  - 2026-10-24 经用户授权重启日常 Strata：模型已加载，温度/功耗/利用率遥测恢复；启动 HtoD 仍为 1.7 GB/s，传输异常未恢复。见[重启验证](tobeo-20261024/strata-restart/README.md)。未改配置或系统设置，未新增 decode 测试，不将遥测恢复记作性能恢复。
+  - 2026-10-24 补查 Dashboard 遥测：旧服务 `/metrics` 温度/功耗等为空，而新进程用相同 `_Nvml` 读取成功，温度约 48°C；见[遥测核查](tobeo-20261023/qwen36-profiling/flash-next-slow-decode.md)。未重启或新增传输测量，不能确认与 HtoD 异常同源，环境恢复仍未完成。
+  - 2026-10-24 只读复核[引擎升级时间线](tobeo-20261023/qwen36-profiling/flash-next-slow-decode.md)：0.1.46 在 10 月 21 日升级后带宽正常，10 月 22 日 13:08 仍为 25.0 GB/s，13:26 同路径/版本/启动参数首次记录 1.7 GB/s。未做版本回滚 A/B，未确认异常触发原因，不新增阶段完成项。
+  - 2026-10-23 补查日常 Flash-Next 的 21:46 请求日志：177-token decode 为 26.5 tok/s，MTP 接受 87/130，当前启动探针 1.7 GB/s，且有显存余量告警。见[日常服务慢速核查](tobeo-20261023/qwen36-profiling/flash-next-slow-decode.md)。本轮仅核查已有日志，没有新增带宽/推理测量，也未确认换页或完成环境恢复。
   - 2026-10-23 20:17 再测为 1.732420997 GB/s，512 次 64-MiB pinned copy、抽查通过；负载时 NVML/PnP 冲突仍在，环境尚未恢复。证据为本机 `tobeo-20261023/qwen36-profiling/pcie-diagnostic-03/result.json`，范围与[无重启续做安排](tobeo-20261023/qwen36-profiling/no-reboot-next-steps.md)已记录。用户仅能远程操作，暂不安排重启或驱动维护；日常服务仍已加载。
   - 2026-10-23，无 profiler 控制 1K prefill 为 23,045.2 ms；两次 64-MiB copy 约 1.732/1.734 GB/s，卸载日常模型后仍慢；复现冻结引擎原始 256-MiB/四 burst 探针为 1.735 GB/s。NVML 负载报告 Gen1×8，PnP 速度编码仍为 5，底层原因未确定，见[环境诊断](tobeo-20261023/qwen36-profiling/README.md)。这完成的是异常识别，不是正常测量环境恢复。
 - [x] 对已有 FP32 GQA 方案完成本机局部构建与正确性验证。
@@ -286,4 +305,4 @@ upstream-notes.md         # 查重、相关讨论、拟提交范围
   - 2026-10-23 夜间：1K CPU IP 采到 10,870 个周期样本，本地 PDB 显示大量等待循环 IP，不能把 on-CPU 全算作专家数学计算；只有一个受环境异常影响会话中的短请求，不能建立正常 Gen5 的关键路径结论。16K CPU、L2/L1/stall/occupancy 与缓存状态对照待继续。
   - 继续使用[观察与待验证假设](tobeo-20261022/qwen36-profiling/bottleneck-notes.md)界定范围，不将 GPU 热点当作唯一瓶颈。权限、重复编号、超时、kernel replay/TDR 的历史排障见[原记录](tobeo-20261022/qwen36-compute/README.md)，不以早期失败覆盖后续成功，也不以三个计数代替最终归因。
 - [ ] 按正确性、配对测量和上游范围要求完成交付。
-  - 现有本地报告和续跑脚本已就绪；16K 实模门禁、至少五组交替配对和最终贡献范围仍待完成。主机到 GPU 的异常传输状态恢复前不填加速比，不把已有上游实现记作自写优化。
+  - 现有本地报告和续跑脚本已就绪；当前主线基线、#3641 当前主线兼容候选、16K 实模门禁、至少五组交替配对和最终贡献范围仍待完成。主机到 GPU 的异常传输状态恢复前不填加速比，不把旧 base 的候选结果当作当前发布结果，也不把已有上游实现记作自写优化。

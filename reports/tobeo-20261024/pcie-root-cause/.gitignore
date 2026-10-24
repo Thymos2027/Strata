@@ -1,0 +1,10 @@
+# Public report, reproducer and compact measurement output.
+*
+!.gitignore
+!README.md
+!*.py
+!*.cu
+!transfer-result.json
+!nvidia-events-all.json
+!nvml-extra.json
+!whea.json

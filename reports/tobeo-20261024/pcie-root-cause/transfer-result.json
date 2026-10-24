@@ -1,0 +1,649 @@
+{
+  "started_at": "2026-10-24T11:46:49.747920+08:00",
+  "exit_code": 0,
+  "samples": [
+    {
+      "time": "2026-10-24T11:46:49.798326+08:00",
+      "nvml": {
+        "util": 2,
+        "mem_used": 1664274432,
+        "mem_total": 17103323136,
+        "temp": 42,
+        "power": 11.107,
+        "power_limit": 180.0,
+        "pcie_gen": 1,
+        "pcie_gen_max": 1,
+        "pcie_width": 8,
+        "pcie_rx_mb": 233.6064453125,
+        "pcie_tx_mb": 26.7041015625
+      }
+    },
+    {
+      "time": "2026-10-24T11:46:50.108450+08:00",
+      "nvml": {
+        "util": 2,
+        "mem_used": 1920331776,
+        "mem_total": 17103323136,
+        "temp": 42,
+        "power": 11.107,
+        "power_limit": 180.0,
+        "pcie_gen": 1,
+        "pcie_gen_max": 1,
+        "pcie_width": 8,
+        "pcie_rx_mb": 5489.8310546875,
+        "pcie_tx_mb": 213.4072265625
+      }
+    },
+    {
+      "time": "2026-10-24T11:46:50.472641+08:00",
+      "nvml": {
+        "util": 100,
+        "mem_used": 1920331776,
+        "mem_total": 17103323136,
+        "temp": 43,
+        "power": 14.809,
+        "power_limit": 180.0,
+        "pcie_gen": 1,
+        "pcie_gen_max": 1,
+        "pcie_width": 8,
+        "pcie_rx_mb": 2275.337890625,
+        "pcie_tx_mb": 406.48828125
+      }
+    },
+    {
+      "time": "2026-10-24T11:46:50.814282+08:00",
+      "nvml": {
+        "util": 100,
+        "mem_used": 1920331776,
+        "mem_total": 17103323136,
+        "temp": 44,
+        "power": 22.763,
+        "power_limit": 180.0,
+        "pcie_gen": 1,
+        "pcie_gen_max": 1,
+        "pcie_width": 8,
+        "pcie_rx_mb": 2727.2275390625,
+        "pcie_tx_mb": 279.4677734375
+      }
+    },
+    {
+      "time": "2026-10-24T11:46:51.129393+08:00",
+      "nvml": {
+        "util": 100,
+        "mem_used": 1920331776,
+        "mem_total": 17103323136,
+        "temp": 44,
+        "power": 22.763,
+        "power_limit": 180.0,
+        "pcie_gen": 1,
+        "pcie_gen_max": 1,
+        "pcie_width": 8,
+        "pcie_rx_mb": 2426.7138671875,
+        "pcie_tx_mb": 269.123046875
+      }
+    },
+    {
+      "time": "2026-10-24T11:46:51.440418+08:00",
+      "nvml": {
+        "util": 100,
+        "mem_used": 1920331776,
+        "mem_total": 17103323136,
+        "temp": 44,
+        "power": 28.384,
+        "power_limit": 180.0,
+        "pcie_gen": 1,
+        "pcie_gen_max": 1,
+        "pcie_width": 8,
+        "pcie_rx_mb": 2721.119140625,
+        "pcie_tx_mb": 380.912109375
+      }
+    },
+    {
+      "time": "2026-10-24T11:46:51.768636+08:00",
+      "nvml": {
+        "util": 100,
+        "mem_used": 1919873024,
+        "mem_total": 17103323136,
+        "temp": 44,
+        "power": 28.877,
+        "power_limit": 180.0,
+        "pcie_gen": 1,
+        "pcie_gen_max": 1,
+        "pcie_width": 8,
+        "pcie_rx_mb": 2986.009765625,
+        "pcie_tx_mb": 262.654296875
+      }
+    },
+    {
+      "time": "2026-10-24T11:46:52.085480+08:00",
+      "nvml": {
+        "util": 100,
+        "mem_used": 1919873024,
+        "mem_total": 17103323136,
+        "temp": 44,
+        "power": 28.877,
+        "power_limit": 180.0,
+        "pcie_gen": 1,
+        "pcie_gen_max": 1,
+        "pcie_width": 8,
+        "pcie_rx_mb": 2931.9169921875,
+        "pcie_tx_mb": 198.5322265625
+      }
+    },
+    {
+      "time": "2026-10-24T11:46:52.412310+08:00",
+      "nvml": {
+        "util": 100,
+        "mem_used": 1919676416,
+        "mem_total": 17103323136,
+        "temp": 44,
+        "power": 28.918,
+        "power_limit": 180.0,
+        "pcie_gen": 1,
+        "pcie_gen_max": 1,
+        "pcie_width": 8,
+        "pcie_rx_mb": 2842.4716796875,
+        "pcie_tx_mb": 237.34765625
+      }
+    },
+    {
+      "time": "2026-10-24T11:46:52.723322+08:00",
+      "nvml": {
+        "util": 100,
+        "mem_used": 1919676416,
+        "mem_total": 17103323136,
+        "temp": 44,
+        "power": 28.986,
+        "power_limit": 180.0,
+        "pcie_gen": 1,
+        "pcie_gen_max": 1,
+        "pcie_width": 8,
+        "pcie_rx_mb": 3008.9013671875,
+        "pcie_tx_mb": 238.18359375
+      }
+    },
+    {
+      "time": "2026-10-24T11:46:53.036515+08:00",
+      "nvml": {
+        "util": 100,
+        "mem_used": 1919217664,
+        "mem_total": 17103323136,
+        "temp": 44,
+        "power": 28.986,
+        "power_limit": 180.0,
+        "pcie_gen": 1,
+        "pcie_gen_max": 1,
+        "pcie_width": 8,
+        "pcie_rx_mb": 2998.68359375,
+        "pcie_tx_mb": 220.9609375
+      }
+    },
+    {
+      "time": "2026-10-24T11:46:53.363821+08:00",
+      "nvml": {
+        "util": 100,
+        "mem_used": 1919217664,
+        "mem_total": 17103323136,
+        "temp": 44,
+        "power": 29.099,
+        "power_limit": 180.0,
+        "pcie_gen": 1,
+        "pcie_gen_max": 1,
+        "pcie_width": 8,
+        "pcie_rx_mb": 2430.271484375,
+        "pcie_tx_mb": 250.41796875
+      }
+    },
+    {
+      "time": "2026-10-24T11:46:53.675178+08:00",
+      "nvml": {
+        "util": 100,
+        "mem_used": 1919217664,
+        "mem_total": 17103323136,
+        "temp": 44,
+        "power": 29.099,
+        "power_limit": 180.0,
+        "pcie_gen": 1,
+        "pcie_gen_max": 1,
+        "pcie_width": 8,
+        "pcie_rx_mb": 3315.3212890625,
+        "pcie_tx_mb": 206.5234375
+      }
+    },
+    {
+      "time": "2026-10-24T11:46:53.987870+08:00",
+      "nvml": {
+        "util": 100,
+        "mem_used": 1919021056,
+        "mem_total": 17103323136,
+        "temp": 44,
+        "power": 29.265,
+        "power_limit": 180.0,
+        "pcie_gen": 1,
+        "pcie_gen_max": 1,
+        "pcie_width": 8,
+        "pcie_rx_mb": 2736.5703125,
+        "pcie_tx_mb": 395.287109375
+      }
+    },
+    {
+      "time": "2026-10-24T11:46:54.318891+08:00",
+      "nvml": {
+        "util": 100,
+        "mem_used": 1919021056,
+        "mem_total": 17103323136,
+        "temp": 44,
+        "power": 29.37,
+        "power_limit": 180.0,
+        "pcie_gen": 1,
+        "pcie_gen_max": 1,
+        "pcie_width": 8,
+        "pcie_rx_mb": 2979.89453125,
+        "pcie_tx_mb": 197.3486328125
+      }
+    },
+    {
+      "time": "2026-10-24T11:46:54.628849+08:00",
+      "nvml": {
+        "util": 100,
+        "mem_used": 1919021056,
+        "mem_total": 17103323136,
+        "temp": 44,
+        "power": 29.37,
+        "power_limit": 180.0,
+        "pcie_gen": 1,
+        "pcie_gen_max": 1,
+        "pcie_width": 8,
+        "pcie_rx_mb": 4614.853515625,
+        "pcie_tx_mb": 269.818359375
+      }
+    },
+    {
+      "time": "2026-10-24T11:46:54.963607+08:00",
+      "nvml": {
+        "util": 100,
+        "mem_used": 1919021056,
+        "mem_total": 17103323136,
+        "temp": 44,
+        "power": 29.409,
+        "power_limit": 180.0,
+        "pcie_gen": 1,
+        "pcie_gen_max": 1,
+        "pcie_width": 8,
+        "pcie_rx_mb": 3113.412109375,
+        "pcie_tx_mb": 264.4775390625
+      }
+    },
+    {
+      "time": "2026-10-24T11:46:55.301531+08:00",
+      "nvml": {
+        "util": 100,
+        "mem_used": 1919021056,
+        "mem_total": 17103323136,
+        "temp": 44,
+        "power": 29.43,
+        "power_limit": 180.0,
+        "pcie_gen": 1,
+        "pcie_gen_max": 1,
+        "pcie_width": 8,
+        "pcie_rx_mb": 4.3271484375,
+        "pcie_tx_mb": 2984.8173828125
+      }
+    },
+    {
+      "time": "2026-10-24T11:46:55.612620+08:00",
+      "nvml": {
+        "util": 100,
+        "mem_used": 1919021056,
+        "mem_total": 17103323136,
+        "temp": 44,
+        "power": 29.43,
+        "power_limit": 180.0,
+        "pcie_gen": 1,
+        "pcie_gen_max": 1,
+        "pcie_width": 8,
+        "pcie_rx_mb": 6.4892578125,
+        "pcie_tx_mb": 2986.8642578125
+      }
+    },
+    {
+      "time": "2026-10-24T11:46:55.923977+08:00",
+      "nvml": {
+        "util": 99,
+        "mem_used": 1919021056,
+        "mem_total": 17103323136,
+        "temp": 45,
+        "power": 29.057,
+        "power_limit": 180.0,
+        "pcie_gen": 1,
+        "pcie_gen_max": 1,
+        "pcie_width": 8,
+        "pcie_rx_mb": 7.3662109375,
+        "pcie_tx_mb": 2889.7099609375
+      }
+    },
+    {
+      "time": "2026-10-24T11:46:56.234882+08:00",
+      "nvml": {
+        "util": 100,
+        "mem_used": 1919021056,
+        "mem_total": 17103323136,
+        "temp": 45,
+        "power": 28.735,
+        "power_limit": 180.0,
+        "pcie_gen": 1,
+        "pcie_gen_max": 1,
+        "pcie_width": 8,
+        "pcie_rx_mb": 167.287109375,
+        "pcie_tx_mb": 2823.4384765625
+      }
+    },
+    {
+      "time": "2026-10-24T11:46:56.546817+08:00",
+      "nvml": {
+        "util": 100,
+        "mem_used": 1919021056,
+        "mem_total": 17103323136,
+        "temp": 45,
+        "power": 28.735,
+        "power_limit": 180.0,
+        "pcie_gen": 1,
+        "pcie_gen_max": 1,
+        "pcie_width": 8,
+        "pcie_rx_mb": 2.8046875,
+        "pcie_tx_mb": 2900.716796875
+      }
+    },
+    {
+      "time": "2026-10-24T11:46:56.858806+08:00",
+      "nvml": {
+        "util": 100,
+        "mem_used": 1919021056,
+        "mem_total": 17103323136,
+        "temp": 45,
+        "power": 28.557,
+        "power_limit": 180.0,
+        "pcie_gen": 1,
+        "pcie_gen_max": 1,
+        "pcie_width": 8,
+        "pcie_rx_mb": 12.7548828125,
+        "pcie_tx_mb": 2921.4560546875
+      }
+    },
+    {
+      "time": "2026-10-24T11:46:57.170126+08:00",
+      "nvml": {
+        "util": 100,
+        "mem_used": 1918758912,
+        "mem_total": 17103323136,
+        "temp": 45,
+        "power": 28.557,
+        "power_limit": 180.0,
+        "pcie_gen": 1,
+        "pcie_gen_max": 1,
+        "pcie_width": 8,
+        "pcie_rx_mb": 14.73828125,
+        "pcie_tx_mb": 3020.76953125
+      }
+    },
+    {
+      "time": "2026-10-24T11:46:57.482827+08:00",
+      "nvml": {
+        "util": 100,
+        "mem_used": 1918758912,
+        "mem_total": 17103323136,
+        "temp": 45,
+        "power": 28.405,
+        "power_limit": 180.0,
+        "pcie_gen": 1,
+        "pcie_gen_max": 1,
+        "pcie_width": 8,
+        "pcie_rx_mb": 19.0419921875,
+        "pcie_tx_mb": 2934.7900390625
+      }
+    },
+    {
+      "time": "2026-10-24T11:46:57.797141+08:00",
+      "nvml": {
+        "util": 100,
+        "mem_used": 1917513728,
+        "mem_total": 17103323136,
+        "temp": 45,
+        "power": 28.411,
+        "power_limit": 180.0,
+        "pcie_gen": 1,
+        "pcie_gen_max": 1,
+        "pcie_width": 8,
+        "pcie_rx_mb": 4.162109375,
+        "pcie_tx_mb": 3034.0634765625
+      }
+    },
+    {
+      "time": "2026-10-24T11:46:58.112396+08:00",
+      "nvml": {
+        "util": 100,
+        "mem_used": 1917513728,
+        "mem_total": 17103323136,
+        "temp": 45,
+        "power": 28.411,
+        "power_limit": 180.0,
+        "pcie_gen": 1,
+        "pcie_gen_max": 1,
+        "pcie_width": 8,
+        "pcie_rx_mb": 7.22265625,
+        "pcie_tx_mb": 2971.9150390625
+      }
+    },
+    {
+      "time": "2026-10-24T11:46:58.422816+08:00",
+      "nvml": {
+        "util": 100,
+        "mem_used": 1917513728,
+        "mem_total": 17103323136,
+        "temp": 45,
+        "power": 28.471,
+        "power_limit": 180.0,
+        "pcie_gen": 1,
+        "pcie_gen_max": 1,
+        "pcie_width": 8,
+        "pcie_rx_mb": 16.1357421875,
+        "pcie_tx_mb": 3099.38671875
+      }
+    },
+    {
+      "time": "2026-10-24T11:46:58.738260+08:00",
+      "nvml": {
+        "util": 100,
+        "mem_used": 1917513728,
+        "mem_total": 17103323136,
+        "temp": 45,
+        "power": 28.444,
+        "power_limit": 180.0,
+        "pcie_gen": 1,
+        "pcie_gen_max": 1,
+        "pcie_width": 8,
+        "pcie_rx_mb": 14.162109375,
+        "pcie_tx_mb": 2882.443359375
+      }
+    },
+    {
+      "time": "2026-10-24T11:46:59.051554+08:00",
+      "nvml": {
+        "util": 100,
+        "mem_used": 1917513728,
+        "mem_total": 17103323136,
+        "temp": 45,
+        "power": 28.444,
+        "power_limit": 180.0,
+        "pcie_gen": 1,
+        "pcie_gen_max": 1,
+        "pcie_width": 8,
+        "pcie_rx_mb": 8.400390625,
+        "pcie_tx_mb": 2884.0380859375
+      }
+    },
+    {
+      "time": "2026-10-24T11:46:59.362207+08:00",
+      "nvml": {
+        "util": 100,
+        "mem_used": 1917513728,
+        "mem_total": 17103323136,
+        "temp": 45,
+        "power": 28.586,
+        "power_limit": 180.0,
+        "pcie_gen": 1,
+        "pcie_gen_max": 1,
+        "pcie_width": 8,
+        "pcie_rx_mb": 13.5380859375,
+        "pcie_tx_mb": 2899.3203125
+      }
+    },
+    {
+      "time": "2026-10-24T11:46:59.675041+08:00",
+      "nvml": {
+        "util": 100,
+        "mem_used": 1917513728,
+        "mem_total": 17103323136,
+        "temp": 45,
+        "power": 28.586,
+        "power_limit": 180.0,
+        "pcie_gen": 1,
+        "pcie_gen_max": 1,
+        "pcie_width": 8,
+        "pcie_rx_mb": 32.19921875,
+        "pcie_tx_mb": 2963.6474609375
+      }
+    },
+    {
+      "time": "2026-10-24T11:46:59.989039+08:00",
+      "nvml": {
+        "util": 100,
+        "mem_used": 1918300160,
+        "mem_total": 17103323136,
+        "temp": 45,
+        "power": 28.787,
+        "power_limit": 180.0,
+        "pcie_gen": 1,
+        "pcie_gen_max": 1,
+        "pcie_width": 8,
+        "pcie_rx_mb": 7.0712890625,
+        "pcie_tx_mb": 2933.9091796875
+      }
+    },
+    {
+      "time": "2026-10-24T11:47:00.300549+08:00",
+      "nvml": {
+        "util": 100,
+        "mem_used": 1918300160,
+        "mem_total": 17103323136,
+        "temp": 45,
+        "power": 28.849,
+        "power_limit": 180.0,
+        "pcie_gen": 1,
+        "pcie_gen_max": 1,
+        "pcie_width": 8,
+        "pcie_rx_mb": 64.6728515625,
+        "pcie_tx_mb": 38.41796875
+      }
+    },
+    {
+      "time": "2026-10-24T11:47:00.614814+08:00",
+      "nvml": {
+        "util": 100,
+        "mem_used": 1918300160,
+        "mem_total": 17103323136,
+        "temp": 45,
+        "power": 28.849,
+        "power_limit": 180.0,
+        "pcie_gen": 1,
+        "pcie_gen_max": 1,
+        "pcie_width": 8,
+        "pcie_rx_mb": 15.1015625,
+        "pcie_tx_mb": 3.85546875
+      }
+    },
+    {
+      "time": "2026-10-24T11:47:00.928939+08:00",
+      "nvml": {
+        "util": 1,
+        "mem_used": 1918496768,
+        "mem_total": 17103323136,
+        "temp": 45,
+        "power": 32.307,
+        "power_limit": 180.0,
+        "pcie_gen": 1,
+        "pcie_gen_max": 1,
+        "pcie_width": 8,
+        "pcie_rx_mb": 2880.5498046875,
+        "pcie_tx_mb": 484.0166015625
+      }
+    },
+    {
+      "time": "2026-10-24T11:47:01.242340+08:00",
+      "nvml": {
+        "util": 100,
+        "mem_used": 1918496768,
+        "mem_total": 17103323136,
+        "temp": 45,
+        "power": 32.292,
+        "power_limit": 180.0,
+        "pcie_gen": 1,
+        "pcie_gen_max": 1,
+        "pcie_width": 8,
+        "pcie_rx_mb": 2932.8310546875,
+        "pcie_tx_mb": 496.5791015625
+      }
+    },
+    {
+      "time": "2026-10-24T11:47:01.556874+08:00",
+      "nvml": {
+        "util": 100,
+        "mem_used": 1918496768,
+        "mem_total": 17103323136,
+        "temp": 45,
+        "power": 32.292,
+        "power_limit": 180.0,
+        "pcie_gen": 1,
+        "pcie_gen_max": 1,
+        "pcie_width": 8,
+        "pcie_rx_mb": 2837.7626953125,
+        "pcie_tx_mb": 493.302734375
+      }
+    },
+    {
+      "time": "2026-10-24T11:47:01.869992+08:00",
+      "nvml": {
+        "util": 100,
+        "mem_used": 1917513728,
+        "mem_total": 17103323136,
+        "temp": 46,
+        "power": 29.603,
+        "power_limit": 180.0,
+        "pcie_gen": 1,
+        "pcie_gen_max": 1,
+        "pcie_width": 8,
+        "pcie_rx_mb": 3740.6298828125,
+        "pcie_tx_mb": 361.537109375
+      }
+    },
+    {
+      "time": "2026-10-24T11:47:02.184306+08:00",
+      "nvml": {
+        "util": 100,
+        "mem_used": 1917513728,
+        "mem_total": 17103323136,
+        "temp": 46,
+        "power": 29.603,
+        "power_limit": 180.0,
+        "pcie_gen": 1,
+        "pcie_gen_max": 1,
+        "pcie_width": 8,
+        "pcie_rx_mb": 2991.330078125,
+        "pcie_tx_mb": 436.634765625
+      }
+    }
+  ],
+  "output": "{\"test\":\"pinned_H2D\",\"bytes_per_copy\":67108864,\"count\":128,\"event_GBps\":1.725655,\"wall_GBps\":1.725581}\n{\"test\":\"pinned_D2H\",\"bytes_per_copy\":67108864,\"count\":128,\"event_GBps\":1.806933,\"wall_GBps\":1.806859}\n{\"test\":\"D2D_oneway_bytes\",\"bytes_per_copy\":67108864,\"count\":256,\"event_GBps\":186.724392,\"wall_GBps\":180.601953}\n{\"test\":\"CPU_memcpy\",\"GBps\":17.241300}\n{\"test\":\"mapped_GPU_read\",\"GBps\":1.608412,\"spot_checks_passed\":true}\n",
+  "model_unloaded": true,
+  "settings_changed": false
+}

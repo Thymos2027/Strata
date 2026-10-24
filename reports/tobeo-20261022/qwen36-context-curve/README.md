@@ -140,3 +140,5 @@ python reports/tobeo-20261022/qwen36-context-curve/analyze_curve.py
 阶段 B 的最小矩阵和上下文曲线已完成。本机存在明确的长上下文 decode 变慢现象，且 MTP 收益随长度缩小，值得进入阶段 C；目前没有 kernel 级时间证据，不能认定 `k_attn_part` 已是主要瓶颈。
 
 阶段 C 先用 Nsight Systems 分别捕获 1K/16K、MTP 0/2 的加载和预热之后的代表性请求，核对 decode 关键路径、CPU 专家工作、同步、拷贝与 GPU 空隙。只对时间线确认值得深入的 kernel 使用 Nsight Compute。正式性能曲线继续使用本轮未挂 profiler 的数据，profiling 计时单独归档；取得本机 trace 后再决定最小优化。
+
+后续状态（2026-10-23）：上述 Systems 四组采集和 1K/16K 三项 Compute 计数已完成，但同日发现 HtoD 异常，最终瓶颈归因仍未完成；当前执行还需先建立 `7ddc17a3` / v0.2.3.1 新基线。详见[总计划](../../INFERENCE_RESEARCH_PLAN.md)，不要继续把本段原始“下一步”当作当前入口。

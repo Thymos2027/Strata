@@ -2,6 +2,8 @@
 
 用户授权按研究计划继续。代理进程管理员状态与实际 NCU 计数探针均通过；后续采集由代理直接执行。结果以北京时间开始日期归档，保留失败，不并行运行 GPU profiler 或性能实验。
 
+> 后续状态（2026-10-23）：本记录已封存为旧 revision 上的执行清单。同步后的当前主线为 `7ddc17a3` / v0.2.3.1；#3641 和 #3678 仍基于 `011c9e6`，GitHub API 当前返回不可直接合并。未完成项不要从这里直接续跑，改按[同步后的总计划](../../INFERENCE_RESEARCH_PLAN.md)和[无重启续做安排](../qwen36-profiling/no-reboot-next-steps.md)执行。
+
 - [x] 核对代理管理员状态并实际采到一个硬件计数。探针 `agent-permission-20261023-011026`，退出 0，有报告。
 - [x] 重新查重 open/closed issues/PR，并阅读相关后续评论。只读取，没有发消息、开 issue 或 PR。
 - [x] 完成 16K / MTP 0 的三个同口径指标与输出验证。`mtp0-application-smoke-02` 通过，874.176 μs、读 91,881,216 bytes、写 1,098,752 bytes。
