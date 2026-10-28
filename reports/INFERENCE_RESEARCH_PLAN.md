@@ -293,6 +293,7 @@ upstream-notes.md         # 查重、相关讨论、拟提交范围
 - [x] 补齐 16K / MTP 0 的相同三个 Compute 指标。
   - 2026-10-23，代理直接运行；874.176 μs、DRAM 读 91,881,216 bytes、写 1,098,752 bytes，shape、64-token 前缀和服务恢复均通过，见[两上下文汇总](tobeo-20261023/qwen36-compute/summary.json)。每个上下文只测一个调用，不代表 L2/stall/occupancy 已完成。
 - [x] 检查同日环境漂移，独立核对主机到 GPU 的传输通路。
+  - 2026-10-28 上游拉取与用户重启后，恢复[日常 IQ3_S 服务](tobeo-20261028/daily-start-105651/README.md)：当前服务端配合已安装 engine 0.1.46，health loaded=true、短 API 回答通过，启动 H2D=24.9 GB/s、温度遥测可用。未升级引擎，显存余量告警仍在；未将 6-token 冒烟请求作为正式性能测量。
   - 2026-10-28 [报告价值评估](tobeo-20261028/pcie-after-reboot/README.md)：重新检索 TDR/PCIe/reboot/Nsight 的 issues，建议优先向 NVIDIA 报告恢复后的持续低吞吐，Strata 侧作排障参考；未找到确认同案，未声称穷尽查重，未发布 issue/comment。后续实际提交前仍需完成 PR/评论范围的针对性查重及脱敏。
   - 2026-10-28 用户整机重启后，用 10-24 同一 exe 复测：H2D=24.882、D2H=28.370、mapped read=16.651 GB/s，退出码 0、数据抽查通过，负载期间采到的代际均为 Gen5，驱动仍为 610.88。见[重启后恢复验证](tobeo-20261028/pcie-after-reboot/README.md)。确认本轮传输恢复，强支持此前持久驱动/设备状态异常；未启动日常模型或测 decode，不代表阶段 C 归因或正式性能 A/B 已完成。
   - 2026-10-24 [进一步定位](tobeo-20261024/pcie-root-cause/README.md)：核对原始事件，13:26:01–04 TDR 紧接 13:26:07 首次慢探针；卸载模型后独立 H2D=1.726、D2H=1.807、mapped read=1.608 GB/s，D2D=186.7、CPU memcpy=17.24 GB/s，抽查通过。复现 NVML RX 峰值高于有效 payload 带宽。优先怀疑 TDR 后持久驱动/设备传输状态；物理代际仍有报告冲突，未执行系统/设备复位，不将相关性记作根因已证实或环境已恢复。

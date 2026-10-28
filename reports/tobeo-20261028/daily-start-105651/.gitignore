@@ -1,0 +1,4 @@
+# Keep the written validation; runtime logs and API responses stay local.
+*
+!.gitignore
+!README.md
