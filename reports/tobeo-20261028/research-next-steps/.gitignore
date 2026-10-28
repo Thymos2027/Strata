@@ -1,0 +1,4 @@
+# Local orchestration includes process IDs and machine paths.
+*
+!.gitignore
+!README.md

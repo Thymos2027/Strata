@@ -5,5 +5,7 @@
 - [重启后的 PCIe 传输恢复验证](pcie-after-reboot/README.md)：同一独立 exe 的 H2D 从 1.726 恢复到 24.882 GB/s，负载采样恢复到 Gen5；未运行模型 decode 或正式性能 A/B。
 - [上游报告发布状态](upstream-reports/README.md)：记录 Strata #4381、NVIDIA Nsight Compute #387175、双向链接、查重与脱敏范围。
 - [日常 IQ3_S 服务恢复](daily-start-105651/README.md)：沿用原配置启动当前服务端与已安装 engine 0.1.46，健康检查和短 API 冒烟通过，启动 H2D 保持约 24.9 GB/s。
+- [恢复后的研究取舍](research-next-steps/README.md)：复核 v0.2.7 与相关上游讨论，优先当前主线的 FP32 GQA 独立验证、正常工况关键路径和 MTP 收益边界；本轮未新增 GPU 实验。
+- [日常引擎升级与验收](engine-upgrade/README.md)：0.1.46 → 0.1.52 的官方包、签名/文件、test-start 和预设 API 验收通过；旧组件保留，长上下文和正式性能 A/B 未运行。
 
 完整 `nvidia-smi` XML、含本机绝对路径的原始结果和运行日志由 `.gitignore` 排除。仓库仅保留报告、复现源码、公开主题快照和明确脱敏的证据包。
