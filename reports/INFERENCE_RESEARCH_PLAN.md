@@ -8,6 +8,8 @@
 
 ## 1. 目标与取舍
 
+选型解释（2026-10-28 补充）：最初的[选题池](tobeo-20261021/INFERENCE_OPTIMIZATION.md)优先考虑 Flash-Next 的亲和性和会话缓存，并非未考虑该模型。总计划选择 Qwen3.6 作为深入 CUDA 主线，是因为上游已有明确的长上下文问题与可定位的 attention 路径、现有 Q4 模型和门禁可用；后续本机时间线又支持继续调查。Flash-Next 已获得固定缓存的 P 核收益证据，但校准功能和缓存机制本来就存在，是否需要新改动仍须证明。此为研究问题与实验范围的选择，不是模型能力或用户价值排名。若优先服务日常 Flash-Next 体验，或 Q36 候选无收益/与上游重叠过大，可转向 Flash-Next。
+
 主项目：**定位 Qwen3.6 长上下文 decode 的瓶颈，先完成已有 attention 方案的独立硬件验证；只有确认仍有不重叠的改动空间并取得范围认同后，才实现自己的优化。**
 
 小贡献：**围绕 MTP 实际执行状态，补一项有用的诊断、回归验证或 benchmark。** 先检查是否与现有 PR 重叠，再决定具体改动。
@@ -276,11 +278,15 @@ upstream-notes.md         # 查重、相关讨论、拟提交范围
 
 ## 11. 执行与收尾清单
 
+2026-10-28 新增独立的[DeepSeek 社区使用案例](tobeo-20261028/deepseek41-community/README.md)：先验证消费级单卡、大内存与 NVMe 条件下的安装、功能和实际速度；不替代上文 Qwen3.6 优化主线。10-21 选题调研是历史候选池，10-28 接续方案是当前执行排序。
+
 每次任务结束前复核本清单：已实际完成的项目打勾，并记录日期、证据与范围；部分完成保留未勾选并说明进度。后续扩展配置或 workload 时，已有勾选不替代新条件下的验证。
 
 最近复核：2026-10-28。已审查本地同步的 `upstream/main` `5e8a4cca` / v0.2.7 及相关实时 PR/Issue 状态，见[恢复后研究评估](tobeo-20261028/research-next-steps/README.md)。阶段 A、阶段 B 最小矩阵及阶段 C 的原 Systems 时间线是在旧 revision 上完成的历史证据；另有 1K/16K Compute 三指标、1K CPU IP/PDB 解析，以及上游 #3641 固定旧 head 的 CUDA 构建/三个选定测试/真实 Q4 1K 对照。10 月 23 日发现的 HtoD 异常已在 10 月 28 日整机重启后恢复，并完成 Strata/NVIDIA 排障报告；当前主线基线、正常工况的完整 profiling 与五组性能 A/B 仍未完成。按北京时间运行开始日期归档。
 
 - [x] 核对最新上游、相关讨论和工作区改动。
+  - 2026-10-28 后续补充 Qwen3.6/Flash-Next 选题关系；完成 [DeepSeek 下载慢排查](tobeo-20261028/deepseek41-community/DOWNLOAD_DIAGNOSTIC.md)，核对运营商 USB 网卡出口，比较代理/直连、入口、分段、CDN 和备用源，改用四路直连后台续传。仅证实低外网吞吐及当前对照，未确认运营商限速、未完成模型下载或推理测试。
+  - 2026-10-28 本轮梳理历史选题池、总计划和恢复后接续方案的关系；完成 DeepSeek 2.25bpw 资源与来源审查，七份 ModelScope 文件大小/哈希均匹配仓库接受版本，后台下载已启动，首份元数据 SHA-256 通过。见[下载与案例安排](tobeo-20261028/deepseek41-community/README.md)；未将下载准备计作模型或研究验证完成。
   - 2026-10-28 后续完成[日常引擎升级评估](tobeo-20261028/research-next-steps/README.md#日常引擎升级决策评估2026-10-28)：实时发布为 engine 0.1.52，运行进程仍为 0.1.46，驱动 610.88 与 CUDA 13 要求相符；建议保留旧组件后验证切换，重点检查显存余量、多轮、MTP 与缓存。仅只读核查与决策记录，未升级或新增推理测量。
   - 2026-10-28 本轮：复核 `5e8a4cca` / v0.2.7、Q36 sampling/attention 差异、#3641/#3678/#3295 元数据与 #2464/#3700 后续评论；更新[研究优先级与接续实验](tobeo-20261028/research-next-steps/README.md)。确认 #3700 已扩展重叠方案，#3641/#3678 API 当前可合并；未把静态审查记作构建、性能或交付完成。
   - 2026-10-28 用户完成 [NVIDIA Nsight Compute #387175](https://forums.developer.nvidia.com/t/rtx-5060-ti-windows-persistent-low-pcie-transfer-throughput-observed-after-kernel-replay-tdr-restored-after-reboot/387175) 发布；已通过公开主题 JSON 核验分类、正文、测量表和限制，并更新 [Strata #4381](https://github.com/Niko1221/Strata/issues/4381) 正文完成互链。核验时论坛尚无回复；报告发布完成不代表根因已被厂商确认或完整优化交付完成。
