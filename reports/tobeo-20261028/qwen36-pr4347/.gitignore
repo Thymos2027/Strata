@@ -3,5 +3,8 @@
 !README.md
 !experiment-plan.md
 !*.py
+!file_entry.cpp
+!validation-next-plan.md
+!validation-next-summary.json
 !summary.json
 !paired-requests.csv
