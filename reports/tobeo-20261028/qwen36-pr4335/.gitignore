@@ -1,0 +1,8 @@
+*
+!.gitignore
+!*.py
+!*.cpp
+!*.md
+!summary.json
+!pairs.csv
+!upstream-snapshot.json
