@@ -1,0 +1,1293 @@
+{
+  "review_date": "2026-10-28",
+  "local_head": "5ebda0f7",
+  "upstream_main": "5e8a4cca7d690ac60ca37eb09e7d0e010099ad6d",
+  "fetch": "git fetch upstream main --no-tags",
+  "pull_requests": [
+    {
+      "number": 3641,
+      "url": "https://github.com/Niko1221/Strata/pull/3641",
+      "title": "[Engine] opt-in qwen35moe F16 inference, validated on Sage-A1.5",
+      "state": "open",
+      "merged": false,
+      "draft": false,
+      "head": "f3f2136f194bdc42d07961bef0ce66b2811f58cb",
+      "base": "011c9e600a93bbc9fd451c563501b5831c32bbca",
+      "author": "acrogenesis",
+      "updated_at": "2026-10-21T22:06:12Z"
+    },
+    {
+      "number": 3678,
+      "url": "https://github.com/Niko1221/Strata/pull/3678",
+      "title": "[Engine] q36: quantized KV caches behind --kv (int8 / fp8 / rk4v4-e8 q4)",
+      "state": "open",
+      "merged": false,
+      "draft": true,
+      "head": "8e7742e8ac2412d59ed3b6a52a9aa7259bc1f128",
+      "base": "011c9e600a93bbc9fd451c563501b5831c32bbca",
+      "author": "yang478",
+      "updated_at": "2026-10-22T19:51:43Z"
+    },
+    {
+      "number": 4270,
+      "url": "https://github.com/Niko1221/Strata/pull/4270",
+      "title": "[Engine] qwen35: FP16 K/V cache by default, int8 with --kv-q8 (262144 fits a 16 GiB card)",
+      "state": "open",
+      "merged": false,
+      "draft": false,
+      "head": "be617b661bad2308bdffa386f52f0515851f5584",
+      "base": "4b9e05a2a806a3fe24f7b2560d98626c37dade35",
+      "author": "benthic-io",
+      "updated_at": "2026-10-26T23:00:05Z"
+    },
+    {
+      "number": 4335,
+      "url": "https://github.com/Niko1221/Strata/pull/4335",
+      "title": "[Engine] q36: a 4096-token prompt chunk in the hybrid mode when the card has room",
+      "state": "open",
+      "merged": false,
+      "draft": false,
+      "head": "bdf0bce2e5520680524efd3a5cf79db984c3902c",
+      "base": "5e8a4cca7d690ac60ca37eb09e7d0e010099ad6d",
+      "author": "rynwang",
+      "updated_at": "2026-10-27T18:38:02Z"
+    },
+    {
+      "number": 4347,
+      "url": "https://github.com/Niko1221/Strata/pull/4347",
+      "title": "[Engine] q36: give the packed Q8_0 decode copies back to the expert slots in the hybrid mode",
+      "state": "open",
+      "merged": false,
+      "draft": false,
+      "head": "7be0a3a17aeea0a7c0bf7bc63ae56c70e53311d4",
+      "base": "5e8a4cca7d690ac60ca37eb09e7d0e010099ad6d",
+      "author": "rynwang",
+      "updated_at": "2026-10-27T18:37:28Z"
+    },
+    {
+      "number": 3522,
+      "url": "https://github.com/Niko1221/Strata/pull/3522",
+      "title": "[Other] calibrate: keep the PCIe/draft-floor winner only when it beats this run's own noise instead of the fixed >3%",
+      "state": "open",
+      "merged": false,
+      "draft": false,
+      "head": "1da8954cc5825cab0042420c8060b8f208e7d151",
+      "base": "5e8a4cca7d690ac60ca37eb09e7d0e010099ad6d",
+      "author": "dsenchankau",
+      "updated_at": "2026-10-28T00:30:59Z"
+    },
+    {
+      "number": 4401,
+      "url": "https://github.com/Niko1221/Strata/pull/4401",
+      "title": "[Benchmark] RTX 5060 Ti 16 GB + i7-14700 / Qwen3.8-Flash-Next IQ3_S 256K / standard-v1 draft.1",
+      "state": "open",
+      "merged": false,
+      "draft": false,
+      "head": "f2433751077e4594bf271ef47a73123cda31a6d9",
+      "base": "5e8a4cca7d690ac60ca37eb09e7d0e010099ad6d",
+      "author": "rifaniponk",
+      "updated_at": "2026-10-28T02:50:12Z"
+    },
+    {
+      "number": 3676,
+      "url": "https://github.com/Niko1221/Strata/pull/3676",
+      "title": "[Serve] a greedy request no longer inherits the model card's penalties (MTP stays on)",
+      "state": "closed",
+      "merged": false,
+      "draft": false,
+      "head": "229034673809288888c83ad21f76b8fc2248b04d",
+      "base": "011c9e600a93bbc9fd451c563501b5831c32bbca",
+      "author": "yang478",
+      "updated_at": "2026-10-27T09:52:30Z"
+    },
+    {
+      "number": 4423,
+      "url": "https://github.com/Niko1221/Strata/pull/4423",
+      "title": "[Engine] Retain batch checkpoints within the prompt-cache budget",
+      "state": "open",
+      "merged": false,
+      "draft": true,
+      "head": "c72dc302f4bf079b2eb83c3035621ab8a27074c0",
+      "base": "5e8a4cca7d690ac60ca37eb09e7d0e010099ad6d",
+      "author": "baibairui",
+      "updated_at": "2026-10-28T06:05:58Z"
+    },
+    {
+      "number": 4002,
+      "url": "https://github.com/Niko1221/Strata/pull/4002",
+      "title": "[Engine] Parallelize staged conversation cache copies",
+      "state": "open",
+      "merged": false,
+      "draft": true,
+      "head": "71ec4933135cba950e3da36f7e8a178ea888bce5",
+      "base": "5e8a4cca7d690ac60ca37eb09e7d0e010099ad6d",
+      "author": "oscarlius",
+      "updated_at": "2026-10-28T05:04:08Z"
+    },
+    {
+      "number": 1912,
+      "url": "https://github.com/Niko1221/Strata/pull/1912",
+      "title": "--pool-affinity measure: on a hybrid CPU, time the all and p-cores pool layouts at start and take the faster (opt-in)",
+      "state": "closed",
+      "merged": false,
+      "draft": false,
+      "head": "271b5b5f26e6dc5d0eaaa041d039e0f86121941c",
+      "base": "61b3fb5dd3f1e8ec09cf7e4e05208bc6d3c46406",
+      "author": "Xiaomi2008",
+      "updated_at": "2026-10-19T16:59:27Z"
+    },
+    {
+      "number": 3773,
+      "url": "https://github.com/Niko1221/Strata/pull/3773",
+      "title": "[Engine] q36: MTP drafts for sampled requests behind STRATA_Q36_MTP_SAMPLED (stacked on #3678)",
+      "state": "open",
+      "merged": false,
+      "draft": true,
+      "head": "ea58bfcfdbc9e272cccb7475558644fe93ef777a",
+      "base": "011c9e600a93bbc9fd451c563501b5831c32bbca",
+      "author": "baptisterajaut"
+    }
+  ],
+  "comments": [
+    {
+      "key": "pc4335",
+      "comments": [
+        {
+          "url": "https://github.com/Niko1221/Strata/pull/4335#issuecomment-6449372673",
+          "author": "rynwang"
+        },
+        {
+          "url": "https://github.com/Niko1221/Strata/pull/4335#issuecomment-6450522089",
+          "author": "rynwang"
+        }
+      ]
+    },
+    {
+      "key": "pc4347",
+      "comments": [
+        {
+          "url": "https://github.com/Niko1221/Strata/pull/4347#issuecomment-6450510656",
+          "author": "rynwang"
+        }
+      ]
+    },
+    {
+      "key": "pc3522",
+      "comments": []
+    },
+    {
+      "key": "pc3641",
+      "comments": []
+    },
+    {
+      "key": "pc4423",
+      "comments": []
+    },
+    {
+      "key": "ic3700",
+      "comments": [
+        {
+          "url": "https://github.com/Niko1221/Strata/issues/3700#issuecomment-6339718829",
+          "author": "xyehya"
+        },
+        {
+          "url": "https://github.com/Niko1221/Strata/issues/3700#issuecomment-6379679338",
+          "author": "xyehya"
+        }
+      ]
+    },
+    {
+      "key": "ic4332",
+      "comments": []
+    },
+    {
+      "key": "ic4346",
+      "comments": [
+        {
+          "url": "https://github.com/Niko1221/Strata/issues/4346#issuecomment-6450427531",
+          "author": "rynwang"
+        }
+      ]
+    },
+    {
+      "key": "ic3354",
+      "comments": [
+        {
+          "url": "https://github.com/Niko1221/Strata/issues/3354#issuecomment-6283450651",
+          "author": "github-actions[bot]"
+        },
+        {
+          "url": "https://github.com/Niko1221/Strata/issues/3354#issuecomment-6283480200",
+          "author": "github-actions[bot]"
+        },
+        {
+          "url": "https://github.com/Niko1221/Strata/issues/3354#issuecomment-6341062209",
+          "author": "Bunkmil"
+        },
+        {
+          "url": "https://github.com/Niko1221/Strata/issues/3354#issuecomment-6380799316",
+          "author": "schmittcn"
+        }
+      ]
+    },
+    {
+      "key": "ic3262",
+      "comments": [
+        {
+          "url": "https://github.com/Niko1221/Strata/issues/3262#issuecomment-6286731450",
+          "author": "Niko1221"
+        },
+        {
+          "url": "https://github.com/Niko1221/Strata/issues/3262#issuecomment-6304337239",
+          "author": "faf-net"
+        },
+        {
+          "url": "https://github.com/Niko1221/Strata/issues/3262#issuecomment-6383462163",
+          "author": "Niko1221"
+        }
+      ]
+    }
+  ],
+  "searches": [
+    {
+      "key": "q36",
+      "items": [
+        {
+          "number": 4416,
+          "title": "[Benchmark] RTX 5080 + 2x Xeon 8176: IQ3_S, NVFP4-QAD and IQ3_XXS in the standard protocol, with quant quality",
+          "url": "https://github.com/Niko1221/Strata/issues/4416"
+        },
+        {
+          "number": 4381,
+          "title": "[Other] Windows RTX 5060 Ti: persistent low PCIe throughput observed after profiling TDR, restored after reboot",
+          "url": "https://github.com/Niko1221/Strata/issues/4381"
+        },
+        {
+          "number": 4346,
+          "title": "[Engine] q36 hybrid mode: the packed Q8_0 decode copies cost more than the expert slots they hold (decode +9-10%, prompt +6%)",
+          "url": "https://github.com/Niko1221/Strata/issues/4346"
+        },
+        {
+          "number": 4332,
+          "title": "[Engine] q36 hybrid mode: a 4096-token prompt chunk reads prompts 51-76% faster on a 16 GB card",
+          "url": "https://github.com/Niko1221/Strata/issues/4332"
+        },
+        {
+          "number": 916,
+          "title": "Unable to launch Strata on RTX 2060 6GB VRAM + 32 GB RAM",
+          "url": "https://github.com/Niko1221/Strata/issues/916"
+        },
+        {
+          "number": 4319,
+          "title": "[Engine] Proposal: add GLM-5.3-Flash and MiniMax-M3.1-Flash as model families (from Project Maya)",
+          "url": "https://github.com/Niko1221/Strata/issues/4319"
+        },
+        {
+          "number": 4303,
+          "title": "[GUI] Model list shows DeepSeek-V4.1-Flash under \"Qwen3.6 models\" group in 0.2.6",
+          "url": "https://github.com/Niko1221/Strata/issues/4303"
+        },
+        {
+          "number": 3585,
+          "title": "Possible to deploy Qwen3.6-35B-A3b on kaggle 2xT4?",
+          "url": "https://github.com/Niko1221/Strata/issues/3585"
+        },
+        {
+          "number": 4215,
+          "title": "[Engine] server_exited (exit code 1): EngineDied: the engine exited before it was ready",
+          "url": "https://github.com/Niko1221/Strata/issues/4215"
+        },
+        {
+          "number": 3508,
+          "title": " [Engine] qwen36 (qwen35moe) on sm_61 Pascal 16GB: expert cache fixed at 73/256 in VRAM, 18.75 GiB all in pageable host memory, 6.98 GiB VRAM free unused, runtime flags ignored",
+          "url": "https://github.com/Niko1221/Strata/issues/3508"
+        },
+        {
+          "number": 3574,
+          "title": "hope support ornith 122b ,zhe model source  to qwen3.5 122b arc",
+          "url": "https://github.com/Niko1221/Strata/issues/3574"
+        },
+        {
+          "number": 2459,
+          "title": "gfx906/HIP build broken on v0.1.44.1: two compile blockers (platform/hip_compat/cublas_v2.h missing three cublas maps, and the new strata_mmq_w4a4 target missing GGML_USE_HIP)",
+          "url": "https://github.com/Niko1221/Strata/issues/2459"
+        },
+        {
+          "number": 3172,
+          "title": "[Engine] gfx906 (2x MI50): build fails on 0.1.44+ and 0.2.0-beta — cublas* in qwen35, cuda.h in the nvfp4 MMQ target",
+          "url": "https://github.com/Niko1221/Strata/issues/3172"
+        },
+        {
+          "number": 4102,
+          "title": "[Other] how to convert \"local\" settings (strata-*.json) to launch-presets (strata launch)?",
+          "url": "https://github.com/Niko1221/Strata/issues/4102"
+        },
+        {
+          "number": 3439,
+          "title": "[Engine] Strata on RX 6900 XT (gfx1030) without compiling the HIP engine myself?",
+          "url": "https://github.com/Niko1221/Strata/issues/3439"
+        },
+        {
+          "number": 3246,
+          "title": "Feature: make Strata support CPU  + RAM + NVMe only!",
+          "url": "https://github.com/Niko1221/Strata/issues/3246"
+        },
+        {
+          "number": 3173,
+          "title": "[Benchmark] 2x MI50 16 GB (gfx906) + Ryzen 7 5700X: IQ3_XXS at 128K, --pipeline-windows 2 gives +36% decode",
+          "url": "https://github.com/Niko1221/Strata/issues/3173"
+        },
+        {
+          "number": 3389,
+          "title": "[Benchmark] 2x RTX 3060 (layer split), Xeon E5-2697 v2 without AVX2, Swift 1.5 IQ2_XS (SC117 abliterated), 0.1.45",
+          "url": "https://github.com/Niko1221/Strata/issues/3389"
+        },
+        {
+          "number": 3932,
+          "title": "[Engine] Run Qwen3.6-35B-A3B on the Mac (Metal) engine",
+          "url": "https://github.com/Niko1221/Strata/issues/3932"
+        },
+        {
+          "number": 3292,
+          "title": "[GUI] Strata 0.2.0-beta · Engine 0.1.45.3 model feedback",
+          "url": "https://github.com/Niko1221/Strata/issues/3292"
+        },
+        {
+          "number": 3271,
+          "title": "[Other] gfx906 (2× Radeon Pro VII): install report, 200K k8v4 + CPU vision, and a 50% CPU question",
+          "url": "https://github.com/Niko1221/Strata/issues/3271"
+        },
+        {
+          "number": 3478,
+          "title": "[GUI] Persistent \"Some model files are missing\" error when loading Qwen3.6-35B-A3B (UD-Q4_K_XL)",
+          "url": "https://github.com/Niko1221/Strata/issues/3478"
+        },
+        {
+          "number": 3354,
+          "title": "[Engine] qwen35moe: the model-card sampling is applied silently and disables MTP drafting (drafts accepted 0 of 0)",
+          "url": "https://github.com/Niko1221/Strata/issues/3354"
+        },
+        {
+          "number": 3926,
+          "title": "[Engine] qwen35moe on gfx1030: turn STRATA_DENSE_MMQ on in setup's config (prompts +47-67% on an RX 6900 XT, KL 0.0033)",
+          "url": "https://github.com/Niko1221/Strata/issues/3926"
+        },
+        {
+          "number": 3700,
+          "title": "[Engine] qwen35 path: opt-in int8 K/V cache for 262K on 16 GB cards (measured, asking for scope)",
+          "url": "https://github.com/Niko1221/Strata/issues/3700"
+        }
+      ]
+    },
+    {
+      "key": "affinity",
+      "items": [
+        {
+          "number": 4410,
+          "title": "[Engine] 0.2.7 single-stream decode −11.7% on 2× RTX 2080 Ti with IQ3_S and --native (105.9 → 93.5 tok/s); prefill and concurrency unchanged",
+          "url": "https://github.com/Niko1221/Strata/issues/4410"
+        },
+        {
+          "number": 4345,
+          "title": "[Benchmark] RTX 4090 Laptop 16 GB (sm_89), Strata 0.2.7 / engine 0.1.52: STRATA_ROUTE_PRIOR on a 16 GB card - speed and KL, up to 255K tokens",
+          "url": "https://github.com/Niko1221/Strata/issues/4345"
+        },
+        {
+          "number": 4409,
+          "title": "[Engine] scope: move a conversation between Strata servers (save by client session, import into the conversation cache, incremental saves)",
+          "url": "https://github.com/Niko1221/Strata/issues/4409"
+        },
+        {
+          "number": 4381,
+          "title": "[Other] Windows RTX 5060 Ti: persistent low PCIe throughput observed after profiling TDR, restored after reboot",
+          "url": "https://github.com/Niko1221/Strata/issues/4381"
+        },
+        {
+          "number": 3794,
+          "title": "[Engine] Feature request: MTP drafts in the pipelined batch-slot path (layer split, experts 100% resident, 3-GPU sm_70)",
+          "url": "https://github.com/Niko1221/Strata/issues/3794"
+        },
+        {
+          "number": 4190,
+          "title": "[Engine] Random Xid 13 \"illegal instruction\" crashes on RTX 2080 Ti (sm_75) under sustained long-context inference — constant ESR 0x4c1eb72",
+          "url": "https://github.com/Niko1221/Strata/issues/4190"
+        },
+        {
+          "number": 3177,
+          "title": "v0.1.45 HIP/gfx1100: verify timeout during ~54K-token request with MTP enabled (single RX 7900 XTX)",
+          "url": "https://github.com/Niko1221/Strata/issues/3177"
+        },
+        {
+          "number": 3605,
+          "title": "[Engine] During initial strata launch migrating from 0.1.45 to 0.2.1 it hangs while test-starting the engine",
+          "url": "https://github.com/Niko1221/Strata/issues/3605"
+        },
+        {
+          "number": 3526,
+          "title": "[Engine] Performance degradation among other issues on V0.2.1",
+          "url": "https://github.com/Niko1221/Strata/issues/3526"
+        },
+        {
+          "number": 3708,
+          "title": "NUMA pool split on a two-socket Xeon (2x 6226R, 2x R9700): on/off numbers, and the \"arena path\" limitation",
+          "url": "https://github.com/Niko1221/Strata/issues/3708"
+        },
+        {
+          "number": 2212,
+          "title": "sudden crash on RTX 3070 for long task",
+          "url": "https://github.com/Niko1221/Strata/issues/2212"
+        },
+        {
+          "number": 3887,
+          "title": "[GUI] a stale --pool-workers is inherited into every new instance record",
+          "url": "https://github.com/Niko1221/Strata/issues/3887"
+        },
+        {
+          "number": 4229,
+          "title": "[Engine] HIP, two gfx1201 cards, layer split: batched prompt read stops at a chunk boundary, stage-2 card busy until reset; on this host triggered by a -50 mV offset, clean at -25 mV and 0 mV",
+          "url": "https://github.com/Niko1221/Strata/issues/4229"
+        },
+        {
+          "number": 4234,
+          "title": "[Benchmark] RTX 4070 Ti 12 GB (sm_89) + 64 GB DDR4, IQ3_S, 128K int8, images on CPU, Windows 10, engine 0.1.50",
+          "url": "https://github.com/Niko1221/Strata/issues/4234"
+        },
+        {
+          "number": 2518,
+          "title": "[Engine] Branching follow-ups can be admitted into the wrong batch slot and lose another conversation's cached prefix affects Strata v0.2.6",
+          "url": "https://github.com/Niko1221/Strata/issues/2518"
+        },
+        {
+          "number": 2275,
+          "title": "[Engine] [Direction] Aim Strata at long-context multi-user: a peer's prompt read leaves a decoding slot at 3.67 tok/s, the batch window emits 1 token/slot, and 4 streams take 4.04x a single read to their first tokens (2x2080 Ti layer split, 96K)",
+          "url": "https://github.com/Niko1221/Strata/issues/2275"
+        },
+        {
+          "number": 4042,
+          "title": "[Benchmark] 2x RTX PRO 6000 Blackwell — DeepSeek V4.1 Flash IST-DAS 2.25 bpw, 325k context",
+          "url": "https://github.com/Niko1221/Strata/issues/4042"
+        },
+        {
+          "number": 2713,
+          "title": "[Engine] use the AVX-512 i-quant kernels on CPUs with AVX512F/BW/VL/DQ + VNNI but no VBMI (Skylake-X, Cascade Lake)",
+          "url": "https://github.com/Niko1221/Strata/issues/2713"
+        },
+        {
+          "number": 3691,
+          "title": "[Engine] [Help] Not filling whole GPU",
+          "url": "https://github.com/Niko1221/Strata/issues/3691"
+        },
+        {
+          "number": 3271,
+          "title": "[Other] gfx906 (2× Radeon Pro VII): install report, 200K k8v4 + CPU vision, and a 50% CPU question",
+          "url": "https://github.com/Niko1221/Strata/issues/3271"
+        },
+        {
+          "number": 3262,
+          "title": "[Engine] Linux hybrid CPU: LP-E cores (cpu_lowpower) counted as P-cores, and 0.2.0's 15-worker default is ~35 % slower than 9 on a Core Ultra 7 255H",
+          "url": "https://github.com/Niko1221/Strata/issues/3262"
+        },
+        {
+          "number": 3912,
+          "title": "[Benchmark] 2x RTX 5060 Ti / swift-1.5 IQ3_S / tuned 25/48 split: 83 tok/s decode, 76k-137k agent sessions",
+          "url": "https://github.com/Niko1221/Strata/issues/3912"
+        },
+        {
+          "number": 3263,
+          "title": "[Other] 0.2.0-beta prebuilt hip-rx7900 engine on a real RX 7900 XTX (gfx1100, Linux): runs, same speed as 0.1.44.1; GPU picture reader works; two packaging notes",
+          "url": "https://github.com/Niko1221/Strata/issues/3263"
+        },
+        {
+          "number": 1846,
+          "title": "--expert-cache auto reports 0.00 GiB free (0 slots) on Windows/WDDM when the dGPU drives no display, while ~15 GiB is actually free",
+          "url": "https://github.com/Niko1221/Strata/issues/1846"
+        },
+        {
+          "number": 2897,
+          "title": "[Engine] [TUI] After updating to 0.1.45 I face out of memory! ( Strata 0.2.2 fails as well)",
+          "url": "https://github.com/Niko1221/Strata/issues/2897"
+        }
+      ]
+    },
+    {
+      "key": "cache",
+      "items": [
+        {
+          "number": 4410,
+          "title": "[Engine] 0.2.7 single-stream decode −11.7% on 2× RTX 2080 Ti with IQ3_S and --native (105.9 → 93.5 tok/s); prefill and concurrency unchanged",
+          "url": "https://github.com/Niko1221/Strata/issues/4410"
+        },
+        {
+          "number": 4425,
+          "title": "[Engine] Docker: a run config key in the file GET /config names is silently discarded by the next launch",
+          "url": "https://github.com/Niko1221/Strata/issues/4425"
+        },
+        {
+          "number": 4420,
+          "title": "[Engine] --batch: parking an idle slot (#2526) drops the copy with the shared system-prompt checkpoint, so the next agent request re-reads 5K tokens",
+          "url": "https://github.com/Niko1221/Strata/issues/4420"
+        },
+        {
+          "number": 4414,
+          "title": "[Engine] pl_drain() drops verifier drain errors without a word, and the pipelined request-end waits carry no progress heartbeat - the #2065 convention stops at the pipelined path",
+          "url": "https://github.com/Niko1221/Strata/issues/4414"
+        },
+        {
+          "number": 4413,
+          "title": "[Engine] MTP chain_launch() lacks the max_cells clamp draft() has - pipelined chains stage drafter cells past max-context near the context end",
+          "url": "https://github.com/Niko1221/Strata/issues/4413"
+        },
+        {
+          "number": 4412,
+          "title": "[Engine] the per-request #2065 VRAM check and the stall report sample device 0 only - the later card of a layer split can go low with no warning",
+          "url": "https://github.com/Niko1221/Strata/issues/4412"
+        },
+        {
+          "number": 4345,
+          "title": "[Benchmark] RTX 4090 Laptop 16 GB (sm_89), Strata 0.2.7 / engine 0.1.52: STRATA_ROUTE_PRIOR on a 16 GB card - speed and KL, up to 255K tokens",
+          "url": "https://github.com/Niko1221/Strata/issues/4345"
+        },
+        {
+          "number": 4350,
+          "title": "[Engine] dsv41 on gfx1100 (HIP, self-built): switching back to a conversation after another one ran fails with \"illegal memory access\"",
+          "url": "https://github.com/Niko1221/Strata/issues/4350"
+        },
+        {
+          "number": 4281,
+          "title": "[Benchmark] Community: Qwen3.8-Flash-Next IQ3_S + DeepSeek-V4.1-Flash IQ2_XXS on one RTX 4000 Ada 20 GB (Windows)",
+          "url": "https://github.com/Niko1221/Strata/issues/4281"
+        },
+        {
+          "number": 4409,
+          "title": "[Engine] scope: move a conversation between Strata servers (save by client session, import into the conversation cache, incremental saves)",
+          "url": "https://github.com/Niko1221/Strata/issues/4409"
+        },
+        {
+          "number": 1552,
+          "title": "Native Windows 11 Port for Intel Arc B580 (Strata v0.1.40.4)",
+          "url": "https://github.com/Niko1221/Strata/issues/1552"
+        },
+        {
+          "number": 3976,
+          "title": "[Engine] Layer-major prefill on a CUDA layer split: 32K prompts 2.0x faster, 0.47x drive reads (Qwen3.8-Flash-Next, v0.2.4.2)",
+          "url": "https://github.com/Niko1221/Strata/issues/3976"
+        },
+        {
+          "number": 3577,
+          "title": "[Engine] MoE fused layout buffer too small during prefill — inference fails on short prompts (Strata 0.2.1)",
+          "url": "https://github.com/Niko1221/Strata/issues/3577"
+        },
+        {
+          "number": 3743,
+          "title": "[Engine] typed decisions: score a schema's token paths instead of generating them",
+          "url": "https://github.com/Niko1221/Strata/issues/3743"
+        },
+        {
+          "number": 4371,
+          "title": "[Benchmark] AMD Ryzen 9 5950X | NVIDIA GeForce RTX 5070 Ti | RAM: 92.2 GiB | IQ3_XXS + IQ3_S",
+          "url": "https://github.com/Niko1221/Strata/issues/4371"
+        },
+        {
+          "number": 4363,
+          "title": "0.1.44.1 HIP: 4 watchdog-caught hangs in one evening — prefill chunk boundaries (16k/32k) and conversation parking",
+          "url": "https://github.com/Niko1221/Strata/issues/4363"
+        },
+        {
+          "number": 4147,
+          "title": "[Engine] DeepSeek 0.1.51: 256K auto RAM store shrinks from 48 GB to 17.8 GB on 2x RTX 3090",
+          "url": "https://github.com/Niko1221/Strata/issues/4147"
+        },
+        {
+          "number": 4355,
+          "title": "[Engine] Save a DeepSeek shared-prefix checkpoint when a suffix starts exactly at pin_at",
+          "url": "https://github.com/Niko1221/Strata/issues/4355"
+        },
+        {
+          "number": 4354,
+          "title": "[Engine] Q6_K grouped-expert dispatch compatibility in DeepSeek (source-inspected gap)",
+          "url": "https://github.com/Niko1221/Strata/issues/4354"
+        },
+        {
+          "number": 4353,
+          "title": "[Engine] Opt-in reusable prefill workspaces and decoded-weight caches for near-1M DeepSeek prompts",
+          "url": "https://github.com/Niko1221/Strata/issues/4353"
+        },
+        {
+          "number": 3813,
+          "title": "[Engine] verify: layer N never rang / mtp draft: illegal instruction — reproduces on 0.1.48; after an engine restart the 2nd request always fails",
+          "url": "https://github.com/Niko1221/Strata/issues/3813"
+        },
+        {
+          "number": 3979,
+          "title": "Engine aborts itself every 60 s during a prompt prefill: 24 stall reports in 10 days (0.1.44.1, 0.1.45, 0.1.48), 23 minidumps attached",
+          "url": "https://github.com/Niko1221/Strata/issues/3979"
+        },
+        {
+          "number": 4190,
+          "title": "[Engine] Random Xid 13 \"illegal instruction\" crashes on RTX 2080 Ti (sm_75) under sustained long-context inference — constant ESR 0x4c1eb72",
+          "url": "https://github.com/Niko1221/Strata/issues/4190"
+        },
+        {
+          "number": 3937,
+          "title": "[Engine] Opt-in API image input for DeepSeek-V4.1-Flash-1017 using the native vision engine",
+          "url": "https://github.com/Niko1221/Strata/issues/3937"
+        },
+        {
+          "number": 4344,
+          "title": "Strata crash",
+          "url": "https://github.com/Niko1221/Strata/issues/4344"
+        }
+      ]
+    },
+    {
+      "key": "draft",
+      "items": [
+        {
+          "number": 4410,
+          "title": "[Engine] 0.2.7 single-stream decode −11.7% on 2× RTX 2080 Ti with IQ3_S and --native (105.9 → 93.5 tok/s); prefill and concurrency unchanged",
+          "url": "https://github.com/Niko1221/Strata/issues/4410"
+        },
+        {
+          "number": 4431,
+          "title": "[Engine] gfx1100 + gfx1201 layer split: prefill dies with `gr_mix_r: no kernel image is available` on engine 0.1.52 (HIP)",
+          "url": "https://github.com/Niko1221/Strata/issues/4431"
+        },
+        {
+          "number": 4429,
+          "title": "[Benchmark] 3× RTX 2080 Ti: CUDA1+CUDA2 expert caches vs a 3-card layer split — short-chat decode +25%, prefill −35%, long-context decode −6%",
+          "url": "https://github.com/Niko1221/Strata/issues/4429"
+        },
+        {
+          "number": 4402,
+          "title": "[Engine] Strata 0.2.7 / engine 0.1.52: IQ2_XS collapses into repetition loops in long-context agent sessions (`STRATA_ROUTE_PRIOR` default-on for ≤13 GiB cards)",
+          "url": "https://github.com/Niko1221/Strata/issues/4402"
+        },
+        {
+          "number": 4420,
+          "title": "[Engine] --batch: parking an idle slot (#2526) drops the copy with the shared system-prompt checkpoint, so the next agent request re-reads 5K tokens",
+          "url": "https://github.com/Niko1221/Strata/issues/4420"
+        },
+        {
+          "number": 4414,
+          "title": "[Engine] pl_drain() drops verifier drain errors without a word, and the pipelined request-end waits carry no progress heartbeat - the #2065 convention stops at the pipelined path",
+          "url": "https://github.com/Niko1221/Strata/issues/4414"
+        },
+        {
+          "number": 4413,
+          "title": "[Engine] MTP chain_launch() lacks the max_cells clamp draft() has - pipelined chains stage drafter cells past max-context near the context end",
+          "url": "https://github.com/Niko1221/Strata/issues/4413"
+        },
+        {
+          "number": 4345,
+          "title": "[Benchmark] RTX 4090 Laptop 16 GB (sm_89), Strata 0.2.7 / engine 0.1.52: STRATA_ROUTE_PRIOR on a 16 GB card - speed and KL, up to 255K tokens",
+          "url": "https://github.com/Niko1221/Strata/issues/4345"
+        },
+        {
+          "number": 4281,
+          "title": "[Benchmark] Community: Qwen3.8-Flash-Next IQ3_S + DeepSeek-V4.1-Flash IQ2_XXS on one RTX 4000 Ada 20 GB (Windows)",
+          "url": "https://github.com/Niko1221/Strata/issues/4281"
+        },
+        {
+          "number": 4409,
+          "title": "[Engine] scope: move a conversation between Strata servers (save by client session, import into the conversation cache, incremental saves)",
+          "url": "https://github.com/Niko1221/Strata/issues/4409"
+        },
+        {
+          "number": 3795,
+          "title": "[Engine] Field report: 0.1.41 -> 0.2.2 upgrade on two AMD rigs - mixed NVIDIA+AMD installer mispick + silent tuning-flag rollback",
+          "url": "https://github.com/Niko1221/Strata/issues/3795"
+        },
+        {
+          "number": 1552,
+          "title": "Native Windows 11 Port for Intel Arc B580 (Strata v0.1.40.4)",
+          "url": "https://github.com/Niko1221/Strata/issues/1552"
+        },
+        {
+          "number": 3976,
+          "title": "[Engine] Layer-major prefill on a CUDA layer split: 32K prompts 2.0x faster, 0.47x drive reads (Qwen3.8-Flash-Next, v0.2.4.2)",
+          "url": "https://github.com/Niko1221/Strata/issues/3976"
+        },
+        {
+          "number": 4391,
+          "title": "[Engine] STRATA_PIPED_MTP: the save/deferred-commit graph execs bypass the 64-graph LRU and grow without bound",
+          "url": "https://github.com/Niko1221/Strata/issues/4391"
+        },
+        {
+          "number": 3421,
+          "title": "[Other] Docker 0.2.x: no way to run the engine without the `strata launch` wrapper (re-downloads existing GGUFs, forces an API key)",
+          "url": "https://github.com/Niko1221/Strata/issues/3421"
+        },
+        {
+          "number": 3640,
+          "title": "[Engine] Gyro-Coder (agentionai): catalog support request — TQ2_T experts + 256-expert qwen4exp, both already supported",
+          "url": "https://github.com/Niko1221/Strata/issues/3640"
+        },
+        {
+          "number": 4388,
+          "title": "[Engine] OOM while loading model",
+          "url": "https://github.com/Niko1221/Strata/issues/4388"
+        },
+        {
+          "number": 4261,
+          "title": "[Benchmark] NVFP4, RTX 5070 + RTX 5060 Ti: stage trim, arena pinning and a Cyrillic draft vocabulary take decode from 46.2 to 67.0 tok/s",
+          "url": "https://github.com/Niko1221/Strata/issues/4261"
+        },
+        {
+          "number": 4381,
+          "title": "[Other] Windows RTX 5060 Ti: persistent low PCIe throughput observed after profiling TDR, restored after reboot",
+          "url": "https://github.com/Niko1221/Strata/issues/4381"
+        },
+        {
+          "number": 4336,
+          "title": "[Engine] Windows HIP gfx1201 (R9700): strata-device --selftest exits 0xC0000005 on engines 0.1.50 and 0.1.52; 0.1.48 passes on the same PC",
+          "url": "https://github.com/Niko1221/Strata/issues/4336"
+        },
+        {
+          "number": 4059,
+          "title": "[Engine] identical temperature-0 requests give different logprobs on ~100-token prompts, even with the #410 switches",
+          "url": "https://github.com/Niko1221/Strata/issues/4059"
+        },
+        {
+          "number": 4373,
+          "title": "[Engine] STRATA_MTP_TOP2 always counts 0 runner-up hits: record_top2() is no longer called",
+          "url": "https://github.com/Niko1221/Strata/issues/4373"
+        },
+        {
+          "number": 4371,
+          "title": "[Benchmark] AMD Ryzen 9 5950X | NVIDIA GeForce RTX 5070 Ti | RAM: 92.2 GiB | IQ3_XXS + IQ3_S",
+          "url": "https://github.com/Niko1221/Strata/issues/4371"
+        },
+        {
+          "number": 4134,
+          "title": "[Engine] launch --vram-reserve-mib is an unknown argument",
+          "url": "https://github.com/Niko1221/Strata/issues/4134"
+        },
+        {
+          "number": 4369,
+          "title": "[GUI] Some Hugging Face download paths ignore HF_ENDPOINT and still target huggingface.co",
+          "url": "https://github.com/Niko1221/Strata/issues/4369"
+        }
+      ]
+    },
+    {
+      "key": "q36prs",
+      "items": [
+        {
+          "number": 4119,
+          "title": "[Engine] Opt-in two-pass QSA prompt selection: 3xTF32 only near the top-k cut-off, the same cells (256K prompt read +5.2%)",
+          "url": "https://github.com/Niko1221/Strata/pull/4119"
+        },
+        {
+          "number": 4283,
+          "title": "[Engine] Opt-in routed prompt stream: skip streamed experts no token routes to (follow-up read time -18%, same output)",
+          "url": "https://github.com/Niko1221/Strata/pull/4283"
+        },
+        {
+          "number": 4415,
+          "title": "[Benchmark] RTX 5080 + 2x Xeon 8176: IQ3_S, NVFP4-QAD, IQ3_XXS and Qwen3.6-35B-A3B, with quant quality",
+          "url": "https://github.com/Niko1221/Strata/pull/4415"
+        },
+        {
+          "number": 4382,
+          "title": "[Engine] DeepSeek-V4.1: the hyper-connection split off the decode path, +1.4% decode, bit-exact",
+          "url": "https://github.com/Niko1221/Strata/pull/4382"
+        },
+        {
+          "number": 4372,
+          "title": "[Benchmark] standard draft: RX 9070 XT, Windows 11 / Qwen3.8-Flash-Next / IQ3_XXS / strata-qwen38-thinking-v1-draft.1 (3 runs, engine 0.1.48)",
+          "url": "https://github.com/Niko1221/Strata/pull/4372"
+        },
+        {
+          "number": 4039,
+          "title": "[Engine] opt-in smaller prompt scratch (STRATA_PF_GROUP_SCRATCH, STRATA_PF_HC_REGION): bigger --prefill auto chunks, bitwise, 8 GB cards +18-24% prompt",
+          "url": "https://github.com/Niko1221/Strata/pull/4039"
+        },
+        {
+          "number": 4366,
+          "title": "[Engine] DeepSeek prompt: the busy experts take FP16 GEMMs, not the tiles (DS4_FAT_ROWS, opt-in)",
+          "url": "https://github.com/Niko1221/Strata/pull/4366"
+        },
+        {
+          "number": 4335,
+          "title": "[Engine] q36: a 4096-token prompt chunk in the hybrid mode when the card has room",
+          "url": "https://github.com/Niko1221/Strata/pull/4335"
+        },
+        {
+          "number": 4347,
+          "title": "[Engine] q36: give the packed Q8_0 decode copies back to the expert slots in the hybrid mode",
+          "url": "https://github.com/Niko1221/Strata/pull/4347"
+        },
+        {
+          "number": 3607,
+          "title": "[Engine] native Windows support for the Intel Arc SYCL port",
+          "url": "https://github.com/Niko1221/Strata/pull/3607"
+        },
+        {
+          "number": 3943,
+          "title": "[Engine] sm_6x prompt path: QSA attention without partials or the merge kernel, bitwise, prompt reads 2-3% faster on GP100 (opt-in, `STRATA_PATTN_SM60=1`)",
+          "url": "https://github.com/Niko1221/Strata/pull/3943"
+        },
+        {
+          "number": 3911,
+          "title": "[Engine] qwen35: a penalty for a history token outside a --draft-vocab row no longer writes past the row",
+          "url": "https://github.com/Niko1221/Strata/pull/3911"
+        },
+        {
+          "number": 2683,
+          "title": "[Engine] tests: cuda_spill_guard fails the CUDA test build when a Strata kernel spills or keeps a per-thread array in local memory",
+          "url": "https://github.com/Niko1221/Strata/pull/2683"
+        },
+        {
+          "number": 3606,
+          "title": "[Other] setup: --gguf-dir files for Qwen3.6-35B-A3B no longer need a .done mark made by setup",
+          "url": "https://github.com/Niko1221/Strata/pull/3606"
+        },
+        {
+          "number": 3305,
+          "title": "[Other] fix(setup AMD): engine probes get the engine's lib_dirs on LD_LIBRARY_PATH on Linux (the PATH-only #2372 env made strata --families exit 127, so setup falsely refused Qwen3.6)",
+          "url": "https://github.com/Niko1221/Strata/pull/3305"
+        },
+        {
+          "number": 4301,
+          "title": "[Engine] strata-dsv41: build with -Xptxas -dlcm=ca in the experimental sm_60/sm_70 build (Pascal decode 1.66 -> 3.50 tok/s)",
+          "url": "https://github.com/Niko1221/Strata/pull/4301"
+        },
+        {
+          "number": 3676,
+          "title": "[Serve] a greedy request no longer inherits the model card's penalties (MTP stays on)",
+          "url": "https://github.com/Niko1221/Strata/pull/3676"
+        },
+        {
+          "number": 4114,
+          "title": "[Engine] Native RDNA4 (gfx1201) NVFP4 engine (--gfx1201-nvfp4)",
+          "url": "https://github.com/Niko1221/Strata/pull/4114"
+        },
+        {
+          "number": 4270,
+          "title": "[Engine] qwen35: FP16 K/V cache by default, int8 with --kv-q8 (262144 fits a 16 GiB card)",
+          "url": "https://github.com/Niko1221/Strata/pull/4270"
+        },
+        {
+          "number": 1764,
+          "title": "EXL3: run the EXL3 trellis format on the engine",
+          "url": "https://github.com/Niko1221/Strata/pull/1764"
+        },
+        {
+          "number": 1748,
+          "title": "[Engine] Remote stage: run the later layers of a layer split on other PCs, over TCP (opt-in; Linux and Windows; Qwen3.8-Flash-Next)",
+          "url": "https://github.com/Niko1221/Strata/pull/1748"
+        },
+        {
+          "number": 3322,
+          "title": "[Engine] support the official Flash-Next DFlash2 checkpoint",
+          "url": "https://github.com/Niko1221/Strata/pull/3322"
+        },
+        {
+          "number": 2041,
+          "title": "[Other] setup: agentionai's Signal 3.8 Flash Next as --family signal (AP-Q4_K_XL, AP-IQ4_XS), images with its own encoder",
+          "url": "https://github.com/Niko1221/Strata/pull/2041"
+        },
+        {
+          "number": 3447,
+          "title": "[Engine] CUDA 12.0/12.1: widen the f32 bits by hand in the q36 VDEBUG print",
+          "url": "https://github.com/Niko1221/Strata/pull/3447"
+        },
+        {
+          "number": 4232,
+          "title": "[GUI] API monitor: show the tokens held in the engine's KV cache",
+          "url": "https://github.com/Niko1221/Strata/pull/4232"
+        }
+      ]
+    },
+    {
+      "key": "affinityprs",
+      "items": [
+        {
+          "number": 4283,
+          "title": "[Engine] Opt-in routed prompt stream: skip streamed experts no token routes to (follow-up read time -18%, same output)",
+          "url": "https://github.com/Niko1221/Strata/pull/4283"
+        },
+        {
+          "number": 4401,
+          "title": "[Benchmark] RTX 5060 Ti 16 GB + i7-14700 / Qwen3.8-Flash-Next IQ3_S 256K / standard-v1 draft.1",
+          "url": "https://github.com/Niko1221/Strata/pull/4401"
+        },
+        {
+          "number": 3522,
+          "title": "[Other] calibrate: keep the PCIe/draft-floor winner only when it beats this run's own noise instead of the fixed >3%",
+          "url": "https://github.com/Niko1221/Strata/pull/3522"
+        },
+        {
+          "number": 3817,
+          "title": "[GUI] the app's start wait follows the model's size, inside the ceiling the installed Control actually takes (#3459 #4191)",
+          "url": "https://github.com/Niko1221/Strata/pull/3817"
+        },
+        {
+          "number": 4019,
+          "title": "[Engine] Mac: calibrate the decode kernels' tiles on the device (setup.sh --calibrate)",
+          "url": "https://github.com/Niko1221/Strata/pull/4019"
+        },
+        {
+          "number": 2528,
+          "title": "[Engine] Slot placement policy for STRATA_SLOT_CACHE_AFFINITY (2/3, depends on #2527): protection by history length, retention scores, value decay, no wait",
+          "url": "https://github.com/Niko1221/Strata/pull/2528"
+        },
+        {
+          "number": 2527,
+          "title": "[Engine] Keep conversations in pipelined batch slots (1/3): active-row windows, park=, cache-aware placement behind a policy interface",
+          "url": "https://github.com/Niko1221/Strata/pull/2527"
+        },
+        {
+          "number": 3317,
+          "title": "[Engine] Calibrate: survive an engine dying mid-measurement; adaptive gate: say where the copies stopped (#1337, #2188)",
+          "url": "https://github.com/Niko1221/Strata/pull/3317"
+        },
+        {
+          "number": 3706,
+          "title": "[Engine] pool_tasks_test and pool_cores_test pass on a two-node machine",
+          "url": "https://github.com/Niko1221/Strata/pull/3706"
+        },
+        {
+          "number": 3730,
+          "title": "[Engine] keep the automatic NUMA pool off when the experts come from the arena path (#3708)",
+          "url": "https://github.com/Niko1221/Strata/pull/3730"
+        },
+        {
+          "number": 4010,
+          "title": "[Engine] Pipelined batch groups adapt the VRAM tier (opt-in STRATA_PIPE_ADAPT_EVERY): six-stream decode after a start 309 -> 410 tok/s",
+          "url": "https://github.com/Niko1221/Strata/pull/4010"
+        },
+        {
+          "number": 3809,
+          "title": "[Engine] opt-in fused int8 prefill for the native Q2_0 pack on sm_80+ (STRATA_PF_FUSED_Q2N=1)",
+          "url": "https://github.com/Niko1221/Strata/pull/3809"
+        },
+        {
+          "number": 3060,
+          "title": "[Engine] STRATA_RAM_ADAPT: move experts out of their stage buffer, up to 4 pairs a layer",
+          "url": "https://github.com/Niko1221/Strata/pull/3060"
+        },
+        {
+          "number": 1284,
+          "title": "[Engine] adaptive tier: --adapt-decay outside (0, 1) is refused (inf counts, NaN swap gains)",
+          "url": "https://github.com/Niko1221/Strata/pull/1284"
+        },
+        {
+          "number": 3895,
+          "title": "[Docs] AMD_HIP: why STRATA_SH_STREAM goes both ways, and leave it off on Windows",
+          "url": "https://github.com/Niko1221/Strata/pull/3895"
+        },
+        {
+          "number": 3864,
+          "title": "[Benchmark] Community report: TITAN RTX + RTX 3080 12 GB layer-split sweep (K=20-32) on Xeon E5-2683 v4",
+          "url": "https://github.com/Niko1221/Strata/pull/3864"
+        },
+        {
+          "number": 4114,
+          "title": "[Engine] Native RDNA4 (gfx1201) NVFP4 engine (--gfx1201-nvfp4)",
+          "url": "https://github.com/Niko1221/Strata/pull/4114"
+        },
+        {
+          "number": 3322,
+          "title": "[Engine] support the official Flash-Next DFlash2 checkpoint",
+          "url": "https://github.com/Niko1221/Strata/pull/3322"
+        },
+        {
+          "number": 3276,
+          "title": "[Other] setup: calibrate a dual config whose gpu is the string 0,1",
+          "url": "https://github.com/Niko1221/Strata/pull/3276"
+        },
+        {
+          "number": 3643,
+          "title": "[Engine] Jev System One decision endpoint (/v1/systemone): typed decisions with calibrated probabilities",
+          "url": "https://github.com/Niko1221/Strata/pull/3643"
+        },
+        {
+          "number": 4185,
+          "title": "[Engine] [SYCL] opt-in mixed-IQ3 decode optimizations on Battlemage",
+          "url": "https://github.com/Niko1221/Strata/pull/4185"
+        },
+        {
+          "number": 3994,
+          "title": "[Engine] build the DeepSeek engine for sm_89 (the RTX 40 series)",
+          "url": "https://github.com/Niko1221/Strata/pull/3994"
+        },
+        {
+          "number": 4149,
+          "title": "[Engine] keep configured vision resident during calibration",
+          "url": "https://github.com/Niko1221/Strata/pull/4149"
+        },
+        {
+          "number": 3420,
+          "title": "[GUI] Web search and page reading for the web app's Chat (DuckDuckGo default, SearXNG, Brave, Tavily, Serper, Exa, Perplexity)",
+          "url": "https://github.com/Niko1221/Strata/pull/3420"
+        },
+        {
+          "number": 4054,
+          "title": "[Benchmark] RTX 3090 + i9-10900K, Flash-Next IQ3_S at 512K context (engines 0.1.44.1 / 0.1.48 / 0.1.50) + seven-configuration A/B",
+          "url": "https://github.com/Niko1221/Strata/pull/4054"
+        }
+      ]
+    },
+    {
+      "key": "cacheprs",
+      "items": [
+        {
+          "number": 3232,
+          "title": "[Benchmark] 3x RTX 2080 Ti 22 GB (sm_75): v0.1.45 vs 0.2.0-beta vs 0.2.7, UD-Q4_K_XL at 262K, layer split 16,32",
+          "url": "https://github.com/Niko1221/Strata/pull/3232"
+        },
+        {
+          "number": 4411,
+          "title": "[Engine] session-file saves: ping-pong blocks and a writer thread so the source copy overlaps the previous block write",
+          "url": "https://github.com/Niko1221/Strata/pull/4411"
+        },
+        {
+          "number": 3913,
+          "title": "[Engine] HIP/Linux: mlock host memory registered or allocated for the GPU so swap and reclaim cannot stall it",
+          "url": "https://github.com/Niko1221/Strata/pull/3913"
+        },
+        {
+          "number": 4119,
+          "title": "[Engine] Opt-in two-pass QSA prompt selection: 3xTF32 only near the top-k cut-off, the same cells (256K prompt read +5.2%)",
+          "url": "https://github.com/Niko1221/Strata/pull/4119"
+        },
+        {
+          "number": 4283,
+          "title": "[Engine] Opt-in routed prompt stream: skip streamed experts no token routes to (follow-up read time -18%, same output)",
+          "url": "https://github.com/Niko1221/Strata/pull/4283"
+        },
+        {
+          "number": 4423,
+          "title": "[Engine] Retain batch checkpoints within the prompt-cache budget",
+          "url": "https://github.com/Niko1221/Strata/pull/4423"
+        },
+        {
+          "number": 4419,
+          "title": "[Benchmark] add RTX 3070 Flash-Next IQ3_S community results",
+          "url": "https://github.com/Niko1221/Strata/pull/4419"
+        },
+        {
+          "number": 3541,
+          "title": "[Engine] metal: the conversation cache and session files keep the decode window's own K/V (#2502)",
+          "url": "https://github.com/Niko1221/Strata/pull/3541"
+        },
+        {
+          "number": 3536,
+          "title": "[Engine] metal: the session no longer holds unused QSA K/V pools (6.4 GiB resident at 262K context)",
+          "url": "https://github.com/Niko1221/Strata/pull/3536"
+        },
+        {
+          "number": 4306,
+          "title": "[Other] serve: session ladder — conversations survive an engine unload",
+          "url": "https://github.com/Niko1221/Strata/pull/4306"
+        },
+        {
+          "number": 4307,
+          "title": "[Other] serve+webui: unload that works — pre-staged checkpoints, polite waits, honest answers",
+          "url": "https://github.com/Niko1221/Strata/pull/4307"
+        },
+        {
+          "number": 4417,
+          "title": "[GUI] the Monitor, Images and About views follow the chosen language",
+          "url": "https://github.com/Niko1221/Strata/pull/4417"
+        },
+        {
+          "number": 2253,
+          "title": "[Engine] serve: the RAM gate releases the heap and stops evicting when it cannot help (rebased #1394)",
+          "url": "https://github.com/Niko1221/Strata/pull/2253"
+        },
+        {
+          "number": 4310,
+          "title": "[Engine] session files: format v2 with per-stage save/restore under --layer-split",
+          "url": "https://github.com/Niko1221/Strata/pull/4310"
+        },
+        {
+          "number": 3382,
+          "title": "[Engine] STRATA_PREFILL_CPU_SHARE_BATCH=1 (opt-in): the prompt's CPU share with --batch, for a read while no slot decodes; short reads -21% to -31%",
+          "url": "https://github.com/Niko1221/Strata/pull/3382"
+        },
+        {
+          "number": 4121,
+          "title": "[Engine] batch-groups: MTP drafts in the pipelined slot groups (STRATA_PIPED_MTP=N, opt-in)",
+          "url": "https://github.com/Niko1221/Strata/pull/4121"
+        },
+        {
+          "number": 4002,
+          "title": "[Engine] Parallelize staged conversation cache copies",
+          "url": "https://github.com/Niko1221/Strata/pull/4002"
+        },
+        {
+          "number": 3378,
+          "title": "[Other] tools: read the FP4-Local checkpoint with cached sequential reads, not a process-lifetime np.memmap",
+          "url": "https://github.com/Niko1221/Strata/pull/3378"
+        },
+        {
+          "number": 4384,
+          "title": "[Engine] serve: a zero drafter ring (Metal --mtp) must not void the conversation cache or kill the engine",
+          "url": "https://github.com/Niko1221/Strata/pull/4384"
+        },
+        {
+          "number": 3564,
+          "title": "[Engine] Metal: working session cache, and the 12 GiB its arena was reserving for nothing",
+          "url": "https://github.com/Niko1221/Strata/pull/3564"
+        },
+        {
+          "number": 3341,
+          "title": "[Engine] conversation cache: park and restore conversations through session files (--conversation-cache-disk-mib)",
+          "url": "https://github.com/Niko1221/Strata/pull/3341"
+        },
+        {
+          "number": 3267,
+          "title": "[Engine] LoRA adapter support with per-request on/off switch",
+          "url": "https://github.com/Niko1221/Strata/pull/3267"
+        },
+        {
+          "number": 4031,
+          "title": "[Engine] Conversation cache: Stop evicting what this freed RAM can never re-use; Auto-shrinking RAM conversation cache slots under RAM pressure",
+          "url": "https://github.com/Niko1221/Strata/pull/4031"
+        },
+        {
+          "number": 4374,
+          "title": "[Other] serve: opt-in \"system_reminders\": \"tail\" keeps a client's system-reminder blocks at the end of the prompt",
+          "url": "https://github.com/Niko1221/Strata/pull/4374"
+        },
+        {
+          "number": 2409,
+          "title": "[Engine] avoid CUDA OOM during conversation-cache restore",
+          "url": "https://github.com/Niko1221/Strata/pull/2409"
+        }
+      ]
+    },
+    {
+      "key": "affinity_exact",
+      "items": [
+        {
+          "number": 2528,
+          "title": "[Engine] Slot placement policy for STRATA_SLOT_CACHE_AFFINITY (2/3, depends on #2527): protection by history length, retention scores, value decay, no wait",
+          "url": "https://github.com/Niko1221/Strata/pull/2528"
+        },
+        {
+          "number": 626,
+          "title": "cpu: preserve full thread affinity on Windows and Linux",
+          "url": "https://github.com/Niko1221/Strata/pull/626"
+        },
+        {
+          "number": 272,
+          "title": "feat(cpu): add hybrid architecture awareness and --pool-affinity for P/E-core CPUs",
+          "url": "https://github.com/Niko1221/Strata/pull/272"
+        },
+        {
+          "number": 1912,
+          "title": "--pool-affinity measure: on a hybrid CPU, time the all and p-cores pool layouts at start and take the faster (opt-in)",
+          "url": "https://github.com/Niko1221/Strata/pull/1912"
+        }
+      ]
+    },
+    {
+      "key": "worker_exact",
+      "items": [
+        {
+          "number": 4019,
+          "title": "[Engine] Mac: calibrate the decode kernels' tiles on the device (setup.sh --calibrate)",
+          "url": "https://github.com/Niko1221/Strata/pull/4019"
+        },
+        {
+          "number": 3205,
+          "title": "[Benchmark] calibrate checks the output directory up front (#3187)",
+          "url": "https://github.com/Niko1221/Strata/pull/3205"
+        },
+        {
+          "number": 4149,
+          "title": "[Engine] keep configured vision resident during calibration",
+          "url": "https://github.com/Niko1221/Strata/pull/4149"
+        },
+        {
+          "number": 3643,
+          "title": "[Engine] Jev System One decision endpoint (/v1/systemone): typed decisions with calibrated probabilities",
+          "url": "https://github.com/Niko1221/Strata/pull/3643"
+        },
+        {
+          "number": 1441,
+          "title": "Prompt chunks sized for a layer split's pipeline (`--prefill-pipe`, opt-in; b/a from `--calibrate`)",
+          "url": "https://github.com/Niko1221/Strata/pull/1441"
+        },
+        {
+          "number": 1849,
+          "title": "[Benchmark] RTX 4090 Laptop GPU follow-up, engine 0.1.41, defaults and --calibrate settings (IQ3_S, 131K and 262K)",
+          "url": "https://github.com/Niko1221/Strata/pull/1849"
+        },
+        {
+          "number": 3522,
+          "title": "[Other] calibrate: keep the PCIe/draft-floor winner only when it beats this run's own noise instead of the fixed >3%",
+          "url": "https://github.com/Niko1221/Strata/pull/3522"
+        },
+        {
+          "number": 4210,
+          "title": "[Engine] serve: /v1/responses accepts Codex's agent_message input items (multi-agent v2 workers)",
+          "url": "https://github.com/Niko1221/Strata/pull/4210"
+        },
+        {
+          "number": 3872,
+          "title": "[Benchmark] 2x RTX 3060 no-AVX2: pool-workers 11 rejected + k8v4 decode-vs-read trade-off",
+          "url": "https://github.com/Niko1221/Strata/pull/3872"
+        },
+        {
+          "number": 2136,
+          "title": "setup: reject conflicting --calibrate options (#2036)",
+          "url": "https://github.com/Niko1221/Strata/pull/2136"
+        },
+        {
+          "number": 3581,
+          "title": "[Benchmark] Radeon VII 16 GB (gfx906) - standard-v1 (complete) + --pool-workers sweep (release v0.2.1.4, engine 0.1.46.3)",
+          "url": "https://github.com/Niko1221/Strata/pull/3581"
+        },
+        {
+          "number": 3617,
+          "title": "[TUI] include calibration helper in Terminal installer payload",
+          "url": "https://github.com/Niko1221/Strata/pull/3617"
+        },
+        {
+          "number": 2312,
+          "title": "[Engine] keep configured vision resident during calibration",
+          "url": "https://github.com/Niko1221/Strata/pull/2312"
+        },
+        {
+          "number": 3276,
+          "title": "[Other] setup: calibrate a dual config whose gpu is the string 0,1",
+          "url": "https://github.com/Niko1221/Strata/pull/3276"
+        },
+        {
+          "number": 2380,
+          "title": "setup: calibrate a dual config whose gpu is the string 0,1",
+          "url": "https://github.com/Niko1221/Strata/pull/2380"
+        },
+        {
+          "number": 1755,
+          "title": "Historical fleet calibration candidates with current-default qualification",
+          "url": "https://github.com/Niko1221/Strata/pull/1755"
+        },
+        {
+          "number": 2639,
+          "title": "[Engine] Jev System One decision endpoint (/v1/systemone): typed decisions with calibrated probabilities",
+          "url": "https://github.com/Niko1221/Strata/pull/2639"
+        },
+        {
+          "number": 1313,
+          "title": "hipBLASLt table for gfx1201 at 100200 (R9700 calibrated, +15% prefill)",
+          "url": "https://github.com/Niko1221/Strata/pull/1313"
+        },
+        {
+          "number": 2332,
+          "title": "Add community benchmarks: RTX 4090 Laptop, IQ3_XXS and IQ3_S, default vs calibrated",
+          "url": "https://github.com/Niko1221/Strata/pull/2332"
+        },
+        {
+          "number": 450,
+          "title": "calibrate: a gpu list is not a layer split (#447)",
+          "url": "https://github.com/Niko1221/Strata/pull/450"
+        }
+      ]
+    }
+  ]
+}
