@@ -1,0 +1,7 @@
+# Keep the report, reproducer and compact path-free state summaries.
+*
+!.gitignore
+!README.md
+!run_probe.py
+!boot-events.json
+!pnp.json

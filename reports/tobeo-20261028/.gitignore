@@ -1,0 +1,6 @@
+# Keep the dated index and selected public artifacts only.
+*
+!.gitignore
+!README.md
+!pcie-after-reboot/
+!upstream-reports/

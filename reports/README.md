@@ -10,6 +10,7 @@
 | [tobeo · 2026-10-22](tobeo-20261022/README.md) | 同一设备：Windows 原生正确性基线、上下文曲线、Nsight Systems 时间线及 Compute 权限预检 |
 | [tobeo · 2026-10-23](tobeo-20261023/README.md) | 1K/16K Compute 计数、CPU IP 与传输异常诊断、PR #3641 局部正确性验证；按北京时间归档 |
 | [tobeo · 2026-10-24](tobeo-20261024/README.md) | TDR 与传输异常时间线、独立双向传输探针、服务重启和上游相关问题检索 |
+| [tobeo · 2026-10-28](tobeo-20261028/README.md) | 重启后的 PCIe 传输恢复验证，以及 Strata/NVIDIA 排障报告发布记录 |
 
 每次归档以 `README.md` 为入口，按主题建目录；后续日期另建归档，不将新测量覆盖到历史结果。报告和复现脚本可进入 Git，本机配置、原始数据、日志和运行时状态由各目录 `.gitignore` 排除。忽略 Git 不等于删除文件：这些记录仍可在本机查看。
 

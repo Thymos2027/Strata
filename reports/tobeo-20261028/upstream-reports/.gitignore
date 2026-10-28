@@ -1,0 +1,10 @@
+# These files are publication-ready or already public and contain no local secrets.
+*
+!.gitignore
+!README.md
+!*.md
+!*.txt
+!*.html
+!*.json
+!*.cu
+!*.zip

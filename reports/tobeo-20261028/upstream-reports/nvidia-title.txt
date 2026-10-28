@@ -1,0 +1,1 @@
+RTX 5060 Ti / Windows: persistent low PCIe transfer throughput observed after kernel-replay TDR, restored after reboot

@@ -267,9 +267,11 @@ upstream-notes.md         # 查重、相关讨论、拟提交范围
 
 每次任务结束前复核本清单：已实际完成的项目打勾，并记录日期、证据与范围；部分完成保留未勾选并说明进度。后续扩展配置或 workload 时，已有勾选不替代新条件下的验证。
 
-最近复核：2026-10-23。已同步并审查 `upstream/main` `7ddc17a3` / v0.2.3.1 及相关实时 PR/Issue 状态。阶段 A、阶段 B 最小矩阵及阶段 C 的原 Systems 时间线是在旧 revision 上完成的历史证据；新增 1K/16K Compute 三指标、1K CPU IP/PDB 解析，以及上游 #3641 固定旧 head 的 CUDA 构建/三个选定测试/真实 Q4 1K 对照。发现同日 HtoD 吞吐异常，NVML/PnP 报告冲突、具体原因未定，当前主线基线、正常工况的完整 profiling 与五组性能 A/B 均未完成。Flash-Next 已恢复；按北京时间运行开始日期归档。
+最近复核：2026-10-28。已同步并审查 `upstream/main` `7ddc17a3` / v0.2.3.1 及相关实时 PR/Issue 状态。阶段 A、阶段 B 最小矩阵及阶段 C 的原 Systems 时间线是在旧 revision 上完成的历史证据；新增 1K/16K Compute 三指标、1K CPU IP/PDB 解析，以及上游 #3641 固定旧 head 的 CUDA 构建/三个选定测试/真实 Q4 1K 对照。10 月 23 日发现的 HtoD 异常已在 10 月 28 日整机重启后恢复，并完成 Strata/NVIDIA 排障报告；当前主线基线、正常工况的完整 profiling 与五组性能 A/B 仍未完成。按北京时间运行开始日期归档。
 
 - [x] 核对最新上游、相关讨论和工作区改动。
+  - 2026-10-28 用户完成 [NVIDIA Nsight Compute #387175](https://forums.developer.nvidia.com/t/rtx-5060-ti-windows-persistent-low-pcie-transfer-throughput-observed-after-kernel-replay-tdr-restored-after-reboot/387175) 发布；已通过公开主题 JSON 核验分类、正文、测量表和限制，并更新 [Strata #4381](https://github.com/Niko1221/Strata/issues/4381) 正文完成互链。核验时论坛尚无回复；报告发布完成不代表根因已被厂商确认或完整优化交付完成。
+  - 2026-10-28 同日早先完成针对性 issues/PRs/论坛查重与脱敏，发布 [Strata 排障报告 #4381](https://github.com/Niko1221/Strata/issues/4381)，并准备 NVIDIA Nsight Compute 正文、证据包和预填页面；随后由用户登录发布并完成互链，最终状态以上一项和[发布状态](tobeo-20261028/upstream-reports/README.md)为准。未把报告发布或本机环境恢复当成完整优化交付。
   - 2026-10-23 同步后复核 `upstream/main` `7ddc17a3`（v0.2.3.1）：Qwen3.6 核心仅见 CUDA 12.0/12.1 编译兼容修复；v0.2.3 改变 conversation cache 自动预算及 Work profile 默认值。GitHub 实时状态确认 #3641/#3678/#3700 均未关闭或合并，前两者仍基于 `011c9e6` 且 API 返回当前不可直接合并；#3542 已更新到当前 base。审查结果已写入本计划和各执行入口，没有向外发送消息或修改上游。
   - 2026-10-23 通过 API 重新搜索 open/closed，阅读 #2464/#3700 后续评论，确认 #3641 已有 FP32 GQA 对照开关，#3678 也有重叠工作；固定 #3641 head f3f2136f 做已有方案验证，不另起重复实现。没有向外发送消息或提交 PR。
   - 2026-10-22 已核对工作区，重新读取 #2464 及后续评论，并查询包含 k_attn_part 的相关 PR（包括 #3084、#2698）；快照保留在阶段 B 目录。实验继续固定阶段 A revision，未声称运行最新 main；后续实现前仍需重新查重。
@@ -291,6 +293,8 @@ upstream-notes.md         # 查重、相关讨论、拟提交范围
 - [x] 补齐 16K / MTP 0 的相同三个 Compute 指标。
   - 2026-10-23，代理直接运行；874.176 μs、DRAM 读 91,881,216 bytes、写 1,098,752 bytes，shape、64-token 前缀和服务恢复均通过，见[两上下文汇总](tobeo-20261023/qwen36-compute/summary.json)。每个上下文只测一个调用，不代表 L2/stall/occupancy 已完成。
 - [x] 检查同日环境漂移，独立核对主机到 GPU 的传输通路。
+  - 2026-10-28 [报告价值评估](tobeo-20261028/pcie-after-reboot/README.md)：重新检索 TDR/PCIe/reboot/Nsight 的 issues，建议优先向 NVIDIA 报告恢复后的持续低吞吐，Strata 侧作排障参考；未找到确认同案，未声称穷尽查重，未发布 issue/comment。后续实际提交前仍需完成 PR/评论范围的针对性查重及脱敏。
+  - 2026-10-28 用户整机重启后，用 10-24 同一 exe 复测：H2D=24.882、D2H=28.370、mapped read=16.651 GB/s，退出码 0、数据抽查通过，负载期间采到的代际均为 Gen5，驱动仍为 610.88。见[重启后恢复验证](tobeo-20261028/pcie-after-reboot/README.md)。确认本轮传输恢复，强支持此前持久驱动/设备状态异常；未启动日常模型或测 decode，不代表阶段 C 归因或正式性能 A/B 已完成。
   - 2026-10-24 [进一步定位](tobeo-20261024/pcie-root-cause/README.md)：核对原始事件，13:26:01–04 TDR 紧接 13:26:07 首次慢探针；卸载模型后独立 H2D=1.726、D2H=1.807、mapped read=1.608 GB/s，D2D=186.7、CPU memcpy=17.24 GB/s，抽查通过。复现 NVML RX 峰值高于有效 payload 带宽。优先怀疑 TDR 后持久驱动/设备传输状态；物理代际仍有报告冲突，未执行系统/设备复位，不将相关性记作根因已证实或环境已恢复。
   - 2026-10-24 完成 HtoD 症状的[上游 issues 检索](tobeo-20261024/strata-restart/github-related-issues.md)，核查 #485/#2137/#2453 正文及评论；找到探针低估、Gen1 限速与同卡 decode 降速的相关报告，但未确认完全同因案例。未发布消息或执行新测量，不代表本机环境恢复。
   - 2026-10-24 经用户授权重启日常 Strata：模型已加载，温度/功耗/利用率遥测恢复；启动 HtoD 仍为 1.7 GB/s，传输异常未恢复。见[重启验证](tobeo-20261024/strata-restart/README.md)。未改配置或系统设置，未新增 decode 测试，不将遥测恢复记作性能恢复。
