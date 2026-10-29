@@ -1,0 +1,16 @@
+[
+  {
+    "name": "gate-multiturn-a",
+    "actual_request_messages": 1,
+    "aggregate_messages": 3,
+    "authoritative_input": "gate-multiturn-a.response.json request.messages",
+    "reason": "Aggregate list contains subsequently appended follow-up messages; raw request retained unchanged."
+  },
+  {
+    "name": "gate-tools",
+    "actual_request_messages": 1,
+    "aggregate_messages": 4,
+    "authoritative_input": "gate-tools.response.json request.messages",
+    "reason": "Aggregate list contains subsequently appended follow-up messages; raw request retained unchanged."
+  }
+]

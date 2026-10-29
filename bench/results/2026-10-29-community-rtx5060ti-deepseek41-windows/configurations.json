@@ -1,0 +1,73 @@
+[
+  {
+    "name": "automatic",
+    "args": [
+      "--pack",
+      "<PACK_DIR>",
+      "--max-context",
+      "8192",
+      "--eos",
+      "1",
+      "--vision",
+      "off",
+      "--dspark",
+      "auto",
+      "--dspark-conf",
+      "0.65",
+      "--experts",
+      "6",
+      "--gpus",
+      "0"
+    ]
+  },
+  {
+    "name": "80GB",
+    "args": [
+      "--pack",
+      "<PACK_DIR>",
+      "--max-context",
+      "8192",
+      "--eos",
+      "1",
+      "--vision",
+      "off",
+      "--dspark",
+      "auto",
+      "--dspark-conf",
+      "0.65",
+      "--experts",
+      "6",
+      "--gpus",
+      "0",
+      "--ssd-cache",
+      "80.0",
+      "--reserve-mib",
+      "1536"
+    ]
+  },
+  {
+    "name": "64GB",
+    "args": [
+      "--pack",
+      "<PACK_DIR>",
+      "--max-context",
+      "8192",
+      "--eos",
+      "1",
+      "--vision",
+      "off",
+      "--dspark",
+      "auto",
+      "--dspark-conf",
+      "0.65",
+      "--experts",
+      "6",
+      "--gpus",
+      "0",
+      "--ssd-cache",
+      "64.0",
+      "--reserve-mib",
+      "1536"
+    ]
+  }
+]

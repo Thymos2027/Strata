@@ -1,0 +1,122 @@
+[
+  {
+    "path": "aggregate-input-notes.json",
+    "bytes": 599,
+    "sha256": "d8574163ca96553edc49ffacd112bb8ce092efc73e906f56dac959347eb35da8"
+  },
+  {
+    "path": "case-results.png",
+    "bytes": 237208,
+    "sha256": "fb8000b9e72285881e61bf5d65607ae0aae874a8be32e53b60f5eb90eae6e300"
+  },
+  {
+    "path": "case-results.svg",
+    "bytes": 135852,
+    "sha256": "d48da464778e65c3e7e16845c2a6100090533fec028d74df409c98013afd6818"
+  },
+  {
+    "path": "configurations.json",
+    "bytes": 1137,
+    "sha256": "4a43d6de0dbf59e311408eb2f804ac66e1e55cfbea4996cff4656bd637c29341"
+  },
+  {
+    "path": "environment.json",
+    "bytes": 1321,
+    "sha256": "e61bca099e25a03133527f5ab0241cf1eea3daaac5b937ed5c123ef2e68e82c3"
+  },
+  {
+    "path": "failure-80GB-guard.json",
+    "bytes": 164,
+    "sha256": "92120af4cfaf312e7e23386ce2f57e2821b4d89e0c1ee00b57323a5823e524d9"
+  },
+  {
+    "path": "failure-event-2004.json",
+    "bytes": 629,
+    "sha256": "d5ed85a893b9e5e1b74b1e7428b7882f8d1262e66585bd5e5684a4d72eb7266f"
+  },
+  {
+    "path": "http-requests.jsonl",
+    "bytes": 2696106,
+    "sha256": "bfe16f144273779243b191dc77d4cc4b34f8f1671324c3160614e316397f75da"
+  },
+  {
+    "path": "logs/64GB-engine.log",
+    "bytes": 15277,
+    "sha256": "759308f28f314d9b5212be0971a0532abb138f1cec93a35616677613a855323c"
+  },
+  {
+    "path": "logs/80GB-engine.log",
+    "bytes": 4953,
+    "sha256": "c5920ac552627fc43079c2a40958b34b9e8189adb536c79b1e45528eedd297de"
+  },
+  {
+    "path": "logs/automatic-engine.log",
+    "bytes": 1570,
+    "sha256": "6ec40b18dd5d1b1122c4fec0a70c72f6ec914eb3d277d40618900818b89a2f9a"
+  },
+  {
+    "path": "model-files.json",
+    "bytes": 2391,
+    "sha256": "9fcea981cf0348afcf849b71f2ad3ab28d982cb69b3dcf0d32e3c53e682bae14"
+  },
+  {
+    "path": "packaging-status.json",
+    "bytes": 238,
+    "sha256": "85dec1416b7831cd2037ca4649a10f15a6dc57a23be87edb9d471cc33616b8f8"
+  },
+  {
+    "path": "protocol-recorded.md",
+    "bytes": 4576,
+    "sha256": "b970b75a6d89657470ab43aca6820d45f0984e8be8ed475ea478a97090f1813c"
+  },
+  {
+    "path": "README.md",
+    "bytes": 11797,
+    "sha256": "0c939dccdbdb090059d07079a039879105823690295f18d5835b377d101474d7"
+  },
+  {
+    "path": "requests.csv",
+    "bytes": 4204,
+    "sha256": "41915814e3a2ae8c20feb34336f8c9cf89154f469aafd09a30c0aa816395aa1d"
+  },
+  {
+    "path": "resources.jsonl",
+    "bytes": 2721985,
+    "sha256": "af2e1cded426d4ad87003894cd7df52a063ad8f99c0716d9cf17e33cd4951398"
+  },
+  {
+    "path": "source/analyze_case_posthoc.py",
+    "bytes": 7074,
+    "sha256": "b0d9e55b7388134f199b82cb12ec7bc4e33526ed95c113f32eb5956429c41af7"
+  },
+  {
+    "path": "source/plot_case_posthoc.py",
+    "bytes": 3314,
+    "sha256": "481cdf4a097ea0cca032c9350f1d80961e52c9fbc3c97f373da2afae8e64c626"
+  },
+  {
+    "path": "source/run_case_recorded.py",
+    "bytes": 21723,
+    "sha256": "9f86a56bfbd595a1a953f2f67b5e919e3051f0541568f4becdb7b114279c3897"
+  },
+  {
+    "path": "source/windows_telemetry_recorded.py",
+    "bytes": 5889,
+    "sha256": "3384a2ae4dee18d403219969d0b19827c448c7d67180c688103cf5f96e6fcf68"
+  },
+  {
+    "path": "source-fingerprints.json",
+    "bytes": 1477,
+    "sha256": "4f34ebe40d35d0deb4ccb8ca69f2ceac841cee39556d98eca3a15f78f1c6df4b"
+  },
+  {
+    "path": "summary.json",
+    "bytes": 68875,
+    "sha256": "beaf01f9a5728a6b486ba95cbac5c844884849b021b49380228699a0ee42369d"
+  },
+  {
+    "path": "verify_public.py",
+    "bytes": 3143,
+    "sha256": "9b4ac7685e777d0c7b62b8f6b9473a0a58714bc202d4d04564f333b02eb4bc21"
+  }
+]

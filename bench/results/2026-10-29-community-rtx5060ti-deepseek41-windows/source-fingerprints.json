@@ -1,0 +1,26 @@
+[
+  {
+    "published_path": "source/run_case_recorded.py",
+    "original_sha256": "c495355468288f79a10e42ac345195847a1741bf2879300bc7db894f1dda19fc",
+    "published_sha256": "9f86a56bfbd595a1a953f2f67b5e919e3051f0541568f4becdb7b114279c3897",
+    "change": "Only local paths replaced with explicit placeholders; archived source, not a portable GPU runner."
+  },
+  {
+    "published_path": "source/windows_telemetry_recorded.py",
+    "original_sha256": "85be86dd8000eabe32c0c7e4da3803418b72443012d72741bb265b3e6d0e84cf",
+    "published_sha256": "3384a2ae4dee18d403219969d0b19827c448c7d67180c688103cf5f96e6fcf68",
+    "change": "Only local paths replaced with explicit placeholders; archived source, not a portable GPU runner."
+  },
+  {
+    "published_path": "source/analyze_case_posthoc.py",
+    "original_sha256": "380b3a9ba95f212080c058cdd97824c0fe608b8b1b2462d8e74545a92893b489",
+    "published_sha256": "b0d9e55b7388134f199b82cb12ec7bc4e33526ed95c113f32eb5956429c41af7",
+    "change": "Only local paths replaced with explicit placeholders; archived source, not a portable GPU runner."
+  },
+  {
+    "published_path": "source/plot_case_posthoc.py",
+    "original_sha256": "81cf4378b5f57948f16526e50472033be89e6139fdbb0202bb216bf6b46c7597",
+    "published_sha256": "481cdf4a097ea0cca032c9350f1d80961e52c9fbc3c97f373da2afae8e64c626",
+    "change": "Only local paths replaced with explicit placeholders; archived source, not a portable GPU runner."
+  }
+]

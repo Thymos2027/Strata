@@ -1,0 +1,2163 @@
+{
+  "phase": "complete",
+  "passed": true,
+  "error": null,
+  "started": "2026-10-29T19:32:18.562303+08:00",
+  "finished": "2026-10-29T20:10:30.668180+08:00",
+  "engine": {
+    "exe": "<ENGINE_DIR>\\strata-dsv41.exe",
+    "sha256": "e2f9fce53017dd8c2318e3a5ce969b4bd00b64589bdf32355e8d4d691962e610",
+    "archive_sha256": "f1a3ae88f770b0ef2a3adb9fc7a7166af79069532210bf0f9c7970845cb75865",
+    "build": {
+      "version": "0.1.52",
+      "source": "f-027-rel a42cc3d7d",
+      "commit": "a42cc3d7df70",
+      "archs": [
+        86,
+        89,
+        120
+      ],
+      "ptx": true,
+      "cuda": "13.0",
+      "portable": true,
+      "dsv41": true
+    },
+    "signed_package_and_all_files_verified": true,
+    "manifest_matches_signed_feed": true
+  },
+  "loads": [
+    {
+      "tag": "first-load",
+      "load_seconds": 18.203000000008615,
+      "ready_at": "2026-10-29T19:32:43.717726+08:00",
+      "health": {
+        "status": "ok",
+        "max_context": 8192,
+        "model": "deepseek-v4.1-flash",
+        "images": false,
+        "api_key": false,
+        "image_generation": false,
+        "loaded": true,
+        "service": "strata"
+      },
+      "engine_pid": 23936,
+      "resources": {
+        "rss_bytes_max": 58578030592,
+        "private_bytes_max": 83342655488,
+        "card_vram_used_bytes_max": 15917342720,
+        "system_committed_bytes_max": 111554301952.0,
+        "system_commit_limit_bytes_max": 141434998784.0,
+        "system_pages_input_s_max": 105.09221346013139,
+        "system_page_reads_s_max": 25.951869662523887,
+        "system_available_bytes_min": 58417516544,
+        "process_read_bytes_delta": 64163200276,
+        "process_write_bytes_delta": 1288,
+        "system_disk_read_bytes_delta": 54333779456,
+        "system_disk_write_bytes_delta": 3402752,
+        "process_page_faults_delta": 15441376,
+        "samples": 29,
+        "error": null
+      }
+    },
+    {
+      "tag": "second-load",
+      "load_seconds": 17.843999999997322,
+      "ready_at": "2026-10-29T19:33:46.122258+08:00",
+      "health": {
+        "status": "ok",
+        "max_context": 8192,
+        "model": "deepseek-v4.1-flash",
+        "images": false,
+        "api_key": false,
+        "image_generation": false,
+        "loaded": true,
+        "service": "strata"
+      },
+      "engine_pid": 26124,
+      "resources": {
+        "rss_bytes_max": 58581278720,
+        "private_bytes_max": 83348860928,
+        "card_vram_used_bytes_max": 15927828480,
+        "system_committed_bytes_max": 111846436864.0,
+        "system_commit_limit_bytes_max": 141434998784.0,
+        "system_pages_input_s_max": 251.48295105263577,
+        "system_page_reads_s_max": 17.963067932331125,
+        "system_available_bytes_min": 58176749568,
+        "process_read_bytes_delta": 64322272856,
+        "process_write_bytes_delta": 1288,
+        "system_disk_read_bytes_delta": 54334952448,
+        "system_disk_write_bytes_delta": 4110848,
+        "process_page_faults_delta": 15484644,
+        "samples": 29,
+        "error": null
+      }
+    }
+  ],
+  "functional": [
+    {
+      "name": "gate-paris",
+      "task_passed": true,
+      "protocol_passed": true,
+      "content": "The capital of France is Paris.",
+      "tool_calls": [],
+      "usage": {
+        "prompt_tokens": 17,
+        "completion_tokens": 8,
+        "total_tokens": 25,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 17,
+        "prompt_ms": 1675.3,
+        "prompt_per_token_ms": 98.547,
+        "prompt_per_second": 10.1,
+        "predicted_n": 8,
+        "predicted_ms": 1036.6,
+        "predicted_per_token_ms": 129.575,
+        "predicted_per_second": 7.7,
+        "draft_n": 0,
+        "draft_n_accepted": 0
+      },
+      "elapsed_s": 2.716144499994698
+    },
+    {
+      "name": "gate-english",
+      "task_passed": true,
+      "protocol_passed": true,
+      "content": "READY",
+      "tool_calls": [],
+      "usage": {
+        "prompt_tokens": 15,
+        "completion_tokens": 3,
+        "total_tokens": 18,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 15,
+        "prompt_ms": 1121.2,
+        "prompt_per_token_ms": 74.747,
+        "prompt_per_second": 13.4,
+        "predicted_n": 3,
+        "predicted_ms": 280.1,
+        "predicted_per_token_ms": 93.367,
+        "predicted_per_second": 10.7,
+        "draft_n": 0,
+        "draft_n_accepted": 0
+      },
+      "elapsed_s": 1.4244779999862658
+    },
+    {
+      "name": "gate-chinese",
+      "task_passed": true,
+      "protocol_passed": true,
+      "content": "本地推理可用",
+      "tool_calls": [],
+      "usage": {
+        "prompt_tokens": 17,
+        "completion_tokens": 4,
+        "total_tokens": 21,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 17,
+        "prompt_ms": 1261.7,
+        "prompt_per_token_ms": 74.218,
+        "prompt_per_second": 13.5,
+        "predicted_n": 4,
+        "predicted_ms": 502.2,
+        "predicted_per_token_ms": 125.55,
+        "predicted_per_second": 8.0,
+        "draft_n": 0,
+        "draft_n_accepted": 0
+      },
+      "elapsed_s": 1.7685507999995025
+    },
+    {
+      "name": "gate-json",
+      "task_passed": true,
+      "protocol_passed": true,
+      "content": "{\"result\": 42}",
+      "tool_calls": [],
+      "usage": {
+        "prompt_tokens": 25,
+        "completion_tokens": 7,
+        "total_tokens": 32,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 25,
+        "prompt_ms": 1659.0,
+        "prompt_per_token_ms": 66.36,
+        "prompt_per_second": 15.1,
+        "predicted_n": 7,
+        "predicted_ms": 1013.6,
+        "predicted_per_token_ms": 144.8,
+        "predicted_per_second": 6.9,
+        "draft_n": 0,
+        "draft_n_accepted": 0
+      },
+      "elapsed_s": 2.6772257999982685
+    },
+    {
+      "name": "gate-code",
+      "task_passed": true,
+      "protocol_passed": true,
+      "content": "```python\ndef absdiff(a, b):\n    d = a - b\n    if d < 0:\n        d = -d\n    return d\n```",
+      "tool_calls": [],
+      "usage": {
+        "prompt_tokens": 37,
+        "completion_tokens": 36,
+        "total_tokens": 73,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 37,
+        "prompt_ms": 2626.4,
+        "prompt_per_token_ms": 70.984,
+        "prompt_per_second": 14.1,
+        "predicted_n": 36,
+        "predicted_ms": 4888.0,
+        "predicted_per_token_ms": 135.778,
+        "predicted_per_second": 7.4,
+        "draft_n": 0,
+        "draft_n_accepted": 0
+      },
+      "elapsed_s": 7.518602700001793
+    },
+    {
+      "name": "gate-multiturn-a",
+      "task_passed": null,
+      "protocol_passed": true,
+      "content": "OK",
+      "tool_calls": [],
+      "usage": {
+        "prompt_tokens": 18,
+        "completion_tokens": 2,
+        "total_tokens": 20,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 18,
+        "prompt_ms": 1351.1,
+        "prompt_per_token_ms": 75.061,
+        "prompt_per_second": 13.3,
+        "predicted_n": 2,
+        "predicted_ms": 95.9,
+        "predicted_per_token_ms": 47.95,
+        "predicted_per_second": 20.9,
+        "draft_n": 0,
+        "draft_n_accepted": 0
+      },
+      "elapsed_s": 1.4705679000035161
+    },
+    {
+      "name": "gate-multiturn-b",
+      "task_passed": true,
+      "protocol_passed": true,
+      "content": "ORBIT-472",
+      "tool_calls": [],
+      "usage": {
+        "prompt_tokens": 34,
+        "completion_tokens": 5,
+        "total_tokens": 39,
+        "prompt_tokens_details": {
+          "cached_tokens": 19
+        }
+      },
+      "timings": {
+        "cache_n": 19,
+        "prompt_n": 15,
+        "prompt_ms": 1247.1,
+        "prompt_per_token_ms": 83.14,
+        "prompt_per_second": 12.0,
+        "predicted_n": 5,
+        "predicted_ms": 511.8,
+        "predicted_per_token_ms": 102.36,
+        "predicted_per_second": 9.8,
+        "draft_n": 0,
+        "draft_n_accepted": 0
+      },
+      "elapsed_s": 1.7818146999925375
+    },
+    {
+      "name": "gate-tools",
+      "task_passed": true,
+      "protocol_passed": true,
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_32b37ab079774b32ad265c90",
+          "name": "add",
+          "arguments": "{\"a\":17,\"b\":25}"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 300,
+        "completion_tokens": 41,
+        "total_tokens": 341,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 300,
+        "prompt_ms": 8778.7,
+        "prompt_per_token_ms": 29.262,
+        "prompt_per_second": 34.2,
+        "predicted_n": 41,
+        "predicted_ms": 4814.8,
+        "predicted_per_token_ms": 117.434,
+        "predicted_per_second": 8.5,
+        "draft_n": 0,
+        "draft_n_accepted": 0
+      },
+      "elapsed_s": 13.632111900005839
+    },
+    {
+      "name": "gate-tool-result",
+      "task_passed": true,
+      "protocol_passed": true,
+      "content": "42",
+      "tool_calls": [],
+      "usage": {
+        "prompt_tokens": 91,
+        "completion_tokens": 2,
+        "total_tokens": 93,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 91,
+        "prompt_ms": 4679.3,
+        "prompt_per_token_ms": 51.421,
+        "prompt_per_second": 19.4,
+        "predicted_n": 2,
+        "predicted_ms": 111.0,
+        "predicted_per_token_ms": 55.5,
+        "predicted_per_second": 18.0,
+        "draft_n": 0,
+        "draft_n_accepted": 0
+      },
+      "elapsed_s": 4.811957600002643
+    }
+  ],
+  "performance": {
+    "1024": {
+      "requests": 3,
+      "prompt_tokens": {
+        "n": 3,
+        "median": 1038,
+        "min": 1038,
+        "max": 1038
+      },
+      "completion_tokens": {
+        "n": 3,
+        "median": 256,
+        "min": 256,
+        "max": 256
+      },
+      "first_content_s": {
+        "n": 3,
+        "median": 9.69684459999553,
+        "min": 9.56914219999453,
+        "max": 11.601813100001891
+      },
+      "elapsed_s": {
+        "n": 3,
+        "median": 46.676916399999755,
+        "min": 44.88738210000156,
+        "max": 47.55786420000368
+      },
+      "prompt_ms": {
+        "n": 3,
+        "median": 9676.9,
+        "min": 9562.8,
+        "max": 11594.2
+      },
+      "prompt_tok_s": {
+        "n": 3,
+        "median": 107.3,
+        "min": 89.5,
+        "max": 108.5
+      },
+      "decode_ms": {
+        "n": 3,
+        "median": 35937.9,
+        "min": 35190.1,
+        "max": 37089.3
+      },
+      "decode_tok_s": {
+        "n": 3,
+        "median": 7.1,
+        "min": 6.9,
+        "max": 7.3
+      },
+      "cache_n": {
+        "n": 3,
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "finish": {
+        "length": 3
+      }
+    },
+    "4096": {
+      "requests": 3,
+      "prompt_tokens": {
+        "n": 3,
+        "median": 4110,
+        "min": 4110,
+        "max": 4110
+      },
+      "completion_tokens": {
+        "n": 3,
+        "median": 256,
+        "min": 256,
+        "max": 256
+      },
+      "first_content_s": {
+        "n": 3,
+        "median": 19.332082799999625,
+        "min": 19.286172699998133,
+        "max": 19.64928399999917
+      },
+      "elapsed_s": {
+        "n": 3,
+        "median": 54.849987900001,
+        "min": 54.77638149999257,
+        "max": 55.10791209999297
+      },
+      "prompt_ms": {
+        "n": 3,
+        "median": 19305.7,
+        "min": 19272.3,
+        "max": 19636.2
+      },
+      "prompt_tok_s": {
+        "n": 3,
+        "median": 212.9,
+        "min": 209.3,
+        "max": 213.3
+      },
+      "decode_ms": {
+        "n": 3,
+        "median": 35517.6,
+        "min": 35126.9,
+        "max": 35802.9
+      },
+      "decode_tok_s": {
+        "n": 3,
+        "median": 7.2,
+        "min": 7.2,
+        "max": 7.3
+      },
+      "cache_n": {
+        "n": 3,
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "finish": {
+        "length": 3
+      }
+    }
+  },
+  "soak": {
+    "requests": 36,
+    "elapsed_s": 1844.1410000000033,
+    "groups": {
+      "1024-zh": {
+        "overall": {
+          "requests": 9,
+          "prompt_tokens": {
+            "n": 9,
+            "median": 1048,
+            "min": 1048,
+            "max": 1048
+          },
+          "completion_tokens": {
+            "n": 9,
+            "median": 256,
+            "min": 256,
+            "max": 256
+          },
+          "first_content_s": {
+            "n": 9,
+            "median": 10.014424699998926,
+            "min": 9.457767899992177,
+            "max": 11.747962599998573
+          },
+          "elapsed_s": {
+            "n": 9,
+            "median": 46.36583640000026,
+            "min": 43.197545599992736,
+            "max": 49.95204499999818
+          },
+          "prompt_ms": {
+            "n": 9,
+            "median": 10006.2,
+            "min": 9437.1,
+            "max": 11726.5
+          },
+          "prompt_tok_s": {
+            "n": 9,
+            "median": 104.7,
+            "min": 89.4,
+            "max": 111.1
+          },
+          "decode_ms": {
+            "n": 9,
+            "median": 35926.8,
+            "min": 33721.5,
+            "max": 38752.0
+          },
+          "decode_tok_s": {
+            "n": 9,
+            "median": 7.1,
+            "min": 6.6,
+            "max": 7.6
+          },
+          "cache_n": {
+            "n": 9,
+            "median": 0,
+            "min": 0,
+            "max": 0
+          },
+          "finish": {
+            "length": 9
+          }
+        },
+        "first_third": {
+          "requests": 3,
+          "prompt_tokens": {
+            "n": 3,
+            "median": 1048,
+            "min": 1048,
+            "max": 1048
+          },
+          "completion_tokens": {
+            "n": 3,
+            "median": 256,
+            "min": 256,
+            "max": 256
+          },
+          "first_content_s": {
+            "n": 3,
+            "median": 10.014424699998926,
+            "min": 9.457767899992177,
+            "max": 10.300069900011295
+          },
+          "elapsed_s": {
+            "n": 3,
+            "median": 47.35525880000205,
+            "min": 43.197545599992736,
+            "max": 49.05217249999987
+          },
+          "prompt_ms": {
+            "n": 3,
+            "median": 10006.2,
+            "min": 9437.1,
+            "max": 10279.9
+          },
+          "prompt_tok_s": {
+            "n": 3,
+            "median": 104.7,
+            "min": 101.9,
+            "max": 111.1
+          },
+          "decode_ms": {
+            "n": 3,
+            "median": 37340.8,
+            "min": 33721.5,
+            "max": 38752.0
+          },
+          "decode_tok_s": {
+            "n": 3,
+            "median": 6.9,
+            "min": 6.6,
+            "max": 7.6
+          },
+          "cache_n": {
+            "n": 3,
+            "median": 0,
+            "min": 0,
+            "max": 0
+          },
+          "finish": {
+            "length": 3
+          }
+        },
+        "last_third": {
+          "requests": 3,
+          "prompt_tokens": {
+            "n": 3,
+            "median": 1048,
+            "min": 1048,
+            "max": 1048
+          },
+          "completion_tokens": {
+            "n": 3,
+            "median": 256,
+            "min": 256,
+            "max": 256
+          },
+          "first_content_s": {
+            "n": 3,
+            "median": 10.42040590000397,
+            "min": 9.929036199988332,
+            "max": 11.747962599998573
+          },
+          "elapsed_s": {
+            "n": 3,
+            "median": 46.36583640000026,
+            "min": 45.734651199993095,
+            "max": 49.95204499999818
+          },
+          "prompt_ms": {
+            "n": 3,
+            "median": 10413.3,
+            "min": 9921.7,
+            "max": 11726.5
+          },
+          "prompt_tok_s": {
+            "n": 3,
+            "median": 100.6,
+            "min": 89.4,
+            "max": 105.6
+          },
+          "decode_ms": {
+            "n": 3,
+            "median": 35926.8,
+            "min": 35787.1,
+            "max": 38203.9
+          },
+          "decode_tok_s": {
+            "n": 3,
+            "median": 7.1,
+            "min": 6.7,
+            "max": 7.2
+          },
+          "cache_n": {
+            "n": 3,
+            "median": 0,
+            "min": 0,
+            "max": 0
+          },
+          "finish": {
+            "length": 3
+          }
+        },
+        "last_first_elapsed_ratio": 0.9791063880744383,
+        "last_first_decode_speed_ratio": 1.0289855072463767
+      },
+      "4096-zh": {
+        "overall": {
+          "requests": 9,
+          "prompt_tokens": {
+            "n": 9,
+            "median": 4120,
+            "min": 4120,
+            "max": 4120
+          },
+          "completion_tokens": {
+            "n": 9,
+            "median": 256,
+            "min": 256,
+            "max": 256
+          },
+          "first_content_s": {
+            "n": 9,
+            "median": 18.951701500001946,
+            "min": 18.52081289999478,
+            "max": 20.527543499993044
+          },
+          "elapsed_s": {
+            "n": 9,
+            "median": 52.86518970000907,
+            "min": 51.39838210000016,
+            "max": 56.26524949999293
+          },
+          "prompt_ms": {
+            "n": 9,
+            "median": 18923.2,
+            "min": 18492.3,
+            "max": 20508.4
+          },
+          "prompt_tok_s": {
+            "n": 9,
+            "median": 217.7,
+            "min": 200.9,
+            "max": 222.8
+          },
+          "decode_ms": {
+            "n": 9,
+            "median": 34239.6,
+            "min": 32493.8,
+            "max": 35740.2
+          },
+          "decode_tok_s": {
+            "n": 9,
+            "median": 7.5,
+            "min": 7.2,
+            "max": 7.9
+          },
+          "cache_n": {
+            "n": 9,
+            "median": 0,
+            "min": 0,
+            "max": 0
+          },
+          "finish": {
+            "length": 9
+          }
+        },
+        "first_third": {
+          "requests": 3,
+          "prompt_tokens": {
+            "n": 3,
+            "median": 4120,
+            "min": 4120,
+            "max": 4120
+          },
+          "completion_tokens": {
+            "n": 3,
+            "median": 256,
+            "min": 256,
+            "max": 256
+          },
+          "first_content_s": {
+            "n": 3,
+            "median": 18.74797039999976,
+            "min": 18.52081289999478,
+            "max": 19.546130300004734
+          },
+          "elapsed_s": {
+            "n": 3,
+            "median": 52.76067499999772,
+            "min": 52.366319900000235,
+            "max": 54.403784399997676
+          },
+          "prompt_ms": {
+            "n": 3,
+            "median": 18732.4,
+            "min": 18492.3,
+            "max": 19517.0
+          },
+          "prompt_tok_s": {
+            "n": 3,
+            "median": 219.9,
+            "min": 211.1,
+            "max": 222.8
+          },
+          "decode_ms": {
+            "n": 3,
+            "median": 34239.6,
+            "min": 33617.9,
+            "max": 34839.2
+          },
+          "decode_tok_s": {
+            "n": 3,
+            "median": 7.5,
+            "min": 7.3,
+            "max": 7.6
+          },
+          "cache_n": {
+            "n": 3,
+            "median": 0,
+            "min": 0,
+            "max": 0
+          },
+          "finish": {
+            "length": 3
+          }
+        },
+        "last_third": {
+          "requests": 3,
+          "prompt_tokens": {
+            "n": 3,
+            "median": 4120,
+            "min": 4120,
+            "max": 4120
+          },
+          "completion_tokens": {
+            "n": 3,
+            "median": 256,
+            "min": 256,
+            "max": 256
+          },
+          "first_content_s": {
+            "n": 3,
+            "median": 20.503698300002725,
+            "min": 19.33812109999417,
+            "max": 20.527543499993044
+          },
+          "elapsed_s": {
+            "n": 3,
+            "median": 56.092030899992096,
+            "min": 54.2813116999896,
+            "max": 56.26524949999293
+          },
+          "prompt_ms": {
+            "n": 3,
+            "median": 20489.3,
+            "min": 19319.9,
+            "max": 20508.4
+          },
+          "prompt_tok_s": {
+            "n": 3,
+            "median": 201.1,
+            "min": 200.9,
+            "max": 213.3
+          },
+          "decode_ms": {
+            "n": 3,
+            "median": 35564.0,
+            "min": 34925.1,
+            "max": 35740.2
+          },
+          "decode_tok_s": {
+            "n": 3,
+            "median": 7.2,
+            "min": 7.2,
+            "max": 7.3
+          },
+          "cache_n": {
+            "n": 3,
+            "median": 0,
+            "min": 0,
+            "max": 0
+          },
+          "finish": {
+            "length": 3
+          }
+        },
+        "last_first_elapsed_ratio": 1.0631408885499385,
+        "last_first_decode_speed_ratio": 0.9600000000000001
+      },
+      "1024-en": {
+        "overall": {
+          "requests": 9,
+          "prompt_tokens": {
+            "n": 9,
+            "median": 1033,
+            "min": 1033,
+            "max": 1033
+          },
+          "completion_tokens": {
+            "n": 9,
+            "median": 256,
+            "min": 256,
+            "max": 256
+          },
+          "first_content_s": {
+            "n": 9,
+            "median": 9.847807900005137,
+            "min": 9.15636710000399,
+            "max": 10.644225600000937
+          },
+          "elapsed_s": {
+            "n": 9,
+            "median": 48.511449400000856,
+            "min": 43.58610260000569,
+            "max": 60.21613299999444
+          },
+          "prompt_ms": {
+            "n": 9,
+            "median": 9822.3,
+            "min": 9137.0,
+            "max": 10621.0
+          },
+          "prompt_tok_s": {
+            "n": 9,
+            "median": 105.2,
+            "min": 97.3,
+            "max": 113.1
+          },
+          "decode_ms": {
+            "n": 9,
+            "median": 38500.5,
+            "min": 33737.9,
+            "max": 49571.6
+          },
+          "decode_tok_s": {
+            "n": 9,
+            "median": 6.6,
+            "min": 5.2,
+            "max": 7.6
+          },
+          "cache_n": {
+            "n": 9,
+            "median": 0,
+            "min": 0,
+            "max": 0
+          },
+          "finish": {
+            "length": 9
+          }
+        },
+        "first_third": {
+          "requests": 3,
+          "prompt_tokens": {
+            "n": 3,
+            "median": 1033,
+            "min": 1033,
+            "max": 1033
+          },
+          "completion_tokens": {
+            "n": 3,
+            "median": 256,
+            "min": 256,
+            "max": 256
+          },
+          "first_content_s": {
+            "n": 3,
+            "median": 9.518480400001863,
+            "min": 9.15636710000399,
+            "max": 9.847807900005137
+          },
+          "elapsed_s": {
+            "n": 3,
+            "median": 44.37332709999464,
+            "min": 43.58610260000569,
+            "max": 46.64641460000712
+          },
+          "prompt_ms": {
+            "n": 3,
+            "median": 9498.4,
+            "min": 9137.0,
+            "max": 9822.3
+          },
+          "prompt_tok_s": {
+            "n": 3,
+            "median": 108.8,
+            "min": 105.2,
+            "max": 113.1
+          },
+          "decode_ms": {
+            "n": 3,
+            "median": 35199.2,
+            "min": 33737.9,
+            "max": 37127.5
+          },
+          "decode_tok_s": {
+            "n": 3,
+            "median": 7.3,
+            "min": 6.9,
+            "max": 7.6
+          },
+          "cache_n": {
+            "n": 3,
+            "median": 0,
+            "min": 0,
+            "max": 0
+          },
+          "finish": {
+            "length": 3
+          }
+        },
+        "last_third": {
+          "requests": 3,
+          "prompt_tokens": {
+            "n": 3,
+            "median": 1033,
+            "min": 1033,
+            "max": 1033
+          },
+          "completion_tokens": {
+            "n": 3,
+            "median": 256,
+            "min": 256,
+            "max": 256
+          },
+          "first_content_s": {
+            "n": 3,
+            "median": 10.254525800002739,
+            "min": 9.868688700007624,
+            "max": 10.644225600000937
+          },
+          "elapsed_s": {
+            "n": 3,
+            "median": 51.28515760001028,
+            "min": 48.75544920000539,
+            "max": 60.21613299999444
+          },
+          "prompt_ms": {
+            "n": 3,
+            "median": 10247.4,
+            "min": 9861.5,
+            "max": 10621.0
+          },
+          "prompt_tok_s": {
+            "n": 3,
+            "median": 100.8,
+            "min": 97.3,
+            "max": 104.8
+          },
+          "decode_ms": {
+            "n": 3,
+            "median": 41417.1,
+            "min": 38500.5,
+            "max": 49571.6
+          },
+          "decode_tok_s": {
+            "n": 3,
+            "median": 6.2,
+            "min": 5.2,
+            "max": 6.6
+          },
+          "cache_n": {
+            "n": 3,
+            "median": 0,
+            "min": 0,
+            "max": 0
+          },
+          "finish": {
+            "length": 3
+          }
+        },
+        "last_first_elapsed_ratio": 1.1557654327889348,
+        "last_first_decode_speed_ratio": 0.8493150684931507
+      },
+      "4096-en": {
+        "overall": {
+          "requests": 9,
+          "prompt_tokens": {
+            "n": 9,
+            "median": 4105,
+            "min": 4105,
+            "max": 4105
+          },
+          "completion_tokens": {
+            "n": 9,
+            "median": 256,
+            "min": 256,
+            "max": 256
+          },
+          "first_content_s": {
+            "n": 9,
+            "median": 19.73401780000131,
+            "min": 18.581500000000233,
+            "max": 20.482413199992152
+          },
+          "elapsed_s": {
+            "n": 9,
+            "median": 54.82510350001394,
+            "min": 53.503854099995806,
+            "max": 60.129820599991945
+          },
+          "prompt_ms": {
+            "n": 9,
+            "median": 19719.8,
+            "min": 18568.0,
+            "max": 20456.4
+          },
+          "prompt_tok_s": {
+            "n": 9,
+            "median": 208.2,
+            "min": 200.7,
+            "max": 221.1
+          },
+          "decode_ms": {
+            "n": 9,
+            "median": 35779.4,
+            "min": 34768.4,
+            "max": 39700.2
+          },
+          "decode_tok_s": {
+            "n": 9,
+            "median": 7.2,
+            "min": 6.4,
+            "max": 7.4
+          },
+          "cache_n": {
+            "n": 9,
+            "median": 0,
+            "min": 0,
+            "max": 0
+          },
+          "finish": {
+            "length": 9
+          }
+        },
+        "first_third": {
+          "requests": 3,
+          "prompt_tokens": {
+            "n": 3,
+            "median": 4105,
+            "min": 4105,
+            "max": 4105
+          },
+          "completion_tokens": {
+            "n": 3,
+            "median": 256,
+            "min": 256,
+            "max": 256
+          },
+          "first_content_s": {
+            "n": 3,
+            "median": 18.842243200007943,
+            "min": 18.581500000000233,
+            "max": 18.848900199998752
+          },
+          "elapsed_s": {
+            "n": 3,
+            "median": 53.89740180000081,
+            "min": 53.503854099995806,
+            "max": 54.12874519999605
+          },
+          "prompt_ms": {
+            "n": 3,
+            "median": 18815.8,
+            "min": 18568.0,
+            "max": 18836.7
+          },
+          "prompt_tok_s": {
+            "n": 3,
+            "median": 218.2,
+            "min": 217.9,
+            "max": 221.1
+          },
+          "decode_ms": {
+            "n": 3,
+            "median": 35048.3,
+            "min": 34922.1,
+            "max": 35286.6
+          },
+          "decode_tok_s": {
+            "n": 3,
+            "median": 7.3,
+            "min": 7.3,
+            "max": 7.3
+          },
+          "cache_n": {
+            "n": 3,
+            "median": 0,
+            "min": 0,
+            "max": 0
+          },
+          "finish": {
+            "length": 3
+          }
+        },
+        "last_third": {
+          "requests": 3,
+          "prompt_tokens": {
+            "n": 3,
+            "median": 4105,
+            "min": 4105,
+            "max": 4105
+          },
+          "completion_tokens": {
+            "n": 3,
+            "median": 256,
+            "min": 256,
+            "max": 256
+          },
+          "first_content_s": {
+            "n": 3,
+            "median": 20.429386899995734,
+            "min": 19.73401780000131,
+            "max": 20.482413199992152
+          },
+          "elapsed_s": {
+            "n": 3,
+            "median": 58.194286199999624,
+            "min": 54.52176690001215,
+            "max": 60.129820599991945
+          },
+          "prompt_ms": {
+            "n": 3,
+            "median": 20415.4,
+            "min": 19719.8,
+            "max": 20456.4
+          },
+          "prompt_tok_s": {
+            "n": 3,
+            "median": 201.1,
+            "min": 200.7,
+            "max": 208.2
+          },
+          "decode_ms": {
+            "n": 3,
+            "median": 37693.5,
+            "min": 34768.4,
+            "max": 39700.2
+          },
+          "decode_tok_s": {
+            "n": 3,
+            "median": 6.8,
+            "min": 6.4,
+            "max": 7.4
+          },
+          "cache_n": {
+            "n": 3,
+            "median": 0,
+            "min": 0,
+            "max": 0
+          },
+          "finish": {
+            "length": 3
+          }
+        },
+        "last_first_elapsed_ratio": 1.0797234051456401,
+        "last_first_decode_speed_ratio": 0.9315068493150684
+      }
+    }
+  },
+  "resource_scope": "0.5-second sampled engine process RAM/private/I/O; whole GPU VRAM; system commit/paging/disk I/O. Page faults are not hard faults.",
+  "request_resources": [
+    {
+      "rss_bytes_max": 58987249664,
+      "private_bytes_max": 83408687104,
+      "card_vram_used_bytes_max": 15923699712,
+      "system_committed_bytes_max": 111772921856.0,
+      "system_commit_limit_bytes_max": 141434998784.0,
+      "system_pages_input_s_max": 207.4167178262263,
+      "system_page_reads_s_max": 21.35649464592679,
+      "system_available_bytes_min": 57841922048,
+      "process_read_bytes_delta": 9341311590,
+      "process_write_bytes_delta": 61902,
+      "system_disk_read_bytes_delta": 8809594880,
+      "system_disk_write_bytes_delta": 7785984,
+      "process_page_faults_delta": 99935,
+      "samples": 7,
+      "error": null,
+      "name": "gate-paris"
+    },
+    {
+      "rss_bytes_max": 59119153152,
+      "private_bytes_max": 83408687104,
+      "card_vram_used_bytes_max": 15926059008,
+      "system_committed_bytes_max": 111763271680.0,
+      "system_commit_limit_bytes_max": 141434998784.0,
+      "system_pages_input_s_max": 89.41255948418888,
+      "system_page_reads_s_max": 21.856403429468394,
+      "system_available_bytes_min": 57645727744,
+      "process_read_bytes_delta": 3790043999,
+      "process_write_bytes_delta": 61767,
+      "system_disk_read_bytes_delta": 3523198976,
+      "system_disk_write_bytes_delta": 592384,
+      "process_page_faults_delta": 30833,
+      "samples": 4,
+      "error": null,
+      "name": "gate-english"
+    },
+    {
+      "rss_bytes_max": 59342950400,
+      "private_bytes_max": 83409346560,
+      "card_vram_used_bytes_max": 15936413696,
+      "system_committed_bytes_max": 111798841344.0,
+      "system_commit_limit_bytes_max": 141434998784.0,
+      "system_pages_input_s_max": 332.14318595628686,
+      "system_page_reads_s_max": 87.4061015674439,
+      "system_available_bytes_min": 57383104512,
+      "process_read_bytes_delta": 6288554608,
+      "process_write_bytes_delta": 61778,
+      "system_disk_read_bytes_delta": 5983592448,
+      "system_disk_write_bytes_delta": 237568,
+      "process_page_faults_delta": 54269,
+      "samples": 5,
+      "error": null,
+      "name": "gate-chinese"
+    },
+    {
+      "rss_bytes_max": 59659603968,
+      "private_bytes_max": 83409534976,
+      "card_vram_used_bytes_max": 15936413696,
+      "system_committed_bytes_max": 111769137152.0,
+      "system_commit_limit_bytes_max": 141434998784.0,
+      "system_pages_input_s_max": 4628.620021392915,
+      "system_page_reads_s_max": 371.9819236677179,
+      "system_available_bytes_min": 57064108032,
+      "process_read_bytes_delta": 7687732368,
+      "process_write_bytes_delta": 61799,
+      "system_disk_read_bytes_delta": 7127413760,
+      "system_disk_write_bytes_delta": 4702720,
+      "process_page_faults_delta": 76920,
+      "samples": 7,
+      "error": null,
+      "name": "gate-json"
+    },
+    {
+      "rss_bytes_max": 60336951296,
+      "private_bytes_max": 83411980288,
+      "card_vram_used_bytes_max": 15939690496,
+      "system_committed_bytes_max": 111707807744.0,
+      "system_commit_limit_bytes_max": 141434998784.0,
+      "system_pages_input_s_max": 9360.249016406937,
+      "system_page_reads_s_max": 33.00647858927981,
+      "system_available_bytes_min": 56156012544,
+      "process_read_bytes_delta": 20618779528,
+      "process_write_bytes_delta": 62397,
+      "system_disk_read_bytes_delta": 18874644992,
+      "system_disk_write_bytes_delta": 1234432,
+      "process_page_faults_delta": 164656,
+      "samples": 16,
+      "error": null,
+      "name": "gate-code"
+    },
+    {
+      "rss_bytes_max": 60487311360,
+      "private_bytes_max": 83411980288,
+      "card_vram_used_bytes_max": 15945588736,
+      "system_committed_bytes_max": 111728766976.0,
+      "system_commit_limit_bytes_max": 141434998784.0,
+      "system_pages_input_s_max": 11462.744421287385,
+      "system_page_reads_s_max": 37.611784435801106,
+      "system_available_bytes_min": 55955103744,
+      "process_read_bytes_delta": 6241516913,
+      "process_write_bytes_delta": 61759,
+      "system_disk_read_bytes_delta": 5977030656,
+      "system_disk_write_bytes_delta": 215552,
+      "process_page_faults_delta": 36709,
+      "samples": 4,
+      "error": null,
+      "name": "gate-multiturn-a"
+    },
+    {
+      "rss_bytes_max": 60628967424,
+      "private_bytes_max": 83413065728,
+      "card_vram_used_bytes_max": 15940214784,
+      "system_committed_bytes_max": 111722000384.0,
+      "system_commit_limit_bytes_max": 141434998784.0,
+      "system_pages_input_s_max": 4772.823318164248,
+      "system_page_reads_s_max": 19.908631327386097,
+      "system_available_bytes_min": 55804809216,
+      "process_read_bytes_delta": 5238037440,
+      "process_write_bytes_delta": 61786,
+      "system_disk_read_bytes_delta": 4978775040,
+      "system_disk_write_bytes_delta": 341504,
+      "process_page_faults_delta": 34216,
+      "samples": 5,
+      "error": null,
+      "name": "gate-multiturn-b"
+    },
+    {
+      "rss_bytes_max": 60857286656,
+      "private_bytes_max": 83530280960,
+      "card_vram_used_bytes_max": 16009814016,
+      "system_committed_bytes_max": 111901503488.0,
+      "system_commit_limit_bytes_max": 141434998784.0,
+      "system_pages_input_s_max": 4440.612338328043,
+      "system_page_reads_s_max": 17.49378581852646,
+      "system_available_bytes_min": 55242051584,
+      "process_read_bytes_delta": 43800945168,
+      "process_write_bytes_delta": 62569,
+      "system_disk_read_bytes_delta": 41786124800,
+      "system_disk_write_bytes_delta": 2189824,
+      "process_page_faults_delta": 55801,
+      "samples": 28,
+      "error": null,
+      "name": "gate-tools"
+    },
+    {
+      "rss_bytes_max": 61090467840,
+      "private_bytes_max": 83530358784,
+      "card_vram_used_bytes_max": 15996248064,
+      "system_committed_bytes_max": 111863087104.0,
+      "system_commit_limit_bytes_max": 141434998784.0,
+      "system_pages_input_s_max": 126.65471506719034,
+      "system_page_reads_s_max": 11.514065006108213,
+      "system_available_bytes_min": 54992982016,
+      "process_read_bytes_delta": 11006664226,
+      "process_write_bytes_delta": 61760,
+      "system_disk_read_bytes_delta": 10724051968,
+      "system_disk_write_bytes_delta": 781312,
+      "process_page_faults_delta": 56929,
+      "samples": 11,
+      "error": null,
+      "name": "gate-tool-result"
+    },
+    {
+      "rss_bytes_max": 60896833536,
+      "private_bytes_max": 83536334848,
+      "card_vram_used_bytes_max": 16007258112,
+      "system_committed_bytes_max": 112104321024.0,
+      "system_commit_limit_bytes_max": 141434998784.0,
+      "system_pages_input_s_max": 33834.604001613894,
+      "system_page_reads_s_max": 410.81209574394677,
+      "system_available_bytes_min": 54892118016,
+      "process_read_bytes_delta": 95864621853,
+      "process_write_bytes_delta": 66832,
+      "system_disk_read_bytes_delta": 92072059904,
+      "system_disk_write_bytes_delta": 31476736,
+      "process_page_faults_delta": 384196,
+      "samples": 95,
+      "error": null,
+      "name": "performance-0-1024"
+    },
+    {
+      "rss_bytes_max": 62888116224,
+      "private_bytes_max": 88543666176,
+      "card_vram_used_bytes_max": 16002932736,
+      "system_committed_bytes_max": 117088882688.0,
+      "system_commit_limit_bytes_max": 141434998784.0,
+      "system_pages_input_s_max": 141733.97323344648,
+      "system_page_reads_s_max": 8386.990641547887,
+      "system_available_bytes_min": 52843175936,
+      "process_read_bytes_delta": 82553932830,
+      "process_write_bytes_delta": 75862,
+      "system_disk_read_bytes_delta": 82428781056,
+      "system_disk_write_bytes_delta": 14456320,
+      "process_page_faults_delta": 666371,
+      "samples": 109,
+      "error": null,
+      "name": "performance-0-4096"
+    },
+    {
+      "rss_bytes_max": 63623426048,
+      "private_bytes_max": 88560181248,
+      "card_vram_used_bytes_max": 15999066112,
+      "system_committed_bytes_max": 117099704320.0,
+      "system_commit_limit_bytes_max": 141434998784.0,
+      "system_pages_input_s_max": 37127.41830422731,
+      "system_page_reads_s_max": 384.0500244060806,
+      "system_available_bytes_min": 52014645248,
+      "process_read_bytes_delta": 81539753646,
+      "process_write_bytes_delta": 75849,
+      "system_disk_read_bytes_delta": 81555775488,
+      "system_disk_write_bytes_delta": 21227520,
+      "process_page_faults_delta": 610503,
+      "samples": 109,
+      "error": null,
+      "name": "performance-1-4096"
+    },
+    {
+      "rss_bytes_max": 62564777984,
+      "private_bytes_max": 83597266944,
+      "card_vram_used_bytes_max": 16085057536,
+      "system_committed_bytes_max": 112480915456.0,
+      "system_commit_limit_bytes_max": 141434998784.0,
+      "system_pages_input_s_max": 1681.9299149369924,
+      "system_page_reads_s_max": 439.3654767284409,
+      "system_available_bytes_min": 52839907328,
+      "process_read_bytes_delta": 73071757741,
+      "process_write_bytes_delta": 67163,
+      "system_disk_read_bytes_delta": 73102180352,
+      "system_disk_write_bytes_delta": 10615296,
+      "process_page_faults_delta": 90349,
+      "samples": 94,
+      "error": null,
+      "name": "performance-1-1024"
+    },
+    {
+      "rss_bytes_max": 62888288256,
+      "private_bytes_max": 83613286400,
+      "card_vram_used_bytes_max": 16073699328,
+      "system_committed_bytes_max": 112311402496.0,
+      "system_commit_limit_bytes_max": 141434998784.0,
+      "system_pages_input_s_max": 826.2454340726937,
+      "system_page_reads_s_max": 386.46888756125986,
+      "system_available_bytes_min": 52829900800,
+      "process_read_bytes_delta": 69954930573,
+      "process_write_bytes_delta": 67147,
+      "system_disk_read_bytes_delta": 69986026496,
+      "system_disk_write_bytes_delta": 13991936,
+      "process_page_faults_delta": 78999,
+      "samples": 90,
+      "error": null,
+      "name": "performance-2-1024"
+    },
+    {
+      "rss_bytes_max": 64865427456,
+      "private_bytes_max": 88594751488,
+      "card_vram_used_bytes_max": 16028241920,
+      "system_committed_bytes_max": 116858654720.0,
+      "system_commit_limit_bytes_max": 141434998784.0,
+      "system_pages_input_s_max": 670.4940378352422,
+      "system_page_reads_s_max": 371.7527542135367,
+      "system_available_bytes_min": 51078692864,
+      "process_read_bytes_delta": 80535495262,
+      "process_write_bytes_delta": 12189189,
+      "system_disk_read_bytes_delta": 80562512896,
+      "system_disk_write_bytes_delta": 21831168,
+      "process_page_faults_delta": 563733,
+      "samples": 110,
+      "error": null,
+      "name": "performance-2-4096"
+    },
+    {
+      "rss_bytes_max": 63584227328,
+      "private_bytes_max": 83618201600,
+      "card_vram_used_bytes_max": 16019656704,
+      "system_committed_bytes_max": 111920078848.0,
+      "system_commit_limit_bytes_max": 141434998784.0,
+      "system_pages_input_s_max": 2316.4139890417296,
+      "system_page_reads_s_max": 2028.8055407378906,
+      "system_available_bytes_min": 52434141184,
+      "process_read_bytes_delta": 77100324617,
+      "process_write_bytes_delta": 15031336,
+      "system_disk_read_bytes_delta": 77127243264,
+      "system_disk_write_bytes_delta": 32456704,
+      "process_page_faults_delta": 96466,
+      "samples": 95,
+      "error": null,
+      "name": "soak-000"
+    },
+    {
+      "rss_bytes_max": 65547448320,
+      "private_bytes_max": 88596819968,
+      "card_vram_used_bytes_max": 16082964480,
+      "system_committed_bytes_max": 116975968256.0,
+      "system_commit_limit_bytes_max": 141434998784.0,
+      "system_pages_input_s_max": 21604.308971344417,
+      "system_page_reads_s_max": 412.25093656445165,
+      "system_available_bytes_min": 50269724672,
+      "process_read_bytes_delta": 68288164441,
+      "process_write_bytes_delta": 15040163,
+      "system_disk_read_bytes_delta": 68311939072,
+      "system_disk_write_bytes_delta": 38562304,
+      "process_page_faults_delta": 546669,
+      "samples": 108,
+      "error": null,
+      "name": "soak-001"
+    },
+    {
+      "rss_bytes_max": 64149856256,
+      "private_bytes_max": 83621761024,
+      "card_vram_used_bytes_max": 16068177920,
+      "system_committed_bytes_max": 112141905920.0,
+      "system_commit_limit_bytes_max": 141434998784.0,
+      "system_pages_input_s_max": 5383.517347860286,
+      "system_page_reads_s_max": 492.85940132289033,
+      "system_available_bytes_min": 51738468352,
+      "process_read_bytes_delta": 79822618858,
+      "process_write_bytes_delta": 12180476,
+      "system_disk_read_bytes_delta": 79799276032,
+      "system_disk_write_bytes_delta": 33175552,
+      "process_page_faults_delta": 78991,
+      "samples": 87,
+      "error": null,
+      "name": "soak-002"
+    },
+    {
+      "rss_bytes_max": 66077974528,
+      "private_bytes_max": 88603361280,
+      "card_vram_used_bytes_max": 16138407936,
+      "system_committed_bytes_max": 116895678464.0,
+      "system_commit_limit_bytes_max": 141434998784.0,
+      "system_pages_input_s_max": 9272.069671668927,
+      "system_page_reads_s_max": 1863.8103498300266,
+      "system_available_bytes_min": 49748033536,
+      "process_read_bytes_delta": 78952504474,
+      "process_write_bytes_delta": 12188883,
+      "system_disk_read_bytes_delta": 78966759936,
+      "system_disk_write_bytes_delta": 20439040,
+      "process_page_faults_delta": 527315,
+      "samples": 107,
+      "error": null,
+      "name": "soak-003"
+    },
+    {
+      "rss_bytes_max": 64595275776,
+      "private_bytes_max": 83625693184,
+      "card_vram_used_bytes_max": 16104787968,
+      "system_committed_bytes_max": 111830548480.0,
+      "system_commit_limit_bytes_max": 141434998784.0,
+      "system_pages_input_s_max": 4709.3269469757515,
+      "system_page_reads_s_max": 386.0362336792735,
+      "system_available_bytes_min": 51448565760,
+      "process_read_bytes_delta": 75979484441,
+      "process_write_bytes_delta": 15031356,
+      "system_disk_read_bytes_delta": 75986176000,
+      "system_disk_write_bytes_delta": 26006016,
+      "process_page_faults_delta": 59675,
+      "samples": 86,
+      "error": null,
+      "name": "soak-004"
+    },
+    {
+      "rss_bytes_max": 66541715456,
+      "private_bytes_max": 88607301632,
+      "card_vram_used_bytes_max": 16259813376,
+      "system_committed_bytes_max": 116649746432.0,
+      "system_commit_limit_bytes_max": 141434998784.0,
+      "system_pages_input_s_max": 18381.806788296773,
+      "system_page_reads_s_max": 380.8414042798996,
+      "system_available_bytes_min": 49827627008,
+      "process_read_bytes_delta": 70052140713,
+      "process_write_bytes_delta": 12198239,
+      "system_disk_read_bytes_delta": 70071755264,
+      "system_disk_write_bytes_delta": 18387456,
+      "process_page_faults_delta": 518223,
+      "samples": 104,
+      "error": null,
+      "name": "soak-005"
+    },
+    {
+      "rss_bytes_max": 64967921664,
+      "private_bytes_max": 83629207552,
+      "card_vram_used_bytes_max": 16252342272,
+      "system_committed_bytes_max": 111952150528.0,
+      "system_commit_limit_bytes_max": 141434998784.0,
+      "system_pages_input_s_max": 4335.16062266054,
+      "system_page_reads_s_max": 376.62088212143004,
+      "system_available_bytes_min": 51796070400,
+      "process_read_bytes_delta": 83121769690,
+      "process_write_bytes_delta": 15040565,
+      "system_disk_read_bytes_delta": 83124052480,
+      "system_disk_write_bytes_delta": 18396672,
+      "process_page_faults_delta": 55754,
+      "samples": 89,
+      "error": null,
+      "name": "soak-006"
+    },
+    {
+      "rss_bytes_max": 66901364736,
+      "private_bytes_max": 88610914304,
+      "card_vram_used_bytes_max": 16244895744,
+      "system_committed_bytes_max": 116768858112.0,
+      "system_commit_limit_bytes_max": 141434998784.0,
+      "system_pages_input_s_max": 5506.646530150641,
+      "system_page_reads_s_max": 570.5259665255085,
+      "system_available_bytes_min": 49818202112,
+      "process_read_bytes_delta": 79893444026,
+      "process_write_bytes_delta": 12184958,
+      "system_disk_read_bytes_delta": 79913545216,
+      "system_disk_write_bytes_delta": 17071616,
+      "process_page_faults_delta": 508404,
+      "samples": 107,
+      "error": null,
+      "name": "soak-007"
+    },
+    {
+      "rss_bytes_max": 65249669120,
+      "private_bytes_max": 83631915008,
+      "card_vram_used_bytes_max": 16128151552,
+      "system_committed_bytes_max": 112009158656.0,
+      "system_commit_limit_bytes_max": 141434998784.0,
+      "system_pages_input_s_max": 9233.854997995844,
+      "system_page_reads_s_max": 379.33434171390803,
+      "system_available_bytes_min": 51162955776,
+      "process_read_bytes_delta": 76296170073,
+      "process_write_bytes_delta": 15027252,
+      "system_disk_read_bytes_delta": 76298525696,
+      "system_disk_write_bytes_delta": 28838912,
+      "process_page_faults_delta": 39901,
+      "samples": 98,
+      "error": null,
+      "name": "soak-008"
+    },
+    {
+      "rss_bytes_max": 67195998208,
+      "private_bytes_max": 88613519360,
+      "card_vram_used_bytes_max": 16034164736,
+      "system_committed_bytes_max": 116769988608.0,
+      "system_commit_limit_bytes_max": 141434998784.0,
+      "system_pages_input_s_max": 9614.361917069444,
+      "system_page_reads_s_max": 381.7636286632905,
+      "system_available_bytes_min": 49215438848,
+      "process_read_bytes_delta": 69609543257,
+      "process_write_bytes_delta": 12198144,
+      "system_disk_read_bytes_delta": 69623739392,
+      "system_disk_write_bytes_delta": 17547264,
+      "process_page_faults_delta": 505953,
+      "samples": 105,
+      "error": null,
+      "name": "soak-009"
+    },
+    {
+      "rss_bytes_max": 65514328064,
+      "private_bytes_max": 83635630080,
+      "card_vram_used_bytes_max": 16034164736,
+      "system_committed_bytes_max": 111887663104.0,
+      "system_commit_limit_bytes_max": 141434998784.0,
+      "system_pages_input_s_max": 394.1007496672038,
+      "system_page_reads_s_max": 382.1583027075916,
+      "system_available_bytes_min": 50812366848,
+      "process_read_bytes_delta": 81157709291,
+      "process_write_bytes_delta": 15040575,
+      "system_disk_read_bytes_delta": 81174795264,
+      "system_disk_write_bytes_delta": 28704256,
+      "process_page_faults_delta": 41377,
+      "samples": 93,
+      "error": null,
+      "name": "soak-010"
+    },
+    {
+      "rss_bytes_max": 67471204352,
+      "private_bytes_max": 88617242624,
+      "card_vram_used_bytes_max": 16034164736,
+      "system_committed_bytes_max": 116809781248.0,
+      "system_commit_limit_bytes_max": 141434998784.0,
+      "system_pages_input_s_max": 14259.860100315575,
+      "system_page_reads_s_max": 370.3869612930112,
+      "system_available_bytes_min": 48858468352,
+      "process_read_bytes_delta": 77345509931,
+      "process_write_bytes_delta": 12184888,
+      "system_disk_read_bytes_delta": 77357149696,
+      "system_disk_write_bytes_delta": 18401792,
+      "process_page_faults_delta": 507414,
+      "samples": 108,
+      "error": null,
+      "name": "soak-011"
+    },
+    {
+      "rss_bytes_max": 65732186112,
+      "private_bytes_max": 83638341632,
+      "card_vram_used_bytes_max": 16021057536,
+      "system_committed_bytes_max": 111916285952.0,
+      "system_commit_limit_bytes_max": 141434998784.0,
+      "system_pages_input_s_max": 1854.9610788375942,
+      "system_page_reads_s_max": 676.0411032990805,
+      "system_available_bytes_min": 50529902592,
+      "process_read_bytes_delta": 73697200650,
+      "process_write_bytes_delta": 15027219,
+      "system_disk_read_bytes_delta": 73719136768,
+      "system_disk_write_bytes_delta": 26146816,
+      "process_page_faults_delta": 31052,
+      "samples": 88,
+      "error": null,
+      "name": "soak-012"
+    },
+    {
+      "rss_bytes_max": 67642028032,
+      "private_bytes_max": 88619937792,
+      "card_vram_used_bytes_max": 16087093248,
+      "system_committed_bytes_max": 117111083008.0,
+      "system_commit_limit_bytes_max": 141434998784.0,
+      "system_pages_input_s_max": 5116.203823486296,
+      "system_page_reads_s_max": 658.924944572784,
+      "system_available_bytes_min": 48474378240,
+      "process_read_bytes_delta": 65261836714,
+      "process_write_bytes_delta": 12198370,
+      "system_disk_read_bytes_delta": 65296740352,
+      "system_disk_write_bytes_delta": 20668416,
+      "process_page_faults_delta": 487470,
+      "samples": 105,
+      "error": null,
+      "name": "soak-013"
+    },
+    {
+      "rss_bytes_max": 65906196480,
+      "private_bytes_max": 83642130432,
+      "card_vram_used_bytes_max": 16089255936,
+      "system_committed_bytes_max": 112115462144.0,
+      "system_commit_limit_bytes_max": 141434998784.0,
+      "system_pages_input_s_max": 7734.797814330995,
+      "system_page_reads_s_max": 1306.4623612182932,
+      "system_available_bytes_min": 50275938304,
+      "process_read_bytes_delta": 80561998123,
+      "process_write_bytes_delta": 15040566,
+      "system_disk_read_bytes_delta": 80633052160,
+      "system_disk_write_bytes_delta": 39017472,
+      "process_page_faults_delta": 28783,
+      "samples": 97,
+      "error": null,
+      "name": "soak-014"
+    },
+    {
+      "rss_bytes_max": 67806498816,
+      "private_bytes_max": 88627142656,
+      "card_vram_used_bytes_max": 16089255936,
+      "system_committed_bytes_max": 117017784320.0,
+      "system_commit_limit_bytes_max": 141434998784.0,
+      "system_pages_input_s_max": 4798.12042744501,
+      "system_page_reads_s_max": 2551.0204081632655,
+      "system_available_bytes_min": 48434569216,
+      "process_read_bytes_delta": 80577100555,
+      "process_write_bytes_delta": 12184872,
+      "system_disk_read_bytes_delta": 80593316864,
+      "system_disk_write_bytes_delta": 25595392,
+      "process_page_faults_delta": 487356,
+      "samples": 109,
+      "error": null,
+      "name": "soak-015"
+    },
+    {
+      "rss_bytes_max": 66080911360,
+      "private_bytes_max": 83644825600,
+      "card_vram_used_bytes_max": 16089255936,
+      "system_committed_bytes_max": 112062455808.0,
+      "system_commit_limit_bytes_max": 141434998784.0,
+      "system_pages_input_s_max": 4443.633732143979,
+      "system_page_reads_s_max": 375.0203717848237,
+      "system_available_bytes_min": 50096545792,
+      "process_read_bytes_delta": 77705996266,
+      "process_write_bytes_delta": 15027230,
+      "system_disk_read_bytes_delta": 77724520960,
+      "system_disk_write_bytes_delta": 19646976,
+      "process_page_faults_delta": 26756,
+      "samples": 89,
+      "error": null,
+      "name": "soak-016"
+    },
+    {
+      "rss_bytes_max": 68027531264,
+      "private_bytes_max": 88626434048,
+      "card_vram_used_bytes_max": 16089255936,
+      "system_committed_bytes_max": 117023518720.0,
+      "system_commit_limit_bytes_max": 141434998784.0,
+      "system_pages_input_s_max": 12984.108095755324,
+      "system_page_reads_s_max": 380.2433517635229,
+      "system_available_bytes_min": 48195878912,
+      "process_read_bytes_delta": 68997305003,
+      "process_write_bytes_delta": 12198262,
+      "system_disk_read_bytes_delta": 69018743296,
+      "system_disk_write_bytes_delta": 25908224,
+      "process_page_faults_delta": 492554,
+      "samples": 102,
+      "error": null,
+      "name": "soak-017"
+    },
+    {
+      "rss_bytes_max": 66219016192,
+      "private_bytes_max": 83647225856,
+      "card_vram_used_bytes_max": 16190509056,
+      "system_committed_bytes_max": 112442998784.0,
+      "system_commit_limit_bytes_max": 141434998784.0,
+      "system_pages_input_s_max": 2738.9756231169545,
+      "system_page_reads_s_max": 2738.9756231169545,
+      "system_available_bytes_min": 49620668416,
+      "process_read_bytes_delta": 83342437851,
+      "process_write_bytes_delta": 15040586,
+      "system_disk_read_bytes_delta": 83375168000,
+      "system_disk_write_bytes_delta": 33628160,
+      "process_page_faults_delta": 23925,
+      "samples": 98,
+      "error": null,
+      "name": "soak-018"
+    },
+    {
+      "rss_bytes_max": 68186243072,
+      "private_bytes_max": 88628822016,
+      "card_vram_used_bytes_max": 16239001600,
+      "system_committed_bytes_max": 117434986496.0,
+      "system_commit_limit_bytes_max": 141434998784.0,
+      "system_pages_input_s_max": 7883.453643302693,
+      "system_page_reads_s_max": 1139.3063419175385,
+      "system_available_bytes_min": 47596294144,
+      "process_read_bytes_delta": 82573587211,
+      "process_write_bytes_delta": 12185350,
+      "system_disk_read_bytes_delta": 82722597888,
+      "system_disk_write_bytes_delta": 279881216,
+      "process_page_faults_delta": 501476,
+      "samples": 112,
+      "error": null,
+      "name": "soak-019"
+    },
+    {
+      "rss_bytes_max": 66354311168,
+      "private_bytes_max": 83649830912,
+      "card_vram_used_bytes_max": 16210567168,
+      "system_committed_bytes_max": 112942931968.0,
+      "system_commit_limit_bytes_max": 141434998784.0,
+      "system_pages_input_s_max": 49125.53506242947,
+      "system_page_reads_s_max": 8569.921600799029,
+      "system_available_bytes_min": 48900513792,
+      "process_read_bytes_delta": 76619009770,
+      "process_write_bytes_delta": 15027245,
+      "system_disk_read_bytes_delta": 76813195776,
+      "system_disk_write_bytes_delta": 113079296,
+      "process_page_faults_delta": 19782,
+      "samples": 96,
+      "error": null,
+      "name": "soak-020"
+    },
+    {
+      "rss_bytes_max": 68375310336,
+      "private_bytes_max": 88631291904,
+      "card_vram_used_bytes_max": 16136445952,
+      "system_committed_bytes_max": 117824102400.0,
+      "system_commit_limit_bytes_max": 141434998784.0,
+      "system_pages_input_s_max": 394.66602882257973,
+      "system_page_reads_s_max": 382.70645219159246,
+      "system_available_bytes_min": 46912417792,
+      "process_read_bytes_delta": 67881586411,
+      "process_write_bytes_delta": 12198329,
+      "system_disk_read_bytes_delta": 67893462528,
+      "system_disk_write_bytes_delta": 58936832,
+      "process_page_faults_delta": 509323,
+      "samples": 104,
+      "error": null,
+      "name": "soak-021"
+    },
+    {
+      "rss_bytes_max": 66480422912,
+      "private_bytes_max": 83652235264,
+      "card_vram_used_bytes_max": 16154132480,
+      "system_committed_bytes_max": 112894013440.0,
+      "system_commit_limit_bytes_max": 141434998784.0,
+      "system_pages_input_s_max": 1734.8747032782735,
+      "system_page_reads_s_max": 348.4489145019859,
+      "system_available_bytes_min": 48736387072,
+      "process_read_bytes_delta": 83695094428,
+      "process_write_bytes_delta": 15040588,
+      "system_disk_read_bytes_delta": 83719029760,
+      "system_disk_write_bytes_delta": 31090688,
+      "process_page_faults_delta": 22472,
+      "samples": 97,
+      "error": null,
+      "name": "soak-022"
+    },
+    {
+      "rss_bytes_max": 68343971840,
+      "private_bytes_max": 88633987072,
+      "card_vram_used_bytes_max": 16148209664,
+      "system_committed_bytes_max": 117927907328.0,
+      "system_commit_limit_bytes_max": 141434998784.0,
+      "system_pages_input_s_max": 27070.77162330798,
+      "system_page_reads_s_max": 3064.652462363395,
+      "system_available_bytes_min": 46854590464,
+      "process_read_bytes_delta": 81174482524,
+      "process_write_bytes_delta": 12185389,
+      "system_disk_read_bytes_delta": 81280654848,
+      "system_disk_write_bytes_delta": 52833792,
+      "process_page_faults_delta": 477301,
+      "samples": 111,
+      "error": null,
+      "name": "soak-023"
+    },
+    {
+      "rss_bytes_max": 66575712256,
+      "private_bytes_max": 83654930432,
+      "card_vram_used_bytes_max": 16137396224,
+      "system_committed_bytes_max": 113060331520.0,
+      "system_commit_limit_bytes_max": 141434998784.0,
+      "system_pages_input_s_max": 783.9121056014983,
+      "system_page_reads_s_max": 385.4236270493788,
+      "system_available_bytes_min": 48262901760,
+      "process_read_bytes_delta": 75566978027,
+      "process_write_bytes_delta": 15027260,
+      "system_disk_read_bytes_delta": 75587941376,
+      "system_disk_write_bytes_delta": 30225920,
+      "process_page_faults_delta": 15723,
+      "samples": 91,
+      "error": null,
+      "name": "soak-024"
+    },
+    {
+      "rss_bytes_max": 68567793664,
+      "private_bytes_max": 88636526592,
+      "card_vram_used_bytes_max": 16151093248,
+      "system_committed_bytes_max": 118250901504.0,
+      "system_commit_limit_bytes_max": 141434998784.0,
+      "system_pages_input_s_max": 4934.700386787275,
+      "system_page_reads_s_max": 2217.294900221729,
+      "system_available_bytes_min": 46164197376,
+      "process_read_bytes_delta": 65911318123,
+      "process_write_bytes_delta": 12199184,
+      "system_disk_read_bytes_delta": 65959066624,
+      "system_disk_write_bytes_delta": 60318720,
+      "process_page_faults_delta": 500141,
+      "samples": 112,
+      "error": null,
+      "name": "soak-025"
+    },
+    {
+      "rss_bytes_max": 66673238016,
+      "private_bytes_max": 83657478144,
+      "card_vram_used_bytes_max": 16144605184,
+      "system_committed_bytes_max": 113306472448.0,
+      "system_commit_limit_bytes_max": 141434998784.0,
+      "system_pages_input_s_max": 15927.447517436402,
+      "system_page_reads_s_max": 3234.1107620166745,
+      "system_available_bytes_min": 48058408960,
+      "process_read_bytes_delta": 82220385212,
+      "process_write_bytes_delta": 15040607,
+      "system_disk_read_bytes_delta": 82278019584,
+      "system_disk_write_bytes_delta": 33771008,
+      "process_page_faults_delta": 17557,
+      "samples": 97,
+      "error": null,
+      "name": "soak-026"
+    },
+    {
+      "rss_bytes_max": 68660891648,
+      "private_bytes_max": 88639082496,
+      "card_vram_used_bytes_max": 16144736256,
+      "system_committed_bytes_max": 118225645568.0,
+      "system_commit_limit_bytes_max": 141434998784.0,
+      "system_pages_input_s_max": 6248.871489106851,
+      "system_page_reads_s_max": 2367.4242424242425,
+      "system_available_bytes_min": 46048972800,
+      "process_read_bytes_delta": 81645305692,
+      "process_write_bytes_delta": 12185294,
+      "system_disk_read_bytes_delta": 81650837504,
+      "system_disk_write_bytes_delta": 35745792,
+      "process_page_faults_delta": 501168,
+      "samples": 108,
+      "error": null,
+      "name": "soak-027"
+    },
+    {
+      "rss_bytes_max": 66779258880,
+      "private_bytes_max": 83659948032,
+      "card_vram_used_bytes_max": 16144867328,
+      "system_committed_bytes_max": 113175490560.0,
+      "system_commit_limit_bytes_max": 141434998784.0,
+      "system_pages_input_s_max": 445.04189321210055,
+      "system_page_reads_s_max": 382.020370440378,
+      "system_available_bytes_min": 48000471040,
+      "process_read_bytes_delta": 77294180875,
+      "process_write_bytes_delta": 15027245,
+      "system_disk_read_bytes_delta": 77315805184,
+      "system_disk_write_bytes_delta": 27057152,
+      "process_page_faults_delta": 17524,
+      "samples": 93,
+      "error": null,
+      "name": "soak-028"
+    },
+    {
+      "rss_bytes_max": 68581945344,
+      "private_bytes_max": 88641556480,
+      "card_vram_used_bytes_max": 16145457152,
+      "system_committed_bytes_max": 118196490240.0,
+      "system_commit_limit_bytes_max": 141434998784.0,
+      "system_pages_input_s_max": 4690.640182630583,
+      "system_page_reads_s_max": 383.1737241811757,
+      "system_available_bytes_min": 45997035520,
+      "process_read_bytes_delta": 65920235147,
+      "process_write_bytes_delta": 12199131,
+      "system_disk_read_bytes_delta": 65969498624,
+      "system_disk_write_bytes_delta": 61813248,
+      "process_page_faults_delta": 499555,
+      "samples": 112,
+      "error": null,
+      "name": "soak-029"
+    },
+    {
+      "rss_bytes_max": 66665639936,
+      "private_bytes_max": 83663638528,
+      "card_vram_used_bytes_max": 16160497664,
+      "system_committed_bytes_max": 114256683008.0,
+      "system_commit_limit_bytes_max": 141434998784.0,
+      "system_pages_input_s_max": 4438.882356996045,
+      "system_page_reads_s_max": 487.0448979416898,
+      "system_available_bytes_min": 46941167616,
+      "process_read_bytes_delta": 82569683980,
+      "process_write_bytes_delta": 15040567,
+      "system_disk_read_bytes_delta": 82610777088,
+      "system_disk_write_bytes_delta": 58485248,
+      "process_page_faults_delta": 16340,
+      "samples": 120,
+      "error": null,
+      "name": "soak-030"
+    },
+    {
+      "rss_bytes_max": 68601929728,
+      "private_bytes_max": 88645091328,
+      "card_vram_used_bytes_max": 16166854656,
+      "system_committed_bytes_max": 118529220608.0,
+      "system_commit_limit_bytes_max": 141434998784.0,
+      "system_pages_input_s_max": 5278.510581876005,
+      "system_page_reads_s_max": 266.26436308117263,
+      "system_available_bytes_min": 45744046080,
+      "process_read_bytes_delta": 80345132844,
+      "process_write_bytes_delta": 12185583,
+      "system_disk_read_bytes_delta": 80384388608,
+      "system_disk_write_bytes_delta": 47405056,
+      "process_page_faults_delta": 484737,
+      "samples": 116,
+      "error": null,
+      "name": "soak-031"
+    },
+    {
+      "rss_bytes_max": 66735083520,
+      "private_bytes_max": 83665051648,
+      "card_vram_used_bytes_max": 16198877184,
+      "system_committed_bytes_max": 113279631360.0,
+      "system_commit_limit_bytes_max": 141434998784.0,
+      "system_pages_input_s_max": 470.6486735285648,
+      "system_page_reads_s_max": 434.7517408018099,
+      "system_available_bytes_min": 47650799616,
+      "process_read_bytes_delta": 77807063387,
+      "process_write_bytes_delta": 15027218,
+      "system_disk_read_bytes_delta": 77832291840,
+      "system_disk_write_bytes_delta": 50153984,
+      "process_page_faults_delta": 12486,
+      "samples": 100,
+      "error": null,
+      "name": "soak-032"
+    },
+    {
+      "rss_bytes_max": 68708884480,
+      "private_bytes_max": 88646656000,
+      "card_vram_used_bytes_max": 16198787072,
+      "system_committed_bytes_max": 116902252544.0,
+      "system_commit_limit_bytes_max": 141434998784.0,
+      "system_pages_input_s_max": 2071.9124967601465,
+      "system_page_reads_s_max": 432.31251134322287,
+      "system_available_bytes_min": 46626680832,
+      "process_read_bytes_delta": 68439459691,
+      "process_write_bytes_delta": 12198505,
+      "system_disk_read_bytes_delta": 68465400832,
+      "system_disk_write_bytes_delta": 34261504,
+      "process_page_faults_delta": 491698,
+      "samples": 108,
+      "error": null,
+      "name": "soak-033"
+    },
+    {
+      "rss_bytes_max": 66798202880,
+      "private_bytes_max": 83667681280,
+      "card_vram_used_bytes_max": 16188694528,
+      "system_committed_bytes_max": 112110239744.0,
+      "system_commit_limit_bytes_max": 141434998784.0,
+      "system_pages_input_s_max": 568.8791771985298,
+      "system_page_reads_s_max": 382.30128248142205,
+      "system_available_bytes_min": 48297750528,
+      "process_read_bytes_delta": 84415245068,
+      "process_write_bytes_delta": 15040586,
+      "system_disk_read_bytes_delta": 84438970368,
+      "system_disk_write_bytes_delta": 46075904,
+      "process_page_faults_delta": 13127,
+      "samples": 102,
+      "error": null,
+      "name": "soak-034"
+    },
+    {
+      "rss_bytes_max": 68285947904,
+      "private_bytes_max": 88649289728,
+      "card_vram_used_bytes_max": 16196231168,
+      "system_committed_bytes_max": 117052669952.0,
+      "system_commit_limit_bytes_max": 141434998784.0,
+      "system_pages_input_s_max": 9197.940736283179,
+      "system_page_reads_s_max": 251.76443254477542,
+      "system_available_bytes_min": 46753685504,
+      "process_read_bytes_delta": 82572653100,
+      "process_write_bytes_delta": 12185678,
+      "system_disk_read_bytes_delta": 82601601536,
+      "system_disk_write_bytes_delta": 31126016,
+      "process_page_faults_delta": 510157,
+      "samples": 119,
+      "error": null,
+      "name": "soak-035"
+    }
+  ],
+  "checks": {
+    "controller_sha_matches": true,
+    "protocol_sha_matches": true,
+    "six_performance_requests": true,
+    "functional_passed": true,
+    "all_requests_have_protocol_finish_usage_timings": true,
+    "soak_at_least_1800_s": true,
+    "daily_config_unchanged": true,
+    "daily_loaded": true,
+    "no_restore_errors": true,
+    "no_resource_sampling_errors": true
+  },
+  "offline_checks_passed": true
+}

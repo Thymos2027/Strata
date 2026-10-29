@@ -1,0 +1,7 @@
+{
+  "prepared": true,
+  "http_requests": 52,
+  "resource_samples": 4384,
+  "all_requests_complete": true,
+  "notes": "Public evidence derived after the measured runs. Original raw files retained locally; no new GPU measurement."
+}

@@ -1,0 +1,38 @@
+{
+  "measurement_date": "2026-10-29",
+  "os": "Windows 11 10.0.26200",
+  "cpu": "Intel i7-12700, 12 physical / 20 logical cores, DDR4",
+  "ram_bytes": 137140031488,
+  "gpu": "NVIDIA GeForce RTX 5060 Ti, 610.88, 16311 MiB",
+  "model_disk": "ZHITAI TiPro9000 4TB NVMe",
+  "python": "3.12.7",
+  "source_checkout_commit": "8857fb6c9a94c947f75e845b7e9abe74b97551c8",
+  "engine": {
+    "exe": "<ENGINE_DIR>\\strata-dsv41.exe",
+    "sha256": "e2f9fce53017dd8c2318e3a5ce969b4bd00b64589bdf32355e8d4d691962e610",
+    "archive_sha256": "f1a3ae88f770b0ef2a3adb9fc7a7166af79069532210bf0f9c7970845cb75865",
+    "build": {
+      "version": "0.1.52",
+      "source": "f-027-rel a42cc3d7d",
+      "commit": "a42cc3d7df70",
+      "archs": [
+        86,
+        89,
+        120
+      ],
+      "ptx": true,
+      "cuda": "13.0",
+      "portable": true,
+      "dsv41": true
+    },
+    "signed_package_and_all_files_verified": true,
+    "manifest_matches_signed_feed": true
+  },
+  "pagefile_postflight": {
+    "initial_mib": 4096,
+    "maximum_mib": 8192,
+    "allocated_after_recovery_mib": 4096,
+    "automatic_managed": false,
+    "note": "Read-only postflight query. Failure event commit limit was 145.730 GB; later runs had a 141.435 GB limit. Do not assume a fixed 4GB allocation throughout."
+  }
+}

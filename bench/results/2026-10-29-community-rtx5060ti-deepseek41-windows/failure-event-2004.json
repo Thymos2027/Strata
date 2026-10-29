@@ -1,0 +1,13 @@
+{
+  "provider": "Microsoft-Windows-Resource-Exhaustion-Detector",
+  "event_id": 2004,
+  "timestamp_utc": "2026-10-29T11:23:30.8339925Z",
+  "system_commit_limit_bytes": 145729966080,
+  "system_commit_charge_bytes": 145636839424,
+  "processes_total_commit_charge_bytes": 136363122688,
+  "physical_memory_size_bytes": 137140031488,
+  "reported_physical_memory_usage_bytes": 41782886400,
+  "deepseek_process_commit_charge_bytes": 118554161152,
+  "deepseek_process": "strata-dsv41.exe",
+  "scope": "Selected numeric fields from the original Windows event XML; machine, user, IDs and unrelated process details omitted."
+}

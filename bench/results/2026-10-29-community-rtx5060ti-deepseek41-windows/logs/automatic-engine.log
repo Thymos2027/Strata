@@ -1,0 +1,14 @@
+[strata] 2026-10-29 19:23:14 engine started: <ENGINE_DIR>\strata-dsv41.exe --serve --pack <PACK_DIR> --max-context 8192 --eos 1 --vision off --dspark auto --dspark-conf 0.65 --experts 6 --gpus 0
+ds4: tensor parallel 2 -> 1: the experts' 256-value blocks split n_ff 2304 no other way (each GPU its own layers)
+ds4: DSpark not loaded: the routed experts (149 GB) are far more than the GPU holds (15 GB), where its verify rounds read 3.3x a token's bytes and gain nothing (--dspark on loads it anyway)
+ds4: experts per word: 6 (full quality)
+ds4: the experts VRAM leaves over (~142.8 GB) are read in place from the model's files (--mmap-experts off copies them into RAM) (115.9 GB of RAM free to keep them: the most-routed 0.0 GB read ahead; prompts in chunks of 4096)
+ds4: RAM store: 113.3 GB of RAM free after the GPU's weights: store sized 101.3 GB, not 106.4
+ds4: RAM store: up to 8899 slots of 11.4 MB (101.3 GB), policy 0, 8 reader threads, unbuffered reads
+ds4: RAM store: 8815 of the profile's hottest experts read in (80.6 GB) in 14.3 s
+ds4: prompt path: the chunked pass from 96 tokens, windows of 16 below
+ds4: CUDA0 layers [0, 39] + head: weights 5.86 GB, experts 6.65 GB (644 of 15360 in VRAM), caches 0.01 GB, 182 MiB free
+ds4: 14716 routed experts on the CPU lane (143.2 GB, in place in the model's files), 12 threads
+maya ds4 serve: GEN <max_new> [keys] <ids>; GENI <max_new> [keys] <pictures> <ids>; STOP, QUIT
+ds4 slots: folder <AUTO_RUN_DIR>\ds4-slots: 0 conversation(s) kept from earlier runs (0.00 GB)
+fatal   : Memory allocation failure
