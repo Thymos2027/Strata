@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-29",
+  "state": "published_and_verified",
+  "branch": "report/qwen36-hybrid-windows-20261028",
+  "commit": "f48fcb6130be1d9e08eaa36c7963dbf2b558e748",
+  "report": "https://github.com/Thymos2027/Strata/blob/f48fcb6130be1d9e08eaa36c7963dbf2b558e748/bench/results/2026-10-28-community-rtx-5060-ti-qwen36-hybrid/README.md",
+  "comment_4335": "https://github.com/Niko1221/Strata/pull/4335#issuecomment-6488876445",
+  "comment_4347": "https://github.com/Niko1221/Strata/pull/4347#issuecomment-6488877876",
+  "connector_comment_write": "403 Resource not accessible by integration; completed through authenticated GitHub CLI",
+  "pull_request": "https://github.com/Niko1221/Strata/pull/4577",
+  "pr_number": 4577,
+  "verified_files": 113,
+  "review_state": {
+    "isDraft": false,
+    "reviewDecision": "",
+    "state": "OPEN",
+    "statusCheckRollup": [
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-10-29T05:35:03Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/Niko1221/Strata/actions/runs/40824216800/job/123283412960",
+        "name": "check",
+        "startedAt": "2026-10-29T05:34:56Z",
+        "status": "COMPLETED",
+        "workflowName": "Intake"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-10-29T05:34:54Z",
+        "conclusion": "SKIPPED",
+        "detailsUrl": "https://github.com/Niko1221/Strata/actions/runs/40824216800/job/123283414342",
+        "name": "sweep",
+        "startedAt": "2026-10-29T05:34:54Z",
+        "status": "COMPLETED",
+        "workflowName": "Intake"
+      }
+    ]
+  }
+}

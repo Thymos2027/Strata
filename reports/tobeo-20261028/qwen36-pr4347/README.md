@@ -2,7 +2,7 @@
 
 2026-10-28，北京时间。已完成当前Windows原生源码基线、已有候选的政策触发、数值归因和小型任务回归。**原自由生成五组配对在第一组后按身份门槛停止；后续另立协议的五组固定历史配对已完成：16K的generation更快，但prefill变慢，二者合计五组均变慢。** 不能据此宣布普遍加速或完整质量等价。日常Flash-Next engine0.1.52和DeepSeek后台下载均已恢复。
 
-实现归属rynwang的[PR #4347](https://github.com/Niko1221/Strata/pull/4347)。本机验证其已有实现，没有改候选源码，没有向上游发送消息或提交重复补丁。范围预先写于[experiment-plan.md](experiment-plan.md)。小型结果见[summary.json](summary.json)，首组原始请求指标见[paired-requests.csv](paired-requests.csv)；CSV中的不同输出时长不是可接受的加速证据。
+实现归属rynwang的[PR #4347](https://github.com/Niko1221/Strata/pull/4347)。本机验证其已有实现，没有改候选源码，10-29已在原PR补充[独立反馈](https://github.com/Niko1221/Strata/pull/4347#issuecomment-6488877876)，并提交[报告PR #4577](https://github.com/Niko1221/Strata/pull/4577)，没有提交重复实现。范围预先写于[experiment-plan.md](experiment-plan.md)。小型结果见[summary.json](summary.json)，首组原始请求指标见[paired-requests.csv](paired-requests.csv)；CSV中的不同输出时长不是可接受的加速证据。
 
 ## 源码与配置
 

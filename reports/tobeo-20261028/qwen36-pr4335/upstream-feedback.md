@@ -1,6 +1,6 @@
 # Local draft: Windows/Blackwell validation of #4335
 
-Not posted. Recorded on 28–29 October 2026. This tests rynwang's existing implementation, without #4347 or engine source edits.
+Historical draft, superseded by the [published comment](https://github.com/Niko1221/Strata/pull/4335#issuecomment-6488876445) and [report PR #4577](https://github.com/Niko1221/Strata/pull/4577). Recorded on 28–29 October 2026. This tests rynwang's existing implementation, without #4347 or engine source edits.
 
 On this Windows/RTX 5060 Ti 16 GB system, the new auto rule selected 4096 at context32768. With a fixed 96-token history, 4096 improved the 16K prompt request total in all five pairs, but made the 1K request total slower in all five pairs. Generation was slower at both lengths, alongside fewer resident GPU experts (63 → 50).
 
