@@ -1,0 +1,21 @@
+{
+  "exe": "D:\\Models\\Strata\\engine-dsv41\\0.1.52-windows-x86_64-cuda-cuda13\\strata-dsv41.exe",
+  "sha256": "e2f9fce53017dd8c2318e3a5ce969b4bd00b64589bdf32355e8d4d691962e610",
+  "archive_sha256": "f1a3ae88f770b0ef2a3adb9fc7a7166af79069532210bf0f9c7970845cb75865",
+  "build": {
+    "version": "0.1.52",
+    "source": "f-027-rel a42cc3d7d",
+    "commit": "a42cc3d7df70",
+    "archs": [
+      86,
+      89,
+      120
+    ],
+    "ptx": true,
+    "cuda": "13.0",
+    "portable": true,
+    "dsv41": true
+  },
+  "signed_package_and_all_files_verified": true,
+  "manifest_matches_signed_feed": true
+}

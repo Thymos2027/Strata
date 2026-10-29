@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "checks": [
+    "strata-iq3_s.json: only planned path replacements",
+    "strata-qwen36-q4.json: only planned path replacements",
+    "All17 old sources absent and new targets present",
+    "Frozen case controller unchanged",
+    "Qwen real request exercised MTP: draft_n=3"
+  ],
+  "health": {
+    "status": "ok",
+    "max_context": 65536,
+    "model": "qwen3.8-flash-next-iq3_s",
+    "images": false,
+    "api_key": false,
+    "image_generation": false,
+    "loaded": true,
+    "service": "strata"
+  }
+}

@@ -1,0 +1,622 @@
+{
+  "observed_at": "2026-10-29T23:37:16.934342+08:00",
+  "root": "D:\\Models\\Strata",
+  "scope": "Read-only names and logical file sizes; no fresh hashes, allocated-space accounting or full dependency audit. No model files moved or deleted.",
+  "total_bytes": 368575416793,
+  "items": [
+    {
+      "name": "__pycache__",
+      "type": "directory",
+      "bytes": 9851,
+      "files": [
+        {
+          "path": "__pycache__\\download_all.cpython-312.pyc",
+          "bytes": 3401
+        },
+        {
+          "path": "__pycache__\\download_iq3s.cpython-312.pyc",
+          "bytes": 6450
+        }
+      ]
+    },
+    {
+      "name": "COMPLETE.json",
+      "type": "file",
+      "bytes": 695
+    },
+    {
+      "name": "components",
+      "type": "directory",
+      "bytes": 1900010780,
+      "files": [
+        {
+          "path": "components\\.updates\\state.json",
+          "bytes": 1183
+        },
+        {
+          "path": "components\\.updates\\update.lock",
+          "bytes": 0
+        },
+        {
+          "path": "components\\.updates\\logs\\test-start-0.1.46.log",
+          "bytes": 6845
+        },
+        {
+          "path": "components\\.updates\\logs\\test-start-0.1.52.log",
+          "bytes": 7050
+        },
+        {
+          "path": "components\\.updates\\partial\\2966143ca8df7919.part.src",
+          "bytes": 154
+        },
+        {
+          "path": "components\\.updates\\partial\\bfa68c6b2e92f9c2.part",
+          "bytes": 58720256
+        },
+        {
+          "path": "components\\engine\\0.1.46-windows-x86_64-cuda-cuda13\\BUILD.json",
+          "bytes": 204
+        },
+        {
+          "path": "components\\engine\\0.1.46-windows-x86_64-cuda-cuda13\\cublas64_13.dll",
+          "bytes": 51776624
+        },
+        {
+          "path": "components\\engine\\0.1.46-windows-x86_64-cuda-cuda13\\cublasLt64_13.dll",
+          "bytes": 478140016
+        },
+        {
+          "path": "components\\engine\\0.1.46-windows-x86_64-cuda-cuda13\\engine-component.json",
+          "bytes": 1552
+        },
+        {
+          "path": "components\\engine\\0.1.46-windows-x86_64-cuda-cuda13\\strata-vision.exe",
+          "bytes": 108206592
+        },
+        {
+          "path": "components\\engine\\0.1.46-windows-x86_64-cuda-cuda13\\strata.exe",
+          "bytes": 223406080
+        },
+        {
+          "path": "components\\engine\\0.1.46-windows-x86_64-cuda-cuda13\\strata_kq.dll",
+          "bytes": 34449920
+        },
+        {
+          "path": "components\\engine\\0.1.52-windows-x86_64-cuda-cuda13\\BUILD.json",
+          "bytes": 240
+        },
+        {
+          "path": "components\\engine\\0.1.52-windows-x86_64-cuda-cuda13\\cublas64_13.dll",
+          "bytes": 51776624
+        },
+        {
+          "path": "components\\engine\\0.1.52-windows-x86_64-cuda-cuda13\\cublasLt64_13.dll",
+          "bytes": 478140016
+        },
+        {
+          "path": "components\\engine\\0.1.52-windows-x86_64-cuda-cuda13\\engine-component.json",
+          "bytes": 1552
+        },
+        {
+          "path": "components\\engine\\0.1.52-windows-x86_64-cuda-cuda13\\strata-vision.exe",
+          "bytes": 108198912
+        },
+        {
+          "path": "components\\engine\\0.1.52-windows-x86_64-cuda-cuda13\\strata.exe",
+          "bytes": 272727040
+        },
+        {
+          "path": "components\\engine\\0.1.52-windows-x86_64-cuda-cuda13\\strata_kq.dll",
+          "bytes": 34449920
+        }
+      ]
+    },
+    {
+      "name": "deepseek-v4.1-flash-IST-DAS-2.25bpw",
+      "type": "directory",
+      "bytes": 155234931351,
+      "files": [
+        {
+          "path": "deepseek-v4.1-flash-IST-DAS-2.25bpw\\DeepSeek-V4.1-Flash-1017-GSQ-RCO-IQ2_XS-00001-of-00004.gguf",
+          "bytes": 39535788064
+        },
+        {
+          "path": "deepseek-v4.1-flash-IST-DAS-2.25bpw\\DeepSeek-V4.1-Flash-1017-GSQ-RCO-IQ2_XS-00001-of-00004.gguf.part.chunks",
+          "bytes": 116
+        },
+        {
+          "path": "deepseek-v4.1-flash-IST-DAS-2.25bpw\\DeepSeek-V4.1-Flash-1017-GSQ-RCO-IQ2_XS-00001-of-00004.gguf.part.src",
+          "bytes": 246
+        },
+        {
+          "path": "deepseek-v4.1-flash-IST-DAS-2.25bpw\\DeepSeek-V4.1-Flash-1017-GSQ-RCO-IQ2_XS-00001-of-00004.gguf.verified.json",
+          "bytes": 360
+        },
+        {
+          "path": "deepseek-v4.1-flash-IST-DAS-2.25bpw\\DeepSeek-V4.1-Flash-1017-GSQ-RCO-IQ2_XS-00002-of-00004.gguf",
+          "bytes": 39494617536
+        },
+        {
+          "path": "deepseek-v4.1-flash-IST-DAS-2.25bpw\\DeepSeek-V4.1-Flash-1017-GSQ-RCO-IQ2_XS-00002-of-00004.gguf.part.src",
+          "bytes": 246
+        },
+        {
+          "path": "deepseek-v4.1-flash-IST-DAS-2.25bpw\\DeepSeek-V4.1-Flash-1017-GSQ-RCO-IQ2_XS-00002-of-00004.gguf.verified.json",
+          "bytes": 360
+        },
+        {
+          "path": "deepseek-v4.1-flash-IST-DAS-2.25bpw\\DeepSeek-V4.1-Flash-1017-GSQ-RCO-IQ2_XS-00003-of-00004.gguf",
+          "bytes": 39423838496
+        },
+        {
+          "path": "deepseek-v4.1-flash-IST-DAS-2.25bpw\\DeepSeek-V4.1-Flash-1017-GSQ-RCO-IQ2_XS-00003-of-00004.gguf.part.src",
+          "bytes": 246
+        },
+        {
+          "path": "deepseek-v4.1-flash-IST-DAS-2.25bpw\\DeepSeek-V4.1-Flash-1017-GSQ-RCO-IQ2_XS-00003-of-00004.gguf.verified.json",
+          "bytes": 360
+        },
+        {
+          "path": "deepseek-v4.1-flash-IST-DAS-2.25bpw\\DeepSeek-V4.1-Flash-1017-GSQ-RCO-IQ2_XS-00004-of-00004.gguf",
+          "bytes": 36771591232
+        },
+        {
+          "path": "deepseek-v4.1-flash-IST-DAS-2.25bpw\\DeepSeek-V4.1-Flash-1017-GSQ-RCO-IQ2_XS-00004-of-00004.gguf.part.src",
+          "bytes": 246
+        },
+        {
+          "path": "deepseek-v4.1-flash-IST-DAS-2.25bpw\\DeepSeek-V4.1-Flash-1017-GSQ-RCO-IQ2_XS-00004-of-00004.gguf.verified.json",
+          "bytes": 360
+        },
+        {
+          "path": "deepseek-v4.1-flash-IST-DAS-2.25bpw\\maya-ds4\\ds4.txt",
+          "bytes": 1223
+        },
+        {
+          "path": "deepseek-v4.1-flash-IST-DAS-2.25bpw\\maya-ds4\\engram.bin",
+          "bytes": 517980
+        },
+        {
+          "path": "deepseek-v4.1-flash-IST-DAS-2.25bpw\\maya-ds4\\expert-profile.bin",
+          "bytes": 61440
+        },
+        {
+          "path": "deepseek-v4.1-flash-IST-DAS-2.25bpw\\maya-ds4\\tensors.txt",
+          "bytes": 3742951
+        },
+        {
+          "path": "deepseek-v4.1-flash-IST-DAS-2.25bpw\\maya-ds4\\tokenizer\\chat_template.jinja",
+          "bytes": 18812
+        },
+        {
+          "path": "deepseek-v4.1-flash-IST-DAS-2.25bpw\\maya-ds4\\tokenizer\\merges.txt",
+          "bytes": 1632573
+        },
+        {
+          "path": "deepseek-v4.1-flash-IST-DAS-2.25bpw\\maya-ds4\\tokenizer\\tokenizer.json",
+          "bytes": 87
+        },
+        {
+          "path": "deepseek-v4.1-flash-IST-DAS-2.25bpw\\maya-ds4\\tokenizer\\token_type.json",
+          "bytes": 387840
+        },
+        {
+          "path": "deepseek-v4.1-flash-IST-DAS-2.25bpw\\maya-ds4\\tokenizer\\vocab.json",
+          "bytes": 2730577
+        }
+      ]
+    },
+    {
+      "name": "deepseek-v4.1-flash-shared",
+      "type": "directory",
+      "bytes": 118577987220,
+      "files": [
+        {
+          "path": "deepseek-v4.1-flash-shared\\DeepSeek-V4.1-Flash-1017-UD-Q8_K_XL-00001-of-00009.gguf",
+          "bytes": 5780589
+        },
+        {
+          "path": "deepseek-v4.1-flash-shared\\DeepSeek-V4.1-Flash-1017-UD-Q8_K_XL-00001-of-00009.gguf.verified.json",
+          "bytes": 351
+        },
+        {
+          "path": "deepseek-v4.1-flash-shared\\DeepSeek-V4.1-Flash-Engram-IQ4_NL.gguf",
+          "bytes": 110595290816
+        },
+        {
+          "path": "deepseek-v4.1-flash-shared\\DeepSeek-V4.1-Flash-Engram-IQ4_NL.gguf.part.src",
+          "bytes": 225
+        },
+        {
+          "path": "deepseek-v4.1-flash-shared\\DeepSeek-V4.1-Flash-Engram-IQ4_NL.gguf.verified.json",
+          "bytes": 340
+        },
+        {
+          "path": "deepseek-v4.1-flash-shared\\dspark-DeepSeek-V4.1-Flash-1017-Q8_0.gguf",
+          "bytes": 7976914240
+        },
+        {
+          "path": "deepseek-v4.1-flash-shared\\dspark-DeepSeek-V4.1-Flash-1017-Q8_0.gguf.part.chunks",
+          "bytes": 114
+        },
+        {
+          "path": "deepseek-v4.1-flash-shared\\dspark-DeepSeek-V4.1-Flash-1017-Q8_0.gguf.part.src",
+          "bytes": 216
+        },
+        {
+          "path": "deepseek-v4.1-flash-shared\\dspark-DeepSeek-V4.1-Flash-1017-Q8_0.gguf.verified.json",
+          "bytes": 329
+        }
+      ]
+    },
+    {
+      "name": "deployment-backups",
+      "type": "directory",
+      "bytes": 25869,
+      "files": [
+        {
+          "path": "deployment-backups\\post-engine-update-20261021.json",
+          "bytes": 7307
+        },
+        {
+          "path": "deployment-backups\\pre-engine-update-20261021\\engine-BUILD.json",
+          "bytes": 154
+        },
+        {
+          "path": "deployment-backups\\pre-engine-update-20261021\\run-iq3_s.bat",
+          "bytes": 261
+        },
+        {
+          "path": "deployment-backups\\pre-engine-update-20261021\\status-before.json",
+          "bytes": 1540
+        },
+        {
+          "path": "deployment-backups\\pre-engine-update-20261021\\strata-iq3_s.json",
+          "bytes": 1082
+        },
+        {
+          "path": "deployment-backups\\pre-engine-update-20261021\\strata-iq3_s.log",
+          "bytes": 13265
+        },
+        {
+          "path": "deployment-backups\\pre-engine-update-20261021\\strata-server.stderr.log",
+          "bytes": 0
+        },
+        {
+          "path": "deployment-backups\\pre-engine-update-20261021\\strata-server.stdout.log",
+          "bytes": 2260
+        }
+      ]
+    },
+    {
+      "name": "download.err.log",
+      "type": "file",
+      "bytes": 4640
+    },
+    {
+      "name": "download.log",
+      "type": "file",
+      "bytes": 13183
+    },
+    {
+      "name": "download_all.py",
+      "type": "file",
+      "bytes": 1929
+    },
+    {
+      "name": "download_iq3s.py",
+      "type": "file",
+      "bytes": 3830
+    },
+    {
+      "name": "engine-dsv41",
+      "type": "directory",
+      "bytes": 625610757,
+      "files": [
+        {
+          "path": "engine-dsv41\\0.1.52-windows-x86_64-cuda-cuda13\\BUILD.json",
+          "bytes": 166
+        },
+        {
+          "path": "engine-dsv41\\0.1.52-windows-x86_64-cuda-cuda13\\cublas64_13.dll",
+          "bytes": 51776624
+        },
+        {
+          "path": "engine-dsv41\\0.1.52-windows-x86_64-cuda-cuda13\\cublasLt64_13.dll",
+          "bytes": 478140016
+        },
+        {
+          "path": "engine-dsv41\\0.1.52-windows-x86_64-cuda-cuda13\\engine-component.json",
+          "bytes": 1151
+        },
+        {
+          "path": "engine-dsv41\\0.1.52-windows-x86_64-cuda-cuda13\\strata-dsv41.exe",
+          "bytes": 95692800
+        }
+      ]
+    },
+    {
+      "name": "engine-dsv41.work",
+      "type": "directory",
+      "bytes": 133169152,
+      "files": [
+        {
+          "path": "engine-dsv41.work\\.updates\\partial\\f1a3ae88f770b0ef.part",
+          "bytes": 133169152
+        }
+      ]
+    },
+    {
+      "name": "IQ3_S",
+      "type": "directory",
+      "bytes": 83617662752,
+      "files": [
+        {
+          "path": "IQ3_S\\Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00001-of-00002.gguf",
+          "bytes": 54817524224
+        },
+        {
+          "path": "IQ3_S\\Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00001-of-00002.gguf.done",
+          "bytes": 48
+        },
+        {
+          "path": "IQ3_S\\Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00002-of-00002.gguf",
+          "bytes": 28800138432
+        },
+        {
+          "path": "IQ3_S\\Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00002-of-00002.gguf.done",
+          "bytes": 48
+        }
+      ]
+    },
+    {
+      "name": "mtp",
+      "type": "directory",
+      "bytes": 6927665080,
+      "files": [
+        {
+          "path": "mtp\\mtp-inventory.json",
+          "bytes": 7860
+        },
+        {
+          "path": "mtp\\mtp-inventory.md",
+          "bytes": 2474
+        },
+        {
+          "path": "mtp\\mtp-manifest.json",
+          "bytes": 12102
+        },
+        {
+          "path": "mtp\\mtp-q2_0.gguf",
+          "bytes": 889017216
+        },
+        {
+          "path": "mtp\\mtp-q2_0.gguf.report.json",
+          "bytes": 3754
+        },
+        {
+          "path": "mtp\\rt\\dense.bin",
+          "bytes": 116099072
+        },
+        {
+          "path": "mtp\\rt\\dense.txt",
+          "bytes": 1880
+        },
+        {
+          "path": "mtp\\rt\\draft_vocab.bin",
+          "bytes": 425196
+        },
+        {
+          "path": "mtp\\rt\\experts.bin",
+          "bytes": 707788800
+        },
+        {
+          "path": "mtp\\tensors\\mtp.fc_embedding.weight.bin",
+          "bytes": 13107200
+        },
+        {
+          "path": "mtp\\tensors\\mtp.fc_hidden.weight.bin",
+          "bytes": 13107200
+        },
+        {
+          "path": "mtp\\tensors\\mtp.hyper_connection_mixer.hc_norm.weight.bin",
+          "bytes": 20480
+        },
+        {
+          "path": "mtp\\tensors\\mtp.hyper_connection_mixer.input_mix_weight_down.weight.bin",
+          "bytes": 6553600
+        },
+        {
+          "path": "mtp\\tensors\\mtp.hyper_connection_mixer.input_mix_weight_up.weight.bin",
+          "bytes": 6553600
+        },
+        {
+          "path": "mtp\\tensors\\mtp.layers.0.attn_hyper_connection.block_inject_weight.weight.bin",
+          "bytes": 81920
+        },
+        {
+          "path": "mtp\\tensors\\mtp.layers.0.attn_hyper_connection.hc_norm.weight.bin",
+          "bytes": 20480
+        },
+        {
+          "path": "mtp\\tensors\\mtp.layers.0.attn_hyper_connection.input_mix_weight_down.weight.bin",
+          "bytes": 6553600
+        },
+        {
+          "path": "mtp\\tensors\\mtp.layers.0.attn_hyper_connection.input_mix_weight_up.weight.bin",
+          "bytes": 6553600
+        },
+        {
+          "path": "mtp\\tensors\\mtp.layers.0.mlp.experts.down_proj.bin",
+          "bytes": 1677721600
+        },
+        {
+          "path": "mtp\\tensors\\mtp.layers.0.mlp.experts.gate_up_proj.bin",
+          "bytes": 3355443200
+        },
+        {
+          "path": "mtp\\tensors\\mtp.layers.0.mlp.gate.weight.bin",
+          "bytes": 2621440
+        },
+        {
+          "path": "mtp\\tensors\\mtp.layers.0.mlp.shared_expert.down_proj.weight.bin",
+          "bytes": 3276800
+        },
+        {
+          "path": "mtp\\tensors\\mtp.layers.0.mlp.shared_expert.gate_proj.weight.bin",
+          "bytes": 3276800
+        },
+        {
+          "path": "mtp\\tensors\\mtp.layers.0.mlp.shared_expert.up_proj.weight.bin",
+          "bytes": 3276800
+        },
+        {
+          "path": "mtp\\tensors\\mtp.layers.0.mlp.shared_expert_gate.weight.bin",
+          "bytes": 5120
+        },
+        {
+          "path": "mtp\\tensors\\mtp.layers.0.mlp_hyper_connection.block_inject_weight.weight.bin",
+          "bytes": 81920
+        },
+        {
+          "path": "mtp\\tensors\\mtp.layers.0.mlp_hyper_connection.hc_norm.weight.bin",
+          "bytes": 20480
+        },
+        {
+          "path": "mtp\\tensors\\mtp.layers.0.mlp_hyper_connection.input_mix_weight_down.weight.bin",
+          "bytes": 6553600
+        },
+        {
+          "path": "mtp\\tensors\\mtp.layers.0.mlp_hyper_connection.input_mix_weight_up.weight.bin",
+          "bytes": 6553600
+        },
+        {
+          "path": "mtp\\tensors\\mtp.layers.0.self_attn.indexer.index_qk_proj.weight.bin",
+          "bytes": 3276800
+        },
+        {
+          "path": "mtp\\tensors\\mtp.layers.0.self_attn.indexer.k_layernorm.weight.bin",
+          "bytes": 256
+        },
+        {
+          "path": "mtp\\tensors\\mtp.layers.0.self_attn.indexer.q_layernorm.weight.bin",
+          "bytes": 256
+        },
+        {
+          "path": "mtp\\tensors\\mtp.layers.0.self_attn.k_norm.weight.bin",
+          "bytes": 512
+        },
+        {
+          "path": "mtp\\tensors\\mtp.layers.0.self_attn.k_proj.weight.bin",
+          "bytes": 2621440
+        },
+        {
+          "path": "mtp\\tensors\\mtp.layers.0.self_attn.o_proj.weight.bin",
+          "bytes": 31457280
+        },
+        {
+          "path": "mtp\\tensors\\mtp.layers.0.self_attn.q_norm.weight.bin",
+          "bytes": 512
+        },
+        {
+          "path": "mtp\\tensors\\mtp.layers.0.self_attn.q_proj.weight.bin",
+          "bytes": 62914560
+        },
+        {
+          "path": "mtp\\tensors\\mtp.layers.0.self_attn.v_proj.weight.bin",
+          "bytes": 2621440
+        },
+        {
+          "path": "mtp\\tensors\\mtp.pre_fc_norm_embedding.weight.bin",
+          "bytes": 5120
+        },
+        {
+          "path": "mtp\\tensors\\mtp.pre_fc_norm_hidden.weight.bin",
+          "bytes": 20480
+        },
+        {
+          "path": "mtp\\tensors\\verified.json",
+          "bytes": 5030
+        }
+      ]
+    },
+    {
+      "name": "optimization-20261021",
+      "type": "directory",
+      "bytes": 2417,
+      "files": [
+        {
+          "path": "optimization-20261021\\final-server.stderr.log",
+          "bytes": 0
+        },
+        {
+          "path": "optimization-20261021\\final-server.stdout.log",
+          "bytes": 2417
+        }
+      ]
+    },
+    {
+      "name": "packs",
+      "type": "directory",
+      "bytes": 1558317287,
+      "files": [
+        {
+          "path": "packs\\iq3_s\\conversions.json",
+          "bytes": 322
+        },
+        {
+          "path": "packs\\iq3_s\\dense.bin",
+          "bytes": 1538035200
+        },
+        {
+          "path": "packs\\iq3_s\\index.txt",
+          "bytes": 93685
+        },
+        {
+          "path": "packs\\iq3_s\\native_experts.txt",
+          "bytes": 3304
+        },
+        {
+          "path": "packs\\iq3_s\\tokenizer\\chat_template.jinja",
+          "bytes": 9993
+        },
+        {
+          "path": "packs\\iq3_s\\tokenizer\\merges.txt",
+          "bytes": 3600844
+        },
+        {
+          "path": "packs\\iq3_s\\tokenizer\\tokenizer.json",
+          "bytes": 554
+        },
+        {
+          "path": "packs\\iq3_s\\tokenizer\\token_type.json",
+          "bytes": 744960
+        },
+        {
+          "path": "packs\\iq3_s\\tokenizer\\vocab.json",
+          "bytes": 5737005
+        },
+        {
+          "path": "packs\\qwen36-ud-q4_k_xl\\tokenizer\\chat_template.jinja",
+          "bytes": 8057
+        },
+        {
+          "path": "packs\\qwen36-ud-q4_k_xl\\tokenizer\\merges.txt",
+          "bytes": 3600844
+        },
+        {
+          "path": "packs\\qwen36-ud-q4_k_xl\\tokenizer\\tokenizer.json",
+          "bytes": 554
+        },
+        {
+          "path": "packs\\qwen36-ud-q4_k_xl\\tokenizer\\token_type.json",
+          "bytes": 744960
+        },
+        {
+          "path": "packs\\qwen36-ud-q4_k_xl\\tokenizer\\vocab.json",
+          "bytes": 5737005
+        }
+      ]
+    }
+  ]
+}

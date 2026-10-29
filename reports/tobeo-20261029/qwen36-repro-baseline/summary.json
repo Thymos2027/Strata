@@ -1,0 +1,147 @@
+{
+  "date": "2026-10-29",
+  "verified_at": "2026-10-29T22:48:46.145087+08:00",
+  "passed": true,
+  "revision": "46c152a1310f77cd2f0ce2c7cd213962df14fe83",
+  "engine_version": {
+    "version": "0.1.53",
+    "source": "CMakeLists.txt",
+    "standalone_cli_version_supported": false,
+    "note": "strata-q36 has no --version option; source version is not an installed release claim"
+  },
+  "gpu": "NVIDIA GeForce RTX 5060 Ti",
+  "machine": {
+    "observed_at": "2026-10-29T22:44:30.5724875+08:00",
+    "os": {
+      "Caption": "Microsoft Windows 11 专业版",
+      "Version": "10.0.26200",
+      "BuildNumber": "26200"
+    },
+    "cpu": {
+      "Name": "12th Gen Intel(R) Core(TM) i7-12700",
+      "NumberOfCores": 12,
+      "NumberOfLogicalProcessors": 20
+    },
+    "ram": {
+      "TotalPhysicalMemory": 137140031488
+    }
+  },
+  "source_tree": "4b58bed9d82ce8ff804e3b8554d44fb6d85f333c",
+  "toolchain_versions": {
+    "cl_version": "用法: cl [ 选项... ] 文件名... [ /link 链接选项... ]\r\n用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.42.34436 版\r\n版权所有(C) Microsoft Corporation。保留所有权利。",
+    "cmake_version": "cmake version 3.29.5-msvc4\n\nCMake suite maintained and supported by Kitware (kitware.com/cmake).",
+    "ninja_version": "1.11.1.git.kitware.jobserver-1",
+    "nvcc_version": "nvcc: NVIDIA (R) Cuda compiler driver\r\nCopyright (c) 2005-2026 NVIDIA Corporation\r\nBuilt on Mon_Mar__2_21:54:11_Pacific_Standard_Time_2026\r\nCuda compilation tools, release 13.2, V13.2.51\r\nBuild cuda_13.2.r13.2/compiler.37434383_0"
+  },
+  "model": {
+    "bytes": 22853663008,
+    "sha256": "55983c5a75a1ab969824077b3bb3de4146e82a9234072b48ad4e8f92ad3fe9f1"
+  },
+  "ggml_revision": "3cf03257f219afbe7334045ff7c6a06ac68c627d",
+  "ggml_archive_sha256": "c076d7534afa0e5d0ec2a0d425b11e791c16f3de0d727221aea071cef156a280",
+  "ggml_files": 3608,
+  "binaries": {
+    "strata-q36.exe": "84a2b1116dc00bff188da39fb8fb9d0ee9db2b9eaa0faf43cf0dc878da9e8e00",
+    "strata_kq.dll": "08b9c0843bab93a3bef4d796490f1ecfb410f845a0291dccc6a4146adbb719ce"
+  },
+  "selected_host_tests_passed": 17,
+  "full_ctest": false,
+  "source_clean": true,
+  "verify_comparisons": 436050,
+  "verify_mismatches": 0,
+  "mtp2_drafts_accepted": 567,
+  "mtp2_drafts_offered": 786,
+  "parity_prompts_per_arm": [
+    10,
+    10,
+    10,
+    10
+  ],
+  "reference_token_lengths": [
+    128,
+    128,
+    128,
+    128,
+    16,
+    128,
+    85,
+    67,
+    128,
+    23
+  ],
+  "configuration": {
+    "max_context": 32768,
+    "prefill": 2048,
+    "workers": 7,
+    "mtp": 0,
+    "expert_budget": "automatic",
+    "fixed_slots": true,
+    "sampling": "temperature=0 top_p=1 top_k=20 min_p=0 penalty_present=0 penalty_freq=0 penalty_repeat=1 penalty_last_n=0 seed=0",
+    "output_cap": 64,
+    "warmup_case": "r1-l1024",
+    "environment": {
+      "CUDA_VISIBLE_DEVICES": "0",
+      "CUDA_MODULE_LOADING": "EAGER",
+      "STRATA_MMQ_KQ": "1",
+      "STRATA_Q8_PACKED": "1"
+    }
+  },
+  "actual_slots": [
+    63
+  ],
+  "repeatability": [
+    {
+      "label": "repeat-1",
+      "case": "r0-l1024",
+      "prompt_tokens": 1025,
+      "generated_tokens": 64,
+      "output_sha256": "0b5a1ea52a88d40495085b558b6674fa7035a8697e8609ccc38b6391ac1e7908",
+      "matches_first_repeat": true
+    },
+    {
+      "label": "repeat-1",
+      "case": "r0-l16384",
+      "prompt_tokens": 16385,
+      "generated_tokens": 64,
+      "output_sha256": "d9fa9d31b1fea2e0ebca46ef3ccb4bb03c7b33d7db49e48b28407f9d2f986a33",
+      "matches_first_repeat": true
+    },
+    {
+      "label": "repeat-2",
+      "case": "r0-l1024",
+      "prompt_tokens": 1025,
+      "generated_tokens": 64,
+      "output_sha256": "0b5a1ea52a88d40495085b558b6674fa7035a8697e8609ccc38b6391ac1e7908",
+      "matches_first_repeat": true
+    },
+    {
+      "label": "repeat-2",
+      "case": "r0-l16384",
+      "prompt_tokens": 16385,
+      "generated_tokens": 64,
+      "output_sha256": "d9fa9d31b1fea2e0ebca46ef3ccb4bb03c7b33d7db49e48b28407f9d2f986a33",
+      "matches_first_repeat": true
+    }
+  ],
+  "bandwidth": {
+    "bandwidth-before": 24.894215,
+    "bandwidth-after": 24.810577
+  },
+  "daily_model_restored": "qwen3.8-flash-next-iq3_s",
+  "daily_config_unchanged": true,
+  "restore_errors": [],
+  "validation_finished": "2026-10-29T22:47:43.879471+08:00",
+  "run_id": "validation-01",
+  "profiler": false,
+  "limits": [
+    "Windows/CUDA only",
+    "hybrid graphs disabled",
+    "frozen expert placement",
+    "no optimization speed claim",
+    "no normal-condition profiling or bottleneck conclusion",
+    "no full quality, concurrency, long-run or HTTP evaluation",
+    "no bit-identical rebuild claim"
+  ],
+  "local_evidence_files": 44,
+  "evidence_manifest_sha256": "0e4f33f2dd4e20f95d826f1c21ff8a2ab31bfa6a752c22209a7fed64550b4b34"
+}

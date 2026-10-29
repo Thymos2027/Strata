@@ -1,0 +1,58 @@
+[
+  {
+    "path": "D:\\Models\\Strata\\deepseek-v4.1-flash-shared\\DeepSeek-V4.1-Flash-1017-UD-Q8_K_XL-00001-of-00009.gguf",
+    "size": 5780589,
+    "mtime_ns": 1793175857558566400,
+    "sha256": "cc15d470afcb030558bbc4d8e2ccd840182e2e95de1a95198138efe63a5fd99f",
+    "passed": true,
+    "seconds": 0.01600000000325963
+  },
+  {
+    "path": "D:\\Models\\Strata\\deepseek-v4.1-flash-shared\\dspark-DeepSeek-V4.1-Flash-1017-Q8_0.gguf",
+    "size": 7976914240,
+    "mtime_ns": 1793263732454890700,
+    "sha256": "6ba6ac1b331c540691a209e7fc97dec2a24e295acb1e755c84c7d24a4373927a",
+    "passed": true,
+    "seconds": 4.562000000005355
+  },
+  {
+    "path": "D:\\Models\\Strata\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\DeepSeek-V4.1-Flash-1017-GSQ-RCO-IQ2_XS-00001-of-00004.gguf",
+    "size": 39535788064,
+    "mtime_ns": 1793271739573233000,
+    "sha256": "d9b949d55e27242b8afc7c2928749b888372d4c39682f9a131670d1c2555155e",
+    "passed": true,
+    "seconds": 22.765999999988708
+  },
+  {
+    "path": "D:\\Models\\Strata\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\DeepSeek-V4.1-Flash-1017-GSQ-RCO-IQ2_XS-00002-of-00004.gguf",
+    "size": 39494617536,
+    "mtime_ns": 1793232139113134400,
+    "sha256": "933461a974fcccee741bf2f9798201e72ab4aa3f8a952be56f849896ca6ea30e",
+    "passed": true,
+    "seconds": 22.594000000011874
+  },
+  {
+    "path": "D:\\Models\\Strata\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\DeepSeek-V4.1-Flash-1017-GSQ-RCO-IQ2_XS-00003-of-00004.gguf",
+    "size": 39423838496,
+    "mtime_ns": 1793237076169513000,
+    "sha256": "bbf91fa346a85ebaf32dd4fd5c456b534d780d381e54f46ac90783a481373240",
+    "passed": true,
+    "seconds": 22.405999999988126
+  },
+  {
+    "path": "D:\\Models\\Strata\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\DeepSeek-V4.1-Flash-1017-GSQ-RCO-IQ2_XS-00004-of-00004.gguf",
+    "size": 36771591232,
+    "mtime_ns": 1793241523527087300,
+    "sha256": "e5b2f8781fab688cd4bc3bc7a69651b5dbb90ed94965657c6bead8bb4774f3cf",
+    "passed": true,
+    "seconds": 21.01600000000326
+  },
+  {
+    "path": "D:\\Models\\Strata\\deepseek-v4.1-flash-shared\\DeepSeek-V4.1-Flash-Engram-IQ4_NL.gguf",
+    "size": 110595290816,
+    "mtime_ns": 1793257345154334300,
+    "sha256": "eb19f30d368d393784e1fc54fdfaffc427ebb2110bf3762fdf5a8fbb9a2d740a",
+    "passed": true,
+    "seconds": 63.375
+  }
+]

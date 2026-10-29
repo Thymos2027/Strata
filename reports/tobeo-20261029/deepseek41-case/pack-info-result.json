@@ -1,0 +1,10 @@
+{
+  "command": [
+    "D:\\Models\\Strata\\engine-dsv41\\0.1.52-windows-x86_64-cuda-cuda13\\strata-dsv41.exe",
+    "--pack",
+    "D:/Models/Strata/deepseek-v4.1-flash-IST-DAS-2.25bpw/maya-ds4",
+    "--pack-info"
+  ],
+  "exit_code": 0,
+  "passed": true
+}

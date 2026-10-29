@@ -1,0 +1,26 @@
+{
+  "checked": "2026-10-29T22:03:58.158214+08:00",
+  "exe_sha256": "e2f9fce53017dd8c2318e3a5ce969b4bd00b64589bdf32355e8d4d691962e610",
+  "rows": [
+    {
+      "tag": "help",
+      "args": [
+        "--help"
+      ],
+      "exit_code": 0,
+      "mentions_ple_io": false,
+      "stderr_first_line": "maya-ds4 --pack <model>/maya-ds4 [--gpus 0,1,...] [--max-context N] [--reserve-mib N]"
+    },
+    {
+      "tag": "ple-io-direct",
+      "args": [
+        "--ple-io",
+        "direct"
+      ],
+      "exit_code": 2,
+      "mentions_ple_io": true,
+      "stderr_first_line": "unknown option --ple-io"
+    }
+  ],
+  "scope": "CLI argument parsing only; no model pack passed, no model loaded, daily service untouched"
+}

@@ -2,3 +2,6 @@
 !.gitignore
 !README.md
 !flash-next-affinity/
+!qwen36-repro-baseline/
+!deepseek41-case/
+!model-directory-audit/

@@ -1,0 +1,47 @@
+[
+  {
+    "path": "D:\\Models\\Strata\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\maya-ds4\\ds4.txt",
+    "size": 1223,
+    "sha256": "527d05829412f42d00b1621e3b828d7f01bd478141341f90dcfc87550ae05062"
+  },
+  {
+    "path": "D:\\Models\\Strata\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\maya-ds4\\engram.bin",
+    "size": 517980,
+    "sha256": "08d55d6433f389b14aa115f4ea4eb31d6a2d63df1ae40821f03facf4c2d49142"
+  },
+  {
+    "path": "D:\\Models\\Strata\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\maya-ds4\\expert-profile.bin",
+    "size": 66048,
+    "sha256": "c8de062c5f3c71725ecf5328bd4ee02c71dca88478bf7f6b0f2ec258567ac6b6"
+  },
+  {
+    "path": "D:\\Models\\Strata\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\maya-ds4\\tensors.txt",
+    "size": 3742951,
+    "sha256": "91359f55e1a95601cb8db7c8822f2e0af60d75587f980da7eb84b44dffd7d612"
+  },
+  {
+    "path": "D:\\Models\\Strata\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\maya-ds4\\tokenizer\\chat_template.jinja",
+    "size": 18812,
+    "sha256": "90a0ece2e0ecef8cae4d1ede6c2ae6d8916f8a813b99b4aa661692e16142d7f7"
+  },
+  {
+    "path": "D:\\Models\\Strata\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\maya-ds4\\tokenizer\\merges.txt",
+    "size": 1632573,
+    "sha256": "47b0b7ca8188ae704a386ba5879d8669ca0321d96d0680f9e14d0379111a4af6"
+  },
+  {
+    "path": "D:\\Models\\Strata\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\maya-ds4\\tokenizer\\token_type.json",
+    "size": 387840,
+    "sha256": "0a61021438e5ce6041133495f18fc360a6587aea748b17d953f552d2119ba51e"
+  },
+  {
+    "path": "D:\\Models\\Strata\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\maya-ds4\\tokenizer\\tokenizer.json",
+    "size": 87,
+    "sha256": "a6a0d02007e358a972197603ce33f7003051524656083f8967293a73d28bb4a8"
+  },
+  {
+    "path": "D:\\Models\\Strata\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\maya-ds4\\tokenizer\\vocab.json",
+    "size": 2730577,
+    "sha256": "2f0bf5b31f4aa191d5d0d78291927a4f28c9ceb498a5e345b97e926c4cb99c1a"
+  }
+]

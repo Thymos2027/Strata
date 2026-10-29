@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "issue": "https://github.com/Niko1221/Strata/issues/4605",
+  "number": 4605,
+  "title": "[Engine] DeepSeek auto RAM-store loading exhausts Windows commit headroom (128 GB RAM)",
+  "author": "Thymos2027",
+  "state": "open",
+  "body_matches_lf_normalized": true,
+  "body_sha256_lf": "3adc286ee9569592ee5fa0bc63f35ccd1206e0c41aae24cd54214f1ae50b98cf",
+  "evidence_commit": "72ff3a298043fab23ec430db87380101d058b680",
+  "fork_main_unchanged": true,
+  "evidence_files": 25,
+  "upstream_pr_created": false
+}

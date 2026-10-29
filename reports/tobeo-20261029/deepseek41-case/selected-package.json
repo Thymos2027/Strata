@@ -1,0 +1,24 @@
+{
+  "version": "0.1.52",
+  "platform": "windows-x86_64",
+  "backend": "cuda",
+  "variant": "cuda13",
+  "archs": [
+    "sm_86",
+    "sm_89",
+    "sm_120",
+    "compute_120"
+  ],
+  "min_driver": {
+    "nvidia": "580.65"
+  },
+  "min_runtime": null,
+  "build_id": "a42cc3d7df70+dsv41+cuda13.0",
+  "url": "strata-dsv41-0.1.52-windows-x86_64-cuda-cuda13.tar.gz",
+  "format": "tar.gz",
+  "size": 422151870,
+  "sha256": "f1a3ae88f770b0ef2a3adb9fc7a7166af79069532210bf0f9c7970845cb75865",
+  "manifest_sha256": "d85244ee296cab951c1022ec52a99a1b5116bb163c4fd1370c892b8792573c30",
+  "installed_bytes": 625610757,
+  "notes": ""
+}

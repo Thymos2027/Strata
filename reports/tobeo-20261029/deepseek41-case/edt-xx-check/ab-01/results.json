@@ -1,0 +1,758 @@
+{
+  "phase": "failed",
+  "passed": false,
+  "started": "2026-10-29T22:06:56.508548+08:00",
+  "loads": [
+    {
+      "tag": "A1",
+      "started": "2026-10-29T22:07:06.837331+08:00",
+      "command": [
+        "E:\\Coder\\LLM\\Strata\\.venv\\Scripts\\python.exe",
+        "-u",
+        "-m",
+        "serve.server",
+        "--engine",
+        "strata",
+        "--config",
+        "E:\\Coder\\LLM\\Strata\\reports\\tobeo-20261029\\deepseek41-case\\edt-xx-check\\ab-01\\config.json",
+        "--host",
+        "127.0.0.1",
+        "--port",
+        "8081",
+        "--offline"
+      ],
+      "server_pid": 24928,
+      "engine_pid": 30380,
+      "load_seconds": 20.76600000000326,
+      "health": {
+        "status": "ok",
+        "max_context": 8192,
+        "model": "deepseek-v4.1-flash",
+        "images": false,
+        "api_key": false,
+        "image_generation": false,
+        "loaded": true,
+        "service": "strata"
+      },
+      "ready_at": "2026-10-29T22:07:27.625547+08:00",
+      "metrics": {
+        "engine": {
+          "model": "deepseek-v4.1-flash",
+          "max_context": 8192,
+          "images": false,
+          "version": "ds4-0.1",
+          "context": 8192,
+          "kv": "fp4",
+          "kv_resident": 8192,
+          "expert_slots": 555,
+          "engine_kind": "ds4",
+          "cpu_experts": 14805,
+          "ram_experts": 0,
+          "engine": "ds4-0.1",
+          "engram_layers": 2,
+          "engram_lookups": 48,
+          "drafting": "off",
+          "drafting_note": ""
+        },
+        "live": {
+          "state": "idle",
+          "queued": 0,
+          "phase": null,
+          "prompt_tokens": null,
+          "prompt_read": null,
+          "prompt_total": null,
+          "generated": null,
+          "max_tokens": null,
+          "elapsed_s": null,
+          "tok_s": null,
+          "tok_s_mean": null,
+          "prefill_tok_s_mean": null,
+          "tok_s_window_s": null
+        },
+        "requests": [],
+        "conversation_cache": {
+          "enabled": false,
+          "budget_mib": null,
+          "slots": null,
+          "parked": 0,
+          "bytes": 0,
+          "evictions": 0,
+          "parks": 0,
+          "restores": 0,
+          "last_event": null,
+          "last_tokens": null,
+          "last_at": null,
+          "requests": 0,
+          "requests_reused": 0,
+          "reused_tokens": 0,
+          "prompt_tokens": 0,
+          "last_reused": null,
+          "last_prompt": null
+        },
+        "requests_kept": 0,
+        "totals": {
+          "since": 1793282845.4096255,
+          "requests": 0,
+          "prompt_tokens": 0,
+          "reused": 0,
+          "output_tokens": 0,
+          "prompt_ms": 0.0,
+          "decode_ms": 0.0,
+          "drafts_offered": 0,
+          "drafts_accepted": 0
+        },
+        "hardware": {
+          "gpu_util": 2,
+          "gpu_mem_used": 16180846592,
+          "gpu_mem_total": 17103323136,
+          "gpu_temp": 43,
+          "gpu_power": 13.57,
+          "gpu_power_limit": 180.0,
+          "gpu_pcie_gen": 2,
+          "gpu_pcie_gen_max": 5,
+          "gpu_pcie_width": 8,
+          "gpu_pcie_rx_mb": 11.52734375,
+          "gpu_pcie_tx_mb": 3.2333984375,
+          "cpu": 9.5,
+          "ram_used": 79871340544,
+          "ram_total": 137140031488,
+          "disk_read_mb": 0.014594333383067848,
+          "disk_write_mb": 0.8378059507717386,
+          "tok_s": 0.0,
+          "tok_s_mean": 0,
+          "prefill_tok_s_mean": 0.0
+        },
+        "hardware_static": {
+          "gpu_name": "NVIDIA GeForce RTX 5060 Ti",
+          "gpu_vram_total_mib": null,
+          "gpu_count": 1,
+          "gpu_note": null,
+          "cpu_name": "12th Gen Intel(R) Core(TM) i7-12700",
+          "cores": 12,
+          "threads": 20,
+          "sockets": 1,
+          "numa_nodes": 1,
+          "psutil": true
+        },
+        "history": {
+          "gpu_util": [
+            0,
+            2
+          ],
+          "gpu_mem_used": [
+            16172392448,
+            16180846592
+          ],
+          "gpu_temp": [
+            43,
+            43
+          ],
+          "gpu_power": [
+            13.43,
+            13.57
+          ],
+          "gpu_pcie_rx_mb": [
+            15.02,
+            11.53
+          ],
+          "cpu": [
+            0.0,
+            9.5
+          ],
+          "ram_used": [
+            79865618432,
+            79871340544
+          ],
+          "disk_read_mb": [
+            null,
+            0.01
+          ],
+          "tok_s": [
+            0.0,
+            0.0
+          ],
+          "prefill_tok_s_mean": [
+            0.0,
+            0.0
+          ]
+        },
+        "time": 1793282847.6271188
+      },
+      "resources_file": "A1.resources.json",
+      "rss_peak_bytes": 58552463360,
+      "resource_error": null
+    },
+    {
+      "tag": "B1",
+      "started": "2026-10-29T22:08:24.020865+08:00",
+      "command": [
+        "E:\\Coder\\LLM\\Strata\\.venv\\Scripts\\python.exe",
+        "-u",
+        "-m",
+        "serve.server",
+        "--engine",
+        "strata",
+        "--config",
+        "E:\\Coder\\LLM\\Strata\\reports\\tobeo-20261029\\deepseek41-case\\edt-xx-check\\ab-01\\config.json",
+        "--host",
+        "127.0.0.1",
+        "--port",
+        "8081",
+        "--offline"
+      ],
+      "server_pid": 20756,
+      "engine_pid": 28376,
+      "load_seconds": 20.15700000000652,
+      "health": {
+        "status": "ok",
+        "max_context": 8192,
+        "model": "deepseek-v4.1-flash",
+        "images": false,
+        "api_key": false,
+        "image_generation": false,
+        "loaded": true,
+        "service": "strata"
+      },
+      "ready_at": "2026-10-29T22:08:44.172421+08:00",
+      "metrics": {
+        "engine": {
+          "model": "deepseek-v4.1-flash",
+          "max_context": 8192,
+          "images": false,
+          "version": "ds4-0.1",
+          "context": 8192,
+          "kv": "fp4",
+          "kv_resident": 8192,
+          "expert_slots": 555,
+          "engine_kind": "ds4",
+          "cpu_experts": 14805,
+          "ram_experts": 0,
+          "engine": "ds4-0.1",
+          "engram_layers": 2,
+          "engram_lookups": 48,
+          "drafting": "off",
+          "drafting_note": ""
+        },
+        "live": {
+          "state": "idle",
+          "queued": 0,
+          "phase": null,
+          "prompt_tokens": null,
+          "prompt_read": null,
+          "prompt_total": null,
+          "generated": null,
+          "max_tokens": null,
+          "elapsed_s": null,
+          "tok_s": null,
+          "tok_s_mean": null,
+          "prefill_tok_s_mean": null,
+          "tok_s_window_s": null
+        },
+        "requests": [],
+        "conversation_cache": {
+          "enabled": false,
+          "budget_mib": null,
+          "slots": null,
+          "parked": 0,
+          "bytes": 0,
+          "evictions": 0,
+          "parks": 0,
+          "restores": 0,
+          "last_event": null,
+          "last_tokens": null,
+          "last_at": null,
+          "requests": 0,
+          "requests_reused": 0,
+          "reused_tokens": 0,
+          "prompt_tokens": 0,
+          "last_reused": null,
+          "last_prompt": null
+        },
+        "requests_kept": 0,
+        "totals": {
+          "since": 1793282922.5828302,
+          "requests": 0,
+          "prompt_tokens": 0,
+          "reused": 0,
+          "output_tokens": 0,
+          "prompt_ms": 0.0,
+          "decode_ms": 0.0,
+          "drafts_offered": 0,
+          "drafts_accepted": 0
+        },
+        "hardware": {
+          "gpu_util": 1,
+          "gpu_mem_used": 16164724736,
+          "gpu_mem_total": 17103323136,
+          "gpu_temp": 37,
+          "gpu_power": 14.432,
+          "gpu_power_limit": 180.0,
+          "gpu_pcie_gen": 5,
+          "gpu_pcie_gen_max": 5,
+          "gpu_pcie_width": 8,
+          "gpu_pcie_rx_mb": 9.9111328125,
+          "gpu_pcie_tx_mb": 2.462890625,
+          "cpu": 13.8,
+          "ram_used": 80334901248,
+          "ram_total": 137140031488,
+          "disk_read_mb": 0.2671411944152903,
+          "disk_write_mb": 0.4062009942479071,
+          "tok_s": 0.0,
+          "tok_s_mean": 0,
+          "prefill_tok_s_mean": 0.0
+        },
+        "hardware_static": {
+          "gpu_name": "NVIDIA GeForce RTX 5060 Ti",
+          "gpu_vram_total_mib": null,
+          "gpu_count": 1,
+          "gpu_note": null,
+          "cpu_name": "12th Gen Intel(R) Core(TM) i7-12700",
+          "cores": 12,
+          "threads": 20,
+          "sockets": 1,
+          "numa_nodes": 1,
+          "psutil": true
+        },
+        "history": {
+          "gpu_util": [
+            18,
+            1
+          ],
+          "gpu_mem_used": [
+            16164724736,
+            16164724736
+          ],
+          "gpu_temp": [
+            38,
+            37
+          ],
+          "gpu_power": [
+            16.26,
+            14.43
+          ],
+          "gpu_pcie_rx_mb": [
+            5.69,
+            9.91
+          ],
+          "cpu": [
+            0.0,
+            13.8
+          ],
+          "ram_used": [
+            80353652736,
+            80334901248
+          ],
+          "disk_read_mb": [
+            null,
+            0.27
+          ],
+          "tok_s": [
+            0.0,
+            0.0
+          ],
+          "prefill_tok_s_mean": [
+            0.0,
+            0.0
+          ]
+        },
+        "time": 1793282924.1886404
+      },
+      "resources_file": "B1.resources.json",
+      "rss_peak_bytes": 58558570496,
+      "resource_error": null
+    }
+  ],
+  "arms": [
+    {
+      "tag": "A1",
+      "direct": 0,
+      "rows": [
+        {
+          "name": "A1-1024",
+          "started": "2026-10-29T22:07:29.259330+08:00",
+          "messages": [
+            {
+              "role": "user",
+              "content": "Independent run 0, length 1024.\nRead the following synthetic records. Then write a detailed numbered review of validation, ownership, errors, and recovery in at least 500 words.\nRecord 0: request=3; budget=1; operation=restore; verify ownership and bounds.\nRecord 1: request=20; budget=2; operation=restore; verify ownership and bounds.\nRecord 2: request=37; budget=3; operation=restore; verify ownership and bounds.\nRecord 3: request=54; budget=4; operation=restore; verify ownership and bounds.\nRecord 4: request=71; budget=5; operation=restore; verify ownership and bounds.\nRecord 5: request=88; budget=6; operation=restore; verify ownership and bounds.\nRecord 6: request=105; budget=7; operation=restore; verify ownership and bounds.\nRecord 7: request=122; budget=8; operation=restore; verify ownership and bounds.\nRecord 8: request=139; budget=9; operation=restore; verify ownership and bounds.\nRecord 9: request=156; budget=10; operation=restore; verify ownership and bounds.\nRecord 10: request=173; budget=11; operation=restore; verify ownership and bounds.\nRecord 11: request=190; budget=12; operation=restore; verify ownership and bounds.\nRecord 12: request=207; budget=13; operation=restore; verify ownership and bounds.\nRecord 13: request=224; budget=14; operation=restore; verify ownership and bounds.\nRecord 14: request=241; budget=15; operation=restore; verify ownership and bounds.\nRecord 15: request=258; budget=16; operation=restore; verify ownership and bounds.\nRecord 16: request=275; budget=17; operation=restore; verify ownership and bounds.\nRecord 17: request=292; budget=18; operation=restore; verify ownership and bounds.\nRecord 18: request=309; budget=19; operation=restore; verify ownership and bounds.\nRecord 19: request=326; budget=1; operation=restore; verify ownership and bounds.\nRecord 20: request=343; budget=2; operation=restore; verify ownership and bounds.\nRecord 21: request=360; budget=3; operation=restore; verify ownership and bounds.\nRecord 22: request=377; budget=4; operation=restore; verify ownership and bounds.\nRecord 23: request=394; budget=5; operation=restore; verify ownership and bounds.\nRecord 24: request=411; budget=6; operation=restore; verify ownership and bounds.\nRecord 25: request=428; budget=7; operation=restore; verify ownership and bounds.\nRecord 26: request=445; budget=8; operation=restore; verify ownership and bounds.\nRecord 27: request=462; budget=9; operation=restore; verify ownership and bounds.\nRecord 28: request=479; budget=10; operation=restore; verify ownership and bounds.\nRecord 29: request=496; budget=11; operation=restore; verify ownership and bounds.\nRecord 30: request=513; budget=12; operation=restore; verify ownership and bounds.\nRecord 31: request=530; budget=13; operation=restore; verify ownership and bounds.\nRecord 32: request=547; budget=14; operation=restore; verify ownership and bounds.\nRecord 33: request=564; budget=15; operation=restore; verify ownership and bounds.\nRecord 34: request=581; budget=16; operation=restore; verify ownership and bounds.\nRecord 35: request=598; budget=17; operation=restore; verify ownership and bounds.\nRecord 36: request=615; budget=18; operation=restore; verify ownership and bounds.\nRecord 37: request=632; budget=19; operation=restore; verify ownership and bounds.\nRecord 38: request=649; budget=1; operation=restore; verify ownership and bounds.\nRecord 39: request=666; budget=2; operation=restore; verify ownership and bounds.\nRecord 40: request=683; budget=3; operation=restore; verify ownership and bounds.\nRecord 41: request=700; budget=4; operation=restore; verify ownership and bounds.\nRecord 42: request=717; budget=5; operation=restore; verify ownership and bounds.\nRecord 43: request=734; budget=6; operation=restore; verify ownership and bounds.\nRecord 44: request=751; budget=7; operation=restore; verify ownership and bounds.\nRecord 45: request="
+            }
+          ],
+          "output_budget": 64,
+          "usage": {
+            "prompt_tokens": 1038,
+            "completion_tokens": 64,
+            "total_tokens": 1102,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          },
+          "timings": {
+            "cache_n": 0,
+            "prompt_n": 1038,
+            "prompt_ms": 12072.8,
+            "prompt_per_token_ms": 11.631,
+            "prompt_per_second": 86.0,
+            "predicted_n": 64,
+            "predicted_ms": 8259.9,
+            "predicted_per_token_ms": 129.061,
+            "predicted_per_second": 7.7,
+            "draft_n": 0,
+            "draft_n_accepted": 0
+          },
+          "finish": "length",
+          "elapsed_s": 20.33948149997741,
+          "first_content_s": 12.079454399994574,
+          "first_event_s": 0.006254399981116876,
+          "content": "# Detailed Review of Validation, Ownership, Errors, and Recovery\n\n## 1. Scope and Structure of the Records\n\nThe synthetic dataset consists of a sequence of records, each containing three fields: a `request` identifier, a `budget` value, and an `operation` descriptor, followed by the instruction \"",
+          "reasoning": "",
+          "tool_calls": [],
+          "finished": "2026-10-29T22:07:49.621156+08:00",
+          "protocol_passed": true,
+          "resources_file": "A1-1024.resources.json",
+          "resources_summary": {
+            "sample_interval_s": 0.5,
+            "error": null,
+            "rss_peak_bytes": 59612028928,
+            "private_peak_bytes": 83524870144,
+            "card_vram_peak_bytes": 16266674176,
+            "system_available_min_bytes": 55659294720,
+            "process_page_fault_delta": 198649
+          },
+          "target_tokens": 1024,
+          "fresh": true,
+          "matches_A1": true
+        },
+        {
+          "name": "A1-4096",
+          "started": "2026-10-29T22:07:49.639115+08:00",
+          "messages": [
+            {
+              "role": "user",
+              "content": "Independent run 0, length 4096.\nRead the following synthetic records. Then write a detailed numbered review of validation, ownership, errors, and recovery in at least 500 words.\nRecord 0: request=3; budget=1; operation=restore; verify ownership and bounds.\nRecord 1: request=20; budget=2; operation=restore; verify ownership and bounds.\nRecord 2: request=37; budget=3; operation=restore; verify ownership and bounds.\nRecord 3: request=54; budget=4; operation=restore; verify ownership and bounds.\nRecord 4: request=71; budget=5; operation=restore; verify ownership and bounds.\nRecord 5: request=88; budget=6; operation=restore; verify ownership and bounds.\nRecord 6: request=105; budget=7; operation=restore; verify ownership and bounds.\nRecord 7: request=122; budget=8; operation=restore; verify ownership and bounds.\nRecord 8: request=139; budget=9; operation=restore; verify ownership and bounds.\nRecord 9: request=156; budget=10; operation=restore; verify ownership and bounds.\nRecord 10: request=173; budget=11; operation=restore; verify ownership and bounds.\nRecord 11: request=190; budget=12; operation=restore; verify ownership and bounds.\nRecord 12: request=207; budget=13; operation=restore; verify ownership and bounds.\nRecord 13: request=224; budget=14; operation=restore; verify ownership and bounds.\nRecord 14: request=241; budget=15; operation=restore; verify ownership and bounds.\nRecord 15: request=258; budget=16; operation=restore; verify ownership and bounds.\nRecord 16: request=275; budget=17; operation=restore; verify ownership and bounds.\nRecord 17: request=292; budget=18; operation=restore; verify ownership and bounds.\nRecord 18: request=309; budget=19; operation=restore; verify ownership and bounds.\nRecord 19: request=326; budget=1; operation=restore; verify ownership and bounds.\nRecord 20: request=343; budget=2; operation=restore; verify ownership and bounds.\nRecord 21: request=360; budget=3; operation=restore; verify ownership and bounds.\nRecord 22: request=377; budget=4; operation=restore; verify ownership and bounds.\nRecord 23: request=394; budget=5; operation=restore; verify ownership and bounds.\nRecord 24: request=411; budget=6; operation=restore; verify ownership and bounds.\nRecord 25: request=428; budget=7; operation=restore; verify ownership and bounds.\nRecord 26: request=445; budget=8; operation=restore; verify ownership and bounds.\nRecord 27: request=462; budget=9; operation=restore; verify ownership and bounds.\nRecord 28: request=479; budget=10; operation=restore; verify ownership and bounds.\nRecord 29: request=496; budget=11; operation=restore; verify ownership and bounds.\nRecord 30: request=513; budget=12; operation=restore; verify ownership and bounds.\nRecord 31: request=530; budget=13; operation=restore; verify ownership and bounds.\nRecord 32: request=547; budget=14; operation=restore; verify ownership and bounds.\nRecord 33: request=564; budget=15; operation=restore; verify ownership and bounds.\nRecord 34: request=581; budget=16; operation=restore; verify ownership and bounds.\nRecord 35: request=598; budget=17; operation=restore; verify ownership and bounds.\nRecord 36: request=615; budget=18; operation=restore; verify ownership and bounds.\nRecord 37: request=632; budget=19; operation=restore; verify ownership and bounds.\nRecord 38: request=649; budget=1; operation=restore; verify ownership and bounds.\nRecord 39: request=666; budget=2; operation=restore; verify ownership and bounds.\nRecord 40: request=683; budget=3; operation=restore; verify ownership and bounds.\nRecord 41: request=700; budget=4; operation=restore; verify ownership and bounds.\nRecord 42: request=717; budget=5; operation=restore; verify ownership and bounds.\nRecord 43: request=734; budget=6; operation=restore; verify ownership and bounds.\nRecord 44: request=751; budget=7; operation=restore; verify ownership and bounds.\nRecord 45: request=768; budget=8; operation=restore; verify ownership and bounds.\nRecord 46: request=785; budget=9; operation=restore; verify ownership and bounds.\nRecord 47: request=802; budget=10; operation=restore; verify ownership and bounds.\nRecord 48: request=819; budget=11; operation=restore; verify ownership and bounds.\nRecord 49: request=836; budget=12; operation=restore; verify ownership and bounds.\nRecord 50: request=853; budget=13; operation=restore; verify ownership and bounds.\nRecord 51: request=870; budget=14; operation=restore; verify ownership and bounds.\nRecord 52: request=887; budget=15; operation=restore; verify ownership and bounds.\nRecord 53: request=904; budget=16; operation=restore; verify ownership and bounds.\nRecord 54: request=921; budget=17; operation=restore; verify ownership and bounds.\nRecord 55: request=938; budget=18; operation=restore; verify ownership and bounds.\nRecord 56: request=955; budget=19; operation=restore; verify ownership and bounds.\nRecord 57: request=972; budget=1; operation=restore; verify ownership and bounds.\nRecord 58: request=989; budget=2; operation=restore; verify ownership and bounds.\nRecord 59: request=1006; budget=3; operation=restore; verify ownership and bounds.\nRecord 60: request=1023; budget=4; operation=restore; verify ownership and bounds.\nRecord 61: request=1040; budget=5; operation=restore; verify ownership and bounds.\nRecord 62: request=1057; budget=6; operation=restore; verify ownership and bounds.\nRecord 63: request=1074; budget=7; operation=restore; verify ownership and bounds.\nRecord 64: request=1091; budget=8; operation=restore; verify ownership and bounds.\nRecord 65: request=1108; budget=9; operation=restore; verify ownership and bounds.\nRecord 66: request=1125; budget=10; operation=restore; verify ownership and bounds.\nRecord 67: request=1142; budget=11; operation=restore; verify ownership and bounds.\nRecord 68: request=1159; budget=12; operation=restore; verify ownership and bounds.\nRecord 69: request=1176; budget=13; operation=restore; verify ownership and bounds.\nRecord 70: request=1193; budget=14; operation=restore; verify ownership and bounds.\nRecord 71: request=1210; budget=15; operation=restore; verify ownership and bounds.\nRecord 72: request=1227; budget=16; operation=restore; verify ownership and bounds.\nRecord 73: request=1244; budget=17; operation=restore; verify ownership and bounds.\nRecord 74: request=1261; budget=18; operation=restore; verify ownership and bounds.\nRecord 75: request=1278; budget=19; operation=restore; verify ownership and bounds.\nRecord 76: request=1295; budget=1; operation=restore; verify ownership and bounds.\nRecord 77: request=1312; budget=2; operation=restore; verify ownership and bounds.\nRecord 78: request=1329; budget=3; operation=restore; verify ownership and bounds.\nRecord 79: request=1346; budget=4; operation=restore; verify ownership and bounds.\nRecord 80: request=1363; budget=5; operation=restore; verify ownership and bounds.\nRecord 81: request=1380; budget=6; operation=restore; verify ownership and bounds.\nRecord 82: request=1397; budget=7; operation=restore; verify ownership and bounds.\nRecord 83: request=1414; budget=8; operation=restore; verify ownership and bounds.\nRecord 84: request=1431; budget=9; operation=restore; verify ownership and bounds.\nRecord 85: request=1448; budget=10; operation=restore; verify ownership and bounds.\nRecord 86: request=1465; budget=11; operation=restore; verify ownership and bounds.\nRecord 87: request=1482; budget=12; operation=restore; verify ownership and bounds.\nRecord 88: request=1499; budget=13; operation=restore; verify ownership and bounds.\nRecord 89: request=1516; budget=14; operation=restore; verify ownership and bounds.\nRecord 90: request=1533; budget=15; operation=restore; verify ownership and bounds.\nRecord 91: request=1550; budget=16; operation=restore; verify ownership and bounds.\nRecord 92: request=1567; budget=17; operation=restore; verify ownership and bounds.\nRecord 93: request=1584; budget=18; operation=restore; verify ownership and bounds.\nRecord 94: request=1601; budget=19; operation=restore; verify ownership and bounds.\nRecord 95: request=1618; budget=1; operation=restore; verify ownership and bounds.\nRecord 96: request=1635; budget=2; operation=restore; verify ownership and bounds.\nRecord 97: request=1652; budget=3; operation=restore; verify ownership and bounds.\nRecord 98: request=1669; budget=4; operation=restore; verify ownership and bounds.\nRecord 99: request=1686; budget=5; operation=restore; verify ownership and bounds.\nRecord 100: request=1703; budget=6; operation=restore; verify ownership and bounds.\nRecord 101: request=1720; budget=7; operation=restore; verify ownership and bounds.\nRecord 102: request=1737; budget=8; operation=restore; verify ownership and bounds.\nRecord 103: request=1754; budget=9; operation=restore; verify ownership and bounds.\nRecord 104: request=1771; budget=10; operation=restore; verify ownership and bounds.\nRecord 105: request=1788; budget=11; operation=restore; verify ownership and bounds.\nRecord 106: request=1805; budget=12; operation=restore; verify ownership and bounds.\nRecord 107: request=1822; budget=13; operation=restore; verify ownership and bounds.\nRecord 108: request=1839; budget=14; operation=restore; verify ownership and bounds.\nRecord 109: request=1856; budget=15; operation=restore; verify ownership and bounds.\nRecord 110: request=1873; budget=16; operation=restore; verify ownership and bounds.\nRecord 111: request=1890; budget=17; operation=restore; verify ownership and bounds.\nRecord 112: request=1907; budget=18; operation=restore; verify ownership and bounds.\nRecord 113: request=1924; budget=19; operation=restore; verify ownership and bounds.\nRecord 114: request=1941; budget=1; operation=restore; verify ownership and bounds.\nRecord 115: request=1958; budget=2; operation=restore; verify ownership and bounds.\nRecord 116: request=1975; budget=3; operation=restore; verify ownership and bounds.\nRecord 117: request=1992; budget=4; operation=restore; verify ownership and bounds.\nRecord 118: request=2009; budget=5; operation=restore; verify ownership and bounds.\nRecord 119: request=2026; budget=6; operation=restore; verify ownership and bounds.\nRecord 120: request=2043; budget=7; operation=restore; verify ownership and bounds.\nRecord 121: request=2060; budget=8; operation=restore; verify ownership and bounds.\nRecord 122: request=2077; budget=9; operation=restore; verify ownership and bounds.\nRecord 123: request=2094; budget=10; operation=restore; verify ownership and bounds.\nRecord 124: request=2111; budget=11; operation=restore; verify ownership and bounds.\nRecord 125: request=2128; budget=12; operation=restore; verify ownership and bounds.\nRecord 126: request=2145; budget=13; operation=restore; verify ownership and bounds.\nRecord 127: request=2162; budget=14; operation=restore; verify ownership and bounds.\nRecord 128: request=2179; budget=15; operation=restore; verify ownership and bounds.\nRecord 129: request=2196; budget=16; operation=restore; verify ownership and bounds.\nRecord 130: request=2213; budget=17; operation=restore; verify ownership and bounds.\nRecord 131: request=2230; budget=18; operation=restore; verify ownership and bounds.\nRecord 132: request=2247; budget=19; operation=restore; verify ownership and bounds.\nRecord 133: request=2264; budget=1; operation=restore; verify ownership and bounds.\nRecord 134: request=2281; budget=2; operation=restore; verify ownership and bounds.\nRecord 135: request=2298; budget=3; operation=restore; verify ownership and bounds.\nRecord 136: request=2315; budget=4; operation=restore; verify ownership and bounds.\nRecord 137: request=2332; budget=5; operation=restore; verify ownership and bounds.\nRecord 138: request=2349; budget=6; operation=restore; verify ownership and bounds.\nRecord 139: request=2366; budget=7; operation=restore; verify ownership and bounds.\nRecord 140: request=2383; budget=8; operation=restore; verify ownership and bounds.\nRecord 141: request=2400; budget=9; operation=restore; verify ownership and bounds.\nRecord 142: request=2417; budget=10; operation=restore; verify ownership and bounds.\nRecord 143: request=2434; budget=11; operation=restore; verify ownership and bounds.\nRecord 144: request=2451; budget=12; operation=restore; verify ownership and bounds.\nRecord 145: request=2468; budget=13; operation=restore; verify ownership and bounds.\nRecord 146: request=2485; budget=14; operation=restore; verify ownership and bounds.\nRecord 147: request=2502; budget=15; operation=restore; verify ownership and bounds.\nRecord 148: request=2519; budget=16; operation=restore; verify ownership and bounds.\nRecord 149: request=2536; budget=17; operation=restore; verify ownership and bounds.\nRecord 150: request=2553; budget=18; operation=restore; verify ownership and bounds.\nRecord 151: request=2570; budget=19; operation=restore; verify ownership and bounds.\nRecord 152: request=2587; budget=1; operation=restore; verify ownership and bounds.\nRecord 153: request=2604; budget=2; operation=restore; verify ownership and bounds.\nRecord 154: request=2621; budget=3; operation=restore; verify ownership and bounds.\nRecord 155: request=2638; budget=4; operation=restore; verify ownership and bounds.\nRecord 156: request=2655; budget=5; operation=restore; verify ownership and bounds.\nRecord 157: request=2672; budget=6; operation=restore; verify ownership and bounds.\nRecord 158: request=2689; budget=7; operation=restore; verify ownership and bounds.\nRecord 159: request=2706; budget=8; operation=restore; verify ownership and bounds.\nRecord 160: request=2723; budget=9; operation=restore; verify ownership and bounds.\nRecord 161: request=2740; budget=10; operation=restore; verify ownership and bounds.\nRecord 162: request=2757; budget=11; operation=restore; verify ownership and bounds.\nRecord 163: request=2774; budget=12; operation=restore; verify ownership and bounds.\nRecord 164: request=2791; budget=13; operation=restore; verify ownership and bounds.\nRecord 165: request=2808; budget=14; operation=restore; verify ownership and bounds.\nRecord 166: request=2825; budget=15; operation=restore; verify ownership and bounds.\nRecord 167: request=2842; budget=16; operation=restore; verify ownership and bounds.\nRecord 168: request=2859; budget=17; operation=restore; verify ownership and bounds.\nRecord 169: request=2876; budget=18; operation=restore; verify ownership and bounds.\nRecord 170: request=2893; budget=19; operation=restore; verify ownership and bounds.\nRecord 171: request=2910; budget=1; operation=restore; verify ownership and bounds.\nRecord 172: request=2927; budget=2; operation=restore; verify ownership and bounds.\nRecord 173: request=2944; budget=3; operation=restore; verify ownership and bounds.\nRecord 174: request=2961; budget=4; operation=restore; verify ownership and bounds.\nRecord 175: request=2978; budget=5; operation=restore; verify ownership and bounds.\nRecord 176: request=2995; budget=6; operation=restore; verify ownership and bounds.\nRecord 177: request=3012; budget=7; operation=restore; verify ownership and bounds.\nRecord 178: request=3029; budget=8; operation=restore; verify ownership and bounds.\nRecord 179: request=3046; budget"
+            }
+          ],
+          "output_budget": 64,
+          "usage": {
+            "prompt_tokens": 4110,
+            "completion_tokens": 64,
+            "total_tokens": 4174,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          },
+          "timings": {
+            "cache_n": 0,
+            "prompt_n": 4110,
+            "prompt_ms": 20608.2,
+            "prompt_per_token_ms": 5.014,
+            "prompt_per_second": 199.4,
+            "predicted_n": 64,
+            "predicted_ms": 8533.1,
+            "predicted_per_token_ms": 133.33,
+            "predicted_per_second": 7.5,
+            "draft_n": 0,
+            "draft_n_accepted": 0
+          },
+          "finish": "length",
+          "elapsed_s": 29.171098099992378,
+          "first_content_s": 20.619751699996414,
+          "first_event_s": 0.010641900007613003,
+          "content": "# Detailed Review of Validation, Ownership, Errors, and Recovery\n\n## 1. Scope and Structure of the Dataset\n\nThe synthetic records consist of 180 enumerated entries (Record 0 through Record 179, with the final record truncated mid-sentence at \"budget\"). Each record follows a rigid, repeated template:",
+          "reasoning": "",
+          "tool_calls": [],
+          "finished": "2026-10-29T22:08:18.822074+08:00",
+          "protocol_passed": true,
+          "resources_file": "A1-4096.resources.json",
+          "resources_summary": {
+            "sample_interval_s": 0.5,
+            "error": null,
+            "rss_peak_bytes": 61711876096,
+            "private_peak_bytes": 88519172096,
+            "card_vram_peak_bytes": 16256942080,
+            "system_available_min_bytes": 53406830592,
+            "process_page_fault_delta": 607281
+          },
+          "target_tokens": 4096,
+          "fresh": true,
+          "matches_A1": true
+        }
+      ],
+      "started": "2026-10-29T22:07:06.837331+08:00",
+      "unmapped_engram_logged": false,
+      "placement": {
+        "gpu_experts": 555,
+        "ram_slots": 5624
+      },
+      "warmup": {
+        "name": "A1-warmup",
+        "started": "2026-10-29T22:07:27.650114+08:00",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Reply with exactly READY."
+          }
+        ],
+        "output_budget": 16,
+        "usage": {
+          "prompt_tokens": 10,
+          "completion_tokens": 3,
+          "total_tokens": 13,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "cache_n": 0,
+          "prompt_n": 10,
+          "prompt_ms": 1261.6,
+          "prompt_per_token_ms": 126.16,
+          "prompt_per_second": 7.9,
+          "predicted_n": 3,
+          "predicted_ms": 304.6,
+          "predicted_per_token_ms": 101.533,
+          "predicted_per_second": 9.8,
+          "draft_n": 0,
+          "draft_n_accepted": 0
+        },
+        "finish": "stop",
+        "elapsed_s": 1.5710083000012673,
+        "first_content_s": 1.2668930999934673,
+        "first_event_s": 0.004479600000195205,
+        "content": "READY",
+        "reasoning": "",
+        "tool_calls": [],
+        "finished": "2026-10-29T22:07:29.241306+08:00",
+        "protocol_passed": true,
+        "resources_file": "A1-warmup.resources.json",
+        "resources_summary": {
+          "sample_interval_s": 0.5,
+          "error": null,
+          "rss_peak_bytes": 58798886912,
+          "private_peak_bytes": 83404058624,
+          "card_vram_peak_bytes": 16168796160,
+          "system_available_min_bytes": 56982368256,
+          "process_page_fault_delta": 60188
+        }
+      },
+      "idle_commit": {
+        "committed_bytes": 112338546688,
+        "limit_bytes": 141434998784,
+        "available_ram_bytes": 56991150080
+      },
+      "finished": "2026-10-29T22:08:18.837534+08:00",
+      "unload": {
+        "status": "unloaded"
+      }
+    },
+    {
+      "tag": "B1",
+      "direct": 1,
+      "rows": [
+        {
+          "name": "B1-1024",
+          "started": "2026-10-29T22:08:46.028060+08:00",
+          "messages": [
+            {
+              "role": "user",
+              "content": "Independent run 0, length 1024.\nRead the following synthetic records. Then write a detailed numbered review of validation, ownership, errors, and recovery in at least 500 words.\nRecord 0: request=3; budget=1; operation=restore; verify ownership and bounds.\nRecord 1: request=20; budget=2; operation=restore; verify ownership and bounds.\nRecord 2: request=37; budget=3; operation=restore; verify ownership and bounds.\nRecord 3: request=54; budget=4; operation=restore; verify ownership and bounds.\nRecord 4: request=71; budget=5; operation=restore; verify ownership and bounds.\nRecord 5: request=88; budget=6; operation=restore; verify ownership and bounds.\nRecord 6: request=105; budget=7; operation=restore; verify ownership and bounds.\nRecord 7: request=122; budget=8; operation=restore; verify ownership and bounds.\nRecord 8: request=139; budget=9; operation=restore; verify ownership and bounds.\nRecord 9: request=156; budget=10; operation=restore; verify ownership and bounds.\nRecord 10: request=173; budget=11; operation=restore; verify ownership and bounds.\nRecord 11: request=190; budget=12; operation=restore; verify ownership and bounds.\nRecord 12: request=207; budget=13; operation=restore; verify ownership and bounds.\nRecord 13: request=224; budget=14; operation=restore; verify ownership and bounds.\nRecord 14: request=241; budget=15; operation=restore; verify ownership and bounds.\nRecord 15: request=258; budget=16; operation=restore; verify ownership and bounds.\nRecord 16: request=275; budget=17; operation=restore; verify ownership and bounds.\nRecord 17: request=292; budget=18; operation=restore; verify ownership and bounds.\nRecord 18: request=309; budget=19; operation=restore; verify ownership and bounds.\nRecord 19: request=326; budget=1; operation=restore; verify ownership and bounds.\nRecord 20: request=343; budget=2; operation=restore; verify ownership and bounds.\nRecord 21: request=360; budget=3; operation=restore; verify ownership and bounds.\nRecord 22: request=377; budget=4; operation=restore; verify ownership and bounds.\nRecord 23: request=394; budget=5; operation=restore; verify ownership and bounds.\nRecord 24: request=411; budget=6; operation=restore; verify ownership and bounds.\nRecord 25: request=428; budget=7; operation=restore; verify ownership and bounds.\nRecord 26: request=445; budget=8; operation=restore; verify ownership and bounds.\nRecord 27: request=462; budget=9; operation=restore; verify ownership and bounds.\nRecord 28: request=479; budget=10; operation=restore; verify ownership and bounds.\nRecord 29: request=496; budget=11; operation=restore; verify ownership and bounds.\nRecord 30: request=513; budget=12; operation=restore; verify ownership and bounds.\nRecord 31: request=530; budget=13; operation=restore; verify ownership and bounds.\nRecord 32: request=547; budget=14; operation=restore; verify ownership and bounds.\nRecord 33: request=564; budget=15; operation=restore; verify ownership and bounds.\nRecord 34: request=581; budget=16; operation=restore; verify ownership and bounds.\nRecord 35: request=598; budget=17; operation=restore; verify ownership and bounds.\nRecord 36: request=615; budget=18; operation=restore; verify ownership and bounds.\nRecord 37: request=632; budget=19; operation=restore; verify ownership and bounds.\nRecord 38: request=649; budget=1; operation=restore; verify ownership and bounds.\nRecord 39: request=666; budget=2; operation=restore; verify ownership and bounds.\nRecord 40: request=683; budget=3; operation=restore; verify ownership and bounds.\nRecord 41: request=700; budget=4; operation=restore; verify ownership and bounds.\nRecord 42: request=717; budget=5; operation=restore; verify ownership and bounds.\nRecord 43: request=734; budget=6; operation=restore; verify ownership and bounds.\nRecord 44: request=751; budget=7; operation=restore; verify ownership and bounds.\nRecord 45: request="
+            }
+          ],
+          "output_budget": 64,
+          "usage": {
+            "prompt_tokens": 1038,
+            "completion_tokens": 64,
+            "total_tokens": 1102,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          },
+          "timings": {
+            "cache_n": 0,
+            "prompt_n": 1038,
+            "prompt_ms": 12768.3,
+            "prompt_per_token_ms": 12.301,
+            "prompt_per_second": 81.3,
+            "predicted_n": 64,
+            "predicted_ms": 9847.2,
+            "predicted_per_token_ms": 153.863,
+            "predicted_per_second": 6.5,
+            "draft_n": 0,
+            "draft_n_accepted": 0
+          },
+          "finish": "length",
+          "elapsed_s": 22.649803700012853,
+          "first_content_s": 12.78805950001697,
+          "first_event_s": 0.019470800005365163,
+          "content": "# Detailed Review of Validation, Ownership, Errors, and Recovery\n\n## 1. Scope and Structure of the Dataset\n\nThe synthetic records describe a sequence of 45+ entries (the excerpt ends mid-record at Record 45), each following an identical schema: `request=<integer>; budget=<integer>; operation",
+          "reasoning": "",
+          "tool_calls": [],
+          "finished": "2026-10-29T22:09:08.692148+08:00",
+          "protocol_passed": true,
+          "resources_file": "B1-1024.resources.json",
+          "resources_summary": {
+            "sample_interval_s": 0.5,
+            "error": null,
+            "rss_peak_bytes": 59796971520,
+            "private_peak_bytes": 83308511232,
+            "card_vram_peak_bytes": 16260079616,
+            "system_available_min_bytes": 54892789760,
+            "process_page_fault_delta": 241696
+          },
+          "target_tokens": 1024,
+          "fresh": true,
+          "matches_A1": false
+        }
+      ],
+      "started": "2026-10-29T22:08:24.018859+08:00",
+      "unmapped_engram_logged": true,
+      "placement": {
+        "gpu_experts": 555,
+        "ram_slots": 5624
+      },
+      "warmup": {
+        "name": "B1-warmup",
+        "started": "2026-10-29T22:08:44.205538+08:00",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Reply with exactly READY."
+          }
+        ],
+        "output_budget": 16,
+        "usage": {
+          "prompt_tokens": 10,
+          "completion_tokens": 3,
+          "total_tokens": 13,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "cache_n": 0,
+          "prompt_n": 10,
+          "prompt_ms": 1453.8,
+          "prompt_per_token_ms": 145.38,
+          "prompt_per_second": 6.9,
+          "predicted_n": 3,
+          "predicted_ms": 311.9,
+          "predicted_per_token_ms": 103.967,
+          "predicted_per_second": 9.6,
+          "draft_n": 0,
+          "draft_n_accepted": 0
+        },
+        "finish": "stop",
+        "elapsed_s": 1.8019056000048295,
+        "first_content_s": 1.4720331999997143,
+        "first_event_s": 0.01751850001164712,
+        "content": "READY",
+        "reasoning": "",
+        "tool_calls": [],
+        "finished": "2026-10-29T22:08:46.018466+08:00",
+        "protocol_passed": true,
+        "resources_file": "B1-warmup.resources.json",
+        "resources_summary": {
+          "sample_interval_s": 0.5,
+          "error": null,
+          "rss_peak_bytes": 58807144448,
+          "private_peak_bytes": 83187826688,
+          "card_vram_peak_bytes": 16166821888,
+          "system_available_min_bytes": 56507518976,
+          "process_page_fault_delta": 60713
+        }
+      },
+      "idle_commit": {
+        "committed_bytes": 112539361280,
+        "limit_bytes": 141434998784,
+        "available_ram_bytes": 56509366272
+      }
+    }
+  ],
+  "controller_sha256": "fe4036b216c435a1eac91f52d40e81ee50f99a15fb5741c5e24f30b532956268",
+  "protocol_sha256": "35eddf8816197a8fa0c02df0b522f52410ebc38a3696c8000a0418dcf72d9aa8",
+  "helper_sha256": "c495355468288f79a10e42ac345195847a1741bf2879300bc7db894f1dda19fc",
+  "tasks": [
+    {
+      "target_tokens": 1024,
+      "messages": [
+        {
+          "role": "user",
+          "content": "Independent run 0, length 1024.\nRead the following synthetic records. Then write a detailed numbered review of validation, ownership, errors, and recovery in at least 500 words.\nRecord 0: request=3; budget=1; operation=restore; verify ownership and bounds.\nRecord 1: request=20; budget=2; operation=restore; verify ownership and bounds.\nRecord 2: request=37; budget=3; operation=restore; verify ownership and bounds.\nRecord 3: request=54; budget=4; operation=restore; verify ownership and bounds.\nRecord 4: request=71; budget=5; operation=restore; verify ownership and bounds.\nRecord 5: request=88; budget=6; operation=restore; verify ownership and bounds.\nRecord 6: request=105; budget=7; operation=restore; verify ownership and bounds.\nRecord 7: request=122; budget=8; operation=restore; verify ownership and bounds.\nRecord 8: request=139; budget=9; operation=restore; verify ownership and bounds.\nRecord 9: request=156; budget=10; operation=restore; verify ownership and bounds.\nRecord 10: request=173; budget=11; operation=restore; verify ownership and bounds.\nRecord 11: request=190; budget=12; operation=restore; verify ownership and bounds.\nRecord 12: request=207; budget=13; operation=restore; verify ownership and bounds.\nRecord 13: request=224; budget=14; operation=restore; verify ownership and bounds.\nRecord 14: request=241; budget=15; operation=restore; verify ownership and bounds.\nRecord 15: request=258; budget=16; operation=restore; verify ownership and bounds.\nRecord 16: request=275; budget=17; operation=restore; verify ownership and bounds.\nRecord 17: request=292; budget=18; operation=restore; verify ownership and bounds.\nRecord 18: request=309; budget=19; operation=restore; verify ownership and bounds.\nRecord 19: request=326; budget=1; operation=restore; verify ownership and bounds.\nRecord 20: request=343; budget=2; operation=restore; verify ownership and bounds.\nRecord 21: request=360; budget=3; operation=restore; verify ownership and bounds.\nRecord 22: request=377; budget=4; operation=restore; verify ownership and bounds.\nRecord 23: request=394; budget=5; operation=restore; verify ownership and bounds.\nRecord 24: request=411; budget=6; operation=restore; verify ownership and bounds.\nRecord 25: request=428; budget=7; operation=restore; verify ownership and bounds.\nRecord 26: request=445; budget=8; operation=restore; verify ownership and bounds.\nRecord 27: request=462; budget=9; operation=restore; verify ownership and bounds.\nRecord 28: request=479; budget=10; operation=restore; verify ownership and bounds.\nRecord 29: request=496; budget=11; operation=restore; verify ownership and bounds.\nRecord 30: request=513; budget=12; operation=restore; verify ownership and bounds.\nRecord 31: request=530; budget=13; operation=restore; verify ownership and bounds.\nRecord 32: request=547; budget=14; operation=restore; verify ownership and bounds.\nRecord 33: request=564; budget=15; operation=restore; verify ownership and bounds.\nRecord 34: request=581; budget=16; operation=restore; verify ownership and bounds.\nRecord 35: request=598; budget=17; operation=restore; verify ownership and bounds.\nRecord 36: request=615; budget=18; operation=restore; verify ownership and bounds.\nRecord 37: request=632; budget=19; operation=restore; verify ownership and bounds.\nRecord 38: request=649; budget=1; operation=restore; verify ownership and bounds.\nRecord 39: request=666; budget=2; operation=restore; verify ownership and bounds.\nRecord 40: request=683; budget=3; operation=restore; verify ownership and bounds.\nRecord 41: request=700; budget=4; operation=restore; verify ownership and bounds.\nRecord 42: request=717; budget=5; operation=restore; verify ownership and bounds.\nRecord 43: request=734; budget=6; operation=restore; verify ownership and bounds.\nRecord 44: request=751; budget=7; operation=restore; verify ownership and bounds.\nRecord 45: request="
+        }
+      ]
+    },
+    {
+      "target_tokens": 4096,
+      "messages": [
+        {
+          "role": "user",
+          "content": "Independent run 0, length 4096.\nRead the following synthetic records. Then write a detailed numbered review of validation, ownership, errors, and recovery in at least 500 words.\nRecord 0: request=3; budget=1; operation=restore; verify ownership and bounds.\nRecord 1: request=20; budget=2; operation=restore; verify ownership and bounds.\nRecord 2: request=37; budget=3; operation=restore; verify ownership and bounds.\nRecord 3: request=54; budget=4; operation=restore; verify ownership and bounds.\nRecord 4: request=71; budget=5; operation=restore; verify ownership and bounds.\nRecord 5: request=88; budget=6; operation=restore; verify ownership and bounds.\nRecord 6: request=105; budget=7; operation=restore; verify ownership and bounds.\nRecord 7: request=122; budget=8; operation=restore; verify ownership and bounds.\nRecord 8: request=139; budget=9; operation=restore; verify ownership and bounds.\nRecord 9: request=156; budget=10; operation=restore; verify ownership and bounds.\nRecord 10: request=173; budget=11; operation=restore; verify ownership and bounds.\nRecord 11: request=190; budget=12; operation=restore; verify ownership and bounds.\nRecord 12: request=207; budget=13; operation=restore; verify ownership and bounds.\nRecord 13: request=224; budget=14; operation=restore; verify ownership and bounds.\nRecord 14: request=241; budget=15; operation=restore; verify ownership and bounds.\nRecord 15: request=258; budget=16; operation=restore; verify ownership and bounds.\nRecord 16: request=275; budget=17; operation=restore; verify ownership and bounds.\nRecord 17: request=292; budget=18; operation=restore; verify ownership and bounds.\nRecord 18: request=309; budget=19; operation=restore; verify ownership and bounds.\nRecord 19: request=326; budget=1; operation=restore; verify ownership and bounds.\nRecord 20: request=343; budget=2; operation=restore; verify ownership and bounds.\nRecord 21: request=360; budget=3; operation=restore; verify ownership and bounds.\nRecord 22: request=377; budget=4; operation=restore; verify ownership and bounds.\nRecord 23: request=394; budget=5; operation=restore; verify ownership and bounds.\nRecord 24: request=411; budget=6; operation=restore; verify ownership and bounds.\nRecord 25: request=428; budget=7; operation=restore; verify ownership and bounds.\nRecord 26: request=445; budget=8; operation=restore; verify ownership and bounds.\nRecord 27: request=462; budget=9; operation=restore; verify ownership and bounds.\nRecord 28: request=479; budget=10; operation=restore; verify ownership and bounds.\nRecord 29: request=496; budget=11; operation=restore; verify ownership and bounds.\nRecord 30: request=513; budget=12; operation=restore; verify ownership and bounds.\nRecord 31: request=530; budget=13; operation=restore; verify ownership and bounds.\nRecord 32: request=547; budget=14; operation=restore; verify ownership and bounds.\nRecord 33: request=564; budget=15; operation=restore; verify ownership and bounds.\nRecord 34: request=581; budget=16; operation=restore; verify ownership and bounds.\nRecord 35: request=598; budget=17; operation=restore; verify ownership and bounds.\nRecord 36: request=615; budget=18; operation=restore; verify ownership and bounds.\nRecord 37: request=632; budget=19; operation=restore; verify ownership and bounds.\nRecord 38: request=649; budget=1; operation=restore; verify ownership and bounds.\nRecord 39: request=666; budget=2; operation=restore; verify ownership and bounds.\nRecord 40: request=683; budget=3; operation=restore; verify ownership and bounds.\nRecord 41: request=700; budget=4; operation=restore; verify ownership and bounds.\nRecord 42: request=717; budget=5; operation=restore; verify ownership and bounds.\nRecord 43: request=734; budget=6; operation=restore; verify ownership and bounds.\nRecord 44: request=751; budget=7; operation=restore; verify ownership and bounds.\nRecord 45: request=768; budget=8; operation=restore; verify ownership and bounds.\nRecord 46: request=785; budget=9; operation=restore; verify ownership and bounds.\nRecord 47: request=802; budget=10; operation=restore; verify ownership and bounds.\nRecord 48: request=819; budget=11; operation=restore; verify ownership and bounds.\nRecord 49: request=836; budget=12; operation=restore; verify ownership and bounds.\nRecord 50: request=853; budget=13; operation=restore; verify ownership and bounds.\nRecord 51: request=870; budget=14; operation=restore; verify ownership and bounds.\nRecord 52: request=887; budget=15; operation=restore; verify ownership and bounds.\nRecord 53: request=904; budget=16; operation=restore; verify ownership and bounds.\nRecord 54: request=921; budget=17; operation=restore; verify ownership and bounds.\nRecord 55: request=938; budget=18; operation=restore; verify ownership and bounds.\nRecord 56: request=955; budget=19; operation=restore; verify ownership and bounds.\nRecord 57: request=972; budget=1; operation=restore; verify ownership and bounds.\nRecord 58: request=989; budget=2; operation=restore; verify ownership and bounds.\nRecord 59: request=1006; budget=3; operation=restore; verify ownership and bounds.\nRecord 60: request=1023; budget=4; operation=restore; verify ownership and bounds.\nRecord 61: request=1040; budget=5; operation=restore; verify ownership and bounds.\nRecord 62: request=1057; budget=6; operation=restore; verify ownership and bounds.\nRecord 63: request=1074; budget=7; operation=restore; verify ownership and bounds.\nRecord 64: request=1091; budget=8; operation=restore; verify ownership and bounds.\nRecord 65: request=1108; budget=9; operation=restore; verify ownership and bounds.\nRecord 66: request=1125; budget=10; operation=restore; verify ownership and bounds.\nRecord 67: request=1142; budget=11; operation=restore; verify ownership and bounds.\nRecord 68: request=1159; budget=12; operation=restore; verify ownership and bounds.\nRecord 69: request=1176; budget=13; operation=restore; verify ownership and bounds.\nRecord 70: request=1193; budget=14; operation=restore; verify ownership and bounds.\nRecord 71: request=1210; budget=15; operation=restore; verify ownership and bounds.\nRecord 72: request=1227; budget=16; operation=restore; verify ownership and bounds.\nRecord 73: request=1244; budget=17; operation=restore; verify ownership and bounds.\nRecord 74: request=1261; budget=18; operation=restore; verify ownership and bounds.\nRecord 75: request=1278; budget=19; operation=restore; verify ownership and bounds.\nRecord 76: request=1295; budget=1; operation=restore; verify ownership and bounds.\nRecord 77: request=1312; budget=2; operation=restore; verify ownership and bounds.\nRecord 78: request=1329; budget=3; operation=restore; verify ownership and bounds.\nRecord 79: request=1346; budget=4; operation=restore; verify ownership and bounds.\nRecord 80: request=1363; budget=5; operation=restore; verify ownership and bounds.\nRecord 81: request=1380; budget=6; operation=restore; verify ownership and bounds.\nRecord 82: request=1397; budget=7; operation=restore; verify ownership and bounds.\nRecord 83: request=1414; budget=8; operation=restore; verify ownership and bounds.\nRecord 84: request=1431; budget=9; operation=restore; verify ownership and bounds.\nRecord 85: request=1448; budget=10; operation=restore; verify ownership and bounds.\nRecord 86: request=1465; budget=11; operation=restore; verify ownership and bounds.\nRecord 87: request=1482; budget=12; operation=restore; verify ownership and bounds.\nRecord 88: request=1499; budget=13; operation=restore; verify ownership and bounds.\nRecord 89: request=1516; budget=14; operation=restore; verify ownership and bounds.\nRecord 90: request=1533; budget=15; operation=restore; verify ownership and bounds.\nRecord 91: request=1550; budget=16; operation=restore; verify ownership and bounds.\nRecord 92: request=1567; budget=17; operation=restore; verify ownership and bounds.\nRecord 93: request=1584; budget=18; operation=restore; verify ownership and bounds.\nRecord 94: request=1601; budget=19; operation=restore; verify ownership and bounds.\nRecord 95: request=1618; budget=1; operation=restore; verify ownership and bounds.\nRecord 96: request=1635; budget=2; operation=restore; verify ownership and bounds.\nRecord 97: request=1652; budget=3; operation=restore; verify ownership and bounds.\nRecord 98: request=1669; budget=4; operation=restore; verify ownership and bounds.\nRecord 99: request=1686; budget=5; operation=restore; verify ownership and bounds.\nRecord 100: request=1703; budget=6; operation=restore; verify ownership and bounds.\nRecord 101: request=1720; budget=7; operation=restore; verify ownership and bounds.\nRecord 102: request=1737; budget=8; operation=restore; verify ownership and bounds.\nRecord 103: request=1754; budget=9; operation=restore; verify ownership and bounds.\nRecord 104: request=1771; budget=10; operation=restore; verify ownership and bounds.\nRecord 105: request=1788; budget=11; operation=restore; verify ownership and bounds.\nRecord 106: request=1805; budget=12; operation=restore; verify ownership and bounds.\nRecord 107: request=1822; budget=13; operation=restore; verify ownership and bounds.\nRecord 108: request=1839; budget=14; operation=restore; verify ownership and bounds.\nRecord 109: request=1856; budget=15; operation=restore; verify ownership and bounds.\nRecord 110: request=1873; budget=16; operation=restore; verify ownership and bounds.\nRecord 111: request=1890; budget=17; operation=restore; verify ownership and bounds.\nRecord 112: request=1907; budget=18; operation=restore; verify ownership and bounds.\nRecord 113: request=1924; budget=19; operation=restore; verify ownership and bounds.\nRecord 114: request=1941; budget=1; operation=restore; verify ownership and bounds.\nRecord 115: request=1958; budget=2; operation=restore; verify ownership and bounds.\nRecord 116: request=1975; budget=3; operation=restore; verify ownership and bounds.\nRecord 117: request=1992; budget=4; operation=restore; verify ownership and bounds.\nRecord 118: request=2009; budget=5; operation=restore; verify ownership and bounds.\nRecord 119: request=2026; budget=6; operation=restore; verify ownership and bounds.\nRecord 120: request=2043; budget=7; operation=restore; verify ownership and bounds.\nRecord 121: request=2060; budget=8; operation=restore; verify ownership and bounds.\nRecord 122: request=2077; budget=9; operation=restore; verify ownership and bounds.\nRecord 123: request=2094; budget=10; operation=restore; verify ownership and bounds.\nRecord 124: request=2111; budget=11; operation=restore; verify ownership and bounds.\nRecord 125: request=2128; budget=12; operation=restore; verify ownership and bounds.\nRecord 126: request=2145; budget=13; operation=restore; verify ownership and bounds.\nRecord 127: request=2162; budget=14; operation=restore; verify ownership and bounds.\nRecord 128: request=2179; budget=15; operation=restore; verify ownership and bounds.\nRecord 129: request=2196; budget=16; operation=restore; verify ownership and bounds.\nRecord 130: request=2213; budget=17; operation=restore; verify ownership and bounds.\nRecord 131: request=2230; budget=18; operation=restore; verify ownership and bounds.\nRecord 132: request=2247; budget=19; operation=restore; verify ownership and bounds.\nRecord 133: request=2264; budget=1; operation=restore; verify ownership and bounds.\nRecord 134: request=2281; budget=2; operation=restore; verify ownership and bounds.\nRecord 135: request=2298; budget=3; operation=restore; verify ownership and bounds.\nRecord 136: request=2315; budget=4; operation=restore; verify ownership and bounds.\nRecord 137: request=2332; budget=5; operation=restore; verify ownership and bounds.\nRecord 138: request=2349; budget=6; operation=restore; verify ownership and bounds.\nRecord 139: request=2366; budget=7; operation=restore; verify ownership and bounds.\nRecord 140: request=2383; budget=8; operation=restore; verify ownership and bounds.\nRecord 141: request=2400; budget=9; operation=restore; verify ownership and bounds.\nRecord 142: request=2417; budget=10; operation=restore; verify ownership and bounds.\nRecord 143: request=2434; budget=11; operation=restore; verify ownership and bounds.\nRecord 144: request=2451; budget=12; operation=restore; verify ownership and bounds.\nRecord 145: request=2468; budget=13; operation=restore; verify ownership and bounds.\nRecord 146: request=2485; budget=14; operation=restore; verify ownership and bounds.\nRecord 147: request=2502; budget=15; operation=restore; verify ownership and bounds.\nRecord 148: request=2519; budget=16; operation=restore; verify ownership and bounds.\nRecord 149: request=2536; budget=17; operation=restore; verify ownership and bounds.\nRecord 150: request=2553; budget=18; operation=restore; verify ownership and bounds.\nRecord 151: request=2570; budget=19; operation=restore; verify ownership and bounds.\nRecord 152: request=2587; budget=1; operation=restore; verify ownership and bounds.\nRecord 153: request=2604; budget=2; operation=restore; verify ownership and bounds.\nRecord 154: request=2621; budget=3; operation=restore; verify ownership and bounds.\nRecord 155: request=2638; budget=4; operation=restore; verify ownership and bounds.\nRecord 156: request=2655; budget=5; operation=restore; verify ownership and bounds.\nRecord 157: request=2672; budget=6; operation=restore; verify ownership and bounds.\nRecord 158: request=2689; budget=7; operation=restore; verify ownership and bounds.\nRecord 159: request=2706; budget=8; operation=restore; verify ownership and bounds.\nRecord 160: request=2723; budget=9; operation=restore; verify ownership and bounds.\nRecord 161: request=2740; budget=10; operation=restore; verify ownership and bounds.\nRecord 162: request=2757; budget=11; operation=restore; verify ownership and bounds.\nRecord 163: request=2774; budget=12; operation=restore; verify ownership and bounds.\nRecord 164: request=2791; budget=13; operation=restore; verify ownership and bounds.\nRecord 165: request=2808; budget=14; operation=restore; verify ownership and bounds.\nRecord 166: request=2825; budget=15; operation=restore; verify ownership and bounds.\nRecord 167: request=2842; budget=16; operation=restore; verify ownership and bounds.\nRecord 168: request=2859; budget=17; operation=restore; verify ownership and bounds.\nRecord 169: request=2876; budget=18; operation=restore; verify ownership and bounds.\nRecord 170: request=2893; budget=19; operation=restore; verify ownership and bounds.\nRecord 171: request=2910; budget=1; operation=restore; verify ownership and bounds.\nRecord 172: request=2927; budget=2; operation=restore; verify ownership and bounds.\nRecord 173: request=2944; budget=3; operation=restore; verify ownership and bounds.\nRecord 174: request=2961; budget=4; operation=restore; verify ownership and bounds.\nRecord 175: request=2978; budget=5; operation=restore; verify ownership and bounds.\nRecord 176: request=2995; budget=6; operation=restore; verify ownership and bounds.\nRecord 177: request=3012; budget=7; operation=restore; verify ownership and bounds.\nRecord 178: request=3029; budget=8; operation=restore; verify ownership and bounds.\nRecord 179: request=3046; budget"
+        }
+      ]
+    }
+  ],
+  "daily_config_sha256_before": "e00594522318be8b5f528ae614bbbc11117db9634f4e751ef942f5efa1002efc",
+  "health_before": {
+    "status": "ok",
+    "max_context": 65536,
+    "model": "qwen3.8-flash-next-iq3_s",
+    "images": false,
+    "api_key": false,
+    "image_generation": false,
+    "loaded": true,
+    "service": "strata"
+  },
+  "updated": "2026-10-29T22:09:59.751717+08:00",
+  "unload": {
+    "status": "unloaded"
+  },
+  "config": {
+    "exe": "D:\\Models\\Strata\\engine-dsv41\\0.1.52-windows-x86_64-cuda-cuda13\\strata-dsv41.exe",
+    "args": [
+      "--pack",
+      "D:\\Models\\Strata\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\maya-ds4",
+      "--max-context",
+      "8192",
+      "--eos",
+      "1",
+      "--vision",
+      "off",
+      "--dspark",
+      "auto",
+      "--dspark-conf",
+      "0.65",
+      "--experts",
+      "6",
+      "--gpus",
+      "0",
+      "--ssd-cache",
+      "64.0",
+      "--reserve-mib",
+      "1536",
+      "--verbose"
+    ],
+    "cwd": "E:\\Coder\\LLM\\Strata",
+    "tokenizer": "D:\\Models\\Strata\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\maya-ds4\\tokenizer",
+    "arch": "deepseek41",
+    "model_name": "deepseek-v4.1-flash",
+    "log": "E:\\Coder\\LLM\\Strata\\reports\\tobeo-20261029\\deepseek41-case\\edt-xx-check\\ab-01\\B1-engine.log",
+    "engine_ready_s": 1800,
+    "host": "127.0.0.1",
+    "port": 8081
+  },
+  "error": "AssertionError('Output/freshness gate failed')",
+  "daily_restore": {
+    "status": "loaded"
+  },
+  "health_after": {
+    "status": "ok",
+    "max_context": 65536,
+    "model": "qwen3.8-flash-next-iq3_s",
+    "images": false,
+    "api_key": false,
+    "image_generation": false,
+    "loaded": true,
+    "service": "strata"
+  },
+  "daily_config_sha256_after": "e00594522318be8b5f528ae614bbbc11117db9634f4e751ef942f5efa1002efc",
+  "restore_errors": [],
+  "finished": "2026-10-29T22:09:59.751717+08:00"
+}

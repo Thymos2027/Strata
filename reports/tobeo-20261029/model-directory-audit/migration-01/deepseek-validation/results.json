@@ -1,0 +1,207 @@
+{
+  "config": {
+    "exe": "D:\\Models\\Strata\\engine-dsv41\\0.1.52-windows-x86_64-cuda-cuda13\\strata-dsv41.exe",
+    "args": [
+      "--pack",
+      "D:\\Models\\DeepSeek\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\maya-ds4",
+      "--max-context",
+      "8192",
+      "--eos",
+      "1",
+      "--vision",
+      "off",
+      "--dspark",
+      "auto",
+      "--dspark-conf",
+      "0.65",
+      "--experts",
+      "6",
+      "--gpus",
+      "0",
+      "--ssd-cache",
+      "64.0",
+      "--reserve-mib",
+      "1536"
+    ],
+    "cwd": "E:\\Coder\\LLM\\Strata",
+    "tokenizer": "D:\\Models\\DeepSeek\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\maya-ds4\\tokenizer",
+    "arch": "deepseek41",
+    "model_name": "deepseek-v4.1-flash",
+    "log": "E:\\Coder\\LLM\\Strata\\reports\\tobeo-20261029\\model-directory-audit\\migration-01\\deepseek-engine.log",
+    "engine_ready_s": 1800,
+    "host": "127.0.0.1",
+    "port": 8081
+  },
+  "loads": [
+    {
+      "tag": "moved-pack",
+      "started": "2026-10-29T23:45:20.924920+08:00",
+      "command": [
+        "E:\\Coder\\LLM\\Strata\\.venv\\Scripts\\python.exe",
+        "-u",
+        "-m",
+        "serve.server",
+        "--engine",
+        "strata",
+        "--config",
+        "E:\\Coder\\LLM\\Strata\\reports\\tobeo-20261029\\model-directory-audit\\migration-01\\deepseek-validation\\config.json",
+        "--host",
+        "127.0.0.1",
+        "--port",
+        "8081",
+        "--offline"
+      ],
+      "server_pid": 20768,
+      "engine_pid": 16524,
+      "load_seconds": 24.39000000001397,
+      "health": {
+        "status": "ok",
+        "max_context": 8192,
+        "model": "deepseek-v4.1-flash",
+        "images": false,
+        "api_key": false,
+        "image_generation": false,
+        "loaded": true,
+        "service": "strata"
+      },
+      "ready_at": "2026-10-29T23:45:45.343531+08:00",
+      "metrics": {
+        "engine": {
+          "model": "deepseek-v4.1-flash",
+          "max_context": 8192,
+          "images": false,
+          "version": "ds4-0.1",
+          "context": 8192,
+          "kv": "fp4",
+          "kv_resident": 8192,
+          "expert_slots": 555,
+          "engine_kind": "ds4",
+          "cpu_experts": 14805,
+          "ram_experts": 0,
+          "engine": "ds4-0.1",
+          "engram_layers": 2,
+          "engram_lookups": 48,
+          "drafting": "off",
+          "drafting_note": ""
+        },
+        "live": {
+          "state": "idle",
+          "queued": 0,
+          "phase": null,
+          "prompt_tokens": null,
+          "prompt_read": null,
+          "prompt_total": null,
+          "generated": null,
+          "max_tokens": null,
+          "elapsed_s": null,
+          "tok_s": null,
+          "tok_s_mean": null,
+          "prefill_tok_s_mean": null,
+          "tok_s_window_s": null
+        },
+        "requests": [],
+        "conversation_cache": {
+          "enabled": false,
+          "budget_mib": null,
+          "slots": null,
+          "parked": 0,
+          "bytes": 0,
+          "evictions": 0,
+          "parks": 0,
+          "restores": 0,
+          "last_event": null,
+          "last_tokens": null,
+          "last_at": null,
+          "requests": 0,
+          "requests_reused": 0,
+          "reused_tokens": 0,
+          "prompt_tokens": 0,
+          "last_reused": null,
+          "last_prompt": null
+        },
+        "requests_kept": 0,
+        "totals": {
+          "since": 1793288744.7215648,
+          "requests": 0,
+          "prompt_tokens": 0,
+          "reused": 0,
+          "output_tokens": 0,
+          "prompt_ms": 0.0,
+          "decode_ms": 0.0,
+          "drafts_offered": 0,
+          "drafts_accepted": 0
+        },
+        "hardware": {
+          "gpu_util": 0,
+          "gpu_mem_used": 16084901888,
+          "gpu_mem_total": 17103323136,
+          "gpu_temp": 39,
+          "gpu_power": 6.973,
+          "gpu_power_limit": 180.0,
+          "gpu_pcie_gen": 1,
+          "gpu_pcie_gen_max": 5,
+          "gpu_pcie_width": 8,
+          "gpu_pcie_rx_mb": 0.31640625,
+          "gpu_pcie_tx_mb": 0.3564453125,
+          "cpu": 0.0,
+          "ram_used": 79397974016,
+          "ram_total": 137140031488,
+          "disk_read_mb": null,
+          "disk_write_mb": null,
+          "tok_s": 0.0,
+          "tok_s_mean": 0,
+          "prefill_tok_s_mean": 0.0
+        },
+        "hardware_static": {
+          "gpu_name": "NVIDIA GeForce RTX 5060 Ti",
+          "gpu_vram_total_mib": null,
+          "gpu_count": 1,
+          "gpu_note": null,
+          "cpu_name": "12th Gen Intel(R) Core(TM) i7-12700",
+          "cores": 12,
+          "threads": 20,
+          "sockets": 1,
+          "numa_nodes": 1,
+          "psutil": true
+        },
+        "history": {
+          "gpu_util": [
+            0
+          ],
+          "gpu_mem_used": [
+            16084901888
+          ],
+          "gpu_temp": [
+            39
+          ],
+          "gpu_power": [
+            6.97
+          ],
+          "gpu_pcie_rx_mb": [
+            0.32
+          ],
+          "cpu": [
+            0.0
+          ],
+          "ram_used": [
+            79397974016
+          ],
+          "disk_read_mb": [
+            null
+          ],
+          "tok_s": [
+            0.0
+          ],
+          "prefill_tok_s_mean": [
+            0.0
+          ]
+        },
+        "time": 1793288745.3449757
+      },
+      "resources_file": "moved-pack.resources.json",
+      "rss_peak_bytes": 58554601472,
+      "resource_error": null
+    }
+  ],
+  "updated": "2026-10-29T23:45:45.349063+08:00"
+}

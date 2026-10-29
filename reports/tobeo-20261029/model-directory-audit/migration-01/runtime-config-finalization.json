@@ -1,0 +1,11 @@
+{
+  "updated": "2026-10-29T23:50:53.168017+08:00",
+  "reason": "Keep future runtime logs separate from immutable migration evidence",
+  "path": "E:\\Coder\\LLM\\Strata\\strata-deepseek41-ist-das-2.25bpw.json",
+  "before_sha256": "2011fe541fbabf6fc833ea4d18f6f4c0ce8640437d5396135625742b51e1a449",
+  "after_sha256": "05e3c320f2fb940be55b06b9a3463b64494a2057ae9a5d72857fcad3a0d9e2f1",
+  "only_change": {
+    "log_before": "E:\\Coder\\LLM\\Strata\\reports\\tobeo-20261029\\model-directory-audit\\migration-01\\deepseek-engine.log",
+    "log_after": "E:\\Coder\\LLM\\Strata\\strata-deepseek41-ist-das-2.25bpw.log"
+  }
+}

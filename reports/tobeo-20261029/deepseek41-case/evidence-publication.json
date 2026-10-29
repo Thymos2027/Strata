@@ -1,0 +1,162 @@
+{
+  "repository": "Thymos2027/Strata",
+  "branch": "evidence/deepseek41-windows-20261029",
+  "parent": "8857fb6c9a94c947f75e845b7e9abe74b97551c8",
+  "commit": "72ff3a298043fab23ec430db87380101d058b680",
+  "tree": "3de89865ac58584db3a1e7b8c6bbcf2d465b96ec",
+  "directory": "bench/results/2026-10-29-community-rtx5060ti-deepseek41-windows",
+  "files": [
+    {
+      "path": "bench/results/2026-10-29-community-rtx5060ti-deepseek41-windows/aggregate-input-notes.json",
+      "git_blob_sha": "6d4069d1cc86537d7dbf3882cbebace010b57b27",
+      "sha256": "d8574163ca96553edc49ffacd112bb8ce092efc73e906f56dac959347eb35da8",
+      "bytes": 599
+    },
+    {
+      "path": "bench/results/2026-10-29-community-rtx5060ti-deepseek41-windows/case-results.png",
+      "git_blob_sha": "8859e90d33ddadb42016e60b080e5205a307f2ef",
+      "sha256": "fb8000b9e72285881e61bf5d65607ae0aae874a8be32e53b60f5eb90eae6e300",
+      "bytes": 237208
+    },
+    {
+      "path": "bench/results/2026-10-29-community-rtx5060ti-deepseek41-windows/case-results.svg",
+      "git_blob_sha": "560354510b9f44634555e1f8cb142248bf6d974b",
+      "sha256": "d48da464778e65c3e7e16845c2a6100090533fec028d74df409c98013afd6818",
+      "bytes": 135852
+    },
+    {
+      "path": "bench/results/2026-10-29-community-rtx5060ti-deepseek41-windows/configurations.json",
+      "git_blob_sha": "23c4e74312c7235ce732ce57aac85e920cbadd3b",
+      "sha256": "4a43d6de0dbf59e311408eb2f804ac66e1e55cfbea4996cff4656bd637c29341",
+      "bytes": 1137
+    },
+    {
+      "path": "bench/results/2026-10-29-community-rtx5060ti-deepseek41-windows/environment.json",
+      "git_blob_sha": "77583132a2d123ce982ce3680ebb3b3b3c9e2613",
+      "sha256": "e61bca099e25a03133527f5ab0241cf1eea3daaac5b937ed5c123ef2e68e82c3",
+      "bytes": 1321
+    },
+    {
+      "path": "bench/results/2026-10-29-community-rtx5060ti-deepseek41-windows/failure-80GB-guard.json",
+      "git_blob_sha": "c8419c1fd26df21b17529b384170480314456fe6",
+      "sha256": "92120af4cfaf312e7e23386ce2f57e2821b4d89e0c1ee00b57323a5823e524d9",
+      "bytes": 164
+    },
+    {
+      "path": "bench/results/2026-10-29-community-rtx5060ti-deepseek41-windows/failure-event-2004.json",
+      "git_blob_sha": "a222393ae84faee887c7cb45eb52d77d139cb582",
+      "sha256": "d5ed85a893b9e5e1b74b1e7428b7882f8d1262e66585bd5e5684a4d72eb7266f",
+      "bytes": 629
+    },
+    {
+      "path": "bench/results/2026-10-29-community-rtx5060ti-deepseek41-windows/http-requests.jsonl",
+      "git_blob_sha": "b74f9c6d70b2b33f6c5e345d87ed2e9432ea3440",
+      "sha256": "bfe16f144273779243b191dc77d4cc4b34f8f1671324c3160614e316397f75da",
+      "bytes": 2696106
+    },
+    {
+      "path": "bench/results/2026-10-29-community-rtx5060ti-deepseek41-windows/logs/64GB-engine.log",
+      "git_blob_sha": "0dc0bed347b3e50b86fe829b5b8b79f627c6697a",
+      "sha256": "759308f28f314d9b5212be0971a0532abb138f1cec93a35616677613a855323c",
+      "bytes": 15277
+    },
+    {
+      "path": "bench/results/2026-10-29-community-rtx5060ti-deepseek41-windows/logs/80GB-engine.log",
+      "git_blob_sha": "6ee9a944e3f386b303bc8dc37224e52ccfbe3a6d",
+      "sha256": "c5920ac552627fc43079c2a40958b34b9e8189adb536c79b1e45528eedd297de",
+      "bytes": 4953
+    },
+    {
+      "path": "bench/results/2026-10-29-community-rtx5060ti-deepseek41-windows/logs/automatic-engine.log",
+      "git_blob_sha": "3a3a83fa2e527497e237551f865f93fe68573b47",
+      "sha256": "6ec40b18dd5d1b1122c4fec0a70c72f6ec914eb3d277d40618900818b89a2f9a",
+      "bytes": 1570
+    },
+    {
+      "path": "bench/results/2026-10-29-community-rtx5060ti-deepseek41-windows/model-files.json",
+      "git_blob_sha": "ec8199abf57473c883524d5a40f93436b12faef6",
+      "sha256": "9fcea981cf0348afcf849b71f2ad3ab28d982cb69b3dcf0d32e3c53e682bae14",
+      "bytes": 2391
+    },
+    {
+      "path": "bench/results/2026-10-29-community-rtx5060ti-deepseek41-windows/packaging-status.json",
+      "git_blob_sha": "4d66fec741fda68b8a4e5133b4b5b9d160bfbe46",
+      "sha256": "85dec1416b7831cd2037ca4649a10f15a6dc57a23be87edb9d471cc33616b8f8",
+      "bytes": 238
+    },
+    {
+      "path": "bench/results/2026-10-29-community-rtx5060ti-deepseek41-windows/protocol-recorded.md",
+      "git_blob_sha": "320fea65ccf9117d467eeea02ed2e35acd403dc8",
+      "sha256": "b970b75a6d89657470ab43aca6820d45f0984e8be8ed475ea478a97090f1813c",
+      "bytes": 4576
+    },
+    {
+      "path": "bench/results/2026-10-29-community-rtx5060ti-deepseek41-windows/README.md",
+      "git_blob_sha": "d04f1e771ce027882c98b4066abed668cc2f9106",
+      "sha256": "0c939dccdbdb090059d07079a039879105823690295f18d5835b377d101474d7",
+      "bytes": 11797
+    },
+    {
+      "path": "bench/results/2026-10-29-community-rtx5060ti-deepseek41-windows/requests.csv",
+      "git_blob_sha": "f5f0e110034d0303e156c5daa63de80060ac837c",
+      "sha256": "41915814e3a2ae8c20feb34336f8c9cf89154f469aafd09a30c0aa816395aa1d",
+      "bytes": 4204
+    },
+    {
+      "path": "bench/results/2026-10-29-community-rtx5060ti-deepseek41-windows/resources.jsonl",
+      "git_blob_sha": "9b1dbd5574c370309082a1806b2e0c802cfea310",
+      "sha256": "af2e1cded426d4ad87003894cd7df52a063ad8f99c0716d9cf17e33cd4951398",
+      "bytes": 2721985
+    },
+    {
+      "path": "bench/results/2026-10-29-community-rtx5060ti-deepseek41-windows/SHA256.json",
+      "git_blob_sha": "f584cfab35ddd6636ce8e1ba2cb40c41959681a6",
+      "sha256": "bf3d08752ee6dffab9ee55c468b7a7d9075a02243efe3dcc52afe89040ed8dde",
+      "bytes": 3623
+    },
+    {
+      "path": "bench/results/2026-10-29-community-rtx5060ti-deepseek41-windows/source/analyze_case_posthoc.py",
+      "git_blob_sha": "7660c795da269d520cea0c26bf5be04bdde5c368",
+      "sha256": "b0d9e55b7388134f199b82cb12ec7bc4e33526ed95c113f32eb5956429c41af7",
+      "bytes": 7074
+    },
+    {
+      "path": "bench/results/2026-10-29-community-rtx5060ti-deepseek41-windows/source/plot_case_posthoc.py",
+      "git_blob_sha": "c8305b1a76edeccb8d94d09d23ae2bd8e777b8fb",
+      "sha256": "481cdf4a097ea0cca032c9350f1d80961e52c9fbc3c97f373da2afae8e64c626",
+      "bytes": 3314
+    },
+    {
+      "path": "bench/results/2026-10-29-community-rtx5060ti-deepseek41-windows/source/run_case_recorded.py",
+      "git_blob_sha": "faaf427bdf1a83506217428d95e4e4dea84d60b9",
+      "sha256": "9f86a56bfbd595a1a953f2f67b5e919e3051f0541568f4becdb7b114279c3897",
+      "bytes": 21723
+    },
+    {
+      "path": "bench/results/2026-10-29-community-rtx5060ti-deepseek41-windows/source/windows_telemetry_recorded.py",
+      "git_blob_sha": "3477dbfefed85f94febcf103114cccd5b650b8c9",
+      "sha256": "3384a2ae4dee18d403219969d0b19827c448c7d67180c688103cf5f96e6fcf68",
+      "bytes": 5889
+    },
+    {
+      "path": "bench/results/2026-10-29-community-rtx5060ti-deepseek41-windows/source-fingerprints.json",
+      "git_blob_sha": "11b6d6a603d64d008a46bf89af38bffaf1ddc1b6",
+      "sha256": "4f34ebe40d35d0deb4ccb8ca69f2ceac841cee39556d98eca3a15f78f1c6df4b",
+      "bytes": 1477
+    },
+    {
+      "path": "bench/results/2026-10-29-community-rtx5060ti-deepseek41-windows/summary.json",
+      "git_blob_sha": "1bb03d7dc71ef9e56e407cf269965c4059eba14c",
+      "sha256": "beaf01f9a5728a6b486ba95cbac5c844884849b021b49380228699a0ee42369d",
+      "bytes": 68875
+    },
+    {
+      "path": "bench/results/2026-10-29-community-rtx5060ti-deepseek41-windows/verify_public.py",
+      "git_blob_sha": "e75079a41d1792d2f9c73b640c16429c0b0ddf16",
+      "sha256": "9b4ac7685e777d0c7b62b8f6b9473a0a58714bc202d4d04564f333b02eb4bc21",
+      "bytes": 3143
+    }
+  ],
+  "worktree_and_real_index_unchanged": true,
+  "url": "https://github.com/Thymos2027/Strata/blob/72ff3a298043fab23ec430db87380101d058b680/bench/results/2026-10-29-community-rtx5060ti-deepseek41-windows/README.md"
+}

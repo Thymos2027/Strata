@@ -1,0 +1,87 @@
+{
+  "phase": "failed",
+  "full_abba_completed": false,
+  "stop_reason": "AssertionError('Output/freshness gate failed')",
+  "arms": [
+    {
+      "tag": "A1",
+      "direct": 0,
+      "placement": {
+        "gpu_experts": 555,
+        "ram_slots": 5624
+      },
+      "direct_path_logged": false,
+      "load_s": 20.76600000000326,
+      "load_private_peak_bytes": 83344707584,
+      "load_commit_peak_bytes": 112296558592.0,
+      "idle_commit": {
+        "committed_bytes": 112338546688,
+        "limit_bytes": 141434998784,
+        "available_ram_bytes": 56991150080
+      },
+      "rows": [
+        {
+          "name": "A1-1024",
+          "prompt_tokens": 1038,
+          "completion_tokens": 64,
+          "output_matches_A1": true,
+          "elapsed_s": 20.33948149997741,
+          "commit_peak_bytes": 112693186560.0,
+          "private_peak_bytes": 83524870144,
+          "rss_peak_bytes": 59612028928
+        },
+        {
+          "name": "A1-4096",
+          "prompt_tokens": 4110,
+          "completion_tokens": 64,
+          "output_matches_A1": true,
+          "elapsed_s": 29.171098099992378,
+          "commit_peak_bytes": 118023753728.0,
+          "private_peak_bytes": 88519172096,
+          "rss_peak_bytes": 61711876096
+        }
+      ]
+    },
+    {
+      "tag": "B1",
+      "direct": 1,
+      "placement": {
+        "gpu_experts": 555,
+        "ram_slots": 5624
+      },
+      "direct_path_logged": true,
+      "load_s": 20.15700000000652,
+      "load_private_peak_bytes": 83126857728,
+      "load_commit_peak_bytes": 112460361728.0,
+      "idle_commit": {
+        "committed_bytes": 112539361280,
+        "limit_bytes": 141434998784,
+        "available_ram_bytes": 56509366272
+      },
+      "rows": [
+        {
+          "name": "B1-1024",
+          "prompt_tokens": 1038,
+          "completion_tokens": 64,
+          "output_matches_A1": false,
+          "elapsed_s": 22.649803700012853,
+          "commit_peak_bytes": 112848134144.0,
+          "private_peak_bytes": 83308511232,
+          "rss_peak_bytes": 59796971520
+        }
+      ]
+    }
+  ],
+  "limits": "One observed pair at explicit64GB store, not an automatic-budget fix test; output-identity gate stopped the planned ABBA.",
+  "restoration_verified": true,
+  "health_after": {
+    "status": "ok",
+    "max_context": 65536,
+    "model": "qwen3.8-flash-next-iq3_s",
+    "images": false,
+    "api_key": false,
+    "image_generation": false,
+    "loaded": true,
+    "service": "strata"
+  }
+}

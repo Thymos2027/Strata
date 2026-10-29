@@ -1,0 +1,1914 @@
+{
+  "started": "2026-10-29T23:41:51.444848+08:00",
+  "phase": "complete",
+  "moves": [
+    {
+      "from": "D:\\Models\\Strata\\IQ3_S",
+      "to": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S"
+    },
+    {
+      "from": "D:\\Models\\Strata\\mtp",
+      "to": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp"
+    },
+    {
+      "from": "D:\\Models\\Strata\\packs\\iq3_s",
+      "to": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S\\strata-pack"
+    },
+    {
+      "from": "D:\\Models\\Strata\\packs\\qwen36-ud-q4_k_xl",
+      "to": "D:\\Models\\Qwen\\Qwen3.6-35B-A3B-MTP-GGUF\\strata-pack"
+    },
+    {
+      "from": "D:\\Models\\Strata\\deepseek-v4.1-flash-IST-DAS-2.25bpw",
+      "to": "D:\\Models\\DeepSeek\\deepseek-v4.1-flash-IST-DAS-2.25bpw"
+    },
+    {
+      "from": "D:\\Models\\Strata\\deepseek-v4.1-flash-shared",
+      "to": "D:\\Models\\DeepSeek\\deepseek-v4.1-flash-shared"
+    },
+    {
+      "from": "D:\\Models\\Strata\\deployment-backups",
+      "to": "D:\\Models\\Strata\\archive\\2026-10-29-layout\\deployment-backups"
+    },
+    {
+      "from": "D:\\Models\\Strata\\optimization-20261021",
+      "to": "D:\\Models\\Strata\\archive\\2026-10-29-layout\\optimization-20261021"
+    },
+    {
+      "from": "D:\\Models\\Strata\\engine-dsv41.work",
+      "to": "D:\\Models\\Strata\\archive\\2026-10-29-layout\\download-residue\\engine-dsv41.work"
+    },
+    {
+      "from": "D:\\Models\\Strata\\COMPLETE.json",
+      "to": "D:\\Models\\Strata\\archive\\2026-10-29-layout\\qwen38-download\\COMPLETE.json"
+    },
+    {
+      "from": "D:\\Models\\Strata\\download_all.py",
+      "to": "D:\\Models\\Strata\\archive\\2026-10-29-layout\\qwen38-download\\download_all.py"
+    },
+    {
+      "from": "D:\\Models\\Strata\\download_iq3s.py",
+      "to": "D:\\Models\\Strata\\archive\\2026-10-29-layout\\qwen38-download\\download_iq3s.py"
+    },
+    {
+      "from": "D:\\Models\\Strata\\download.log",
+      "to": "D:\\Models\\Strata\\archive\\2026-10-29-layout\\qwen38-download\\download.log"
+    },
+    {
+      "from": "D:\\Models\\Strata\\download.err.log",
+      "to": "D:\\Models\\Strata\\archive\\2026-10-29-layout\\qwen38-download\\download.err.log"
+    },
+    {
+      "from": "D:\\Models\\Strata\\__pycache__",
+      "to": "D:\\Models\\Strata\\archive\\2026-10-29-layout\\qwen38-download\\__pycache__"
+    },
+    {
+      "from": "D:\\Models\\Strata\\components\\.updates\\partial\\2966143ca8df7919.part.src",
+      "to": "D:\\Models\\Strata\\archive\\2026-10-29-layout\\download-residue\\components-partial\\2966143ca8df7919.part.src"
+    },
+    {
+      "from": "D:\\Models\\Strata\\components\\.updates\\partial\\bfa68c6b2e92f9c2.part",
+      "to": "D:\\Models\\Strata\\archive\\2026-10-29-layout\\download-residue\\components-partial\\bfa68c6b2e92f9c2.part"
+    }
+  ],
+  "hashes": [
+    {
+      "path": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S\\Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00001-of-00002.gguf",
+      "sha256": "4c1eb2ceb4915e1192f4f386021897bde56a97f40a0bb78bb86465e0f7d2aca3",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S\\Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00001-of-00002.gguf.done",
+      "sha256": "8180ce1dc4cddb0783d282a076c73129c1320f3b6f5ed74bd7fee86838202c10",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S\\Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00002-of-00002.gguf",
+      "sha256": "316b46f3a2dbd68c900f43136ab9449f9dcc3725dfd8c794847c204bc161e113",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S\\Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00002-of-00002.gguf.done",
+      "sha256": "8180ce1dc4cddb0783d282a076c73129c1320f3b6f5ed74bd7fee86838202c10",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\mtp-inventory.json",
+      "sha256": "596c7c3f83270f59787be4d9cd659575b711d7e5a1ffb4f150b392708709facd",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\mtp-inventory.md",
+      "sha256": "6ef0289eab0e1a17a210799e61b7ef37abc9f868a2f18a5ce4948e1cd4bbcb90",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\mtp-manifest.json",
+      "sha256": "6d0b9f960bde353913af870d2095304922d2218131943b3df6a8a0a253368975",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\mtp-q2_0.gguf",
+      "sha256": "a22206a4d74eafbf31063a84610292535fb3b49af9a339963817fd04aed81e4d",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\mtp-q2_0.gguf.report.json",
+      "sha256": "b64e0a9ce1383132918813adcbbee5a0e08d3caa530af1855154ba8f1546d049",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\rt\\dense.bin",
+      "sha256": "c724dc0b0822ada5d2977bf5bde821605feabaa64ea2e0045b67ca656329070a",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\rt\\dense.txt",
+      "sha256": "8773c81ebb0986e37fe94a8a9933e87be48b1fabc6889a0106bcdab179d1c2ac",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\rt\\draft_vocab.bin",
+      "sha256": "b1e1d3a7a9e4bf862dcd5923ce661fb59bbd07907e594df5cf86a62ac235cb91",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\rt\\experts.bin",
+      "sha256": "09398406be61f1f54c93861f449e48b8df0bfccbc9ec9b2b7636775a6ea9244f",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\tensors\\mtp.fc_embedding.weight.bin",
+      "sha256": "241d6e87ded317a61b1aeb3ca4e28c53f1caba09ad5be66092e91fe5e3e14751",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\tensors\\mtp.fc_hidden.weight.bin",
+      "sha256": "97c8e427ad0177e2c713ed24a397d815b523eda15ef453f1ae6463f6c70a8f96",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\tensors\\mtp.hyper_connection_mixer.hc_norm.weight.bin",
+      "sha256": "ce948a398e15aeaa403c424cda34e6eed296ab2570d591bb5ff3da642b255d64",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\tensors\\mtp.hyper_connection_mixer.input_mix_weight_down.weight.bin",
+      "sha256": "c633d2841fda463e82045e0b93fb8cb8d511ec0c9eda616020f01aca18d71947",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\tensors\\mtp.hyper_connection_mixer.input_mix_weight_up.weight.bin",
+      "sha256": "6565285f0ba2923703252763cfc11d8a9bda40ab42e7548e12464b04dbdbec13",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\tensors\\mtp.layers.0.attn_hyper_connection.block_inject_weight.weight.bin",
+      "sha256": "c8afff64e7f54412d02120097c4255033c55245e1c1eed84cc630d428ccb864c",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\tensors\\mtp.layers.0.attn_hyper_connection.hc_norm.weight.bin",
+      "sha256": "1fb619aeaaf637ccd70f46f1f8f8116e6a46448cb43026b246de8ee8286ed809",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\tensors\\mtp.layers.0.attn_hyper_connection.input_mix_weight_down.weight.bin",
+      "sha256": "e80ac8bf3e270e9d5a949ec7c913329dc8de017d69851334820fae7b8c86a7f5",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\tensors\\mtp.layers.0.attn_hyper_connection.input_mix_weight_up.weight.bin",
+      "sha256": "f80f1fd44e1183e7764ea496b11ff89ead9dd758f861d4e79a770bf54956b1a5",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\tensors\\mtp.layers.0.mlp.experts.down_proj.bin",
+      "sha256": "539c46234f73bac70450f731f40e715f77ac32faf77def0f3f800e58aaabbbc0",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\tensors\\mtp.layers.0.mlp.experts.gate_up_proj.bin",
+      "sha256": "839e98f9642ebc884b178abd2090b6dc8b0bcd81ed92d7f7a08314c6a68f96d5",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\tensors\\mtp.layers.0.mlp.gate.weight.bin",
+      "sha256": "f0d35fa41b360a08bc0c5b1e5766aa42df960291716ee189208b5d2599462c20",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\tensors\\mtp.layers.0.mlp.shared_expert.down_proj.weight.bin",
+      "sha256": "d2ced8c81367cc494599d1a8cdc279c3dd6579b628ded05acd7495e99cee01d8",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\tensors\\mtp.layers.0.mlp.shared_expert.gate_proj.weight.bin",
+      "sha256": "f4a81109165853b3b64f36d809f98094b599763364070f5fa079200e1c386d4c",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\tensors\\mtp.layers.0.mlp.shared_expert.up_proj.weight.bin",
+      "sha256": "172586861eea53efbff10afc43ded5b6e49c83879e9efc01e089c652bbb0a156",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\tensors\\mtp.layers.0.mlp.shared_expert_gate.weight.bin",
+      "sha256": "acdd306d9996d356e4667a16ff63af6fef086fc7f570f1bc00bbe882a2a93f6e",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\tensors\\mtp.layers.0.mlp_hyper_connection.block_inject_weight.weight.bin",
+      "sha256": "c5782dd92b479a1f8ef43d683fe9c917fd9e8fba81f23c1aae8817bfe4b476a6",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\tensors\\mtp.layers.0.mlp_hyper_connection.hc_norm.weight.bin",
+      "sha256": "21a504876b5e7b788301557c68dfb757999430eba36c66ec8ab96a63604dbfd1",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\tensors\\mtp.layers.0.mlp_hyper_connection.input_mix_weight_down.weight.bin",
+      "sha256": "b71240036dea954e034d5ae04e097bcd7ac51cb28a44e4c93d198af3447278a1",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\tensors\\mtp.layers.0.mlp_hyper_connection.input_mix_weight_up.weight.bin",
+      "sha256": "40756866bf2a5e82c28e407f717b6fa07614d593f78e79c7ceb2cd4ffe6dda94",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\tensors\\mtp.layers.0.self_attn.indexer.index_qk_proj.weight.bin",
+      "sha256": "2befafae6e944c1fc651fd73d4d527eb6f138a6c1679065b003128ee3150e859",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\tensors\\mtp.layers.0.self_attn.indexer.k_layernorm.weight.bin",
+      "sha256": "2db621f6a08b4085756fc69d60a4a1bd1d7fbf5d406456d2477075842efaae54",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\tensors\\mtp.layers.0.self_attn.indexer.q_layernorm.weight.bin",
+      "sha256": "afaf59f68e251939970ffdeacad0667dffc657a522bea62cdc44a52816fc49d6",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\tensors\\mtp.layers.0.self_attn.k_norm.weight.bin",
+      "sha256": "8f924b0357cf936e14fc34518205d000e1423aa60626827df81b0804fae8cdfd",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\tensors\\mtp.layers.0.self_attn.k_proj.weight.bin",
+      "sha256": "1a295dc2d6e633e808aeb19e00c97856a1817bbfcc83f5b610e2bfcacfcb8c38",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\tensors\\mtp.layers.0.self_attn.o_proj.weight.bin",
+      "sha256": "9d2fcf0ac6ac19de87f638f710cfd1af6ad14141e75b7d3d5d29fbd06f374219",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\tensors\\mtp.layers.0.self_attn.q_norm.weight.bin",
+      "sha256": "57957aa1e7c5a3ac628bff0ec5522ad55a39b8c0b8bd2d324ae640e3771617ef",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\tensors\\mtp.layers.0.self_attn.q_proj.weight.bin",
+      "sha256": "5220aef3d288f40759f7356af9ef453e5ac0256a38749a9bb803a4e9db58150d",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\tensors\\mtp.layers.0.self_attn.v_proj.weight.bin",
+      "sha256": "39cb12f5424e965fa71fb81db0ee230c701b7b1e0b72c36641fde7e0e41bff41",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\tensors\\mtp.pre_fc_norm_embedding.weight.bin",
+      "sha256": "04c4a570850e06f2d8913da8220d54d4c7f87db6eb6d45480b938e8ba41d6a86",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\tensors\\mtp.pre_fc_norm_hidden.weight.bin",
+      "sha256": "b933b44559879449b1baf2af8385c5c237347307e3fd452394870cb53e6eab6d",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\tensors\\verified.json",
+      "sha256": "08b1191e72f484b3408e151008022b5c8c33eecbabc749e3515019146296aec9",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S\\strata-pack\\conversions.json",
+      "sha256": "aef6eb1635ca3250a68c0bb3330a892248baf529aea2b23ddabd9e2e93bbbd0b",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S\\strata-pack\\dense.bin",
+      "sha256": "d2af3d8331e5c7a1985d1d589747230f9d56719a6d33c7cddc9ee6b81cde6b13",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S\\strata-pack\\index.txt",
+      "sha256": "b2a014878c3b61d6a6f915e194055a5e68ede34f9465dd1cb13249d902f008ac",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S\\strata-pack\\native_experts.txt",
+      "sha256": "d9ac2dfa3ee63c55c9c6a6db26f72da0cec0ee41733f007e5cbbbba71617aa5d",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S\\strata-pack\\tokenizer\\chat_template.jinja",
+      "sha256": "12827f24b742ea4e80cdc12dbcf9622227056b9f797252a3149263d4f9aaadce",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S\\strata-pack\\tokenizer\\merges.txt",
+      "sha256": "080cf95432173729d160346b7882bd2a644b07f7a3813a3eb73f4e66787bfde9",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S\\strata-pack\\tokenizer\\token_type.json",
+      "sha256": "5088c8c298fc06af8382ddb3b76c888703ac2634e82263b97eedcc2ad202738b",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S\\strata-pack\\tokenizer\\tokenizer.json",
+      "sha256": "87be2ac47d8bc7393b7435df6ccd276740019a393941a2585d5edce59f450c54",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S\\strata-pack\\tokenizer\\vocab.json",
+      "sha256": "4ba64f0332abcfb0b600b7df1537d1e836e68009d5fb7cdb77339738dc6365c4",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\Qwen\\Qwen3.6-35B-A3B-MTP-GGUF\\strata-pack\\tokenizer\\chat_template.jinja",
+      "sha256": "55d4931433fe502b794226ee7f4d206a6bdd436ac9f80eb7d8ebb4c639f9ea0c",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\Qwen\\Qwen3.6-35B-A3B-MTP-GGUF\\strata-pack\\tokenizer\\merges.txt",
+      "sha256": "080cf95432173729d160346b7882bd2a644b07f7a3813a3eb73f4e66787bfde9",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\Qwen\\Qwen3.6-35B-A3B-MTP-GGUF\\strata-pack\\tokenizer\\token_type.json",
+      "sha256": "5088c8c298fc06af8382ddb3b76c888703ac2634e82263b97eedcc2ad202738b",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\Qwen\\Qwen3.6-35B-A3B-MTP-GGUF\\strata-pack\\tokenizer\\tokenizer.json",
+      "sha256": "2971ee07b719ef5dcac1f869fb6124fbb4e20f9dedf34e9a84f2010c98b518f5",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\Qwen\\Qwen3.6-35B-A3B-MTP-GGUF\\strata-pack\\tokenizer\\vocab.json",
+      "sha256": "4ba64f0332abcfb0b600b7df1537d1e836e68009d5fb7cdb77339738dc6365c4",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\DeepSeek\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\DeepSeek-V4.1-Flash-1017-GSQ-RCO-IQ2_XS-00001-of-00004.gguf",
+      "sha256": "d9b949d55e27242b8afc7c2928749b888372d4c39682f9a131670d1c2555155e",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\DeepSeek\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\DeepSeek-V4.1-Flash-1017-GSQ-RCO-IQ2_XS-00001-of-00004.gguf.part.chunks",
+      "sha256": "cd7e26a3f1b8fff6120dd7e6e0c93dd6f9d760615489e4e939f5625e2666af80",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\DeepSeek\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\DeepSeek-V4.1-Flash-1017-GSQ-RCO-IQ2_XS-00001-of-00004.gguf.part.src",
+      "sha256": "8744decc0ab59b71e9c84dd28259a0a5e4223e5d58405d6528d0c2aa052b4ac3",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\DeepSeek\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\DeepSeek-V4.1-Flash-1017-GSQ-RCO-IQ2_XS-00001-of-00004.gguf.verified.json",
+      "sha256": "04dbd9227e4edaa5746f36e77312aceb24ab1444a760de94c576f5080fb50e67",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\DeepSeek\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\DeepSeek-V4.1-Flash-1017-GSQ-RCO-IQ2_XS-00002-of-00004.gguf",
+      "sha256": "933461a974fcccee741bf2f9798201e72ab4aa3f8a952be56f849896ca6ea30e",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\DeepSeek\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\DeepSeek-V4.1-Flash-1017-GSQ-RCO-IQ2_XS-00002-of-00004.gguf.part.src",
+      "sha256": "67227d852e2790ca36423eb19831729ab6c5b686efe3d66d03a8a6494e5bc7a4",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\DeepSeek\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\DeepSeek-V4.1-Flash-1017-GSQ-RCO-IQ2_XS-00002-of-00004.gguf.verified.json",
+      "sha256": "5595cc8df97e33f835bec72cb5803f1861e6e711c45b2cd8fb22bf8979911b64",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\DeepSeek\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\DeepSeek-V4.1-Flash-1017-GSQ-RCO-IQ2_XS-00003-of-00004.gguf",
+      "sha256": "bbf91fa346a85ebaf32dd4fd5c456b534d780d381e54f46ac90783a481373240",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\DeepSeek\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\DeepSeek-V4.1-Flash-1017-GSQ-RCO-IQ2_XS-00003-of-00004.gguf.part.src",
+      "sha256": "6658c2be118bb825f7278a7e685fb3bd696574574d3e1889533b834d14ddfe41",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\DeepSeek\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\DeepSeek-V4.1-Flash-1017-GSQ-RCO-IQ2_XS-00003-of-00004.gguf.verified.json",
+      "sha256": "b0bfe4ee4e831ce026f333577ed35c5afd930aff1e116f3082e5f158cc21cc3f",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\DeepSeek\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\DeepSeek-V4.1-Flash-1017-GSQ-RCO-IQ2_XS-00004-of-00004.gguf",
+      "sha256": "e5b2f8781fab688cd4bc3bc7a69651b5dbb90ed94965657c6bead8bb4774f3cf",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\DeepSeek\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\DeepSeek-V4.1-Flash-1017-GSQ-RCO-IQ2_XS-00004-of-00004.gguf.part.src",
+      "sha256": "a4e36b1d2dfd24ad17e02c17187d668d3f5dcbfa4bcb030d527a41c91213738f",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\DeepSeek\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\DeepSeek-V4.1-Flash-1017-GSQ-RCO-IQ2_XS-00004-of-00004.gguf.verified.json",
+      "sha256": "210acf074565d98e5c355acefdc493e993ac2ed5a2e1ed44996451d8443df4a7",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\DeepSeek\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\maya-ds4\\ds4.txt",
+      "sha256": "df3e6ddd98d88e54e2b2722aa19611b91f9e0ba3ca42c6e61cef3b494720694f",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": true
+    },
+    {
+      "path": "D:\\Models\\DeepSeek\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\maya-ds4\\engram.bin",
+      "sha256": "08d55d6433f389b14aa115f4ea4eb31d6a2d63df1ae40821f03facf4c2d49142",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\DeepSeek\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\maya-ds4\\expert-profile.bin",
+      "sha256": "c8db1d14fa20571561c388b082d4ca8ba8bd5abb1631eeaab6a4f4aeb64c400b",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\DeepSeek\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\maya-ds4\\tensors.txt",
+      "sha256": "91359f55e1a95601cb8db7c8822f2e0af60d75587f980da7eb84b44dffd7d612",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\DeepSeek\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\maya-ds4\\tokenizer\\chat_template.jinja",
+      "sha256": "90a0ece2e0ecef8cae4d1ede6c2ae6d8916f8a813b99b4aa661692e16142d7f7",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\DeepSeek\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\maya-ds4\\tokenizer\\merges.txt",
+      "sha256": "47b0b7ca8188ae704a386ba5879d8669ca0321d96d0680f9e14d0379111a4af6",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\DeepSeek\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\maya-ds4\\tokenizer\\token_type.json",
+      "sha256": "0a61021438e5ce6041133495f18fc360a6587aea748b17d953f552d2119ba51e",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\DeepSeek\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\maya-ds4\\tokenizer\\tokenizer.json",
+      "sha256": "a6a0d02007e358a972197603ce33f7003051524656083f8967293a73d28bb4a8",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\DeepSeek\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\maya-ds4\\tokenizer\\vocab.json",
+      "sha256": "2f0bf5b31f4aa191d5d0d78291927a4f28c9ceb498a5e345b97e926c4cb99c1a",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\DeepSeek\\deepseek-v4.1-flash-shared\\DeepSeek-V4.1-Flash-1017-UD-Q8_K_XL-00001-of-00009.gguf",
+      "sha256": "cc15d470afcb030558bbc4d8e2ccd840182e2e95de1a95198138efe63a5fd99f",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\DeepSeek\\deepseek-v4.1-flash-shared\\DeepSeek-V4.1-Flash-1017-UD-Q8_K_XL-00001-of-00009.gguf.verified.json",
+      "sha256": "4a9bc34213b6b6fbd3e9407de72ba6d43e315ddb03cf08820b3de0b5c7f676d5",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\DeepSeek\\deepseek-v4.1-flash-shared\\DeepSeek-V4.1-Flash-Engram-IQ4_NL.gguf",
+      "sha256": "eb19f30d368d393784e1fc54fdfaffc427ebb2110bf3762fdf5a8fbb9a2d740a",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\DeepSeek\\deepseek-v4.1-flash-shared\\DeepSeek-V4.1-Flash-Engram-IQ4_NL.gguf.part.src",
+      "sha256": "66f11ea9d6171a06f24755989cefe552c859a0c63d203fb43ad7808a9f601f55",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\DeepSeek\\deepseek-v4.1-flash-shared\\DeepSeek-V4.1-Flash-Engram-IQ4_NL.gguf.verified.json",
+      "sha256": "7896efc6f7d52a0e24c0e8ab48f2e4cece52b0e4055e54e5d646db23d96fe310",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\DeepSeek\\deepseek-v4.1-flash-shared\\dspark-DeepSeek-V4.1-Flash-1017-Q8_0.gguf",
+      "sha256": "6ba6ac1b331c540691a209e7fc97dec2a24e295acb1e755c84c7d24a4373927a",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\DeepSeek\\deepseek-v4.1-flash-shared\\dspark-DeepSeek-V4.1-Flash-1017-Q8_0.gguf.part.chunks",
+      "sha256": "d71c6bce89d23d243148083bad18b8afebfd94ba0b88d1d4e4e315529e1a12c8",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\DeepSeek\\deepseek-v4.1-flash-shared\\dspark-DeepSeek-V4.1-Flash-1017-Q8_0.gguf.part.src",
+      "sha256": "1c8ad3b2118d57682e557a695099997f50c2c71650a2b7ade87d46ab1f3c494a",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\DeepSeek\\deepseek-v4.1-flash-shared\\dspark-DeepSeek-V4.1-Flash-1017-Q8_0.gguf.verified.json",
+      "sha256": "71ac3a4b36754764cfbaf867a023db8eb2d3c986b52810b44ff83f2a6a1b69a2",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\Strata\\archive\\2026-10-29-layout\\deployment-backups\\post-engine-update-20261021.json",
+      "sha256": "33fe5137e24f11afc1bcc360eb42a7a21155f0f90de31999ccaae59f71dce320",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\Strata\\archive\\2026-10-29-layout\\deployment-backups\\pre-engine-update-20261021\\engine-BUILD.json",
+      "sha256": "1a6c0e3ac698a371253ca953f43c5ecfbc379f45e0051073496fbd72bfde5b18",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\Strata\\archive\\2026-10-29-layout\\deployment-backups\\pre-engine-update-20261021\\run-iq3_s.bat",
+      "sha256": "c7f6799f96147ee74a06adebbe9cd938dd4b0721b344baf0c3da0c777d0cfea0",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\Strata\\archive\\2026-10-29-layout\\deployment-backups\\pre-engine-update-20261021\\status-before.json",
+      "sha256": "8d80a5ff456eb68e96937d949a81917b63d01e29185e99d24b6e0d5a6fbfd755",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\Strata\\archive\\2026-10-29-layout\\deployment-backups\\pre-engine-update-20261021\\strata-iq3_s.json",
+      "sha256": "b6e62b79269a5bd56b121ff8bb45fba2d7616b65910188d56570fbc0edbd04a8",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\Strata\\archive\\2026-10-29-layout\\deployment-backups\\pre-engine-update-20261021\\strata-iq3_s.log",
+      "sha256": "0561c0ab5a0f9b452b1318b7477a99454a91c7ca103028067b6fb6efc2e4cee0",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\Strata\\archive\\2026-10-29-layout\\deployment-backups\\pre-engine-update-20261021\\strata-server.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\Strata\\archive\\2026-10-29-layout\\deployment-backups\\pre-engine-update-20261021\\strata-server.stdout.log",
+      "sha256": "c56b5f63cc242c505312cfc36ec26735fe1525a7c128b4935b9848c5055403c4",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\Strata\\archive\\2026-10-29-layout\\optimization-20261021\\final-server.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\Strata\\archive\\2026-10-29-layout\\optimization-20261021\\final-server.stdout.log",
+      "sha256": "57219e6a30f0c4e316479b08f491c305196df16a1e3c88ffa66236c0c35974ea",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\Strata\\archive\\2026-10-29-layout\\download-residue\\engine-dsv41.work\\.updates\\partial\\f1a3ae88f770b0ef.part",
+      "sha256": "3f73c3019f9479282755871b99c10a25c1a365facbba10e9a1f46f785e1840bc",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\Strata\\archive\\2026-10-29-layout\\qwen38-download\\COMPLETE.json",
+      "sha256": "b7a04b638820102fc56e368548ee9a301aeeb9e9568dc75df9ed7a40dbb144e7",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\Strata\\archive\\2026-10-29-layout\\qwen38-download\\download_all.py",
+      "sha256": "970ceec382561d7d540237a56f69dda02697810de70621f1d463fb4fb6ee8608",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\Strata\\archive\\2026-10-29-layout\\qwen38-download\\download_iq3s.py",
+      "sha256": "1152f2cb56c82e8c7147d943c96bba26d742270532130911dc2b61f61b12fec6",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\Strata\\archive\\2026-10-29-layout\\qwen38-download\\download.log",
+      "sha256": "2fab9ba3dc2a99a772240e7eddbcc2630f7f124e77da4335f336fdceb455b47d",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\Strata\\archive\\2026-10-29-layout\\qwen38-download\\download.err.log",
+      "sha256": "4c9d2f66e328cdd3bbb49158fa1fbd3cf7f6773d26ae94a0efc3203e76d14dac",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\Strata\\archive\\2026-10-29-layout\\qwen38-download\\__pycache__\\download_all.cpython-312.pyc",
+      "sha256": "4475e75cad04e21cb54afb142b6b8ef8a04ebaded6306c1171c79604b0561aea",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\Strata\\archive\\2026-10-29-layout\\qwen38-download\\__pycache__\\download_iq3s.cpython-312.pyc",
+      "sha256": "ff36c0af6fd3f3bc72329e329add932b18513d6353b346143918269270c4bd2f",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\Strata\\archive\\2026-10-29-layout\\download-residue\\components-partial\\2966143ca8df7919.part.src",
+      "sha256": "2b75839510f444b2d796ab713329b48275899ef162c86d4e2ba1bca55cf64aef",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    },
+    {
+      "path": "D:\\Models\\Strata\\archive\\2026-10-29-layout\\download-residue\\components-partial\\bfa68c6b2e92f9c2.part",
+      "sha256": "62754b8c8f2bccf886b895d542206bdfc095fc0914138fc7923b5812b66f5898",
+      "passed": true,
+      "same_file_id": true,
+      "intentional_pack_path_patch": false
+    }
+  ],
+  "updated": "2026-10-29T23:46:42.416301+08:00",
+  "health_before": {
+    "status": "ok",
+    "max_context": 65536,
+    "model": "qwen3.8-flash-next-iq3_s",
+    "images": false,
+    "api_key": false,
+    "image_generation": false,
+    "loaded": true,
+    "service": "strata"
+  },
+  "daily_old_pid": 25984,
+  "daily_old_command": [
+    "E:\\Coder\\LLM\\Strata\\.venv\\Scripts\\python.exe",
+    "-u",
+    "-m",
+    "serve.server",
+    "--engine",
+    "strata",
+    "--config",
+    "E:\\Coder\\LLM\\Strata\\strata-iq3_s.json",
+    "--port",
+    "8080"
+  ],
+  "planned_moves": [
+    {
+      "from": "D:\\Models\\Strata\\IQ3_S",
+      "to": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S"
+    },
+    {
+      "from": "D:\\Models\\Strata\\mtp",
+      "to": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp"
+    },
+    {
+      "from": "D:\\Models\\Strata\\packs\\iq3_s",
+      "to": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S\\strata-pack"
+    },
+    {
+      "from": "D:\\Models\\Strata\\packs\\qwen36-ud-q4_k_xl",
+      "to": "D:\\Models\\Qwen\\Qwen3.6-35B-A3B-MTP-GGUF\\strata-pack"
+    },
+    {
+      "from": "D:\\Models\\Strata\\deepseek-v4.1-flash-IST-DAS-2.25bpw",
+      "to": "D:\\Models\\DeepSeek\\deepseek-v4.1-flash-IST-DAS-2.25bpw"
+    },
+    {
+      "from": "D:\\Models\\Strata\\deepseek-v4.1-flash-shared",
+      "to": "D:\\Models\\DeepSeek\\deepseek-v4.1-flash-shared"
+    },
+    {
+      "from": "D:\\Models\\Strata\\deployment-backups",
+      "to": "D:\\Models\\Strata\\archive\\2026-10-29-layout\\deployment-backups"
+    },
+    {
+      "from": "D:\\Models\\Strata\\optimization-20261021",
+      "to": "D:\\Models\\Strata\\archive\\2026-10-29-layout\\optimization-20261021"
+    },
+    {
+      "from": "D:\\Models\\Strata\\engine-dsv41.work",
+      "to": "D:\\Models\\Strata\\archive\\2026-10-29-layout\\download-residue\\engine-dsv41.work"
+    },
+    {
+      "from": "D:\\Models\\Strata\\COMPLETE.json",
+      "to": "D:\\Models\\Strata\\archive\\2026-10-29-layout\\qwen38-download\\COMPLETE.json"
+    },
+    {
+      "from": "D:\\Models\\Strata\\download_all.py",
+      "to": "D:\\Models\\Strata\\archive\\2026-10-29-layout\\qwen38-download\\download_all.py"
+    },
+    {
+      "from": "D:\\Models\\Strata\\download_iq3s.py",
+      "to": "D:\\Models\\Strata\\archive\\2026-10-29-layout\\qwen38-download\\download_iq3s.py"
+    },
+    {
+      "from": "D:\\Models\\Strata\\download.log",
+      "to": "D:\\Models\\Strata\\archive\\2026-10-29-layout\\qwen38-download\\download.log"
+    },
+    {
+      "from": "D:\\Models\\Strata\\download.err.log",
+      "to": "D:\\Models\\Strata\\archive\\2026-10-29-layout\\qwen38-download\\download.err.log"
+    },
+    {
+      "from": "D:\\Models\\Strata\\__pycache__",
+      "to": "D:\\Models\\Strata\\archive\\2026-10-29-layout\\qwen38-download\\__pycache__"
+    },
+    {
+      "from": "D:\\Models\\Strata\\components\\.updates\\partial\\2966143ca8df7919.part.src",
+      "to": "D:\\Models\\Strata\\archive\\2026-10-29-layout\\download-residue\\components-partial\\2966143ca8df7919.part.src"
+    },
+    {
+      "from": "D:\\Models\\Strata\\components\\.updates\\partial\\bfa68c6b2e92f9c2.part",
+      "to": "D:\\Models\\Strata\\archive\\2026-10-29-layout\\download-residue\\components-partial\\bfa68c6b2e92f9c2.part"
+    }
+  ],
+  "files": [
+    {
+      "from": "D:\\Models\\Strata\\IQ3_S\\Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00001-of-00002.gguf",
+      "to": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S\\Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00001-of-00002.gguf",
+      "bytes": 54817524224,
+      "file_id": 562949953753964,
+      "expected_sha256": "4c1eb2ceb4915e1192f4f386021897bde56a97f40a0bb78bb86465e0f7d2aca3",
+      "expected_origin": "pinned Qwen download record"
+    },
+    {
+      "from": "D:\\Models\\Strata\\IQ3_S\\Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00001-of-00002.gguf.done",
+      "to": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S\\Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00001-of-00002.gguf.done",
+      "bytes": 48,
+      "file_id": 2533274790449313,
+      "expected_sha256": "8180ce1dc4cddb0783d282a076c73129c1320f3b6f5ed74bd7fee86838202c10",
+      "expected_origin": "fresh pre-move hash"
+    },
+    {
+      "from": "D:\\Models\\Strata\\IQ3_S\\Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00002-of-00002.gguf",
+      "to": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S\\Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00002-of-00002.gguf",
+      "bytes": 28800138432,
+      "file_id": 562949953753965,
+      "expected_sha256": "316b46f3a2dbd68c900f43136ab9449f9dcc3725dfd8c794847c204bc161e113",
+      "expected_origin": "pinned Qwen download record"
+    },
+    {
+      "from": "D:\\Models\\Strata\\IQ3_S\\Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00002-of-00002.gguf.done",
+      "to": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S\\Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00002-of-00002.gguf.done",
+      "bytes": 48,
+      "file_id": 2251799813738658,
+      "expected_sha256": "8180ce1dc4cddb0783d282a076c73129c1320f3b6f5ed74bd7fee86838202c10",
+      "expected_origin": "fresh pre-move hash"
+    },
+    {
+      "from": "D:\\Models\\Strata\\mtp\\mtp-inventory.json",
+      "to": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\mtp-inventory.json",
+      "bytes": 7860,
+      "file_id": 562949953753966,
+      "expected_sha256": "596c7c3f83270f59787be4d9cd659575b711d7e5a1ffb4f150b392708709facd",
+      "expected_origin": "fresh pre-move hash"
+    },
+    {
+      "from": "D:\\Models\\Strata\\mtp\\mtp-inventory.md",
+      "to": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\mtp-inventory.md",
+      "bytes": 2474,
+      "file_id": 562949953753967,
+      "expected_sha256": "6ef0289eab0e1a17a210799e61b7ef37abc9f868a2f18a5ce4948e1cd4bbcb90",
+      "expected_origin": "fresh pre-move hash"
+    },
+    {
+      "from": "D:\\Models\\Strata\\mtp\\mtp-manifest.json",
+      "to": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\mtp-manifest.json",
+      "bytes": 12102,
+      "file_id": 562949953753969,
+      "expected_sha256": "6d0b9f960bde353913af870d2095304922d2218131943b3df6a8a0a253368975",
+      "expected_origin": "fresh pre-move hash"
+    },
+    {
+      "from": "D:\\Models\\Strata\\mtp\\mtp-q2_0.gguf",
+      "to": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\mtp-q2_0.gguf",
+      "bytes": 889017216,
+      "file_id": 2251799813738671,
+      "expected_sha256": "a22206a4d74eafbf31063a84610292535fb3b49af9a339963817fd04aed81e4d",
+      "expected_origin": "fresh pre-move hash"
+    },
+    {
+      "from": "D:\\Models\\Strata\\mtp\\mtp-q2_0.gguf.report.json",
+      "to": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\mtp-q2_0.gguf.report.json",
+      "bytes": 3754,
+      "file_id": 2251799813738672,
+      "expected_sha256": "b64e0a9ce1383132918813adcbbee5a0e08d3caa530af1855154ba8f1546d049",
+      "expected_origin": "fresh pre-move hash"
+    },
+    {
+      "from": "D:\\Models\\Strata\\mtp\\rt\\dense.bin",
+      "to": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\rt\\dense.bin",
+      "bytes": 116099072,
+      "file_id": 2251799813738675,
+      "expected_sha256": "c724dc0b0822ada5d2977bf5bde821605feabaa64ea2e0045b67ca656329070a",
+      "expected_origin": "fresh pre-move hash"
+    },
+    {
+      "from": "D:\\Models\\Strata\\mtp\\rt\\dense.txt",
+      "to": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\rt\\dense.txt",
+      "bytes": 1880,
+      "file_id": 2251799813738676,
+      "expected_sha256": "8773c81ebb0986e37fe94a8a9933e87be48b1fabc6889a0106bcdab179d1c2ac",
+      "expected_origin": "fresh pre-move hash"
+    },
+    {
+      "from": "D:\\Models\\Strata\\mtp\\rt\\draft_vocab.bin",
+      "to": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\rt\\draft_vocab.bin",
+      "bytes": 425196,
+      "file_id": 2251799813738677,
+      "expected_sha256": "b1e1d3a7a9e4bf862dcd5923ce661fb59bbd07907e594df5cf86a62ac235cb91",
+      "expected_origin": "fresh pre-move hash"
+    },
+    {
+      "from": "D:\\Models\\Strata\\mtp\\rt\\experts.bin",
+      "to": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\rt\\experts.bin",
+      "bytes": 707788800,
+      "file_id": 2251799813738674,
+      "expected_sha256": "09398406be61f1f54c93861f449e48b8df0bfccbc9ec9b2b7636775a6ea9244f",
+      "expected_origin": "fresh pre-move hash"
+    },
+    {
+      "from": "D:\\Models\\Strata\\mtp\\tensors\\mtp.fc_embedding.weight.bin",
+      "to": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\tensors\\mtp.fc_embedding.weight.bin",
+      "bytes": 13107200,
+      "file_id": 562949953753972,
+      "expected_sha256": "241d6e87ded317a61b1aeb3ca4e28c53f1caba09ad5be66092e91fe5e3e14751",
+      "expected_origin": "MTP source tensor manifest"
+    },
+    {
+      "from": "D:\\Models\\Strata\\mtp\\tensors\\mtp.fc_hidden.weight.bin",
+      "to": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\tensors\\mtp.fc_hidden.weight.bin",
+      "bytes": 13107200,
+      "file_id": 562949953753973,
+      "expected_sha256": "97c8e427ad0177e2c713ed24a397d815b523eda15ef453f1ae6463f6c70a8f96",
+      "expected_origin": "MTP source tensor manifest"
+    },
+    {
+      "from": "D:\\Models\\Strata\\mtp\\tensors\\mtp.hyper_connection_mixer.hc_norm.weight.bin",
+      "to": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\tensors\\mtp.hyper_connection_mixer.hc_norm.weight.bin",
+      "bytes": 20480,
+      "file_id": 562949953753974,
+      "expected_sha256": "ce948a398e15aeaa403c424cda34e6eed296ab2570d591bb5ff3da642b255d64",
+      "expected_origin": "MTP source tensor manifest"
+    },
+    {
+      "from": "D:\\Models\\Strata\\mtp\\tensors\\mtp.hyper_connection_mixer.input_mix_weight_down.weight.bin",
+      "to": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\tensors\\mtp.hyper_connection_mixer.input_mix_weight_down.weight.bin",
+      "bytes": 6553600,
+      "file_id": 562949953753975,
+      "expected_sha256": "c633d2841fda463e82045e0b93fb8cb8d511ec0c9eda616020f01aca18d71947",
+      "expected_origin": "MTP source tensor manifest"
+    },
+    {
+      "from": "D:\\Models\\Strata\\mtp\\tensors\\mtp.hyper_connection_mixer.input_mix_weight_up.weight.bin",
+      "to": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\tensors\\mtp.hyper_connection_mixer.input_mix_weight_up.weight.bin",
+      "bytes": 6553600,
+      "file_id": 562949953753976,
+      "expected_sha256": "6565285f0ba2923703252763cfc11d8a9bda40ab42e7548e12464b04dbdbec13",
+      "expected_origin": "MTP source tensor manifest"
+    },
+    {
+      "from": "D:\\Models\\Strata\\mtp\\tensors\\mtp.layers.0.attn_hyper_connection.block_inject_weight.weight.bin",
+      "to": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\tensors\\mtp.layers.0.attn_hyper_connection.block_inject_weight.weight.bin",
+      "bytes": 81920,
+      "file_id": 562949953753977,
+      "expected_sha256": "c8afff64e7f54412d02120097c4255033c55245e1c1eed84cc630d428ccb864c",
+      "expected_origin": "MTP source tensor manifest"
+    },
+    {
+      "from": "D:\\Models\\Strata\\mtp\\tensors\\mtp.layers.0.attn_hyper_connection.hc_norm.weight.bin",
+      "to": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\tensors\\mtp.layers.0.attn_hyper_connection.hc_norm.weight.bin",
+      "bytes": 20480,
+      "file_id": 562949953753978,
+      "expected_sha256": "1fb619aeaaf637ccd70f46f1f8f8116e6a46448cb43026b246de8ee8286ed809",
+      "expected_origin": "MTP source tensor manifest"
+    },
+    {
+      "from": "D:\\Models\\Strata\\mtp\\tensors\\mtp.layers.0.attn_hyper_connection.input_mix_weight_down.weight.bin",
+      "to": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\tensors\\mtp.layers.0.attn_hyper_connection.input_mix_weight_down.weight.bin",
+      "bytes": 6553600,
+      "file_id": 562949953753979,
+      "expected_sha256": "e80ac8bf3e270e9d5a949ec7c913329dc8de017d69851334820fae7b8c86a7f5",
+      "expected_origin": "MTP source tensor manifest"
+    },
+    {
+      "from": "D:\\Models\\Strata\\mtp\\tensors\\mtp.layers.0.attn_hyper_connection.input_mix_weight_up.weight.bin",
+      "to": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\tensors\\mtp.layers.0.attn_hyper_connection.input_mix_weight_up.weight.bin",
+      "bytes": 6553600,
+      "file_id": 562949953753980,
+      "expected_sha256": "f80f1fd44e1183e7764ea496b11ff89ead9dd758f861d4e79a770bf54956b1a5",
+      "expected_origin": "MTP source tensor manifest"
+    },
+    {
+      "from": "D:\\Models\\Strata\\mtp\\tensors\\mtp.layers.0.mlp.experts.down_proj.bin",
+      "to": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\tensors\\mtp.layers.0.mlp.experts.down_proj.bin",
+      "bytes": 1677721600,
+      "file_id": 562949953753981,
+      "expected_sha256": "539c46234f73bac70450f731f40e715f77ac32faf77def0f3f800e58aaabbbc0",
+      "expected_origin": "MTP source tensor manifest"
+    },
+    {
+      "from": "D:\\Models\\Strata\\mtp\\tensors\\mtp.layers.0.mlp.experts.gate_up_proj.bin",
+      "to": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\tensors\\mtp.layers.0.mlp.experts.gate_up_proj.bin",
+      "bytes": 3355443200,
+      "file_id": 562949953753982,
+      "expected_sha256": "839e98f9642ebc884b178abd2090b6dc8b0bcd81ed92d7f7a08314c6a68f96d5",
+      "expected_origin": "MTP source tensor manifest"
+    },
+    {
+      "from": "D:\\Models\\Strata\\mtp\\tensors\\mtp.layers.0.mlp.gate.weight.bin",
+      "to": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\tensors\\mtp.layers.0.mlp.gate.weight.bin",
+      "bytes": 2621440,
+      "file_id": 562949953753983,
+      "expected_sha256": "f0d35fa41b360a08bc0c5b1e5766aa42df960291716ee189208b5d2599462c20",
+      "expected_origin": "MTP source tensor manifest"
+    },
+    {
+      "from": "D:\\Models\\Strata\\mtp\\tensors\\mtp.layers.0.mlp.shared_expert.down_proj.weight.bin",
+      "to": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\tensors\\mtp.layers.0.mlp.shared_expert.down_proj.weight.bin",
+      "bytes": 3276800,
+      "file_id": 562949953753984,
+      "expected_sha256": "d2ced8c81367cc494599d1a8cdc279c3dd6579b628ded05acd7495e99cee01d8",
+      "expected_origin": "MTP source tensor manifest"
+    },
+    {
+      "from": "D:\\Models\\Strata\\mtp\\tensors\\mtp.layers.0.mlp.shared_expert.gate_proj.weight.bin",
+      "to": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\tensors\\mtp.layers.0.mlp.shared_expert.gate_proj.weight.bin",
+      "bytes": 3276800,
+      "file_id": 562949953753985,
+      "expected_sha256": "f4a81109165853b3b64f36d809f98094b599763364070f5fa079200e1c386d4c",
+      "expected_origin": "MTP source tensor manifest"
+    },
+    {
+      "from": "D:\\Models\\Strata\\mtp\\tensors\\mtp.layers.0.mlp.shared_expert.up_proj.weight.bin",
+      "to": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\tensors\\mtp.layers.0.mlp.shared_expert.up_proj.weight.bin",
+      "bytes": 3276800,
+      "file_id": 562949953753986,
+      "expected_sha256": "172586861eea53efbff10afc43ded5b6e49c83879e9efc01e089c652bbb0a156",
+      "expected_origin": "MTP source tensor manifest"
+    },
+    {
+      "from": "D:\\Models\\Strata\\mtp\\tensors\\mtp.layers.0.mlp.shared_expert_gate.weight.bin",
+      "to": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\tensors\\mtp.layers.0.mlp.shared_expert_gate.weight.bin",
+      "bytes": 5120,
+      "file_id": 562949953753987,
+      "expected_sha256": "acdd306d9996d356e4667a16ff63af6fef086fc7f570f1bc00bbe882a2a93f6e",
+      "expected_origin": "MTP source tensor manifest"
+    },
+    {
+      "from": "D:\\Models\\Strata\\mtp\\tensors\\mtp.layers.0.mlp_hyper_connection.block_inject_weight.weight.bin",
+      "to": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\tensors\\mtp.layers.0.mlp_hyper_connection.block_inject_weight.weight.bin",
+      "bytes": 81920,
+      "file_id": 562949953753988,
+      "expected_sha256": "c5782dd92b479a1f8ef43d683fe9c917fd9e8fba81f23c1aae8817bfe4b476a6",
+      "expected_origin": "MTP source tensor manifest"
+    },
+    {
+      "from": "D:\\Models\\Strata\\mtp\\tensors\\mtp.layers.0.mlp_hyper_connection.hc_norm.weight.bin",
+      "to": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\tensors\\mtp.layers.0.mlp_hyper_connection.hc_norm.weight.bin",
+      "bytes": 20480,
+      "file_id": 562949953753989,
+      "expected_sha256": "21a504876b5e7b788301557c68dfb757999430eba36c66ec8ab96a63604dbfd1",
+      "expected_origin": "MTP source tensor manifest"
+    },
+    {
+      "from": "D:\\Models\\Strata\\mtp\\tensors\\mtp.layers.0.mlp_hyper_connection.input_mix_weight_down.weight.bin",
+      "to": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\tensors\\mtp.layers.0.mlp_hyper_connection.input_mix_weight_down.weight.bin",
+      "bytes": 6553600,
+      "file_id": 562949953753990,
+      "expected_sha256": "b71240036dea954e034d5ae04e097bcd7ac51cb28a44e4c93d198af3447278a1",
+      "expected_origin": "MTP source tensor manifest"
+    },
+    {
+      "from": "D:\\Models\\Strata\\mtp\\tensors\\mtp.layers.0.mlp_hyper_connection.input_mix_weight_up.weight.bin",
+      "to": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\tensors\\mtp.layers.0.mlp_hyper_connection.input_mix_weight_up.weight.bin",
+      "bytes": 6553600,
+      "file_id": 562949953753991,
+      "expected_sha256": "40756866bf2a5e82c28e407f717b6fa07614d593f78e79c7ceb2cd4ffe6dda94",
+      "expected_origin": "MTP source tensor manifest"
+    },
+    {
+      "from": "D:\\Models\\Strata\\mtp\\tensors\\mtp.layers.0.self_attn.indexer.index_qk_proj.weight.bin",
+      "to": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\tensors\\mtp.layers.0.self_attn.indexer.index_qk_proj.weight.bin",
+      "bytes": 3276800,
+      "file_id": 562949953753992,
+      "expected_sha256": "2befafae6e944c1fc651fd73d4d527eb6f138a6c1679065b003128ee3150e859",
+      "expected_origin": "MTP source tensor manifest"
+    },
+    {
+      "from": "D:\\Models\\Strata\\mtp\\tensors\\mtp.layers.0.self_attn.indexer.k_layernorm.weight.bin",
+      "to": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\tensors\\mtp.layers.0.self_attn.indexer.k_layernorm.weight.bin",
+      "bytes": 256,
+      "file_id": 562949953753993,
+      "expected_sha256": "2db621f6a08b4085756fc69d60a4a1bd1d7fbf5d406456d2477075842efaae54",
+      "expected_origin": "MTP source tensor manifest"
+    },
+    {
+      "from": "D:\\Models\\Strata\\mtp\\tensors\\mtp.layers.0.self_attn.indexer.q_layernorm.weight.bin",
+      "to": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\tensors\\mtp.layers.0.self_attn.indexer.q_layernorm.weight.bin",
+      "bytes": 256,
+      "file_id": 562949953753994,
+      "expected_sha256": "afaf59f68e251939970ffdeacad0667dffc657a522bea62cdc44a52816fc49d6",
+      "expected_origin": "MTP source tensor manifest"
+    },
+    {
+      "from": "D:\\Models\\Strata\\mtp\\tensors\\mtp.layers.0.self_attn.k_norm.weight.bin",
+      "to": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\tensors\\mtp.layers.0.self_attn.k_norm.weight.bin",
+      "bytes": 512,
+      "file_id": 562949953753995,
+      "expected_sha256": "8f924b0357cf936e14fc34518205d000e1423aa60626827df81b0804fae8cdfd",
+      "expected_origin": "MTP source tensor manifest"
+    },
+    {
+      "from": "D:\\Models\\Strata\\mtp\\tensors\\mtp.layers.0.self_attn.k_proj.weight.bin",
+      "to": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\tensors\\mtp.layers.0.self_attn.k_proj.weight.bin",
+      "bytes": 2621440,
+      "file_id": 562949953753996,
+      "expected_sha256": "1a295dc2d6e633e808aeb19e00c97856a1817bbfcc83f5b610e2bfcacfcb8c38",
+      "expected_origin": "MTP source tensor manifest"
+    },
+    {
+      "from": "D:\\Models\\Strata\\mtp\\tensors\\mtp.layers.0.self_attn.o_proj.weight.bin",
+      "to": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\tensors\\mtp.layers.0.self_attn.o_proj.weight.bin",
+      "bytes": 31457280,
+      "file_id": 562949953753997,
+      "expected_sha256": "9d2fcf0ac6ac19de87f638f710cfd1af6ad14141e75b7d3d5d29fbd06f374219",
+      "expected_origin": "MTP source tensor manifest"
+    },
+    {
+      "from": "D:\\Models\\Strata\\mtp\\tensors\\mtp.layers.0.self_attn.q_norm.weight.bin",
+      "to": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\tensors\\mtp.layers.0.self_attn.q_norm.weight.bin",
+      "bytes": 512,
+      "file_id": 562949953753998,
+      "expected_sha256": "57957aa1e7c5a3ac628bff0ec5522ad55a39b8c0b8bd2d324ae640e3771617ef",
+      "expected_origin": "MTP source tensor manifest"
+    },
+    {
+      "from": "D:\\Models\\Strata\\mtp\\tensors\\mtp.layers.0.self_attn.q_proj.weight.bin",
+      "to": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\tensors\\mtp.layers.0.self_attn.q_proj.weight.bin",
+      "bytes": 62914560,
+      "file_id": 562949953753999,
+      "expected_sha256": "5220aef3d288f40759f7356af9ef453e5ac0256a38749a9bb803a4e9db58150d",
+      "expected_origin": "MTP source tensor manifest"
+    },
+    {
+      "from": "D:\\Models\\Strata\\mtp\\tensors\\mtp.layers.0.self_attn.v_proj.weight.bin",
+      "to": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\tensors\\mtp.layers.0.self_attn.v_proj.weight.bin",
+      "bytes": 2621440,
+      "file_id": 562949953754000,
+      "expected_sha256": "39cb12f5424e965fa71fb81db0ee230c701b7b1e0b72c36641fde7e0e41bff41",
+      "expected_origin": "MTP source tensor manifest"
+    },
+    {
+      "from": "D:\\Models\\Strata\\mtp\\tensors\\mtp.pre_fc_norm_embedding.weight.bin",
+      "to": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\tensors\\mtp.pre_fc_norm_embedding.weight.bin",
+      "bytes": 5120,
+      "file_id": 562949953754001,
+      "expected_sha256": "04c4a570850e06f2d8913da8220d54d4c7f87db6eb6d45480b938e8ba41d6a86",
+      "expected_origin": "MTP source tensor manifest"
+    },
+    {
+      "from": "D:\\Models\\Strata\\mtp\\tensors\\mtp.pre_fc_norm_hidden.weight.bin",
+      "to": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\tensors\\mtp.pre_fc_norm_hidden.weight.bin",
+      "bytes": 20480,
+      "file_id": 562949953754002,
+      "expected_sha256": "b933b44559879449b1baf2af8385c5c237347307e3fd452394870cb53e6eab6d",
+      "expected_origin": "MTP source tensor manifest"
+    },
+    {
+      "from": "D:\\Models\\Strata\\mtp\\tensors\\verified.json",
+      "to": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-shared\\mtp\\tensors\\verified.json",
+      "bytes": 5030,
+      "file_id": 562949953754003,
+      "expected_sha256": "08b1191e72f484b3408e151008022b5c8c33eecbabc749e3515019146296aec9",
+      "expected_origin": "fresh pre-move hash"
+    },
+    {
+      "from": "D:\\Models\\Strata\\packs\\iq3_s\\conversions.json",
+      "to": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S\\strata-pack\\conversions.json",
+      "bytes": 322,
+      "file_id": 2251799813738663,
+      "expected_sha256": "aef6eb1635ca3250a68c0bb3330a892248baf529aea2b23ddabd9e2e93bbbd0b",
+      "expected_origin": "fresh pre-move hash"
+    },
+    {
+      "from": "D:\\Models\\Strata\\packs\\iq3_s\\dense.bin",
+      "to": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S\\strata-pack\\dense.bin",
+      "bytes": 1538035200,
+      "file_id": 2251799813738661,
+      "expected_sha256": "d2af3d8331e5c7a1985d1d589747230f9d56719a6d33c7cddc9ee6b81cde6b13",
+      "expected_origin": "fresh pre-move hash"
+    },
+    {
+      "from": "D:\\Models\\Strata\\packs\\iq3_s\\index.txt",
+      "to": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S\\strata-pack\\index.txt",
+      "bytes": 93685,
+      "file_id": 2251799813738662,
+      "expected_sha256": "b2a014878c3b61d6a6f915e194055a5e68ede34f9465dd1cb13249d902f008ac",
+      "expected_origin": "fresh pre-move hash"
+    },
+    {
+      "from": "D:\\Models\\Strata\\packs\\iq3_s\\native_experts.txt",
+      "to": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S\\strata-pack\\native_experts.txt",
+      "bytes": 3304,
+      "file_id": 2251799813738670,
+      "expected_sha256": "d9ac2dfa3ee63c55c9c6a6db26f72da0cec0ee41733f007e5cbbbba71617aa5d",
+      "expected_origin": "fresh pre-move hash"
+    },
+    {
+      "from": "D:\\Models\\Strata\\packs\\iq3_s\\tokenizer\\chat_template.jinja",
+      "to": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S\\strata-pack\\tokenizer\\chat_template.jinja",
+      "bytes": 9993,
+      "file_id": 2251799813738669,
+      "expected_sha256": "12827f24b742ea4e80cdc12dbcf9622227056b9f797252a3149263d4f9aaadce",
+      "expected_origin": "fresh pre-move hash"
+    },
+    {
+      "from": "D:\\Models\\Strata\\packs\\iq3_s\\tokenizer\\merges.txt",
+      "to": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S\\strata-pack\\tokenizer\\merges.txt",
+      "bytes": 3600844,
+      "file_id": 2251799813738666,
+      "expected_sha256": "080cf95432173729d160346b7882bd2a644b07f7a3813a3eb73f4e66787bfde9",
+      "expected_origin": "fresh pre-move hash"
+    },
+    {
+      "from": "D:\\Models\\Strata\\packs\\iq3_s\\tokenizer\\token_type.json",
+      "to": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S\\strata-pack\\tokenizer\\token_type.json",
+      "bytes": 744960,
+      "file_id": 2251799813738667,
+      "expected_sha256": "5088c8c298fc06af8382ddb3b76c888703ac2634e82263b97eedcc2ad202738b",
+      "expected_origin": "fresh pre-move hash"
+    },
+    {
+      "from": "D:\\Models\\Strata\\packs\\iq3_s\\tokenizer\\tokenizer.json",
+      "to": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S\\strata-pack\\tokenizer\\tokenizer.json",
+      "bytes": 554,
+      "file_id": 2251799813738668,
+      "expected_sha256": "87be2ac47d8bc7393b7435df6ccd276740019a393941a2585d5edce59f450c54",
+      "expected_origin": "fresh pre-move hash"
+    },
+    {
+      "from": "D:\\Models\\Strata\\packs\\iq3_s\\tokenizer\\vocab.json",
+      "to": "D:\\Models\\Qwen\\Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S\\strata-pack\\tokenizer\\vocab.json",
+      "bytes": 5737005,
+      "file_id": 2251799813738665,
+      "expected_sha256": "4ba64f0332abcfb0b600b7df1537d1e836e68009d5fb7cdb77339738dc6365c4",
+      "expected_origin": "fresh pre-move hash"
+    },
+    {
+      "from": "D:\\Models\\Strata\\packs\\qwen36-ud-q4_k_xl\\tokenizer\\chat_template.jinja",
+      "to": "D:\\Models\\Qwen\\Qwen3.6-35B-A3B-MTP-GGUF\\strata-pack\\tokenizer\\chat_template.jinja",
+      "bytes": 8057,
+      "file_id": 3096224743870691,
+      "expected_sha256": "55d4931433fe502b794226ee7f4d206a6bdd436ac9f80eb7d8ebb4c639f9ea0c",
+      "expected_origin": "fresh pre-move hash"
+    },
+    {
+      "from": "D:\\Models\\Strata\\packs\\qwen36-ud-q4_k_xl\\tokenizer\\merges.txt",
+      "to": "D:\\Models\\Qwen\\Qwen3.6-35B-A3B-MTP-GGUF\\strata-pack\\tokenizer\\merges.txt",
+      "bytes": 3600844,
+      "file_id": 3096224743870688,
+      "expected_sha256": "080cf95432173729d160346b7882bd2a644b07f7a3813a3eb73f4e66787bfde9",
+      "expected_origin": "fresh pre-move hash"
+    },
+    {
+      "from": "D:\\Models\\Strata\\packs\\qwen36-ud-q4_k_xl\\tokenizer\\token_type.json",
+      "to": "D:\\Models\\Qwen\\Qwen3.6-35B-A3B-MTP-GGUF\\strata-pack\\tokenizer\\token_type.json",
+      "bytes": 744960,
+      "file_id": 3096224743870689,
+      "expected_sha256": "5088c8c298fc06af8382ddb3b76c888703ac2634e82263b97eedcc2ad202738b",
+      "expected_origin": "fresh pre-move hash"
+    },
+    {
+      "from": "D:\\Models\\Strata\\packs\\qwen36-ud-q4_k_xl\\tokenizer\\tokenizer.json",
+      "to": "D:\\Models\\Qwen\\Qwen3.6-35B-A3B-MTP-GGUF\\strata-pack\\tokenizer\\tokenizer.json",
+      "bytes": 554,
+      "file_id": 3096224743870690,
+      "expected_sha256": "2971ee07b719ef5dcac1f869fb6124fbb4e20f9dedf34e9a84f2010c98b518f5",
+      "expected_origin": "fresh pre-move hash"
+    },
+    {
+      "from": "D:\\Models\\Strata\\packs\\qwen36-ud-q4_k_xl\\tokenizer\\vocab.json",
+      "to": "D:\\Models\\Qwen\\Qwen3.6-35B-A3B-MTP-GGUF\\strata-pack\\tokenizer\\vocab.json",
+      "bytes": 5737005,
+      "file_id": 3096224743870687,
+      "expected_sha256": "4ba64f0332abcfb0b600b7df1537d1e836e68009d5fb7cdb77339738dc6365c4",
+      "expected_origin": "fresh pre-move hash"
+    },
+    {
+      "from": "D:\\Models\\Strata\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\DeepSeek-V4.1-Flash-1017-GSQ-RCO-IQ2_XS-00001-of-00004.gguf",
+      "to": "D:\\Models\\DeepSeek\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\DeepSeek-V4.1-Flash-1017-GSQ-RCO-IQ2_XS-00001-of-00004.gguf",
+      "bytes": 39535788064,
+      "file_id": 3377699720587826,
+      "expected_sha256": "d9b949d55e27242b8afc7c2928749b888372d4c39682f9a131670d1c2555155e",
+      "expected_origin": "prior DeepSeek full verification"
+    },
+    {
+      "from": "D:\\Models\\Strata\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\DeepSeek-V4.1-Flash-1017-GSQ-RCO-IQ2_XS-00001-of-00004.gguf.part.chunks",
+      "to": "D:\\Models\\DeepSeek\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\DeepSeek-V4.1-Flash-1017-GSQ-RCO-IQ2_XS-00001-of-00004.gguf.part.chunks",
+      "bytes": 116,
+      "file_id": 145804037936124460,
+      "expected_sha256": "cd7e26a3f1b8fff6120dd7e6e0c93dd6f9d760615489e4e939f5625e2666af80",
+      "expected_origin": "fresh pre-move hash"
+    },
+    {
+      "from": "D:\\Models\\Strata\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\DeepSeek-V4.1-Flash-1017-GSQ-RCO-IQ2_XS-00001-of-00004.gguf.part.src",
+      "to": "D:\\Models\\DeepSeek\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\DeepSeek-V4.1-Flash-1017-GSQ-RCO-IQ2_XS-00001-of-00004.gguf.part.src",
+      "bytes": 246,
+      "file_id": 197876908627651130,
+      "expected_sha256": "8744decc0ab59b71e9c84dd28259a0a5e4223e5d58405d6528d0c2aa052b4ac3",
+      "expected_origin": "fresh pre-move hash"
+    },
+    {
+      "from": "D:\\Models\\Strata\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\DeepSeek-V4.1-Flash-1017-GSQ-RCO-IQ2_XS-00001-of-00004.gguf.verified.json",
+      "to": "D:\\Models\\DeepSeek\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\DeepSeek-V4.1-Flash-1017-GSQ-RCO-IQ2_XS-00001-of-00004.gguf.verified.json",
+      "bytes": 360,
+      "file_id": 210543282579575338,
+      "expected_sha256": "04dbd9227e4edaa5746f36e77312aceb24ab1444a760de94c576f5080fb50e67",
+      "expected_origin": "fresh pre-move hash"
+    },
+    {
+      "from": "D:\\Models\\Strata\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\DeepSeek-V4.1-Flash-1017-GSQ-RCO-IQ2_XS-00002-of-00004.gguf",
+      "to": "D:\\Models\\DeepSeek\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\DeepSeek-V4.1-Flash-1017-GSQ-RCO-IQ2_XS-00002-of-00004.gguf",
+      "bytes": 39494617536,
+      "file_id": 2814749767166529,
+      "expected_sha256": "933461a974fcccee741bf2f9798201e72ab4aa3f8a952be56f849896ca6ea30e",
+      "expected_origin": "prior DeepSeek full verification"
+    },
+    {
+      "from": "D:\\Models\\Strata\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\DeepSeek-V4.1-Flash-1017-GSQ-RCO-IQ2_XS-00002-of-00004.gguf.part.src",
+      "to": "D:\\Models\\DeepSeek\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\DeepSeek-V4.1-Flash-1017-GSQ-RCO-IQ2_XS-00002-of-00004.gguf.part.src",
+      "bytes": 246,
+      "file_id": 324822123124156991,
+      "expected_sha256": "67227d852e2790ca36423eb19831729ab6c5b686efe3d66d03a8a6494e5bc7a4",
+      "expected_origin": "fresh pre-move hash"
+    },
+    {
+      "from": "D:\\Models\\Strata\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\DeepSeek-V4.1-Flash-1017-GSQ-RCO-IQ2_XS-00002-of-00004.gguf.verified.json",
+      "to": "D:\\Models\\DeepSeek\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\DeepSeek-V4.1-Flash-1017-GSQ-RCO-IQ2_XS-00002-of-00004.gguf.verified.json",
+      "bytes": 360,
+      "file_id": 32651097298436834,
+      "expected_sha256": "5595cc8df97e33f835bec72cb5803f1861e6e711c45b2cd8fb22bf8979911b64",
+      "expected_origin": "fresh pre-move hash"
+    },
+    {
+      "from": "D:\\Models\\Strata\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\DeepSeek-V4.1-Flash-1017-GSQ-RCO-IQ2_XS-00003-of-00004.gguf",
+      "to": "D:\\Models\\DeepSeek\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\DeepSeek-V4.1-Flash-1017-GSQ-RCO-IQ2_XS-00003-of-00004.gguf",
+      "bytes": 39423838496,
+      "file_id": 2251799813689799,
+      "expected_sha256": "bbf91fa346a85ebaf32dd4fd5c456b534d780d381e54f46ac90783a481373240",
+      "expected_origin": "prior DeepSeek full verification"
+    },
+    {
+      "from": "D:\\Models\\Strata\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\DeepSeek-V4.1-Flash-1017-GSQ-RCO-IQ2_XS-00003-of-00004.gguf.part.src",
+      "to": "D:\\Models\\DeepSeek\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\DeepSeek-V4.1-Flash-1017-GSQ-RCO-IQ2_XS-00003-of-00004.gguf.part.src",
+      "bytes": 246,
+      "file_id": 27866022694355697,
+      "expected_sha256": "6658c2be118bb825f7278a7e685fb3bd696574574d3e1889533b834d14ddfe41",
+      "expected_origin": "fresh pre-move hash"
+    },
+    {
+      "from": "D:\\Models\\Strata\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\DeepSeek-V4.1-Flash-1017-GSQ-RCO-IQ2_XS-00003-of-00004.gguf.verified.json",
+      "to": "D:\\Models\\DeepSeek\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\DeepSeek-V4.1-Flash-1017-GSQ-RCO-IQ2_XS-00003-of-00004.gguf.verified.json",
+      "bytes": 360,
+      "file_id": 135107988821119432,
+      "expected_sha256": "b0bfe4ee4e831ce026f333577ed35c5afd930aff1e116f3082e5f158cc21cc3f",
+      "expected_origin": "fresh pre-move hash"
+    },
+    {
+      "from": "D:\\Models\\Strata\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\DeepSeek-V4.1-Flash-1017-GSQ-RCO-IQ2_XS-00004-of-00004.gguf",
+      "to": "D:\\Models\\DeepSeek\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\DeepSeek-V4.1-Flash-1017-GSQ-RCO-IQ2_XS-00004-of-00004.gguf",
+      "bytes": 36771591232,
+      "file_id": 2533274790400458,
+      "expected_sha256": "e5b2f8781fab688cd4bc3bc7a69651b5dbb90ed94965657c6bead8bb4774f3cf",
+      "expected_origin": "prior DeepSeek full verification"
+    },
+    {
+      "from": "D:\\Models\\Strata\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\DeepSeek-V4.1-Flash-1017-GSQ-RCO-IQ2_XS-00004-of-00004.gguf.part.src",
+      "to": "D:\\Models\\DeepSeek\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\DeepSeek-V4.1-Flash-1017-GSQ-RCO-IQ2_XS-00004-of-00004.gguf.part.src",
+      "bytes": 246,
+      "file_id": 134826513844408777,
+      "expected_sha256": "a4e36b1d2dfd24ad17e02c17187d668d3f5dcbfa4bcb030d527a41c91213738f",
+      "expected_origin": "fresh pre-move hash"
+    },
+    {
+      "from": "D:\\Models\\Strata\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\DeepSeek-V4.1-Flash-1017-GSQ-RCO-IQ2_XS-00004-of-00004.gguf.verified.json",
+      "to": "D:\\Models\\DeepSeek\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\DeepSeek-V4.1-Flash-1017-GSQ-RCO-IQ2_XS-00004-of-00004.gguf.verified.json",
+      "bytes": 360,
+      "file_id": 121878664915718691,
+      "expected_sha256": "210acf074565d98e5c355acefdc493e993ac2ed5a2e1ed44996451d8443df4a7",
+      "expected_origin": "fresh pre-move hash"
+    },
+    {
+      "from": "D:\\Models\\Strata\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\maya-ds4\\ds4.txt",
+      "to": "D:\\Models\\DeepSeek\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\maya-ds4\\ds4.txt",
+      "bytes": 1223,
+      "file_id": 2533274790400573,
+      "expected_sha256": "527d05829412f42d00b1621e3b828d7f01bd478141341f90dcfc87550ae05062",
+      "expected_origin": "fresh pre-move hash"
+    },
+    {
+      "from": "D:\\Models\\Strata\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\maya-ds4\\engram.bin",
+      "to": "D:\\Models\\DeepSeek\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\maya-ds4\\engram.bin",
+      "bytes": 517980,
+      "file_id": 2533274790400575,
+      "expected_sha256": "08d55d6433f389b14aa115f4ea4eb31d6a2d63df1ae40821f03facf4c2d49142",
+      "expected_origin": "fresh pre-move hash"
+    },
+    {
+      "from": "D:\\Models\\Strata\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\maya-ds4\\expert-profile.bin",
+      "to": "D:\\Models\\DeepSeek\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\maya-ds4\\expert-profile.bin",
+      "bytes": 61440,
+      "file_id": 12384898975273542,
+      "expected_sha256": "c8db1d14fa20571561c388b082d4ca8ba8bd5abb1631eeaab6a4f4aeb64c400b",
+      "expected_origin": "fresh pre-move hash"
+    },
+    {
+      "from": "D:\\Models\\Strata\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\maya-ds4\\tensors.txt",
+      "to": "D:\\Models\\DeepSeek\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\maya-ds4\\tensors.txt",
+      "bytes": 3742951,
+      "file_id": 2533274790400574,
+      "expected_sha256": "91359f55e1a95601cb8db7c8822f2e0af60d75587f980da7eb84b44dffd7d612",
+      "expected_origin": "fresh pre-move hash"
+    },
+    {
+      "from": "D:\\Models\\Strata\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\maya-ds4\\tokenizer\\chat_template.jinja",
+      "to": "D:\\Models\\DeepSeek\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\maya-ds4\\tokenizer\\chat_template.jinja",
+      "bytes": 18812,
+      "file_id": 2533274790400581,
+      "expected_sha256": "90a0ece2e0ecef8cae4d1ede6c2ae6d8916f8a813b99b4aa661692e16142d7f7",
+      "expected_origin": "fresh pre-move hash"
+    },
+    {
+      "from": "D:\\Models\\Strata\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\maya-ds4\\tokenizer\\merges.txt",
+      "to": "D:\\Models\\DeepSeek\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\maya-ds4\\tokenizer\\merges.txt",
+      "bytes": 1632573,
+      "file_id": 2533274790400578,
+      "expected_sha256": "47b0b7ca8188ae704a386ba5879d8669ca0321d96d0680f9e14d0379111a4af6",
+      "expected_origin": "fresh pre-move hash"
+    },
+    {
+      "from": "D:\\Models\\Strata\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\maya-ds4\\tokenizer\\token_type.json",
+      "to": "D:\\Models\\DeepSeek\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\maya-ds4\\tokenizer\\token_type.json",
+      "bytes": 387840,
+      "file_id": 2533274790400579,
+      "expected_sha256": "0a61021438e5ce6041133495f18fc360a6587aea748b17d953f552d2119ba51e",
+      "expected_origin": "fresh pre-move hash"
+    },
+    {
+      "from": "D:\\Models\\Strata\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\maya-ds4\\tokenizer\\tokenizer.json",
+      "to": "D:\\Models\\DeepSeek\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\maya-ds4\\tokenizer\\tokenizer.json",
+      "bytes": 87,
+      "file_id": 2533274790400580,
+      "expected_sha256": "a6a0d02007e358a972197603ce33f7003051524656083f8967293a73d28bb4a8",
+      "expected_origin": "fresh pre-move hash"
+    },
+    {
+      "from": "D:\\Models\\Strata\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\maya-ds4\\tokenizer\\vocab.json",
+      "to": "D:\\Models\\DeepSeek\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\maya-ds4\\tokenizer\\vocab.json",
+      "bytes": 2730577,
+      "file_id": 2533274790400577,
+      "expected_sha256": "2f0bf5b31f4aa191d5d0d78291927a4f28c9ceb498a5e345b97e926c4cb99c1a",
+      "expected_origin": "fresh pre-move hash"
+    },
+    {
+      "from": "D:\\Models\\Strata\\deepseek-v4.1-flash-shared\\DeepSeek-V4.1-Flash-1017-UD-Q8_K_XL-00001-of-00009.gguf",
+      "to": "D:\\Models\\DeepSeek\\deepseek-v4.1-flash-shared\\DeepSeek-V4.1-Flash-1017-UD-Q8_K_XL-00001-of-00009.gguf",
+      "bytes": 5780589,
+      "file_id": 3659174697298479,
+      "expected_sha256": "cc15d470afcb030558bbc4d8e2ccd840182e2e95de1a95198138efe63a5fd99f",
+      "expected_origin": "prior DeepSeek full verification"
+    },
+    {
+      "from": "D:\\Models\\Strata\\deepseek-v4.1-flash-shared\\DeepSeek-V4.1-Flash-1017-UD-Q8_K_XL-00001-of-00009.gguf.verified.json",
+      "to": "D:\\Models\\DeepSeek\\deepseek-v4.1-flash-shared\\DeepSeek-V4.1-Flash-1017-UD-Q8_K_XL-00001-of-00009.gguf.verified.json",
+      "bytes": 351,
+      "file_id": 3377699720587824,
+      "expected_sha256": "4a9bc34213b6b6fbd3e9407de72ba6d43e315ddb03cf08820b3de0b5c7f676d5",
+      "expected_origin": "fresh pre-move hash"
+    },
+    {
+      "from": "D:\\Models\\Strata\\deepseek-v4.1-flash-shared\\DeepSeek-V4.1-Flash-Engram-IQ4_NL.gguf",
+      "to": "D:\\Models\\DeepSeek\\deepseek-v4.1-flash-shared\\DeepSeek-V4.1-Flash-Engram-IQ4_NL.gguf",
+      "bytes": 110595290816,
+      "file_id": 2533274790400549,
+      "expected_sha256": "eb19f30d368d393784e1fc54fdfaffc427ebb2110bf3762fdf5a8fbb9a2d740a",
+      "expected_origin": "prior DeepSeek full verification"
+    },
+    {
+      "from": "D:\\Models\\Strata\\deepseek-v4.1-flash-shared\\DeepSeek-V4.1-Flash-Engram-IQ4_NL.gguf.part.src",
+      "to": "D:\\Models\\DeepSeek\\deepseek-v4.1-flash-shared\\DeepSeek-V4.1-Flash-Engram-IQ4_NL.gguf.part.src",
+      "bytes": 225,
+      "file_id": 121597189939008036,
+      "expected_sha256": "66f11ea9d6171a06f24755989cefe552c859a0c63d203fb43ad7808a9f601f55",
+      "expected_origin": "fresh pre-move hash"
+    },
+    {
+      "from": "D:\\Models\\Strata\\deepseek-v4.1-flash-shared\\DeepSeek-V4.1-Flash-Engram-IQ4_NL.gguf.verified.json",
+      "to": "D:\\Models\\DeepSeek\\deepseek-v4.1-flash-shared\\DeepSeek-V4.1-Flash-Engram-IQ4_NL.gguf.verified.json",
+      "bytes": 340,
+      "file_id": 428123439576912423,
+      "expected_sha256": "7896efc6f7d52a0e24c0e8ab48f2e4cece52b0e4055e54e5d646db23d96fe310",
+      "expected_origin": "fresh pre-move hash"
+    },
+    {
+      "from": "D:\\Models\\Strata\\deepseek-v4.1-flash-shared\\dspark-DeepSeek-V4.1-Flash-1017-Q8_0.gguf",
+      "to": "D:\\Models\\DeepSeek\\deepseek-v4.1-flash-shared\\dspark-DeepSeek-V4.1-Flash-1017-Q8_0.gguf",
+      "bytes": 7976914240,
+      "file_id": 28710447624491561,
+      "expected_sha256": "6ba6ac1b331c540691a209e7fc97dec2a24e295acb1e755c84c7d24a4373927a",
+      "expected_origin": "prior DeepSeek full verification"
+    },
+    {
+      "from": "D:\\Models\\Strata\\deepseek-v4.1-flash-shared\\dspark-DeepSeek-V4.1-Flash-1017-Q8_0.gguf.part.chunks",
+      "to": "D:\\Models\\DeepSeek\\deepseek-v4.1-flash-shared\\dspark-DeepSeek-V4.1-Flash-1017-Q8_0.gguf.part.chunks",
+      "bytes": 114,
+      "file_id": 24769797950542384,
+      "expected_sha256": "d71c6bce89d23d243148083bad18b8afebfd94ba0b88d1d4e4e315529e1a12c8",
+      "expected_origin": "fresh pre-move hash"
+    },
+    {
+      "from": "D:\\Models\\Strata\\deepseek-v4.1-flash-shared\\dspark-DeepSeek-V4.1-Flash-1017-Q8_0.gguf.part.src",
+      "to": "D:\\Models\\DeepSeek\\deepseek-v4.1-flash-shared\\dspark-DeepSeek-V4.1-Flash-1017-Q8_0.gguf.part.src",
+      "bytes": 216,
+      "file_id": 454300612411003432,
+      "expected_sha256": "1c8ad3b2118d57682e557a695099997f50c2c71650a2b7ade87d46ab1f3c494a",
+      "expected_origin": "fresh pre-move hash"
+    },
+    {
+      "from": "D:\\Models\\Strata\\deepseek-v4.1-flash-shared\\dspark-DeepSeek-V4.1-Flash-1017-Q8_0.gguf.verified.json",
+      "to": "D:\\Models\\DeepSeek\\deepseek-v4.1-flash-shared\\dspark-DeepSeek-V4.1-Flash-1017-Q8_0.gguf.verified.json",
+      "bytes": 329,
+      "file_id": 25895697857385007,
+      "expected_sha256": "71ac3a4b36754764cfbaf867a023db8eb2d3c986b52810b44ff83f2a6a1b69a2",
+      "expected_origin": "fresh pre-move hash"
+    },
+    {
+      "from": "D:\\Models\\Strata\\deployment-backups\\post-engine-update-20261021.json",
+      "to": "D:\\Models\\Strata\\archive\\2026-10-29-layout\\deployment-backups\\post-engine-update-20261021.json",
+      "bytes": 7307,
+      "file_id": 7036874417819856,
+      "expected_sha256": "33fe5137e24f11afc1bcc360eb42a7a21155f0f90de31999ccaae59f71dce320",
+      "expected_origin": "fresh pre-move hash"
+    },
+    {
+      "from": "D:\\Models\\Strata\\deployment-backups\\pre-engine-update-20261021\\engine-BUILD.json",
+      "to": "D:\\Models\\Strata\\archive\\2026-10-29-layout\\deployment-backups\\pre-engine-update-20261021\\engine-BUILD.json",
+      "bytes": 154,
+      "file_id": 2251799813738695,
+      "expected_sha256": "1a6c0e3ac698a371253ca953f43c5ecfbc379f45e0051073496fbd72bfde5b18",
+      "expected_origin": "fresh pre-move hash"
+    },
+    {
+      "from": "D:\\Models\\Strata\\deployment-backups\\pre-engine-update-20261021\\run-iq3_s.bat",
+      "to": "D:\\Models\\Strata\\archive\\2026-10-29-layout\\deployment-backups\\pre-engine-update-20261021\\run-iq3_s.bat",
+      "bytes": 261,
+      "file_id": 2251799813738691,
+      "expected_sha256": "c7f6799f96147ee74a06adebbe9cd938dd4b0721b344baf0c3da0c777d0cfea0",
+      "expected_origin": "fresh pre-move hash"
+    },
+    {
+      "from": "D:\\Models\\Strata\\deployment-backups\\pre-engine-update-20261021\\status-before.json",
+      "to": "D:\\Models\\Strata\\archive\\2026-10-29-layout\\deployment-backups\\pre-engine-update-20261021\\status-before.json",
+      "bytes": 1540,
+      "file_id": 2251799813738696,
+      "expected_sha256": "8d80a5ff456eb68e96937d949a81917b63d01e29185e99d24b6e0d5a6fbfd755",
+      "expected_origin": "fresh pre-move hash"
+    },
+    {
+      "from": "D:\\Models\\Strata\\deployment-backups\\pre-engine-update-20261021\\strata-iq3_s.json",
+      "to": "D:\\Models\\Strata\\archive\\2026-10-29-layout\\deployment-backups\\pre-engine-update-20261021\\strata-iq3_s.json",
+      "bytes": 1082,
+      "file_id": 2251799813738690,
+      "expected_sha256": "b6e62b79269a5bd56b121ff8bb45fba2d7616b65910188d56570fbc0edbd04a8",
+      "expected_origin": "fresh pre-move hash"
+    },
+    {
+      "from": "D:\\Models\\Strata\\deployment-backups\\pre-engine-update-20261021\\strata-iq3_s.log",
+      "to": "D:\\Models\\Strata\\archive\\2026-10-29-layout\\deployment-backups\\pre-engine-update-20261021\\strata-iq3_s.log",
+      "bytes": 13265,
+      "file_id": 2251799813738692,
+      "expected_sha256": "0561c0ab5a0f9b452b1318b7477a99454a91c7ca103028067b6fb6efc2e4cee0",
+      "expected_origin": "fresh pre-move hash"
+    },
+    {
+      "from": "D:\\Models\\Strata\\deployment-backups\\pre-engine-update-20261021\\strata-server.stderr.log",
+      "to": "D:\\Models\\Strata\\archive\\2026-10-29-layout\\deployment-backups\\pre-engine-update-20261021\\strata-server.stderr.log",
+      "bytes": 0,
+      "file_id": 2251799813738694,
+      "expected_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "expected_origin": "fresh pre-move hash"
+    },
+    {
+      "from": "D:\\Models\\Strata\\deployment-backups\\pre-engine-update-20261021\\strata-server.stdout.log",
+      "to": "D:\\Models\\Strata\\archive\\2026-10-29-layout\\deployment-backups\\pre-engine-update-20261021\\strata-server.stdout.log",
+      "bytes": 2260,
+      "file_id": 2251799813738693,
+      "expected_sha256": "c56b5f63cc242c505312cfc36ec26735fe1525a7c128b4935b9848c5055403c4",
+      "expected_origin": "fresh pre-move hash"
+    },
+    {
+      "from": "D:\\Models\\Strata\\optimization-20261021\\final-server.stderr.log",
+      "to": "D:\\Models\\Strata\\archive\\2026-10-29-layout\\optimization-20261021\\final-server.stderr.log",
+      "bytes": 0,
+      "file_id": 2251799813738766,
+      "expected_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "expected_origin": "fresh pre-move hash"
+    },
+    {
+      "from": "D:\\Models\\Strata\\optimization-20261021\\final-server.stdout.log",
+      "to": "D:\\Models\\Strata\\archive\\2026-10-29-layout\\optimization-20261021\\final-server.stdout.log",
+      "bytes": 2417,
+      "file_id": 2251799813738765,
+      "expected_sha256": "57219e6a30f0c4e316479b08f491c305196df16a1e3c88ffa66236c0c35974ea",
+      "expected_origin": "fresh pre-move hash"
+    },
+    {
+      "from": "D:\\Models\\Strata\\engine-dsv41.work\\.updates\\partial\\f1a3ae88f770b0ef.part",
+      "to": "D:\\Models\\Strata\\archive\\2026-10-29-layout\\download-residue\\engine-dsv41.work\\.updates\\partial\\f1a3ae88f770b0ef.part",
+      "bytes": 133169152,
+      "file_id": 13229323905405499,
+      "expected_sha256": "3f73c3019f9479282755871b99c10a25c1a365facbba10e9a1f46f785e1840bc",
+      "expected_origin": "fresh pre-move hash"
+    },
+    {
+      "from": "D:\\Models\\Strata\\COMPLETE.json",
+      "to": "D:\\Models\\Strata\\archive\\2026-10-29-layout\\qwen38-download\\COMPLETE.json",
+      "bytes": 695,
+      "file_id": 562949953753956,
+      "expected_sha256": "b7a04b638820102fc56e368548ee9a301aeeb9e9568dc75df9ed7a40dbb144e7",
+      "expected_origin": "fresh pre-move hash"
+    },
+    {
+      "from": "D:\\Models\\Strata\\download_all.py",
+      "to": "D:\\Models\\Strata\\archive\\2026-10-29-layout\\qwen38-download\\download_all.py",
+      "bytes": 1929,
+      "file_id": 562949953753959,
+      "expected_sha256": "970ceec382561d7d540237a56f69dda02697810de70621f1d463fb4fb6ee8608",
+      "expected_origin": "fresh pre-move hash"
+    },
+    {
+      "from": "D:\\Models\\Strata\\download_iq3s.py",
+      "to": "D:\\Models\\Strata\\archive\\2026-10-29-layout\\qwen38-download\\download_iq3s.py",
+      "bytes": 3830,
+      "file_id": 562949953753960,
+      "expected_sha256": "1152f2cb56c82e8c7147d943c96bba26d742270532130911dc2b61f61b12fec6",
+      "expected_origin": "fresh pre-move hash"
+    },
+    {
+      "from": "D:\\Models\\Strata\\download.log",
+      "to": "D:\\Models\\Strata\\archive\\2026-10-29-layout\\qwen38-download\\download.log",
+      "bytes": 13183,
+      "file_id": 562949953753958,
+      "expected_sha256": "2fab9ba3dc2a99a772240e7eddbcc2630f7f124e77da4335f336fdceb455b47d",
+      "expected_origin": "fresh pre-move hash"
+    },
+    {
+      "from": "D:\\Models\\Strata\\download.err.log",
+      "to": "D:\\Models\\Strata\\archive\\2026-10-29-layout\\qwen38-download\\download.err.log",
+      "bytes": 4640,
+      "file_id": 562949953753957,
+      "expected_sha256": "4c9d2f66e328cdd3bbb49158fa1fbd3cf7f6773d26ae94a0efc3203e76d14dac",
+      "expected_origin": "fresh pre-move hash"
+    },
+    {
+      "from": "D:\\Models\\Strata\\__pycache__\\download_all.cpython-312.pyc",
+      "to": "D:\\Models\\Strata\\archive\\2026-10-29-layout\\qwen38-download\\__pycache__\\download_all.cpython-312.pyc",
+      "bytes": 3401,
+      "file_id": 562949953753968,
+      "expected_sha256": "4475e75cad04e21cb54afb142b6b8ef8a04ebaded6306c1171c79604b0561aea",
+      "expected_origin": "fresh pre-move hash"
+    },
+    {
+      "from": "D:\\Models\\Strata\\__pycache__\\download_iq3s.cpython-312.pyc",
+      "to": "D:\\Models\\Strata\\archive\\2026-10-29-layout\\qwen38-download\\__pycache__\\download_iq3s.cpython-312.pyc",
+      "bytes": 6450,
+      "file_id": 562949953753970,
+      "expected_sha256": "ff36c0af6fd3f3bc72329e329add932b18513d6353b346143918269270c4bd2f",
+      "expected_origin": "fresh pre-move hash"
+    },
+    {
+      "from": "D:\\Models\\Strata\\components\\.updates\\partial\\2966143ca8df7919.part.src",
+      "to": "D:\\Models\\Strata\\archive\\2026-10-29-layout\\download-residue\\components-partial\\2966143ca8df7919.part.src",
+      "bytes": 154,
+      "file_id": 2533274790449357,
+      "expected_sha256": "2b75839510f444b2d796ab713329b48275899ef162c86d4e2ba1bca55cf64aef",
+      "expected_origin": "fresh pre-move hash"
+    },
+    {
+      "from": "D:\\Models\\Strata\\components\\.updates\\partial\\bfa68c6b2e92f9c2.part",
+      "to": "D:\\Models\\Strata\\archive\\2026-10-29-layout\\download-residue\\components-partial\\bfa68c6b2e92f9c2.part",
+      "bytes": 58720256,
+      "file_id": 4785074604134628,
+      "expected_sha256": "62754b8c8f2bccf886b895d542206bdfc095fc0914138fc7923b5812b66f5898",
+      "expected_origin": "fresh pre-move hash"
+    }
+  ],
+  "unload": {
+    "status": "unloaded"
+  },
+  "pack_info": {
+    "command": [
+      "D:\\Models\\Strata\\engine-dsv41\\0.1.52-windows-x86_64-cuda-cuda13\\strata-dsv41.exe",
+      "--pack",
+      "D:\\Models\\DeepSeek\\deepseek-v4.1-flash-IST-DAS-2.25bpw\\maya-ds4",
+      "--pack-info"
+    ],
+    "exit_code": 0
+  },
+  "deepseek_request": {
+    "name": "paris",
+    "started": "2026-10-29T23:45:45.350062+08:00",
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the capital of France? Answer only the city name."
+      }
+    ],
+    "output_budget": 32,
+    "usage": {
+      "prompt_tokens": 17,
+      "completion_tokens": 2,
+      "total_tokens": 19,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "timings": {
+      "cache_n": 0,
+      "prompt_n": 17,
+      "prompt_ms": 1763.7,
+      "prompt_per_token_ms": 103.747,
+      "prompt_per_second": 9.6,
+      "predicted_n": 2,
+      "predicted_ms": 222.9,
+      "predicted_per_token_ms": 111.45,
+      "predicted_per_second": 9.0,
+      "draft_n": 0,
+      "draft_n_accepted": 0
+    },
+    "finish": "stop",
+    "elapsed_s": 1.9951907999929972,
+    "first_content_s": 1.7958805999951437,
+    "first_event_s": 0.003227499983040616,
+    "content": "Paris",
+    "reasoning": "",
+    "tool_calls": [],
+    "finished": "2026-10-29T23:45:47.361586+08:00",
+    "protocol_passed": true,
+    "resources_file": "paris.resources.json",
+    "resources_summary": {
+      "sample_interval_s": 0.5,
+      "error": null,
+      "rss_peak_bytes": 58897006592,
+      "private_peak_bytes": 83413811200,
+      "card_vram_peak_bytes": 16088309760,
+      "system_available_min_bytes": 57408385024,
+      "process_page_fault_delta": 83624
+    }
+  },
+  "daily_new_pid": 23680,
+  "health_after": {
+    "status": "ok",
+    "max_context": 65536,
+    "model": "qwen3.8-flash-next-iq3_s",
+    "images": false,
+    "api_key": false,
+    "image_generation": false,
+    "loaded": true,
+    "service": "strata"
+  },
+  "daily_restored": true,
+  "qwen_request_passed": true,
+  "config_after": [
+    {
+      "path": "E:\\Coder\\LLM\\Strata\\strata-iq3_s.json",
+      "sha256": "520c62f6c114743830be4c0f1fb6eb4b4b0a56cac85c4749f7f49e46ebc62d39"
+    },
+    {
+      "path": "E:\\Coder\\LLM\\Strata\\strata-qwen36-q4.json",
+      "sha256": "c61a8f23fe12201bb14d8270dccf50e5519659b01bf75636afa9c7ac7f3314c2"
+    },
+    {
+      "path": "E:\\Coder\\LLM\\Strata\\strata-deepseek41-ist-das-2.25bpw.json",
+      "sha256": "2011fe541fbabf6fc833ea4d18f6f4c0ce8640437d5396135625742b51e1a449"
+    }
+  ],
+  "passed": true,
+  "finished": "2026-10-29T23:46:42.416301+08:00"
+}
