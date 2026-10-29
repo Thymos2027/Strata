@@ -81,6 +81,24 @@ performance-04数据阶段停止DeepSeek下载器的Python/curl进程，等待�
 
 ## 证据和限制
 
+### 已在原讨论发布（2026-10-29）
+
+按用户选择，仅发布[#1912评论](https://github.com/Niko1221/Strata/pull/1912#issuecomment-6494468322)，不另提报告PR、不重开原讨论。作者Thymos2027，正文与[本地评论](comment-1912.md)逐字回读一致，原PR仍closed/unmerged。GitHub连接器对上游写评论返回403，随后使用本机已登录同一账户的GitHub CLI发布成功；无重复评论。
+
+证据链接放在用户fork的独立`evidence/flash-next-affinity-20261029`分支，固定commit `d973440a29e6efc8106ea7d8f4ebe6d6cbc6035c`：[英文摘要、数据和日志](https://github.com/Thymos2027/Strata/blob/d973440a29e6efc8106ea7d8f4ebe6d6cbc6035c/bench/results/2026-10-29-affinity-i7-12700/README.md)。共22文件、615605 bytes，仅该证据目录；未更新fork main或既有Qwen3.6 PR。全部22文件线上回读内容与本地包一致，事后添加的离线校验器通过文件哈希、45条输出身份、15份日志及15组主指标配对核对。未运行新的GPU实验，不将此紧凑证据包称为便携GPU复现工具。
+
+导出脚本：[prepare_comment_evidence.py](prepare_comment_evidence.py)；本机完整发布材料为`performance-04/comment-evidence/`与`comment-request.json`。初次脱敏扫描把https网址误判为Windows盘符，在上传前修正盘符匹配边界后全部通过；不涉及实验阈值或数据改动。
+
+### 较早的发布评估（2026-10-29，后续采用上文评论方案）
+
+检索了上游开放/关闭的亲和性与校准讨论。[原measure提案#1912](https://github.com/Niko1221/Strata/pull/1912)已关闭且未合并，正文已有另一Windows混合核CPU的选择波动与10% P核偏好说明；本轮不能把该行为称为新发现或新功能。[#3522](https://github.com/Niko1221/Strata/pull/3522)针对PCIe/draft-floor确认噪声，本实验不是该PR的验证。已有[5060 Ti/i7-14700 Linux报告#4401](https://github.com/Niko1221/Strata/pull/4401)，但配置/CPU/OS/协议不同，不能直接跨报告算加速。
+
+本轮值得分享的新增信息是Windows/i7-12700/DDR4/0.1.52下，实际固定缓存、15次独立启动/45条输出一致请求的all/P/measure对照：合计配对比中位数接近1、无稳定错选，P累计CPU时间每类5/5较低，启动选择并非五次相同。属于非标准受控社区报告，不能冠以标准协议合格结果、通用提速、低功耗或bug修复。
+
+优先在#1912原讨论补充精简独立证据；若希望长期收录，可另开仅增加`bench/results/<date>-community-.../`的`[Benchmark]`报告PR并引用原讨论。依据[贡献规则](../../../CONTRIBUTING.md)和[社区测量指南](../../../docs/COMMUNITY_BENCHMARKS.md)，结果型PR可以直接提交。当前本机报告尚非完整发布包：需制作英文摘要、脱敏配置/启动与失败日志、保留确切输入/全部配对和来源，并解决脚本对本机历史报告目录的依赖；原实跑脚本与事后便携入口须区分验证范围。不能把本段评估记为已完成打包或已发布。
+
+此前Qwen3.6报告[PR#4577](https://github.com/Niko1221/Strata/pull/4577)评估时实时回读仍open、未合并；Flash-Next是独立问题，不追加到该PR。评估时尚未发布，后续用户只选择原讨论评论，实际发布见上文。
+
 原始完整证据：本机`execution-01..04/`、`performance-01..04/`及对应console/stderr日志；有效正式矩阵仅采用performance-04。运行脚本是[run_experiment.py](run_experiment.py)，续跑正式矩阵是[run_performance.py](run_performance.py)，收尾汇总为[analyze.py](analyze.py)。本机路径、完整资源样本与配置默认不进Git。
 
 本轮只验证当前单机受控配置。没有日常MTP阈值0.5、lookup/suffix默认、自动PCIe/缓存、prompt CPU share、route-tail策略、其他上下文/预算、并发、其他CPU或后端的性能结论。measure的10% P核偏好是已知设计；只有真实请求方向、波动和资源代价一起支持时，才考虑后续最小改动。
