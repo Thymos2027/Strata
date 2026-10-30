@@ -1,0 +1,101 @@
+{
+  "verified_at": "2026-10-30T12:15:35.498394+08:00",
+  "all_320_stages_byte_conserved": true,
+  "resident_fraction_exact": "63/256",
+  "all_320_dependency_chains_checked": true,
+  "arms": [
+    {
+      "arm": "off",
+      "sqlite_sha256": "5b5670d20c8832447d4f0837238973e88c8744959276c859ded3d0880eddb58e",
+      "stages": 320,
+      "buffer_copy_event_ids": [
+        38,
+        40
+      ],
+      "stream_metadata": [
+        {
+          "streamId": 13,
+          "hwId": 0,
+          "vmId": 1,
+          "processId": 27868,
+          "contextId": 1,
+          "priority": 0,
+          "flag": 2,
+          "priority_signed": 0
+        },
+        {
+          "streamId": 14,
+          "hwId": 0,
+          "vmId": 1,
+          "processId": 27868,
+          "contextId": 1,
+          "priority": 0,
+          "flag": 2,
+          "priority_signed": 0
+        }
+      ],
+      "overlap": {
+        "HtoD_DtoD_ms": 0.0,
+        "DtoD_kernel_ms": 0.0,
+        "HtoD_ms": 6302.513214,
+        "DtoD_ms": 0.0
+      },
+      "all_copy_device_timestamps_zero": true,
+      "dependency_scope": "CPU enqueue/eventSyncId linkage; not measured GPU event completion times"
+    },
+    {
+      "arm": "on",
+      "sqlite_sha256": "cf8e3f3791a980575a343a525d501319df54a7f8798ee5d5eabbd33ef764cbcf",
+      "stages": 320,
+      "buffer_copy_event_ids": [
+        40,
+        42
+      ],
+      "stream_metadata": [
+        {
+          "streamId": 13,
+          "hwId": 0,
+          "vmId": 1,
+          "processId": 26648,
+          "contextId": 1,
+          "priority": 0,
+          "flag": 2,
+          "priority_signed": 0
+        },
+        {
+          "streamId": 14,
+          "hwId": 0,
+          "vmId": 1,
+          "processId": 26648,
+          "contextId": 1,
+          "priority": 0,
+          "flag": 2,
+          "priority_signed": 0
+        },
+        {
+          "streamId": 15,
+          "hwId": 0,
+          "vmId": 1,
+          "processId": 26648,
+          "contextId": 1,
+          "priority": 4294967291,
+          "flag": 2,
+          "priority_signed": -5
+        }
+      ],
+      "overlap": {
+        "HtoD_DtoD_ms": 193.962169,
+        "DtoD_kernel_ms": 9.105335,
+        "HtoD_ms": 4792.990507,
+        "DtoD_ms": 208.492741
+      },
+      "all_copy_device_timestamps_zero": true,
+      "dependency_scope": "CPU enqueue/eventSyncId linkage; not measured GPU event completion times"
+    }
+  ],
+  "limits": [
+    "no third arm; priority and independent-stream benefits not isolated",
+    "CUDA event device completion timestamps are zero; no GPU wait duration claim",
+    "not a byte dump of staging memory; no new timing sample"
+  ]
+}
