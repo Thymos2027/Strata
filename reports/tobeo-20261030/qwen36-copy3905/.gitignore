@@ -1,0 +1,8 @@
+*
+!.gitignore
+!*.md
+!*.py
+!candidate.patch
+!summary.json
+!pairs.csv
+!upstream-summary.json

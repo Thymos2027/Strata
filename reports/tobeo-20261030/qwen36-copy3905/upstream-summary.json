@@ -1,0 +1,388 @@
+{
+  "date": "2026-10-30",
+  "queries": [
+    {
+      "kind": "issue",
+      "query": "\"STRATA_Q36_STREAM_ALL\"",
+      "matches": [
+        {
+          "title": " [Engine] qwen36 (qwen35moe) on sm_61 Pascal 16GB: expert cache fixed at 73/256 in VRAM, 18.75 GiB all in pageable host memory, 6.98 GiB VRAM free unused, runtime flags ignored",
+          "url": "https://github.com/Niko1221/Strata/issues/3508"
+        }
+      ]
+    },
+    {
+      "kind": "issue",
+      "query": "\"stream_kick\"",
+      "matches": [
+        {
+          "title": "[Engine] q36: STRATA_Q36_SINGLE_STAGE=1 keeps one staging buffer, and STRATA_Q36_NO_MMQ takes a number",
+          "url": "https://github.com/Niko1221/Strata/pull/3841"
+        }
+      ]
+    },
+    {
+      "kind": "issue",
+      "query": "\"Qwen3.6\" \"prefill\"",
+      "matches": [
+        {
+          "title": "[Engine] [TUI] Qwen3.6A3B fails with out of memory with recommended configs while Qwen3.8-Flash-Next unsloth Q4 runs fine ",
+          "url": "https://github.com/Niko1221/Strata/issues/2747"
+        },
+        {
+          "title": "[Engine] Qwen3.6-35B-A3B decode falls with context (V100: 109 to 14.6 tok/s at 114K on 0.2.0-beta); llama.cpp holds ~90",
+          "url": "https://github.com/Niko1221/Strata/issues/2464"
+        },
+        {
+          "title": "[Engine] Strata 0.2.2 qwen36-ud-q6_k_xl error",
+          "url": "https://github.com/Niko1221/Strata/issues/3687"
+        },
+        {
+          "title": "[Engine] server_exited (exit code 1): EngineDied: the engine exited before it was ready",
+          "url": "https://github.com/Niko1221/Strata/issues/4215"
+        },
+        {
+          "title": "[Engine] qwen35moe on gfx1030: turn STRATA_DENSE_MMQ on in setup's config (prompts +47-67% on an RX 6900 XT, KL 0.0033)",
+          "url": "https://github.com/Niko1221/Strata/issues/3926"
+        },
+        {
+          "title": "[Engine] MTP drafts never proposed on sm_89 (RTX 4060 Ti 16GB, hybrid mode, drafts accepted 0 of 0)",
+          "url": "https://github.com/Niko1221/Strata/issues/4575"
+        },
+        {
+          "title": "[Engine] q36 (qwen35moe) KV cache is always fp32: --kv / --kv-resident are not parsed, so 256K context OOMs on a 16 GB card",
+          "url": "https://github.com/Niko1221/Strata/issues/3303"
+        },
+        {
+          "title": "[Engine] qwen35moe: the model-card sampling is applied silently and disables MTP drafting (drafts accepted 0 of 0)",
+          "url": "https://github.com/Niko1221/Strata/issues/3354"
+        },
+        {
+          "title": "[Engine] Proposal: add GLM-5.3-Flash and MiniMax-M3.1-Flash as model families (from Project Maya)",
+          "url": "https://github.com/Niko1221/Strata/issues/4319"
+        },
+        {
+          "title": "[Other] gfx906 / MI50: reproducible Linux releases and community validation",
+          "url": "https://github.com/Niko1221/Strata/issues/2883"
+        },
+        {
+          "title": "[RFC/PoC] Native Chunked Online Softmax Prefill for Dense Models (Qwen3.6) on HIP (Tested on gfx1031)",
+          "url": "https://github.com/Niko1221/Strata/issues/1685"
+        },
+        {
+          "title": "MTP block loaded on Qwen3.6-35B-A3B-UD-Q4_K_XL made output slowly",
+          "url": "https://github.com/Niko1221/Strata/issues/3116"
+        },
+        {
+          "title": "[Benchmark] Windows Strix Halo (gfx1151) suite on 0.1.45: --mmap-experts + STRATA_SH_STREAM=0 decode +12-15%",
+          "url": "https://github.com/Niko1221/Strata/issues/3398"
+        },
+        {
+          "title": "[Benchmark] RTX 3090 Ti, 24 GiB VRAM, 32GB RAM qwen3.6-35b-a3b-ud-q4_k_xl",
+          "url": "https://github.com/Niko1221/Strata/issues/3775"
+        },
+        {
+          "title": "Qwen3.6 2-bit GSQ-hybrid (Q2_0 experts) crashes 0xC0000005 in the hybrid CPU expert pool; Windows HIP (RX 7800 XT)",
+          "url": "https://github.com/Niko1221/Strata/issues/2947"
+        },
+        {
+          "title": "Qwen3.6-35B-A3B UD-Q4_K_XL: Low GPU utilization, limited generation speed, and MTP acceptance concerns",
+          "url": "https://github.com/Niko1221/Strata/issues/2982"
+        },
+        {
+          "title": "[Benchmark] RTX 5080 + 2x Xeon 8176: IQ3_S, NVFP4-QAD and IQ3_XXS in the standard protocol, with quant quality",
+          "url": "https://github.com/Niko1221/Strata/issues/4416"
+        },
+        {
+          "title": "Feature request: KV cache quantization (`--kv int8` / `--kv q4_0`) for the Qwen3.6-35B-A3B (strata-q36) path",
+          "url": "https://github.com/Niko1221/Strata/issues/2693"
+        },
+        {
+          "title": "Windows app: Qwen3.6 install reported as \"files missing\" (--mtp 2 checked as a folder) and Gyro-S low-RAM prep fails (missing --compat-bf16)",
+          "url": "https://github.com/Niko1221/Strata/issues/3298"
+        },
+        {
+          "title": "[Engine] gfx906 (2x MI50): build fails on 0.1.44+ and 0.2.0-beta — cublas* in qwen35, cuda.h in the nvfp4 MMQ target",
+          "url": "https://github.com/Niko1221/Strata/issues/3172"
+        }
+      ]
+    },
+    {
+      "kind": "pr",
+      "query": "\"stream_kick\"",
+      "matches": [
+        {
+          "title": "[Engine] q36: STRATA_Q36_SINGLE_STAGE=1 keeps one staging buffer, and STRATA_Q36_NO_MMQ takes a number",
+          "url": "https://github.com/Niko1221/Strata/pull/3841"
+        }
+      ]
+    },
+    {
+      "kind": "pr",
+      "query": "\"q36\" \"stream\"",
+      "matches": [
+        {
+          "title": "[Engine] qwen35: faster decode chain and prompt expert stream (two kernels always on, two opt-in flags)",
+          "url": "https://github.com/Niko1221/Strata/pull/3905"
+        },
+        {
+          "title": "[Engine] qwen35: MTP drafting for sampled requests (--mtp-sampled, --spec-min-p, --sample-gpu)",
+          "url": "https://github.com/Niko1221/Strata/pull/3908"
+        },
+        {
+          "title": "[Engine] qwen35: decode attention that holds up at long context (--kv int8 / fp16 / k8v4, --gqa-attn, --attn-mma)",
+          "url": "https://github.com/Niko1221/Strata/pull/3903"
+        },
+        {
+          "title": "[Engine] qwen35: hybrid mode sizes the CPU half by the rows that reach it and keeps 256 MiB free (default change)",
+          "url": "https://github.com/Niko1221/Strata/pull/3910"
+        },
+        {
+          "title": "[Engine] qwen35: hybrid mode: expert placement opt-ins, --async-swaps and --lend-staging",
+          "url": "https://github.com/Niko1221/Strata/pull/3906"
+        },
+        {
+          "title": "[Engine] qwen35: CPU expert pool: phase counters and an opt-in warm-up of the predicted experts (--pool-warm)",
+          "url": "https://github.com/Niko1221/Strata/pull/3907"
+        },
+        {
+          "title": "[Engine] q36: a 4096-token prompt chunk in the hybrid mode when the card has room",
+          "url": "https://github.com/Niko1221/Strata/pull/4335"
+        },
+        {
+          "title": "[Engine] opt-in qwen35moe F16 inference, validated on Sage-A1.5",
+          "url": "https://github.com/Niko1221/Strata/pull/3641"
+        },
+        {
+          "title": "[Engine] qwen35: agent turns continue from cached state (--snapshots, --snapshot-host, splice_turns)",
+          "url": "https://github.com/Niko1221/Strata/pull/3909"
+        },
+        {
+          "title": "[Engine] gfx906/HIP: `__shared__ alignas(16) int4` does not compile (clang 18 / ROCm 6.3.3)",
+          "url": "https://github.com/Niko1221/Strata/pull/4151"
+        },
+        {
+          "title": "[Engine] q36: STRATA_Q36_SINGLE_STAGE=1 keeps one staging buffer, and STRATA_Q36_NO_MMQ takes a number",
+          "url": "https://github.com/Niko1221/Strata/pull/3841"
+        },
+        {
+          "title": "Experimental gfx803 (RX 580) Q36 Linux path",
+          "url": "https://github.com/Niko1221/Strata/pull/2765"
+        },
+        {
+          "title": "Qwen3.6: opt-in int8 K/V cache and single staging buffer",
+          "url": "https://github.com/Niko1221/Strata/pull/2742"
+        },
+        {
+          "title": "qwen35/q36: --kv - int8 K/V caches (codes + a FP16 scale per 64 values)",
+          "url": "https://github.com/Niko1221/Strata/pull/2698"
+        },
+        {
+          "title": "[Engine] gfx906/HIP: `__shared__ alignas(16) int4` does not compile (clang 18 / ROCm 6.3.3)",
+          "url": "https://github.com/Niko1221/Strata/pull/3078"
+        }
+      ]
+    },
+    {
+      "kind": "pr",
+      "query": "\"Qwen3.6\" \"prefill\"",
+      "matches": [
+        {
+          "title": "[Engine] [TUI] Qwen3.6A3B fails with out of memory with recommended configs while Qwen3.8-Flash-Next unsloth Q4 runs fine ",
+          "url": "https://github.com/Niko1221/Strata/issues/2747"
+        },
+        {
+          "title": "[Engine] Qwen3.6-35B-A3B decode falls with context (V100: 109 to 14.6 tok/s at 114K on 0.2.0-beta); llama.cpp holds ~90",
+          "url": "https://github.com/Niko1221/Strata/issues/2464"
+        },
+        {
+          "title": "[Engine] Strata 0.2.2 qwen36-ud-q6_k_xl error",
+          "url": "https://github.com/Niko1221/Strata/issues/3687"
+        },
+        {
+          "title": "[Engine] server_exited (exit code 1): EngineDied: the engine exited before it was ready",
+          "url": "https://github.com/Niko1221/Strata/issues/4215"
+        },
+        {
+          "title": "[Engine] qwen35moe on gfx1030: turn STRATA_DENSE_MMQ on in setup's config (prompts +47-67% on an RX 6900 XT, KL 0.0033)",
+          "url": "https://github.com/Niko1221/Strata/issues/3926"
+        },
+        {
+          "title": "[Engine] MTP drafts never proposed on sm_89 (RTX 4060 Ti 16GB, hybrid mode, drafts accepted 0 of 0)",
+          "url": "https://github.com/Niko1221/Strata/issues/4575"
+        },
+        {
+          "title": "[Engine] q36 (qwen35moe) KV cache is always fp32: --kv / --kv-resident are not parsed, so 256K context OOMs on a 16 GB card",
+          "url": "https://github.com/Niko1221/Strata/issues/3303"
+        },
+        {
+          "title": "[Engine] qwen35moe: the model-card sampling is applied silently and disables MTP drafting (drafts accepted 0 of 0)",
+          "url": "https://github.com/Niko1221/Strata/issues/3354"
+        },
+        {
+          "title": "[Engine] Proposal: add GLM-5.3-Flash and MiniMax-M3.1-Flash as model families (from Project Maya)",
+          "url": "https://github.com/Niko1221/Strata/issues/4319"
+        },
+        {
+          "title": "[Other] gfx906 / MI50: reproducible Linux releases and community validation",
+          "url": "https://github.com/Niko1221/Strata/issues/2883"
+        },
+        {
+          "title": "[RFC/PoC] Native Chunked Online Softmax Prefill for Dense Models (Qwen3.6) on HIP (Tested on gfx1031)",
+          "url": "https://github.com/Niko1221/Strata/issues/1685"
+        },
+        {
+          "title": "MTP block loaded on Qwen3.6-35B-A3B-UD-Q4_K_XL made output slowly",
+          "url": "https://github.com/Niko1221/Strata/issues/3116"
+        },
+        {
+          "title": "[Benchmark] Windows Strix Halo (gfx1151) suite on 0.1.45: --mmap-experts + STRATA_SH_STREAM=0 decode +12-15%",
+          "url": "https://github.com/Niko1221/Strata/issues/3398"
+        },
+        {
+          "title": "[Benchmark] RTX 3090 Ti, 24 GiB VRAM, 32GB RAM qwen3.6-35b-a3b-ud-q4_k_xl",
+          "url": "https://github.com/Niko1221/Strata/issues/3775"
+        },
+        {
+          "title": "Qwen3.6 2-bit GSQ-hybrid (Q2_0 experts) crashes 0xC0000005 in the hybrid CPU expert pool; Windows HIP (RX 7800 XT)",
+          "url": "https://github.com/Niko1221/Strata/issues/2947"
+        },
+        {
+          "title": "Qwen3.6-35B-A3B UD-Q4_K_XL: Low GPU utilization, limited generation speed, and MTP acceptance concerns",
+          "url": "https://github.com/Niko1221/Strata/issues/2982"
+        },
+        {
+          "title": "[Benchmark] RTX 5080 + 2x Xeon 8176: IQ3_S, NVFP4-QAD and IQ3_XXS in the standard protocol, with quant quality",
+          "url": "https://github.com/Niko1221/Strata/issues/4416"
+        },
+        {
+          "title": "Feature request: KV cache quantization (`--kv int8` / `--kv q4_0`) for the Qwen3.6-35B-A3B (strata-q36) path",
+          "url": "https://github.com/Niko1221/Strata/issues/2693"
+        },
+        {
+          "title": "Windows app: Qwen3.6 install reported as \"files missing\" (--mtp 2 checked as a folder) and Gyro-S low-RAM prep fails (missing --compat-bf16)",
+          "url": "https://github.com/Niko1221/Strata/issues/3298"
+        },
+        {
+          "title": "[Engine] gfx906 (2x MI50): build fails on 0.1.44+ and 0.2.0-beta — cublas* in qwen35, cuda.h in the nvfp4 MMQ target",
+          "url": "https://github.com/Niko1221/Strata/issues/3172"
+        }
+      ]
+    },
+    {
+      "kind": "pr",
+      "query": "\"hybrid\" \"copy\"",
+      "matches": [
+        {
+          "title": "[Engine] q36: give the packed Q8_0 decode copies back to the expert slots in the hybrid mode",
+          "url": "https://github.com/Niko1221/Strata/pull/4347"
+        },
+        {
+          "title": "[Engine] let a HIP helper read pinned expert rows in place",
+          "url": "https://github.com/Niko1221/Strata/pull/3553"
+        },
+        {
+          "title": "[Engine] qwen35: hybrid mode: expert placement opt-ins, --async-swaps and --lend-staging",
+          "url": "https://github.com/Niko1221/Strata/pull/3906"
+        },
+        {
+          "title": "[Engine] fix the host memory probe on hybrid cgroup hosts and on WSL2 without systemd",
+          "url": "https://github.com/Niko1221/Strata/pull/3629"
+        },
+        {
+          "title": "[Engine] add an opt-in CUDA and HIP hybrid build",
+          "url": "https://github.com/Niko1221/Strata/pull/3551"
+        },
+        {
+          "title": "[Engine] skip file-tier experts while a helper GPU is attached",
+          "url": "https://github.com/Niko1221/Strata/pull/3552"
+        },
+        {
+          "title": "[Engine] qwen35: CPU expert pool: phase counters and an opt-in warm-up of the predicted experts (--pool-warm)",
+          "url": "https://github.com/Niko1221/Strata/pull/3907"
+        },
+        {
+          "title": "[Engine] qwen35: hybrid mode sizes the CPU half by the rows that reach it and keeps 256 MiB free (default change)",
+          "url": "https://github.com/Niko1221/Strata/pull/3910"
+        },
+        {
+          "title": "[Engine] opt-in qwen35moe F16 inference, validated on Sage-A1.5",
+          "url": "https://github.com/Niko1221/Strata/pull/3641"
+        },
+        {
+          "title": "[Engine] DS4_LOOKUP: draft a round from the request's own history (opt-in)",
+          "url": "https://github.com/Niko1221/Strata/pull/4619"
+        },
+        {
+          "title": "[Engine] qwen35: faster decode chain and prompt expert stream (two kernels always on, two opt-in flags)",
+          "url": "https://github.com/Niko1221/Strata/pull/3905"
+        },
+        {
+          "title": "[Engine] qwen35: agent turns continue from cached state (--snapshots, --snapshot-host, splice_turns)",
+          "url": "https://github.com/Niko1221/Strata/pull/3909"
+        },
+        {
+          "title": "[Engine] q36: MTP drafts for sampled requests behind STRATA_Q36_MTP_SAMPLED (stacked on #3678)",
+          "url": "https://github.com/Niko1221/Strata/pull/3773"
+        },
+        {
+          "title": "[Engine] Metal: opt-in fp16-slab expert path (mpp) for streaming prompt chunks",
+          "url": "https://github.com/Niko1221/Strata/pull/2645"
+        },
+        {
+          "title": "Fix Qwen3.6 hybrid staging allocation on small GPUs",
+          "url": "https://github.com/Niko1221/Strata/pull/2917"
+        },
+        {
+          "title": "[Engine] q36: parallelise the expert copy at load",
+          "url": "https://github.com/Niko1221/Strata/pull/3827"
+        },
+        {
+          "title": "[Engine] q36: parallelise the expert copy at load",
+          "url": "https://github.com/Niko1221/Strata/pull/2889"
+        },
+        {
+          "title": "[Engine] qwen35: MTP drafting for sampled requests (--mtp-sampled, --spec-min-p, --sample-gpu)",
+          "url": "https://github.com/Niko1221/Strata/pull/3908"
+        },
+        {
+          "title": "verify: the batched K/V append writes a streamed K8V4 state's host copy (#1188, #1169)",
+          "url": "https://github.com/Niko1221/Strata/pull/1264"
+        },
+        {
+          "title": "[Engine] Native RDNA4 (gfx1201) NVFP4 engine (--gfx1201-nvfp4)",
+          "url": "https://github.com/Niko1221/Strata/pull/4114"
+        }
+      ]
+    }
+  ],
+  "pulls": {
+    "3841": {
+      "title": "[Engine] q36: STRATA_Q36_SINGLE_STAGE=1 keeps one staging buffer, and STRATA_Q36_NO_MMQ takes a number",
+      "state": "closed",
+      "merged_at": null,
+      "head": "907a1452f092c55e67040d29f765bf61b0014b10",
+      "base": "7ddc17a38fe7f31637e895ecfba58c2cd43d65ec",
+      "author": "ggeorgovassilis",
+      "comments": 0
+    },
+    "3905": {
+      "title": "[Engine] qwen35: faster decode chain and prompt expert stream (two kernels always on, two opt-in flags)",
+      "state": "open",
+      "merged_at": null,
+      "head": "b398f571f738293fe2ef671f00ac86e98b28eae1",
+      "base": "8183c6b67162340c09b67360860177c577a65f2e",
+      "author": "xyehya",
+      "comments": 0
+    },
+    "3906": {
+      "title": "[Engine] qwen35: hybrid mode: expert placement opt-ins, --async-swaps and --lend-staging",
+      "state": "open",
+      "merged_at": null,
+      "head": "4f136754947afc4df4589bfe24f0a4127d4c91fd",
+      "base": "8183c6b67162340c09b67360860177c577a65f2e",
+      "author": "xyehya",
+      "comments": 0
+    }
+  }
+}
