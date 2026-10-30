@@ -1,0 +1,6 @@
+{"test":"pinned_H2D","bytes_per_copy":67108864,"count":128,"event_GBps":24.880983,"wall_GBps":24.867403}
+{"test":"pinned_D2H","bytes_per_copy":67108864,"count":128,"event_GBps":28.417165,"wall_GBps":28.402675}
+{"test":"D2D_oneway_bytes","bytes_per_copy":67108864,"count":256,"event_GBps":193.831964,"wall_GBps":187.873732}
+{"test":"CPU_memcpy","GBps":17.821411}
+{"test":"mapped_GPU_read","GBps":23.566318,"spot_checks_passed":true}
+

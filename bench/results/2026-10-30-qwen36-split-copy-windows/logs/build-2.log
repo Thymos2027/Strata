@@ -1,0 +1,40 @@
+Internal ctest changing into directory: <REPO_ROOT>/build-native-baseline/build-copy3905-af08278c-cuda132-sm120
+Test project <REPO_ROOT>/build-native-baseline/build-copy3905-af08278c-cuda132-sm120
+      Start   1: conversation_cache_test
+ 1/17 Test   #1: conversation_cache_test ...........   Passed    0.48 sec
+      Start   2: conversation_split_failure_test
+ 2/17 Test   #2: conversation_split_failure_test ...   Passed    0.05 sec
+      Start   3: conversation_memory_test
+ 3/17 Test   #3: conversation_memory_test ..........   Passed    0.04 sec
+      Start   4: conversation_file_test
+ 4/17 Test   #4: conversation_file_test ............   Passed    3.12 sec
+      Start   5: session_save_reclaim_test
+ 5/17 Test   #5: session_save_reclaim_test .........   Passed    0.15 sec
+      Start  10: model_family_test
+ 6/17 Test  #10: model_family_test .................   Passed    0.19 sec
+      Start 119: qwen35_sampling_test
+ 7/17 Test #119: qwen35_sampling_test ..............   Passed    0.52 sec
+      Start 122: nv_defaults_test
+ 8/17 Test #122: nv_defaults_test ..................   Passed    0.05 sec
+      Start 130: message_boundary_test
+ 9/17 Test #130: message_boundary_test .............   Passed    0.05 sec
+      Start 131: split_ring_test
+10/17 Test #131: split_ring_test ...................   Passed    0.06 sec
+      Start 132: conv_cache_test
+11/17 Test #132: conv_cache_test ...................   Passed    0.05 sec
+      Start 135: draft_kv_plan_test
+12/17 Test #135: draft_kv_plan_test ................   Passed    0.05 sec
+      Start 136: coupled_draft_test
+13/17 Test #136: coupled_draft_test ................   Passed    0.04 sec
+      Start 137: spec_prob_test
+14/17 Test #137: spec_prob_test ....................   Passed    4.67 sec
+      Start 144: bf16_bits_test
+15/17 Test #144: bf16_bits_test ....................   Passed    8.32 sec
+      Start 145: batch_rows_test
+16/17 Test #145: batch_rows_test ...................   Passed    0.08 sec
+      Start 146: batch_groups_test
+17/17 Test #146: batch_groups_test .................   Passed    0.04 sec
+
+100% tests passed, 0 tests failed out of 17
+
+Total Test time (real) =  18.00 sec

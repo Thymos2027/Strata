@@ -1,0 +1,724 @@
+{
+  "note": "Commands actually recorded, with path placeholders; no additional GPU rerun performed.",
+  "build": [
+    {
+      "command": [
+        "<VS_BUILDTOOLS>\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe",
+        "-S",
+        "<REPO_ROOT>\\build-native-baseline\\src-copy3905-af08278c",
+        "-B",
+        "<REPO_ROOT>\\build-native-baseline\\build-copy3905-af08278c-cuda132-sm120",
+        "-G",
+        "Ninja",
+        "-DCMAKE_BUILD_TYPE=Release",
+        "-DSTRATA_ENABLE_CUDA=ON",
+        "-DCMAKE_CUDA_ARCHITECTURES=120",
+        "-DCUDAToolkit_ROOT=<REPO_ROOT>/build-native-baseline/toolchains/cuda-13.2.0",
+        "-DCMAKE_CUDA_COMPILER=<REPO_ROOT>/build-native-baseline/toolchains/cuda-13.2.0/bin/nvcc.exe",
+        "-DCMAKE_C_COMPILER=<VS_BUILDTOOLS>/VC/Tools/MSVC/14.42.34433/bin/HostX64/x64/cl.exe",
+        "-DCMAKE_CXX_COMPILER=<VS_BUILDTOOLS>/VC/Tools/MSVC/14.42.34433/bin/HostX64/x64/cl.exe",
+        "-DCMAKE_CUDA_HOST_COMPILER=<VS_BUILDTOOLS>/VC/Tools/MSVC/14.42.34433/bin/HostX64/x64/cl.exe",
+        "-DSTRATA_GGML_DIR=<REPO_ROOT>/build-native-baseline/deps-main-46c152a1/llama.cpp-3cf03257f219afbe7334045ff7c6a06ac68c627d",
+        "-DSTRATA_BUILD_TESTS=ON",
+        "-DSTRATA_BUILD_CONVERSATION_TESTS=ON",
+        "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON"
+      ],
+      "exit_code": 0,
+      "seconds": 21.828000000008615
+    },
+    {
+      "command": [
+        "<VS_BUILDTOOLS>\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe",
+        "--build",
+        "<REPO_ROOT>\\build-native-baseline\\build-copy3905-af08278c-cuda132-sm120",
+        "--target",
+        "strata-q36",
+        "strata_kq",
+        "conversation_cache_test",
+        "conversation_split_failure_test",
+        "conversation_memory_test",
+        "conversation_file_test",
+        "session_save_reclaim_test",
+        "message_boundary_test",
+        "split_ring_test",
+        "conv_cache_test",
+        "draft_kv_plan_test",
+        "coupled_draft_test",
+        "spec_prob_test",
+        "bf16_bits_test",
+        "batch_rows_test",
+        "batch_groups_test",
+        "model_family_test",
+        "qwen35_sampling_test",
+        "nv_defaults_test",
+        "--parallel",
+        "8"
+      ],
+      "exit_code": 0,
+      "seconds": 472.875
+    },
+    {
+      "command": [
+        "<VS_BUILDTOOLS>\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\ctest.exe",
+        "--test-dir",
+        "<REPO_ROOT>\\build-native-baseline\\build-copy3905-af08278c-cuda132-sm120",
+        "--output-on-failure",
+        "-R",
+        "^(conversation_cache_test|conversation_split_failure_test|conversation_memory_test|conversation_file_test|session_save_reclaim_test|message_boundary_test|split_ring_test|conv_cache_test|draft_kv_plan_test|coupled_draft_test|spec_prob_test|bf16_bits_test|batch_rows_test|batch_groups_test|model_family_test|qwen35_sampling_test|nv_defaults_test)$"
+      ],
+      "exit_code": 0,
+      "seconds": 18.312999999994645
+    },
+    {
+      "command": [
+        "<PYTHON_ENV>\\Scripts\\ninja.exe",
+        "-C",
+        "<REPO_ROOT>\\build-native-baseline\\build-copy3905-af08278c-cuda132-sm120",
+        "-n",
+        "strata-q36",
+        "strata_kq",
+        "conversation_cache_test",
+        "conversation_split_failure_test",
+        "conversation_memory_test",
+        "conversation_file_test",
+        "session_save_reclaim_test",
+        "message_boundary_test",
+        "split_ring_test",
+        "conv_cache_test",
+        "draft_kv_plan_test",
+        "coupled_draft_test",
+        "spec_prob_test",
+        "bf16_bits_test",
+        "batch_rows_test",
+        "batch_groups_test",
+        "model_family_test",
+        "qwen35_sampling_test",
+        "nv_defaults_test"
+      ],
+      "exit_code": 0,
+      "seconds": 0.030999999988125637
+    }
+  ],
+  "numeric": [
+    [
+      "<REPO_ROOT>\\reports\\tobeo-20261030\\qwen36-copy3905\\adapter-baseline\\strata-q36-file.exe",
+      "--native",
+      "<MODEL_FILE>",
+      "--max-context",
+      "32768",
+      "--prefill",
+      "2048",
+      "--pool-workers",
+      "7",
+      "--mtp",
+      "0",
+      "--expert-slots",
+      "63",
+      "--tokens-file",
+      "<REPO_ROOT>\\reports\\tobeo-20261030\\qwen36-copy3905\\execution-02\\r0-l1024.tokens",
+      "--force-file",
+      "<REPO_ROOT>\\reports\\tobeo-20261030\\qwen36-copy3905\\execution-02\\r0-l1024.forced",
+      "--dump-full-logits",
+      "<REPO_ROOT>\\reports\\tobeo-20261030\\qwen36-copy3905\\execution-02\\r0-l1024-baseline.f32"
+    ],
+    [
+      "<REPO_ROOT>\\reports\\tobeo-20261030\\qwen36-copy3905\\adapter-candidate\\strata-q36-file.exe",
+      "--native",
+      "<MODEL_FILE>",
+      "--max-context",
+      "32768",
+      "--prefill",
+      "2048",
+      "--pool-workers",
+      "7",
+      "--mtp",
+      "0",
+      "--expert-slots",
+      "63",
+      "--tokens-file",
+      "<REPO_ROOT>\\reports\\tobeo-20261030\\qwen36-copy3905\\execution-02\\r0-l1024.tokens",
+      "--force-file",
+      "<REPO_ROOT>\\reports\\tobeo-20261030\\qwen36-copy3905\\execution-02\\r0-l1024.forced",
+      "--dump-full-logits",
+      "<REPO_ROOT>\\reports\\tobeo-20261030\\qwen36-copy3905\\execution-02\\r0-l1024-off.f32"
+    ],
+    [
+      "<REPO_ROOT>\\reports\\tobeo-20261030\\qwen36-copy3905\\adapter-candidate\\strata-q36-file.exe",
+      "--native",
+      "<MODEL_FILE>",
+      "--max-context",
+      "32768",
+      "--prefill",
+      "2048",
+      "--pool-workers",
+      "7",
+      "--mtp",
+      "0",
+      "--expert-slots",
+      "63",
+      "--split-stage-copy",
+      "--tokens-file",
+      "<REPO_ROOT>\\reports\\tobeo-20261030\\qwen36-copy3905\\execution-02\\r0-l1024.tokens",
+      "--force-file",
+      "<REPO_ROOT>\\reports\\tobeo-20261030\\qwen36-copy3905\\execution-02\\r0-l1024.forced",
+      "--dump-full-logits",
+      "<REPO_ROOT>\\reports\\tobeo-20261030\\qwen36-copy3905\\execution-02\\r0-l1024-on.f32"
+    ],
+    [
+      "<REPO_ROOT>\\reports\\tobeo-20261030\\qwen36-copy3905\\adapter-baseline\\strata-q36-file.exe",
+      "--native",
+      "<MODEL_FILE>",
+      "--max-context",
+      "32768",
+      "--prefill",
+      "2048",
+      "--pool-workers",
+      "7",
+      "--mtp",
+      "0",
+      "--expert-slots",
+      "63",
+      "--tokens-file",
+      "<REPO_ROOT>\\reports\\tobeo-20261030\\qwen36-copy3905\\execution-02\\r0-l16384.tokens",
+      "--force-file",
+      "<REPO_ROOT>\\reports\\tobeo-20261030\\qwen36-copy3905\\execution-02\\r0-l16384.forced",
+      "--dump-full-logits",
+      "<REPO_ROOT>\\reports\\tobeo-20261030\\qwen36-copy3905\\execution-02\\r0-l16384-baseline.f32"
+    ],
+    [
+      "<REPO_ROOT>\\reports\\tobeo-20261030\\qwen36-copy3905\\adapter-candidate\\strata-q36-file.exe",
+      "--native",
+      "<MODEL_FILE>",
+      "--max-context",
+      "32768",
+      "--prefill",
+      "2048",
+      "--pool-workers",
+      "7",
+      "--mtp",
+      "0",
+      "--expert-slots",
+      "63",
+      "--tokens-file",
+      "<REPO_ROOT>\\reports\\tobeo-20261030\\qwen36-copy3905\\execution-02\\r0-l16384.tokens",
+      "--force-file",
+      "<REPO_ROOT>\\reports\\tobeo-20261030\\qwen36-copy3905\\execution-02\\r0-l16384.forced",
+      "--dump-full-logits",
+      "<REPO_ROOT>\\reports\\tobeo-20261030\\qwen36-copy3905\\execution-02\\r0-l16384-off.f32"
+    ],
+    [
+      "<REPO_ROOT>\\reports\\tobeo-20261030\\qwen36-copy3905\\adapter-candidate\\strata-q36-file.exe",
+      "--native",
+      "<MODEL_FILE>",
+      "--max-context",
+      "32768",
+      "--prefill",
+      "2048",
+      "--pool-workers",
+      "7",
+      "--mtp",
+      "0",
+      "--expert-slots",
+      "63",
+      "--split-stage-copy",
+      "--tokens-file",
+      "<REPO_ROOT>\\reports\\tobeo-20261030\\qwen36-copy3905\\execution-02\\r0-l16384.tokens",
+      "--force-file",
+      "<REPO_ROOT>\\reports\\tobeo-20261030\\qwen36-copy3905\\execution-02\\r0-l16384.forced",
+      "--dump-full-logits",
+      "<REPO_ROOT>\\reports\\tobeo-20261030\\qwen36-copy3905\\execution-02\\r0-l16384-on.f32"
+    ]
+  ],
+  "free_generation": [
+    {
+      "tag": "gate-r0-l1024-off",
+      "args": [
+        "--native",
+        "<MODEL_FILE>",
+        "--max-context",
+        "32768",
+        "--prefill",
+        "2048",
+        "--pool-workers",
+        "7",
+        "--mtp",
+        "0",
+        "--expert-slots",
+        "63"
+      ]
+    },
+    {
+      "tag": "gate-r0-l1024-on",
+      "args": [
+        "--native",
+        "<MODEL_FILE>",
+        "--max-context",
+        "32768",
+        "--prefill",
+        "2048",
+        "--pool-workers",
+        "7",
+        "--mtp",
+        "0",
+        "--expert-slots",
+        "63",
+        "--split-stage-copy"
+      ]
+    },
+    {
+      "tag": "gate-r0-l16384-off",
+      "args": [
+        "--native",
+        "<MODEL_FILE>",
+        "--max-context",
+        "32768",
+        "--prefill",
+        "2048",
+        "--pool-workers",
+        "7",
+        "--mtp",
+        "0",
+        "--expert-slots",
+        "63"
+      ]
+    },
+    {
+      "tag": "gate-r0-l16384-on",
+      "args": [
+        "--native",
+        "<MODEL_FILE>",
+        "--max-context",
+        "32768",
+        "--prefill",
+        "2048",
+        "--pool-workers",
+        "7",
+        "--mtp",
+        "0",
+        "--expert-slots",
+        "63",
+        "--split-stage-copy"
+      ]
+    },
+    {
+      "tag": "pair-0-r0-l1024-off",
+      "args": [
+        "--native",
+        "<MODEL_FILE>",
+        "--max-context",
+        "32768",
+        "--prefill",
+        "2048",
+        "--pool-workers",
+        "7",
+        "--mtp",
+        "0",
+        "--expert-slots",
+        "63"
+      ]
+    },
+    {
+      "tag": "pair-0-r0-l1024-on",
+      "args": [
+        "--native",
+        "<MODEL_FILE>",
+        "--max-context",
+        "32768",
+        "--prefill",
+        "2048",
+        "--pool-workers",
+        "7",
+        "--mtp",
+        "0",
+        "--expert-slots",
+        "63",
+        "--split-stage-copy"
+      ]
+    },
+    {
+      "tag": "pair-0-r0-l16384-off",
+      "args": [
+        "--native",
+        "<MODEL_FILE>",
+        "--max-context",
+        "32768",
+        "--prefill",
+        "2048",
+        "--pool-workers",
+        "7",
+        "--mtp",
+        "0",
+        "--expert-slots",
+        "63"
+      ]
+    },
+    {
+      "tag": "pair-0-r0-l16384-on",
+      "args": [
+        "--native",
+        "<MODEL_FILE>",
+        "--max-context",
+        "32768",
+        "--prefill",
+        "2048",
+        "--pool-workers",
+        "7",
+        "--mtp",
+        "0",
+        "--expert-slots",
+        "63",
+        "--split-stage-copy"
+      ]
+    },
+    {
+      "tag": "pair-1-r0-l16384-on",
+      "args": [
+        "--native",
+        "<MODEL_FILE>",
+        "--max-context",
+        "32768",
+        "--prefill",
+        "2048",
+        "--pool-workers",
+        "7",
+        "--mtp",
+        "0",
+        "--expert-slots",
+        "63",
+        "--split-stage-copy"
+      ]
+    },
+    {
+      "tag": "pair-1-r0-l16384-off",
+      "args": [
+        "--native",
+        "<MODEL_FILE>",
+        "--max-context",
+        "32768",
+        "--prefill",
+        "2048",
+        "--pool-workers",
+        "7",
+        "--mtp",
+        "0",
+        "--expert-slots",
+        "63"
+      ]
+    },
+    {
+      "tag": "pair-1-r0-l1024-on",
+      "args": [
+        "--native",
+        "<MODEL_FILE>",
+        "--max-context",
+        "32768",
+        "--prefill",
+        "2048",
+        "--pool-workers",
+        "7",
+        "--mtp",
+        "0",
+        "--expert-slots",
+        "63",
+        "--split-stage-copy"
+      ]
+    },
+    {
+      "tag": "pair-1-r0-l1024-off",
+      "args": [
+        "--native",
+        "<MODEL_FILE>",
+        "--max-context",
+        "32768",
+        "--prefill",
+        "2048",
+        "--pool-workers",
+        "7",
+        "--mtp",
+        "0",
+        "--expert-slots",
+        "63"
+      ]
+    },
+    {
+      "tag": "pair-2-r0-l1024-off",
+      "args": [
+        "--native",
+        "<MODEL_FILE>",
+        "--max-context",
+        "32768",
+        "--prefill",
+        "2048",
+        "--pool-workers",
+        "7",
+        "--mtp",
+        "0",
+        "--expert-slots",
+        "63"
+      ]
+    },
+    {
+      "tag": "pair-2-r0-l1024-on",
+      "args": [
+        "--native",
+        "<MODEL_FILE>",
+        "--max-context",
+        "32768",
+        "--prefill",
+        "2048",
+        "--pool-workers",
+        "7",
+        "--mtp",
+        "0",
+        "--expert-slots",
+        "63",
+        "--split-stage-copy"
+      ]
+    },
+    {
+      "tag": "pair-2-r0-l16384-off",
+      "args": [
+        "--native",
+        "<MODEL_FILE>",
+        "--max-context",
+        "32768",
+        "--prefill",
+        "2048",
+        "--pool-workers",
+        "7",
+        "--mtp",
+        "0",
+        "--expert-slots",
+        "63"
+      ]
+    },
+    {
+      "tag": "pair-2-r0-l16384-on",
+      "args": [
+        "--native",
+        "<MODEL_FILE>",
+        "--max-context",
+        "32768",
+        "--prefill",
+        "2048",
+        "--pool-workers",
+        "7",
+        "--mtp",
+        "0",
+        "--expert-slots",
+        "63",
+        "--split-stage-copy"
+      ]
+    },
+    {
+      "tag": "pair-3-r0-l16384-on",
+      "args": [
+        "--native",
+        "<MODEL_FILE>",
+        "--max-context",
+        "32768",
+        "--prefill",
+        "2048",
+        "--pool-workers",
+        "7",
+        "--mtp",
+        "0",
+        "--expert-slots",
+        "63",
+        "--split-stage-copy"
+      ]
+    },
+    {
+      "tag": "pair-3-r0-l16384-off",
+      "args": [
+        "--native",
+        "<MODEL_FILE>",
+        "--max-context",
+        "32768",
+        "--prefill",
+        "2048",
+        "--pool-workers",
+        "7",
+        "--mtp",
+        "0",
+        "--expert-slots",
+        "63"
+      ]
+    },
+    {
+      "tag": "pair-3-r0-l1024-on",
+      "args": [
+        "--native",
+        "<MODEL_FILE>",
+        "--max-context",
+        "32768",
+        "--prefill",
+        "2048",
+        "--pool-workers",
+        "7",
+        "--mtp",
+        "0",
+        "--expert-slots",
+        "63",
+        "--split-stage-copy"
+      ]
+    },
+    {
+      "tag": "pair-3-r0-l1024-off",
+      "args": [
+        "--native",
+        "<MODEL_FILE>",
+        "--max-context",
+        "32768",
+        "--prefill",
+        "2048",
+        "--pool-workers",
+        "7",
+        "--mtp",
+        "0",
+        "--expert-slots",
+        "63"
+      ]
+    },
+    {
+      "tag": "pair-4-r0-l1024-off",
+      "args": [
+        "--native",
+        "<MODEL_FILE>",
+        "--max-context",
+        "32768",
+        "--prefill",
+        "2048",
+        "--pool-workers",
+        "7",
+        "--mtp",
+        "0",
+        "--expert-slots",
+        "63"
+      ]
+    },
+    {
+      "tag": "pair-4-r0-l1024-on",
+      "args": [
+        "--native",
+        "<MODEL_FILE>",
+        "--max-context",
+        "32768",
+        "--prefill",
+        "2048",
+        "--pool-workers",
+        "7",
+        "--mtp",
+        "0",
+        "--expert-slots",
+        "63",
+        "--split-stage-copy"
+      ]
+    },
+    {
+      "tag": "pair-4-r0-l16384-off",
+      "args": [
+        "--native",
+        "<MODEL_FILE>",
+        "--max-context",
+        "32768",
+        "--prefill",
+        "2048",
+        "--pool-workers",
+        "7",
+        "--mtp",
+        "0",
+        "--expert-slots",
+        "63"
+      ]
+    },
+    {
+      "tag": "pair-4-r0-l16384-on",
+      "args": [
+        "--native",
+        "<MODEL_FILE>",
+        "--max-context",
+        "32768",
+        "--prefill",
+        "2048",
+        "--pool-workers",
+        "7",
+        "--mtp",
+        "0",
+        "--expert-slots",
+        "63",
+        "--split-stage-copy"
+      ]
+    }
+  ],
+  "trace": [
+    {
+      "arm": "off",
+      "kind": "capture",
+      "command": [
+        "<REPO_ROOT>\\build-native-baseline\\toolchains\\nsight-systems-2026.1.3.425\\nsight_systems-windows-x86_64-2026.1.3.425-archive\\nsight-systems\\2026.1.3\\target-windows-x64\\nsys.exe",
+        "profile",
+        "--trace=cuda,nvtx",
+        "--sample=none",
+        "--cpuctxsw=none",
+        "--cuda-graph-trace=node",
+        "--kill=false",
+        "--wait=all",
+        "--output=<REPO_ROOT>\\reports\\tobeo-20261030\\qwen36-copy3905\\traces-01\\off",
+        "<PYTHON_ENV>\\python.exe",
+        "<REPO_ROOT>\\reports\\tobeo-20261030\\qwen36-copy3905\\trace_copy.py",
+        "--worker",
+        "off",
+        "--directory",
+        "<REPO_ROOT>\\reports\\tobeo-20261030\\qwen36-copy3905\\traces-01"
+      ],
+      "exit_code": 0
+    },
+    {
+      "arm": "off",
+      "kind": "export",
+      "command": [
+        "<REPO_ROOT>\\build-native-baseline\\toolchains\\nsight-systems-2026.1.3.425\\nsight_systems-windows-x86_64-2026.1.3.425-archive\\nsight-systems\\2026.1.3\\target-windows-x64\\nsys.exe",
+        "export",
+        "--type=sqlite",
+        "--output=<REPO_ROOT>\\reports\\tobeo-20261030\\qwen36-copy3905\\traces-01\\off.sqlite",
+        "<REPO_ROOT>\\reports\\tobeo-20261030\\qwen36-copy3905\\traces-01\\off.nsys-rep"
+      ],
+      "exit_code": 0
+    },
+    {
+      "arm": "on",
+      "kind": "capture",
+      "command": [
+        "<REPO_ROOT>\\build-native-baseline\\toolchains\\nsight-systems-2026.1.3.425\\nsight_systems-windows-x86_64-2026.1.3.425-archive\\nsight-systems\\2026.1.3\\target-windows-x64\\nsys.exe",
+        "profile",
+        "--trace=cuda,nvtx",
+        "--sample=none",
+        "--cpuctxsw=none",
+        "--cuda-graph-trace=node",
+        "--kill=false",
+        "--wait=all",
+        "--output=<REPO_ROOT>\\reports\\tobeo-20261030\\qwen36-copy3905\\traces-01\\on",
+        "<PYTHON_ENV>\\python.exe",
+        "<REPO_ROOT>\\reports\\tobeo-20261030\\qwen36-copy3905\\trace_copy.py",
+        "--worker",
+        "on",
+        "--directory",
+        "<REPO_ROOT>\\reports\\tobeo-20261030\\qwen36-copy3905\\traces-01"
+      ],
+      "exit_code": 0
+    },
+    {
+      "arm": "on",
+      "kind": "export",
+      "command": [
+        "<REPO_ROOT>\\build-native-baseline\\toolchains\\nsight-systems-2026.1.3.425\\nsight_systems-windows-x86_64-2026.1.3.425-archive\\nsight-systems\\2026.1.3\\target-windows-x64\\nsys.exe",
+        "export",
+        "--type=sqlite",
+        "--output=<REPO_ROOT>\\reports\\tobeo-20261030\\qwen36-copy3905\\traces-01\\on.sqlite",
+        "<REPO_ROOT>\\reports\\tobeo-20261030\\qwen36-copy3905\\traces-01\\on.nsys-rep"
+      ],
+      "exit_code": 0
+    }
+  ]
+}

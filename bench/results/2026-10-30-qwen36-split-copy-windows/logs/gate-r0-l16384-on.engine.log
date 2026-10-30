@@ -1,0 +1,9 @@
+strata-q36: <MODEL_FILE>: 753 tensors (layout checked), 4.40 GiB on the GPU in 3.0 s (the routed experts are placed after the engine's buffers)
+strata: K-quant prompt kernels from <REPO_ROOT>\build-native-baseline\build-copy3905-af08278c-cuda132-sm120\strata_kq.dll (STRATA_MMQ_KQ=1)
+strata-q36: prompt experts on MMQ (int8)
+strata-q36: context 32768 cells, prompt chunk 2048, MTP block loaded, 6.48 GiB of VRAM free
+strata-q36: hybrid experts: 63 of 256 per layer in VRAM (4.61 GiB), all 18.75 GiB in pinned host memory, the rest of a batch of <= 128 rows on 8 CPU threads, bigger prompt chunks streamed (1.10 GiB staging); 16.5 s
+strata-q36: warmed up in 0.8 s (one prompt chunk, a decode step)
+strata serve: session 0: prompt 1025 tokens = 0 reused + 1025 read in 631 ms (1625.1 tok/s), 64 generated in 1763 ms (36.3 tok/s), drafts accepted 0 of 0 (length)
+strata serve: session 0: prompt 16385 tokens = 0 reused + 16385 read in 5990 ms (2735.3 tok/s), 64 generated in 2203 ms (29.0 tok/s), drafts accepted 0 of 0 (length)
+strata-q36: hybrid experts: 10368 of 40640 batch entries on the GPU (25.5%), 30272 on the CPU pool in 1402 ms, 0 slot replacements

@@ -1,0 +1,36 @@
+{
+  "baseline": "46c152a1310f77cd2f0ce2c7cd213962df14fe83",
+  "slice_commit": "af08278c15e857345dad95805dda7256a559dcfa",
+  "author": "xyehya",
+  "model": {
+    "bytes": 22853663008,
+    "sha256": "55983c5a75a1ab969824077b3bb3de4146e82a9234072b48ad4e8f92ad3fe9f1"
+  },
+  "candidate_binaries": {
+    "strata-q36.exe": "6bb49a28223960f522ffd93e848f006130b2d8836cb86ddcff0a566155ab2b2f",
+    "strata_kq.dll": "ded0370d0c6fe4ba58e774253cad7c44e0c9281287300e0b01f2b9b3aacb6cd6"
+  },
+  "baseline_binaries": {
+    "strata-q36.exe": "84a2b1116dc00bff188da39fb8fb9d0ee9db2b9eaa0faf43cf0dc878da9e8e00",
+    "strata_kq.dll": "08b9c0843bab93a3bef4d796490f1ecfb410f845a0291dccc6a4146adbb719ce"
+  },
+  "patch_sha256": "acba5189211781d442c73f2bad19ed92fbfdeeab746f51e76d3c9dd250773359",
+  "candidate_source_sha256": "7d7f0e579d59e030434dc9af264fcd53d4e226c9e4c423850b657b3979917241",
+  "adapters": {
+    "baseline": {
+      "sha256": "81873f2c5f727af57628ec9c75f74bb4822c30610be24cdb6a2a09d8060377c6",
+      "dll_sha256": "08b9c0843bab93a3bef4d796490f1ecfb410f845a0291dccc6a4146adbb719ce"
+    },
+    "candidate": {
+      "sha256": "416fc6cb688b2f27dbe1fb0901e0fc34c2208691a01792ced77f514eea14f414",
+      "dll_sha256": "ded0370d0c6fe4ba58e774253cad7c44e0c9281287300e0b01f2b9b3aacb6cd6"
+    }
+  },
+  "local_controller_sha256": "a1c1abe147a42bc64ce0b67d2e3ab0dc5a86351c23fec9c53a33d92440e11e8c",
+  "prewritten_plan_sha256": "c5996619a5b775b2af00b8bc74777962c329ec06ddcfdea9f6ed1adebf06ed42",
+  "original_build_script_sha256": "1db54726cefa335949861cb9d734ca71dd612d38b279d0515874380207622bdb",
+  "adapter_deployment_fix_script_sha256": "b5b775b0ae8f7c25cb1aa18785a4da31990fed5653f6d8b3ebff42a1f0e126d7",
+  "local_raw_manifest_sha256": "7978c851493eecefa6e20092cdc52813a6a3dafe00283f7fa276e6126c04efff",
+  "local_raw_files": 94,
+  "archive_note": "Exported after measurement. Absolute paths replaced with placeholders; original raw files remain local."
+}
