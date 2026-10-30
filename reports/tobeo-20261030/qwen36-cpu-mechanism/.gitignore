@@ -1,0 +1,9 @@
+*
+!.gitignore
+!*.md
+!*.py
+!summary.json
+!mechanism-summary.json
+!cpu-summary.json
+!timeline.png
+!mechanism-stages.csv

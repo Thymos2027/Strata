@@ -1,0 +1,69 @@
+{
+  "date": "2026-10-30",
+  "verified_at": "2026-10-30T12:15:54.590457+08:00",
+  "passed": true,
+  "baseline_revision": "46c152a1310f77cd2f0ce2c7cd213962df14fe83",
+  "slice_commit": "af08278c15e857345dad95805dda7256a559dcfa",
+  "source_unchanged": true,
+  "model": {
+    "bytes": 22853663008,
+    "sha256": "55983c5a75a1ab969824077b3bb3de4146e82a9234072b48ad4e8f92ad3fe9f1"
+  },
+  "binaries": {
+    "baseline": {
+      "strata-q36.exe": "84a2b1116dc00bff188da39fb8fb9d0ee9db2b9eaa0faf43cf0dc878da9e8e00",
+      "strata_kq.dll": "08b9c0843bab93a3bef4d796490f1ecfb410f845a0291dccc6a4146adbb719ce",
+      "strata-q36.pdb": "9febd604bb37269f01396dc79edd821484c5145eba23255dfc40ed341bb8cbce"
+    },
+    "copy_candidate": {
+      "strata-q36.exe": "6bb49a28223960f522ffd93e848f006130b2d8836cb86ddcff0a566155ab2b2f",
+      "strata_kq.dll": "ded0370d0c6fe4ba58e774253cad7c44e0c9281287300e0b01f2b9b3aacb6cd6",
+      "strata-q36.pdb": "d4213a0b344b9f5e486c681efa921507391d7c1a04a271f5ca2031903a98b77b"
+    }
+  },
+  "cpu_preflight": {
+    "periodic_samples": 1851,
+    "scheduling_events": 13899
+  },
+  "measured_requests": 6,
+  "cpu_traces": 3,
+  "periodic_leaf_samples": {
+    "baseline-r0-l1024": 9448,
+    "baseline-r0-l16384": 12093,
+    "on-r0-l16384": 11867
+  },
+  "per_stage_conservation_and_dependencies": 320,
+  "bandwidth": {
+    "bandwidth-before": 24.862111,
+    "bandwidth-after": 24.942329
+  },
+  "service_restored_at": "2026-10-30T12:05:08.248687+08:00",
+  "health": {
+    "status": "ok",
+    "max_context": 65536,
+    "model": "qwen3.8-flash-next-iq3_s",
+    "images": false,
+    "api_key": false,
+    "image_generation": false,
+    "loaded": true,
+    "service": "strata"
+  },
+  "daily_config_unchanged": true,
+  "restore_errors": [],
+  "cpu_ip_and_scheduling_complete": true,
+  "full_causal_critical_path_complete": false,
+  "additional_evidence_published": false,
+  "new_engine_build": false,
+  "default_changed": false,
+  "limits": [
+    "500Hz leaf IP, not full stacks",
+    "one trace per cell; injected threads remain in denominator",
+    "CPU-on-CPU includes idle spin; parallel per-thread durations are not elapsed time",
+    "no direct CPU expert job markers; not a complete causal critical path",
+    "no third arm; priority and independent-stream benefits not isolated",
+    "CUDA event device completion timestamps are zero; no GPU wait duration claim",
+    "not a byte dump of staging memory; no new timing sample"
+  ],
+  "evidence_files": 52,
+  "manifest_sha256": "b14e5597ff8d00dc4873d69c51218f28b6f7372f5dd4531bfe8a755ef9dd5d81"
+}

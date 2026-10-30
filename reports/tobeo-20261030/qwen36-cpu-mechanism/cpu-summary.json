@@ -1,0 +1,1725 @@
+{
+  "verified_at": "2026-10-30T12:11:37.472187+08:00",
+  "cells": [
+    {
+      "tag": "baseline-r0-l1024",
+      "engine_pid": 28992,
+      "window_ms": 2202.966707,
+      "gpu_union_ms": 629.667348,
+      "gpu_uncovered_ms": 1573.299359,
+      "engine_on_cpu_union_ms": 2200.945207,
+      "gpu_gaps_with_engine_on_cpu_ms": 1571.277859,
+      "periodic_leaf_samples": 9448,
+      "engine_image_samples": 7484,
+      "unresolved_engine_samples": 0,
+      "leaf_classes": {
+        "pool_idle_wait_loop": 4912,
+        "profiler_module": 404,
+        "kernel_address_unresolved": 1164,
+        "other_module": 206,
+        "CPU_arithmetic_or_quantization": 2441,
+        "pool_control_or_join": 118,
+        "CUDA_driver_module": 190,
+        "other_engine_code": 13
+      },
+      "leaf_classes_during_gpu_gaps": {
+        "profiler_module": 244,
+        "kernel_address_unresolved": 786,
+        "other_module": 154,
+        "pool_idle_wait_loop": 2771,
+        "CPU_arithmetic_or_quantization": 2441,
+        "pool_control_or_join": 118,
+        "CUDA_driver_module": 98,
+        "other_engine_code": 12
+      },
+      "leaf_modules": {
+        "strata-q36.exe": 7484,
+        "ToolsInjection64.dll": 172,
+        "<kernel address>": 1164,
+        "ntdll.dll": 137,
+        "cupti64_133.dll": 232,
+        "ucrtbase.dll": 14,
+        "VCRUNTIME140.dll": 27,
+        "nvcudart_hybrid64.dll": 17,
+        "nvcuda64.dll": 173,
+        "KERNEL32.DLL": 11,
+        "win32u.dll": 2,
+        "MSVCP140.dll": 11,
+        "nvdxgdmal64.dll": 1,
+        "KERNELBASE.dll": 2,
+        "nvperf_host.dll": 1
+      },
+      "top_engine_functions": [
+        {
+          "function": "strata::kernels::cpu::ExpertPool::worker",
+          "samples": 4918
+        },
+        {
+          "function": "ggml_vec_dot_q4_K_q8_K",
+          "samples": 1428
+        },
+        {
+          "function": "ggml_vec_dot_q5_K_q8_K",
+          "samples": 854
+        },
+        {
+          "function": "strata::kernels::cpu::ExpertPool::wait_done",
+          "samples": 104
+        },
+        {
+          "function": "ggml_vec_dot_q6_K_q8_K",
+          "samples": 87
+        },
+        {
+          "function": "strata::kernels::cpu::native_down_rows_impl<0>",
+          "samples": 53
+        },
+        {
+          "function": "strata::kernels::cpu::native_gu_rows_impl<0>",
+          "samples": 19
+        },
+        {
+          "function": "strata::kernels::cpu::ExpertPool::drain",
+          "samples": 7
+        },
+        {
+          "function": "strata::kernels::cpu::q8k_quant_avx2",
+          "samples": 5
+        },
+        {
+          "function": "strata::kernels::native_expert_grouped",
+          "samples": 2
+        },
+        {
+          "function": "expf",
+          "samples": 2
+        },
+        {
+          "function": "_GLOBAL__N__bfa39db1_13_q36_engine_cu_19c1e9e6::Engine::layer",
+          "samples": 1
+        },
+        {
+          "function": "__security_check_cookie",
+          "samples": 1
+        },
+        {
+          "function": "strata::kernels::cpu::ExpertPool::run_split_multi_native",
+          "samples": 1
+        },
+        {
+          "function": "q36k::k_add_rms_q",
+          "samples": 1
+        },
+        {
+          "function": "_GLOBAL__N__bfa39db1_13_q36_engine_cu_19c1e9e6::Engine::moe_hybrid_cpu",
+          "samples": 1
+        }
+      ],
+      "top_engine_lines": [
+        {
+          "function": "strata::kernels::cpu::ExpertPool::worker",
+          "file": "pool.cpp",
+          "line": 1014,
+          "samples": 4703
+        },
+        {
+          "function": "ggml_vec_dot_q4_K_q8_K",
+          "file": "",
+          "line": 0,
+          "samples": 1428
+        },
+        {
+          "function": "ggml_vec_dot_q5_K_q8_K",
+          "file": "",
+          "line": 0,
+          "samples": 854
+        },
+        {
+          "function": "strata::kernels::cpu::ExpertPool::worker",
+          "file": "pool.cpp",
+          "line": 1000,
+          "samples": 173
+        },
+        {
+          "function": "strata::kernels::cpu::ExpertPool::wait_done",
+          "file": "pool.cpp",
+          "line": 1162,
+          "samples": 99
+        },
+        {
+          "function": "ggml_vec_dot_q6_K_q8_K",
+          "file": "",
+          "line": 0,
+          "samples": 87
+        },
+        {
+          "function": "strata::kernels::cpu::native_down_rows_impl<0>",
+          "file": "native_expert.cpp",
+          "line": 573,
+          "samples": 31
+        },
+        {
+          "function": "strata::kernels::cpu::ExpertPool::worker",
+          "file": "pool.cpp",
+          "line": 1003,
+          "samples": 24
+        },
+        {
+          "function": "strata::kernels::cpu::native_down_rows_impl<0>",
+          "file": "native_expert.cpp",
+          "line": 569,
+          "samples": 11
+        },
+        {
+          "function": "strata::kernels::cpu::ExpertPool::worker",
+          "file": "pool.cpp",
+          "line": 1001,
+          "samples": 11
+        },
+        {
+          "function": "strata::kernels::cpu::native_gu_rows_impl<0>",
+          "file": "native_expert.cpp",
+          "line": 511,
+          "samples": 7
+        },
+        {
+          "function": "strata::kernels::cpu::native_down_rows_impl<0>",
+          "file": "native_expert.cpp",
+          "line": 572,
+          "samples": 6
+        },
+        {
+          "function": "strata::kernels::cpu::native_gu_rows_impl<0>",
+          "file": "native_expert.cpp",
+          "line": 510,
+          "samples": 5
+        },
+        {
+          "function": "strata::kernels::cpu::native_down_rows_impl<0>",
+          "file": "native_expert.cpp",
+          "line": 570,
+          "samples": 5
+        },
+        {
+          "function": "strata::kernels::cpu::ExpertPool::drain",
+          "file": "pool.cpp",
+          "line": 1281,
+          "samples": 4
+        },
+        {
+          "function": "strata::kernels::cpu::ExpertPool::wait_done",
+          "file": "pool.cpp",
+          "line": 1159,
+          "samples": 4
+        },
+        {
+          "function": "strata::kernels::cpu::ExpertPool::worker",
+          "file": "pool.cpp",
+          "line": 1037,
+          "samples": 3
+        },
+        {
+          "function": "strata::kernels::cpu::native_gu_rows_impl<0>",
+          "file": "native_expert.cpp",
+          "line": 508,
+          "samples": 2
+        },
+        {
+          "function": "strata::kernels::native_expert_grouped",
+          "file": "",
+          "line": 0,
+          "samples": 2
+        },
+        {
+          "function": "strata::kernels::cpu::ExpertPool::worker",
+          "file": "pool.cpp",
+          "line": 1029,
+          "samples": 2
+        },
+        {
+          "function": "expf",
+          "file": "",
+          "line": 0,
+          "samples": 2
+        },
+        {
+          "function": "strata::kernels::cpu::native_gu_rows_impl<0>",
+          "file": "native_expert.cpp",
+          "line": 503,
+          "samples": 2
+        },
+        {
+          "function": "strata::kernels::cpu::native_gu_rows_impl<0>",
+          "file": "native_expert.cpp",
+          "line": 505,
+          "samples": 2
+        },
+        {
+          "function": "strata::kernels::cpu::q8k_quant_avx2",
+          "file": "iq_avx2.cpp",
+          "line": 404,
+          "samples": 2
+        },
+        {
+          "function": "strata::kernels::cpu::ExpertPool::drain",
+          "file": "pool.cpp",
+          "line": 1183,
+          "samples": 1
+        },
+        {
+          "function": "strata::kernels::cpu::ExpertPool::worker",
+          "file": "pool.cpp",
+          "line": 1016,
+          "samples": 1
+        },
+        {
+          "function": "strata::kernels::cpu::ExpertPool::drain",
+          "file": "pool.cpp",
+          "line": 1186,
+          "samples": 1
+        },
+        {
+          "function": "strata::kernels::cpu::ExpertPool::wait_done",
+          "file": "pool.cpp",
+          "line": 1156,
+          "samples": 1
+        },
+        {
+          "function": "_GLOBAL__N__bfa39db1_13_q36_engine_cu_19c1e9e6::Engine::layer",
+          "file": "",
+          "line": 0,
+          "samples": 1
+        },
+        {
+          "function": "strata::kernels::cpu::ExpertPool::worker",
+          "file": "pool.cpp",
+          "line": 1034,
+          "samples": 1
+        }
+      ],
+      "threads": [
+        {
+          "tid": 2224,
+          "global_tid": 281961381759152,
+          "on_cpu_ms": 2167.232007,
+          "on_cpu_during_gpu_gaps_ms": 1546.252224,
+          "periodic_samples": 1078,
+          "leaf_classes": {
+            "profiler_module": 67,
+            "kernel_address_unresolved": 912,
+            "other_module": 99
+          }
+        },
+        {
+          "tid": 31240,
+          "global_tid": 281961381788168,
+          "on_cpu_ms": 2128.725736,
+          "on_cpu_during_gpu_gaps_ms": 1503.877682,
+          "periodic_samples": 1064,
+          "leaf_classes": {
+            "pool_idle_wait_loop": 744,
+            "CPU_arithmetic_or_quantization": 314,
+            "other_module": 3,
+            "kernel_address_unresolved": 3
+          }
+        },
+        {
+          "tid": 27684,
+          "global_tid": 281961381784612,
+          "on_cpu_ms": 2125.092836,
+          "on_cpu_during_gpu_gaps_ms": 1499.230751,
+          "periodic_samples": 1062,
+          "leaf_classes": {
+            "CUDA_driver_module": 175,
+            "pool_control_or_join": 106,
+            "profiler_module": 206,
+            "CPU_arithmetic_or_quantization": 342,
+            "kernel_address_unresolved": 162,
+            "other_module": 60,
+            "other_engine_code": 11
+          }
+        },
+        {
+          "tid": 26752,
+          "global_tid": 281961381783680,
+          "on_cpu_ms": 2113.918936,
+          "on_cpu_during_gpu_gaps_ms": 1494.205556,
+          "periodic_samples": 1059,
+          "leaf_classes": {
+            "pool_idle_wait_loop": 731,
+            "CPU_arithmetic_or_quantization": 323,
+            "other_module": 2,
+            "other_engine_code": 1,
+            "kernel_address_unresolved": 1,
+            "pool_control_or_join": 1
+          }
+        },
+        {
+          "tid": 20900,
+          "global_tid": 281961381777828,
+          "on_cpu_ms": 2100.150836,
+          "on_cpu_during_gpu_gaps_ms": 1484.445454,
+          "periodic_samples": 1051,
+          "leaf_classes": {
+            "pool_idle_wait_loop": 745,
+            "kernel_address_unresolved": 2,
+            "CPU_arithmetic_or_quantization": 298,
+            "other_module": 4,
+            "pool_control_or_join": 2
+          }
+        },
+        {
+          "tid": 10552,
+          "global_tid": 281961381767480,
+          "on_cpu_ms": 1994.370436,
+          "on_cpu_during_gpu_gaps_ms": 1403.698953,
+          "periodic_samples": 997,
+          "leaf_classes": {
+            "pool_idle_wait_loop": 685,
+            "kernel_address_unresolved": 14,
+            "CPU_arithmetic_or_quantization": 294,
+            "pool_control_or_join": 2,
+            "other_module": 2
+          }
+        },
+        {
+          "tid": 16092,
+          "global_tid": 281961381773020,
+          "on_cpu_ms": 1990.103636,
+          "on_cpu_during_gpu_gaps_ms": 1398.467446,
+          "periodic_samples": 996,
+          "leaf_classes": {
+            "pool_idle_wait_loop": 678,
+            "pool_control_or_join": 2,
+            "CPU_arithmetic_or_quantization": 311,
+            "kernel_address_unresolved": 4,
+            "other_module": 1
+          }
+        },
+        {
+          "tid": 3292,
+          "global_tid": 281961381760220,
+          "on_cpu_ms": 1930.118736,
+          "on_cpu_during_gpu_gaps_ms": 1354.416123,
+          "periodic_samples": 961,
+          "leaf_classes": {
+            "pool_idle_wait_loop": 673,
+            "CPU_arithmetic_or_quantization": 280,
+            "pool_control_or_join": 4,
+            "kernel_address_unresolved": 2,
+            "other_module": 1,
+            "other_engine_code": 1
+          }
+        },
+        {
+          "tid": 20792,
+          "global_tid": 281961381777720,
+          "on_cpu_ms": 1859.007436,
+          "on_cpu_during_gpu_gaps_ms": 1304.128098,
+          "periodic_samples": 937,
+          "leaf_classes": {
+            "pool_idle_wait_loop": 656,
+            "CPU_arithmetic_or_quantization": 279,
+            "kernel_address_unresolved": 1,
+            "pool_control_or_join": 1
+          }
+        },
+        {
+          "tid": 29228,
+          "global_tid": 281961381786156,
+          "on_cpu_ms": 449.079236,
+          "on_cpu_during_gpu_gaps_ms": 328.520205,
+          "periodic_samples": 233,
+          "leaf_classes": {
+            "profiler_module": 131,
+            "other_module": 33,
+            "kernel_address_unresolved": 55,
+            "CUDA_driver_module": 14
+          }
+        },
+        {
+          "tid": 29660,
+          "global_tid": 281961381786588,
+          "on_cpu_ms": 12.8083,
+          "on_cpu_during_gpu_gaps_ms": 9.472379,
+          "periodic_samples": 8,
+          "leaf_classes": {
+            "kernel_address_unresolved": 8
+          }
+        },
+        {
+          "tid": 17972,
+          "global_tid": 281961381774900,
+          "on_cpu_ms": 0.904,
+          "on_cpu_during_gpu_gaps_ms": 0.656154,
+          "periodic_samples": 1,
+          "leaf_classes": {
+            "other_module": 1
+          }
+        },
+        {
+          "tid": 21800,
+          "global_tid": 281961381778728,
+          "on_cpu_ms": 0.8791,
+          "on_cpu_during_gpu_gaps_ms": 0.637348,
+          "periodic_samples": 0,
+          "leaf_classes": {}
+        },
+        {
+          "tid": 23032,
+          "global_tid": 281961381779960,
+          "on_cpu_ms": 0.4265,
+          "on_cpu_during_gpu_gaps_ms": 0.29329,
+          "periodic_samples": 1,
+          "leaf_classes": {
+            "CUDA_driver_module": 1
+          }
+        }
+      ],
+      "diagnostic_warnings": [
+        {
+          "timestamp": 4729419600,
+          "timestampType": 2,
+          "source": 3,
+          "severity": 2,
+          "text": "Not all NVTX events might have been collected.",
+          "globalPid": 281523295092736
+        },
+        {
+          "timestamp": 4729426000,
+          "timestampType": 2,
+          "source": 3,
+          "severity": 2,
+          "text": "No NVTX events collected. Does the process use NVTX?",
+          "globalPid": 281961381756928
+        },
+        {
+          "timestamp": 4729427400,
+          "timestampType": 2,
+          "source": 3,
+          "severity": 2,
+          "text": "CUDA profiling might have not been started correctly.",
+          "globalPid": 281523295092736
+        },
+        {
+          "timestamp": 4729428000,
+          "timestampType": 2,
+          "source": 3,
+          "severity": 2,
+          "text": "No CUDA events collected. Does the process use CUDA?",
+          "globalPid": 281523295092736
+        },
+        {
+          "timestamp": 37427070400,
+          "timestampType": 1,
+          "source": 2,
+          "severity": 2,
+          "text": "NVIDIA Nsight Systems requires that Windows Performance Toolkit be installed on the target machine to create a merged ETL file of the trace session. Could not detect Windows Performance Toolkit, therefore the session's merged ETL file was not created. To fix this, please install Windows Performance Toolkit on the target machine.",
+          "globalPid": 281474976710656
+        }
+      ],
+      "cudaEventQuery": {
+        "calls": 954631,
+        "return_values": {
+          "0": 954631
+        },
+        "call_threads": {
+          "27684": 954631
+        },
+        "return_value_limit": "Raw serialized field; event readiness is not inferred from this field.",
+        "API_union_ms": 484.5602,
+        "API_during_gpu_gaps_ms": 212.627815
+      },
+      "profile_to_plain_ratios": {
+        "prefill": 0.9457900807381776,
+        "decode": 1.1647651186458834
+      },
+      "plain": {
+        "prompt_ms": 867.0,
+        "decode_ms": 1866.9,
+        "process_cpu_s": 14.890625
+      },
+      "profiled": {
+        "prompt_ms": 820.0,
+        "decode_ms": 2174.5,
+        "process_cpu_s": 20.34375
+      },
+      "cuda_submission_thread": 27684,
+      "pool_worker_tids": [
+        31240,
+        26752,
+        20900,
+        10552,
+        16092,
+        3292,
+        20792
+      ]
+    },
+    {
+      "tag": "baseline-r0-l16384",
+      "engine_pid": 3380,
+      "window_ms": 2745.06282,
+      "gpu_union_ms": 1214.005036,
+      "gpu_uncovered_ms": 1531.057784,
+      "engine_on_cpu_union_ms": 2744.83612,
+      "gpu_gaps_with_engine_on_cpu_ms": 1530.831084,
+      "periodic_leaf_samples": 12093,
+      "engine_image_samples": 8930,
+      "unresolved_engine_samples": 0,
+      "leaf_classes": {
+        "pool_idle_wait_loop": 6364,
+        "CPU_arithmetic_or_quantization": 2430,
+        "other_engine_code": 21,
+        "CUDA_driver_module": 325,
+        "profiler_module": 841,
+        "other_module": 370,
+        "pool_control_or_join": 114,
+        "kernel_address_unresolved": 1627,
+        "CUDA_event_query": 1
+      },
+      "leaf_classes_during_gpu_gaps": {
+        "CPU_arithmetic_or_quantization": 2430,
+        "pool_idle_wait_loop": 2461,
+        "other_engine_code": 15,
+        "CUDA_driver_module": 104,
+        "profiler_module": 363,
+        "other_module": 181,
+        "pool_control_or_join": 114,
+        "kernel_address_unresolved": 862
+      },
+      "leaf_modules": {
+        "strata-q36.exe": 8930,
+        "nvcuda64.dll": 306,
+        "ToolsInjection64.dll": 342,
+        "ntdll.dll": 250,
+        "<kernel address>": 1627,
+        "ucrtbase.dll": 11,
+        "VCRUNTIME140.dll": 71,
+        "KERNELBASE.dll": 5,
+        "cupti64_133.dll": 498,
+        "MSVCP140.dll": 14,
+        "KERNEL32.DLL": 13,
+        "nvcudart_hybrid64.dll": 19,
+        "win32u.dll": 3,
+        "ToolsInjectionHelper64.dll": 1,
+        "nvdxgdmal64.dll": 2,
+        "nvperf_host.dll": 1
+      },
+      "top_engine_functions": [
+        {
+          "function": "strata::kernels::cpu::ExpertPool::worker",
+          "samples": 6366
+        },
+        {
+          "function": "ggml_vec_dot_q4_K_q8_K",
+          "samples": 1470
+        },
+        {
+          "function": "ggml_vec_dot_q5_K_q8_K",
+          "samples": 825
+        },
+        {
+          "function": "strata::kernels::cpu::ExpertPool::wait_done",
+          "samples": 109
+        },
+        {
+          "function": "ggml_vec_dot_q6_K_q8_K",
+          "samples": 70
+        },
+        {
+          "function": "strata::kernels::cpu::native_down_rows_impl<0>",
+          "samples": 44
+        },
+        {
+          "function": "strata::kernels::cpu::native_gu_rows_impl<0>",
+          "samples": 21
+        },
+        {
+          "function": "strata::kernels::cpu::q8k_quant_avx2",
+          "samples": 7
+        },
+        {
+          "function": "strata::kernels::cpu::ExpertPool::drain",
+          "samples": 3
+        },
+        {
+          "function": "_GLOBAL__N__bfa39db1_13_q36_engine_cu_19c1e9e6::Engine::moe_hybrid_cpu",
+          "samples": 3
+        },
+        {
+          "function": "expf",
+          "samples": 2
+        },
+        {
+          "function": "__security_check_cookie",
+          "samples": 2
+        },
+        {
+          "function": "ggml_get_type_traits_cpu",
+          "samples": 1
+        },
+        {
+          "function": "cudaEventQuery",
+          "samples": 1
+        },
+        {
+          "function": "Query_perf_frequency",
+          "samples": 1
+        },
+        {
+          "function": "std::_Hash<std::_Umap_traits<void const * __ptr64,strata::kernels::_GLOBAL__N__cf31494e_14_native_mmvq_cu_30eb090c::Q6Packed,std::_Uhash_compare<void const * __ptr64,std::hash<void const * __ptr64>,std::equal_to<void const * __ptr64> >,std::allocator<std::pair<void const * __ptr64 const,strata::kernels::_GLOBAL__N__cf31494e_14_native_mmvq_cu_30eb090c::Q6Packed> >,0> >::find<void>",
+          "samples": 1
+        },
+        {
+          "function": "q36k::launch_q8_rows<1,2,0>",
+          "samples": 1
+        },
+        {
+          "function": "std::vector<int,std::allocator<int> >::_Assign_counted_range<int * __ptr64>",
+          "samples": 1
+        },
+        {
+          "function": "_GLOBAL__N__bfa39db1_13_q36_engine_cu_19c1e9e6::Engine::add_rms_post",
+          "samples": 1
+        },
+        {
+          "function": "_GLOBAL__N__bfa39db1_13_q36_engine_cu_19c1e9e6::Engine::layer",
+          "samples": 1
+        }
+      ],
+      "top_engine_lines": [
+        {
+          "function": "strata::kernels::cpu::ExpertPool::worker",
+          "file": "pool.cpp",
+          "line": 1014,
+          "samples": 6066
+        },
+        {
+          "function": "ggml_vec_dot_q4_K_q8_K",
+          "file": "",
+          "line": 0,
+          "samples": 1470
+        },
+        {
+          "function": "ggml_vec_dot_q5_K_q8_K",
+          "file": "",
+          "line": 0,
+          "samples": 825
+        },
+        {
+          "function": "strata::kernels::cpu::ExpertPool::worker",
+          "file": "pool.cpp",
+          "line": 1000,
+          "samples": 246
+        },
+        {
+          "function": "strata::kernels::cpu::ExpertPool::wait_done",
+          "file": "pool.cpp",
+          "line": 1162,
+          "samples": 106
+        },
+        {
+          "function": "ggml_vec_dot_q6_K_q8_K",
+          "file": "",
+          "line": 0,
+          "samples": 70
+        },
+        {
+          "function": "strata::kernels::cpu::native_down_rows_impl<0>",
+          "file": "native_expert.cpp",
+          "line": 573,
+          "samples": 28
+        },
+        {
+          "function": "strata::kernels::cpu::ExpertPool::worker",
+          "file": "pool.cpp",
+          "line": 1003,
+          "samples": 27
+        },
+        {
+          "function": "strata::kernels::cpu::ExpertPool::worker",
+          "file": "pool.cpp",
+          "line": 1001,
+          "samples": 23
+        },
+        {
+          "function": "strata::kernels::cpu::native_down_rows_impl<0>",
+          "file": "native_expert.cpp",
+          "line": 572,
+          "samples": 7
+        },
+        {
+          "function": "strata::kernels::cpu::native_gu_rows_impl<0>",
+          "file": "native_expert.cpp",
+          "line": 511,
+          "samples": 7
+        },
+        {
+          "function": "strata::kernels::cpu::native_gu_rows_impl<0>",
+          "file": "native_expert.cpp",
+          "line": 503,
+          "samples": 5
+        },
+        {
+          "function": "strata::kernels::cpu::native_down_rows_impl<0>",
+          "file": "native_expert.cpp",
+          "line": 570,
+          "samples": 5
+        },
+        {
+          "function": "strata::kernels::cpu::q8k_quant_avx2",
+          "file": "iq_avx2.cpp",
+          "line": 404,
+          "samples": 5
+        },
+        {
+          "function": "strata::kernels::cpu::native_gu_rows_impl<0>",
+          "file": "native_expert.cpp",
+          "line": 510,
+          "samples": 3
+        },
+        {
+          "function": "strata::kernels::cpu::native_down_rows_impl<0>",
+          "file": "native_expert.cpp",
+          "line": 569,
+          "samples": 3
+        },
+        {
+          "function": "_GLOBAL__N__bfa39db1_13_q36_engine_cu_19c1e9e6::Engine::moe_hybrid_cpu",
+          "file": "",
+          "line": 0,
+          "samples": 3
+        },
+        {
+          "function": "strata::kernels::cpu::ExpertPool::wait_done",
+          "file": "pool.cpp",
+          "line": 1159,
+          "samples": 3
+        },
+        {
+          "function": "expf",
+          "file": "",
+          "line": 0,
+          "samples": 2
+        },
+        {
+          "function": "strata::kernels::cpu::ExpertPool::worker",
+          "file": "pool.cpp",
+          "line": 1016,
+          "samples": 2
+        },
+        {
+          "function": "strata::kernels::cpu::ExpertPool::drain",
+          "file": "pool.cpp",
+          "line": 1183,
+          "samples": 2
+        },
+        {
+          "function": "__security_check_cookie",
+          "file": "amdsecgs.asm",
+          "line": 48,
+          "samples": 2
+        },
+        {
+          "function": "strata::kernels::cpu::native_gu_rows_impl<0>",
+          "file": "native_expert.cpp",
+          "line": 505,
+          "samples": 2
+        },
+        {
+          "function": "strata::kernels::cpu::ExpertPool::worker",
+          "file": "pool.cpp",
+          "line": 1034,
+          "samples": 1
+        },
+        {
+          "function": "strata::kernels::cpu::ExpertPool::drain",
+          "file": "pool.cpp",
+          "line": 1284,
+          "samples": 1
+        },
+        {
+          "function": "strata::kernels::cpu::native_gu_rows_impl<0>",
+          "file": "native_expert.cpp",
+          "line": 508,
+          "samples": 1
+        },
+        {
+          "function": "strata::kernels::cpu::native_gu_rows_impl<0>",
+          "file": "native_expert.cpp",
+          "line": 509,
+          "samples": 1
+        },
+        {
+          "function": "ggml_get_type_traits_cpu",
+          "file": "",
+          "line": 0,
+          "samples": 1
+        },
+        {
+          "function": "cudaEventQuery",
+          "file": "generated_cuda_runtime_api_loader.c",
+          "line": 1815,
+          "samples": 1
+        },
+        {
+          "function": "Query_perf_frequency",
+          "file": "",
+          "line": 0,
+          "samples": 1
+        }
+      ],
+      "threads": [
+        {
+          "tid": 3128,
+          "global_tid": 281531683703864,
+          "on_cpu_ms": 2704.37542,
+          "on_cpu_during_gpu_gaps_ms": 1507.97144,
+          "periodic_samples": 1354,
+          "leaf_classes": {
+            "other_module": 122,
+            "kernel_address_unresolved": 1149,
+            "profiler_module": 83
+          }
+        },
+        {
+          "tid": 5728,
+          "global_tid": 281531683706464,
+          "on_cpu_ms": 2677.56818,
+          "on_cpu_during_gpu_gaps_ms": 1466.832769,
+          "periodic_samples": 1340,
+          "leaf_classes": {
+            "pool_control_or_join": 109,
+            "profiler_module": 490,
+            "other_module": 107,
+            "CPU_arithmetic_or_quantization": 333,
+            "kernel_address_unresolved": 75,
+            "CUDA_driver_module": 207,
+            "other_engine_code": 18,
+            "CUDA_event_query": 1
+          }
+        },
+        {
+          "tid": 25896,
+          "global_tid": 281531683726632,
+          "on_cpu_ms": 2594.45328,
+          "on_cpu_during_gpu_gaps_ms": 1418.853987,
+          "periodic_samples": 1296,
+          "leaf_classes": {
+            "CPU_arithmetic_or_quantization": 299,
+            "pool_idle_wait_loop": 994,
+            "kernel_address_unresolved": 2,
+            "pool_control_or_join": 1
+          }
+        },
+        {
+          "tid": 30076,
+          "global_tid": 281531683730812,
+          "on_cpu_ms": 2590.17758,
+          "on_cpu_during_gpu_gaps_ms": 1410.245825,
+          "periodic_samples": 1295,
+          "leaf_classes": {
+            "pool_idle_wait_loop": 966,
+            "CPU_arithmetic_or_quantization": 316,
+            "other_engine_code": 1,
+            "pool_control_or_join": 2,
+            "kernel_address_unresolved": 8,
+            "other_module": 2
+          }
+        },
+        {
+          "tid": 31612,
+          "global_tid": 281531683732348,
+          "on_cpu_ms": 2556.13678,
+          "on_cpu_during_gpu_gaps_ms": 1386.346002,
+          "periodic_samples": 1284,
+          "leaf_classes": {
+            "pool_idle_wait_loop": 947,
+            "CPU_arithmetic_or_quantization": 316,
+            "other_module": 3,
+            "kernel_address_unresolved": 17,
+            "other_engine_code": 1
+          }
+        },
+        {
+          "tid": 32444,
+          "global_tid": 281531683733180,
+          "on_cpu_ms": 2536.62568,
+          "on_cpu_during_gpu_gaps_ms": 1390.786929,
+          "periodic_samples": 1270,
+          "leaf_classes": {
+            "CPU_arithmetic_or_quantization": 305,
+            "pool_idle_wait_loop": 955,
+            "kernel_address_unresolved": 5,
+            "other_module": 2,
+            "other_engine_code": 1,
+            "pool_control_or_join": 2
+          }
+        },
+        {
+          "tid": 24400,
+          "global_tid": 281531683725136,
+          "on_cpu_ms": 2452.09728,
+          "on_cpu_during_gpu_gaps_ms": 1346.342389,
+          "periodic_samples": 1222,
+          "leaf_classes": {
+            "pool_idle_wait_loop": 918,
+            "CPU_arithmetic_or_quantization": 301,
+            "other_module": 2,
+            "kernel_address_unresolved": 1
+          }
+        },
+        {
+          "tid": 25284,
+          "global_tid": 281531683726020,
+          "on_cpu_ms": 2450.65708,
+          "on_cpu_during_gpu_gaps_ms": 1333.67794,
+          "periodic_samples": 1226,
+          "leaf_classes": {
+            "pool_idle_wait_loop": 688,
+            "CPU_arithmetic_or_quantization": 278,
+            "kernel_address_unresolved": 260
+          }
+        },
+        {
+          "tid": 28164,
+          "global_tid": 281531683728900,
+          "on_cpu_ms": 2354.07118,
+          "on_cpu_during_gpu_gaps_ms": 1289.471808,
+          "periodic_samples": 1181,
+          "leaf_classes": {
+            "pool_idle_wait_loop": 896,
+            "CPU_arithmetic_or_quantization": 282,
+            "other_module": 2,
+            "kernel_address_unresolved": 1
+          }
+        },
+        {
+          "tid": 13108,
+          "global_tid": 281531683713844,
+          "on_cpu_ms": 1256.0075,
+          "on_cpu_during_gpu_gaps_ms": 693.847442,
+          "periodic_samples": 616,
+          "leaf_classes": {
+            "CUDA_driver_module": 118,
+            "profiler_module": 268,
+            "other_module": 130,
+            "kernel_address_unresolved": 100
+          }
+        },
+        {
+          "tid": 1392,
+          "global_tid": 281531683702128,
+          "on_cpu_ms": 13.6897,
+          "on_cpu_during_gpu_gaps_ms": 8.259483,
+          "periodic_samples": 6,
+          "leaf_classes": {
+            "kernel_address_unresolved": 6
+          }
+        },
+        {
+          "tid": 9660,
+          "global_tid": 281531683710396,
+          "on_cpu_ms": 1.8404,
+          "on_cpu_during_gpu_gaps_ms": 1.077004,
+          "periodic_samples": 2,
+          "leaf_classes": {
+            "kernel_address_unresolved": 2
+          }
+        },
+        {
+          "tid": 27284,
+          "global_tid": 281531683728020,
+          "on_cpu_ms": 1.0919,
+          "on_cpu_during_gpu_gaps_ms": 0.700996,
+          "periodic_samples": 0,
+          "leaf_classes": {}
+        },
+        {
+          "tid": 28112,
+          "global_tid": 281531683728848,
+          "on_cpu_ms": 0.5227,
+          "on_cpu_during_gpu_gaps_ms": 0.266848,
+          "periodic_samples": 1,
+          "leaf_classes": {
+            "kernel_address_unresolved": 1
+          }
+        },
+        {
+          "tid": 23616,
+          "global_tid": 281531683724352,
+          "on_cpu_ms": 0.0639,
+          "on_cpu_during_gpu_gaps_ms": 0.06142,
+          "periodic_samples": 0,
+          "leaf_classes": {}
+        },
+        {
+          "tid": 27456,
+          "global_tid": 281531683728192,
+          "on_cpu_ms": 0.0153,
+          "on_cpu_during_gpu_gaps_ms": 0.0153,
+          "periodic_samples": 0,
+          "leaf_classes": {}
+        },
+        {
+          "tid": 28544,
+          "global_tid": 281531683729280,
+          "on_cpu_ms": 0.0107,
+          "on_cpu_during_gpu_gaps_ms": 0.0107,
+          "periodic_samples": 0,
+          "leaf_classes": {}
+        },
+        {
+          "tid": 32116,
+          "global_tid": 281531683732852,
+          "on_cpu_ms": 0.0095,
+          "on_cpu_during_gpu_gaps_ms": 0.0095,
+          "periodic_samples": 0,
+          "leaf_classes": {}
+        },
+        {
+          "tid": 30160,
+          "global_tid": 281531683730896,
+          "on_cpu_ms": 0.0083,
+          "on_cpu_during_gpu_gaps_ms": 0.0083,
+          "periodic_samples": 0,
+          "leaf_classes": {}
+        },
+        {
+          "tid": 11960,
+          "global_tid": 281531683712696,
+          "on_cpu_ms": 0.0051,
+          "on_cpu_during_gpu_gaps_ms": 0.0051,
+          "periodic_samples": 0,
+          "leaf_classes": {}
+        }
+      ],
+      "diagnostic_warnings": [
+        {
+          "timestamp": 17192087700,
+          "timestampType": 2,
+          "source": 3,
+          "severity": 2,
+          "text": "Not all NVTX events might have been collected.",
+          "globalPid": 281524503052288
+        },
+        {
+          "timestamp": 17192101400,
+          "timestampType": 2,
+          "source": 3,
+          "severity": 2,
+          "text": "No NVTX events collected. Does the process use NVTX?",
+          "globalPid": 281531683700736
+        },
+        {
+          "timestamp": 17192103600,
+          "timestampType": 2,
+          "source": 3,
+          "severity": 2,
+          "text": "CUDA profiling might have not been started correctly.",
+          "globalPid": 281524503052288
+        },
+        {
+          "timestamp": 17192104800,
+          "timestampType": 2,
+          "source": 3,
+          "severity": 2,
+          "text": "No CUDA events collected. Does the process use CUDA?",
+          "globalPid": 281524503052288
+        },
+        {
+          "timestamp": 44295123900,
+          "timestampType": 1,
+          "source": 2,
+          "severity": 2,
+          "text": "NVIDIA Nsight Systems requires that Windows Performance Toolkit be installed on the target machine to create a merged ETL file of the trace session. Could not detect Windows Performance Toolkit, therefore the session's merged ETL file was not created. To fix this, please install Windows Performance Toolkit on the target machine.",
+          "globalPid": 281474976710656
+        }
+      ],
+      "cudaEventQuery": {
+        "calls": 2767380,
+        "return_values": {
+          "0": 2767380
+        },
+        "call_threads": {
+          "5728": 2767380
+        },
+        "return_value_limit": "Raw serialized field; event readiness is not inferred from this field.",
+        "API_union_ms": 994.761698,
+        "API_during_gpu_gaps_ms": 246.891511
+      },
+      "profile_to_plain_ratios": {
+        "prefill": 1.0048289311346663,
+        "decode": 1.1516081564010932
+      },
+      "plain": {
+        "prompt_ms": 7537.9,
+        "decode_ms": 2378.5,
+        "process_cpu_s": 25.859375
+      },
+      "profiled": {
+        "prompt_ms": 7574.3,
+        "decode_ms": 2739.1,
+        "process_cpu_s": 33.875
+      },
+      "cuda_submission_thread": 5728,
+      "pool_worker_tids": [
+        25896,
+        30076,
+        31612,
+        32444,
+        24400,
+        25284,
+        28164
+      ]
+    },
+    {
+      "tag": "on-r0-l16384",
+      "engine_pid": 30248,
+      "window_ms": 2622.563317,
+      "gpu_union_ms": 1152.558115,
+      "gpu_uncovered_ms": 1470.005202,
+      "engine_on_cpu_union_ms": 2622.563317,
+      "gpu_gaps_with_engine_on_cpu_ms": 1470.005202,
+      "periodic_leaf_samples": 11867,
+      "engine_image_samples": 9133,
+      "unresolved_engine_samples": 0,
+      "leaf_classes": {
+        "pool_idle_wait_loop": 6448,
+        "CPU_arithmetic_or_quantization": 2597,
+        "profiler_module": 714,
+        "CUDA_driver_module": 258,
+        "kernel_address_unresolved": 1442,
+        "pool_control_or_join": 79,
+        "other_module": 320,
+        "other_engine_code": 9
+      },
+      "leaf_classes_during_gpu_gaps": {
+        "pool_idle_wait_loop": 2539,
+        "CPU_arithmetic_or_quantization": 2596,
+        "profiler_module": 296,
+        "pool_control_or_join": 79,
+        "kernel_address_unresolved": 814,
+        "other_module": 168,
+        "CUDA_driver_module": 110,
+        "other_engine_code": 8
+      },
+      "leaf_modules": {
+        "strata-q36.exe": 9133,
+        "ToolsInjection64.dll": 282,
+        "cupti64_133.dll": 432,
+        "nvcuda64.dll": 243,
+        "<kernel address>": 1442,
+        "ntdll.dll": 198,
+        "ucrtbase.dll": 8,
+        "VCRUNTIME140.dll": 79,
+        "KERNEL32.DLL": 14,
+        "nvcudart_hybrid64.dll": 15,
+        "MSVCP140.dll": 10,
+        "nvdxgdmal64.dll": 2,
+        "KERNELBASE.dll": 9
+      },
+      "top_engine_functions": [
+        {
+          "function": "strata::kernels::cpu::ExpertPool::worker",
+          "samples": 6449
+        },
+        {
+          "function": "ggml_vec_dot_q4_K_q8_K",
+          "samples": 1537
+        },
+        {
+          "function": "ggml_vec_dot_q5_K_q8_K",
+          "samples": 919
+        },
+        {
+          "function": "ggml_vec_dot_q6_K_q8_K",
+          "samples": 90
+        },
+        {
+          "function": "strata::kernels::cpu::ExpertPool::wait_done",
+          "samples": 70
+        },
+        {
+          "function": "strata::kernels::cpu::native_down_rows_impl<0>",
+          "samples": 35
+        },
+        {
+          "function": "strata::kernels::cpu::native_gu_rows_impl<0>",
+          "samples": 16
+        },
+        {
+          "function": "strata::kernels::cpu::ExpertPool::drain",
+          "samples": 7
+        },
+        {
+          "function": "expf",
+          "samples": 3
+        },
+        {
+          "function": "strata::kernels::cpu::q8k_quant_avx2",
+          "samples": 3
+        },
+        {
+          "function": "_GLOBAL__N__f8dd849e_13_q36_engine_cu_19c1e9e6::Engine::q8_small",
+          "samples": 1
+        },
+        {
+          "function": "__cudaLaunchKernel",
+          "samples": 1
+        },
+        {
+          "function": "std::_Hash<std::_Umap_traits<void const * __ptr64,strata::kernels::_GLOBAL__N__923c6d42_14_native_mmvq_cu_30eb090c::Q6Packed,std::_Uhash_compare<void const * __ptr64,std::hash<void const * __ptr64>,std::equal_to<void const * __ptr64> >,std::allocator<std::pair<void const * __ptr64 const,strata::kernels::_GLOBAL__N__923c6d42_14_native_mmvq_cu_30eb090c::Q6Packed> >,0> >::find<void>",
+          "samples": 1
+        },
+        {
+          "function": "strata::kernels::cpu::ExpertPool::begin_batch",
+          "samples": 1
+        }
+      ],
+      "top_engine_lines": [
+        {
+          "function": "strata::kernels::cpu::ExpertPool::worker",
+          "file": "pool.cpp",
+          "line": 1014,
+          "samples": 6144
+        },
+        {
+          "function": "ggml_vec_dot_q4_K_q8_K",
+          "file": "",
+          "line": 0,
+          "samples": 1537
+        },
+        {
+          "function": "ggml_vec_dot_q5_K_q8_K",
+          "file": "",
+          "line": 0,
+          "samples": 919
+        },
+        {
+          "function": "strata::kernels::cpu::ExpertPool::worker",
+          "file": "pool.cpp",
+          "line": 1000,
+          "samples": 264
+        },
+        {
+          "function": "ggml_vec_dot_q6_K_q8_K",
+          "file": "",
+          "line": 0,
+          "samples": 90
+        },
+        {
+          "function": "strata::kernels::cpu::ExpertPool::wait_done",
+          "file": "pool.cpp",
+          "line": 1162,
+          "samples": 66
+        },
+        {
+          "function": "strata::kernels::cpu::ExpertPool::worker",
+          "file": "pool.cpp",
+          "line": 1003,
+          "samples": 21
+        },
+        {
+          "function": "strata::kernels::cpu::native_down_rows_impl<0>",
+          "file": "native_expert.cpp",
+          "line": 573,
+          "samples": 20
+        },
+        {
+          "function": "strata::kernels::cpu::ExpertPool::worker",
+          "file": "pool.cpp",
+          "line": 1001,
+          "samples": 19
+        },
+        {
+          "function": "strata::kernels::cpu::native_down_rows_impl<0>",
+          "file": "native_expert.cpp",
+          "line": 570,
+          "samples": 8
+        },
+        {
+          "function": "strata::kernels::cpu::native_gu_rows_impl<0>",
+          "file": "native_expert.cpp",
+          "line": 511,
+          "samples": 6
+        },
+        {
+          "function": "strata::kernels::cpu::native_down_rows_impl<0>",
+          "file": "native_expert.cpp",
+          "line": 569,
+          "samples": 6
+        },
+        {
+          "function": "strata::kernels::cpu::ExpertPool::drain",
+          "file": "pool.cpp",
+          "line": 1183,
+          "samples": 5
+        },
+        {
+          "function": "strata::kernels::cpu::native_gu_rows_impl<0>",
+          "file": "native_expert.cpp",
+          "line": 503,
+          "samples": 4
+        },
+        {
+          "function": "strata::kernels::cpu::ExpertPool::wait_done",
+          "file": "pool.cpp",
+          "line": 1159,
+          "samples": 3
+        },
+        {
+          "function": "expf",
+          "file": "",
+          "line": 0,
+          "samples": 3
+        },
+        {
+          "function": "strata::kernels::cpu::native_gu_rows_impl<0>",
+          "file": "native_expert.cpp",
+          "line": 510,
+          "samples": 3
+        },
+        {
+          "function": "strata::kernels::cpu::q8k_quant_avx2",
+          "file": "iq_avx2.cpp",
+          "line": 417,
+          "samples": 2
+        },
+        {
+          "function": "strata::kernels::cpu::ExpertPool::drain",
+          "file": "pool.cpp",
+          "line": 1281,
+          "samples": 2
+        },
+        {
+          "function": "strata::kernels::cpu::ExpertPool::worker",
+          "file": "pool.cpp",
+          "line": 1034,
+          "samples": 1
+        },
+        {
+          "function": "strata::kernels::cpu::native_gu_rows_impl<0>",
+          "file": "native_expert.cpp",
+          "line": 509,
+          "samples": 1
+        },
+        {
+          "function": "strata::kernels::cpu::native_gu_rows_impl<0>",
+          "file": "native_expert.cpp",
+          "line": 508,
+          "samples": 1
+        },
+        {
+          "function": "strata::kernels::cpu::native_down_rows_impl<0>",
+          "file": "native_expert.cpp",
+          "line": 572,
+          "samples": 1
+        },
+        {
+          "function": "_GLOBAL__N__f8dd849e_13_q36_engine_cu_19c1e9e6::Engine::q8_small",
+          "file": "",
+          "line": 0,
+          "samples": 1
+        },
+        {
+          "function": "strata::kernels::cpu::q8k_quant_avx2",
+          "file": "iq_avx2.cpp",
+          "line": 404,
+          "samples": 1
+        },
+        {
+          "function": "__cudaLaunchKernel",
+          "file": "cuda_runtime_api_private_entrypoints.c",
+          "line": 202,
+          "samples": 1
+        },
+        {
+          "function": "std::_Hash<std::_Umap_traits<void const * __ptr64,strata::kernels::_GLOBAL__N__923c6d42_14_native_mmvq_cu_30eb090c::Q6Packed,std::_Uhash_compare<void const * __ptr64,std::hash<void const * __ptr64>,std::equal_to<void const * __ptr64> >,std::allocator<std::pair<void const * __ptr64 const,strata::kernels::_GLOBAL__N__923c6d42_14_native_mmvq_cu_30eb090c::Q6Packed> >,0> >::find<void>",
+          "file": "",
+          "line": 0,
+          "samples": 1
+        },
+        {
+          "function": "strata::kernels::cpu::ExpertPool::begin_batch",
+          "file": "pool.cpp",
+          "line": 1102,
+          "samples": 1
+        },
+        {
+          "function": "strata::kernels::cpu::ExpertPool::wait_done",
+          "file": "pool.cpp",
+          "line": 1156,
+          "samples": 1
+        },
+        {
+          "function": "strata::kernels::cpu::native_gu_rows_impl<0>",
+          "file": "native_expert.cpp",
+          "line": 507,
+          "samples": 1
+        }
+      ],
+      "threads": [
+        {
+          "tid": 14736,
+          "global_tid": 281982453954960,
+          "on_cpu_ms": 2599.118317,
+          "on_cpu_during_gpu_gaps_ms": 1457.834142,
+          "periodic_samples": 1299,
+          "leaf_classes": {
+            "kernel_address_unresolved": 1079,
+            "other_module": 128,
+            "profiler_module": 92
+          }
+        },
+        {
+          "tid": 14512,
+          "global_tid": 281982453954736,
+          "on_cpu_ms": 2596.644363,
+          "on_cpu_during_gpu_gaps_ms": 1446.872594,
+          "periodic_samples": 1298,
+          "leaf_classes": {
+            "profiler_module": 411,
+            "pool_control_or_join": 72,
+            "CUDA_driver_module": 181,
+            "CPU_arithmetic_or_quantization": 340,
+            "other_module": 76,
+            "kernel_address_unresolved": 211,
+            "other_engine_code": 7
+          }
+        },
+        {
+          "tid": 19932,
+          "global_tid": 281982453960156,
+          "on_cpu_ms": 2566.149363,
+          "on_cpu_during_gpu_gaps_ms": 1426.347827,
+          "periodic_samples": 1281,
+          "leaf_classes": {
+            "pool_idle_wait_loop": 953,
+            "CPU_arithmetic_or_quantization": 322,
+            "other_module": 5,
+            "kernel_address_unresolved": 1
+          }
+        },
+        {
+          "tid": 31960,
+          "global_tid": 281982453972184,
+          "on_cpu_ms": 2558.342817,
+          "on_cpu_during_gpu_gaps_ms": 1432.850746,
+          "periodic_samples": 1284,
+          "leaf_classes": {
+            "pool_idle_wait_loop": 924,
+            "CPU_arithmetic_or_quantization": 357,
+            "other_module": 2,
+            "kernel_address_unresolved": 1
+          }
+        },
+        {
+          "tid": 29840,
+          "global_tid": 281982453970064,
+          "on_cpu_ms": 2525.499317,
+          "on_cpu_during_gpu_gaps_ms": 1404.703713,
+          "periodic_samples": 1257,
+          "leaf_classes": {
+            "pool_idle_wait_loop": 901,
+            "CPU_arithmetic_or_quantization": 353,
+            "kernel_address_unresolved": 1,
+            "pool_control_or_join": 1,
+            "other_module": 1
+          }
+        },
+        {
+          "tid": 26500,
+          "global_tid": 281982453966724,
+          "on_cpu_ms": 2502.802217,
+          "on_cpu_during_gpu_gaps_ms": 1403.293306,
+          "periodic_samples": 1249,
+          "leaf_classes": {
+            "pool_idle_wait_loop": 915,
+            "CPU_arithmetic_or_quantization": 327,
+            "kernel_address_unresolved": 3,
+            "pool_control_or_join": 2,
+            "other_module": 1,
+            "other_engine_code": 1
+          }
+        },
+        {
+          "tid": 5904,
+          "global_tid": 281982453946128,
+          "on_cpu_ms": 2496.475417,
+          "on_cpu_during_gpu_gaps_ms": 1394.509619,
+          "periodic_samples": 1249,
+          "leaf_classes": {
+            "pool_idle_wait_loop": 933,
+            "CPU_arithmetic_or_quantization": 312,
+            "pool_control_or_join": 1,
+            "other_module": 2,
+            "kernel_address_unresolved": 1
+          }
+        },
+        {
+          "tid": 31072,
+          "global_tid": 281982453971296,
+          "on_cpu_ms": 2423.225817,
+          "on_cpu_during_gpu_gaps_ms": 1366.075073,
+          "periodic_samples": 1211,
+          "leaf_classes": {
+            "pool_idle_wait_loop": 896,
+            "CPU_arithmetic_or_quantization": 306,
+            "pool_control_or_join": 3,
+            "kernel_address_unresolved": 5,
+            "other_engine_code": 1
+          }
+        },
+        {
+          "tid": 29960,
+          "global_tid": 281982453970184,
+          "on_cpu_ms": 2412.337017,
+          "on_cpu_during_gpu_gaps_ms": 1346.630371,
+          "periodic_samples": 1212,
+          "leaf_classes": {
+            "pool_idle_wait_loop": 926,
+            "CPU_arithmetic_or_quantization": 280,
+            "kernel_address_unresolved": 5,
+            "other_module": 1
+          }
+        },
+        {
+          "tid": 3324,
+          "global_tid": 281982453943548,
+          "on_cpu_ms": 1042.6707,
+          "on_cpu_during_gpu_gaps_ms": 607.484685,
+          "periodic_samples": 517,
+          "leaf_classes": {
+            "profiler_module": 211,
+            "CUDA_driver_module": 77,
+            "kernel_address_unresolved": 125,
+            "other_module": 104
+          }
+        },
+        {
+          "tid": 8404,
+          "global_tid": 281982453948628,
+          "on_cpu_ms": 14.3915,
+          "on_cpu_during_gpu_gaps_ms": 8.367614,
+          "periodic_samples": 6,
+          "leaf_classes": {
+            "kernel_address_unresolved": 6
+          }
+        },
+        {
+          "tid": 9212,
+          "global_tid": 281982453949436,
+          "on_cpu_ms": 1.4025,
+          "on_cpu_during_gpu_gaps_ms": 0.952053,
+          "periodic_samples": 3,
+          "leaf_classes": {
+            "kernel_address_unresolved": 3
+          }
+        },
+        {
+          "tid": 28616,
+          "global_tid": 281982453968840,
+          "on_cpu_ms": 1.3182,
+          "on_cpu_during_gpu_gaps_ms": 0.785442,
+          "periodic_samples": 1,
+          "leaf_classes": {
+            "kernel_address_unresolved": 1
+          }
+        },
+        {
+          "tid": 26632,
+          "global_tid": 281982453966856,
+          "on_cpu_ms": 0.4551,
+          "on_cpu_during_gpu_gaps_ms": 0.278947,
+          "periodic_samples": 0,
+          "leaf_classes": {}
+        }
+      ],
+      "diagnostic_warnings": [
+        {
+          "timestamp": 14288829900,
+          "timestampType": 2,
+          "source": 3,
+          "severity": 2,
+          "text": "Not all NVTX events might have been collected.",
+          "globalPid": 281943061037056
+        },
+        {
+          "timestamp": 14288840000,
+          "timestampType": 2,
+          "source": 3,
+          "severity": 2,
+          "text": "No NVTX events collected. Does the process use NVTX?",
+          "globalPid": 281982453940224
+        },
+        {
+          "timestamp": 14288842200,
+          "timestampType": 2,
+          "source": 3,
+          "severity": 2,
+          "text": "CUDA profiling might have not been started correctly.",
+          "globalPid": 281943061037056
+        },
+        {
+          "timestamp": 14288843300,
+          "timestampType": 2,
+          "source": 3,
+          "severity": 2,
+          "text": "No CUDA events collected. Does the process use CUDA?",
+          "globalPid": 281943061037056
+        },
+        {
+          "timestamp": 39558451300,
+          "timestampType": 1,
+          "source": 2,
+          "severity": 2,
+          "text": "NVIDIA Nsight Systems requires that Windows Performance Toolkit be installed on the target machine to create a merged ETL file of the trace session. Could not detect Windows Performance Toolkit, therefore the session's merged ETL file was not created. To fix this, please install Windows Performance Toolkit on the target machine.",
+          "globalPid": 281474976710656
+        }
+      ],
+      "cudaEventQuery": {
+        "calls": 2143987,
+        "return_values": {
+          "0": 2143987
+        },
+        "call_threads": {
+          "14512": 2143987
+        },
+        "return_value_limit": "Raw serialized field; event readiness is not inferred from this field.",
+        "API_union_ms": 922.249094,
+        "API_during_gpu_gaps_ms": 220.583522
+      },
+      "profile_to_plain_ratios": {
+        "prefill": 1.0093488072211476,
+        "decode": 1.1041430550308524
+      },
+      "plain": {
+        "prompt_ms": 6204.0,
+        "decode_ms": 2382.3,
+        "process_cpu_s": 24.46875
+      },
+      "profiled": {
+        "prompt_ms": 6262.0,
+        "decode_ms": 2630.4,
+        "process_cpu_s": 31.25
+      },
+      "cuda_submission_thread": 14512,
+      "pool_worker_tids": [
+        19932,
+        31960,
+        29840,
+        26500,
+        5904,
+        31072,
+        29960
+      ]
+    }
+  ],
+  "limits": [
+    "500Hz leaf IP, not full stacks",
+    "one trace per cell; injected threads remain in denominator",
+    "CPU-on-CPU includes idle spin; parallel per-thread durations are not elapsed time",
+    "no direct CPU expert job markers; not a complete causal critical path"
+  ]
+}
