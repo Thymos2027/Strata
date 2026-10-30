@@ -1,0 +1,140 @@
+diff --git a/src/kernels/cpu/pool.cpp b/src/kernels/cpu/pool.cpp
+index a43b5c6e..a10544b6 100644
+--- a/src/kernels/cpu/pool.cpp
++++ b/src/kernels/cpu/pool.cpp
+@@ -1,6 +1,7 @@
+ // src/kernels/cpu/pool.cpp - P2.S3: the CPU expert pool.  Read pool.hpp first; it explains the protocol.
+ #include "strata/kernels/cpu/pool.hpp"
+ #include "strata/core/progress.hpp"
++#include "strata/core/job_trace.hpp"
+ #include "strata/platform/aux_cpus.hpp"
+ #include "strata/kernels/cpu/expert_layout.hpp"
+ #include "strata/kernels/cpu/numa_pool.hpp"
+@@ -1121,6 +1122,7 @@ uint32_t ExpertPool::begin_batch(int n) {
+         done_.store(0, std::memory_order_relaxed);
+         head_.store(pack_head(e, (uint32_t) n, 0), std::memory_order_release);
+     }
++    strata_job_trace::mark("JT publish epoch=%u", e);
+     publish();
+     return e;
+ }
+@@ -1183,6 +1185,7 @@ void ExpertPool::drain(int id, ExpertScratch& scratch, uint32_t epoch) {
+         if (!sliced) ci = claim(epoch);
+         if (ci < 0) break;
+         const uint32_t i = (uint32_t) ci;
++        strata_job_trace::Span jt_job("JT job epoch=%u mode=%d task=%u who=%d", epoch, mode_, i, id);
+         if (id >= 0) wstate_[(size_t) id].store(ci, std::memory_order_relaxed);
+         else { hstate_.store(ci, std::memory_order_relaxed); hstate_ms_.store(now_ms(), std::memory_order_relaxed); }
+         if (mode_ == 0) {
+@@ -1271,6 +1274,7 @@ void ExpertPool::drain(int id, ExpertScratch& scratch, uint32_t epoch) {
+                 r += r1 - r0;
+             }
+         }
++        jt_job.finish(); // observation ends before the original done release
+         if (sliced) {
+             NodeSync& ns = nsync_[(size_t) s];
+             const uint32_t t = (uint32_t) ns.tasks;
+@@ -1278,19 +1282,28 @@ void ExpertPool::drain(int id, ExpertScratch& scratch, uint32_t epoch) {
+             if (ns.done.fetch_add(1, std::memory_order_release) + 1 == t)
+                 ns.drained_ns.store(now_ns(), std::memory_order_relaxed);
+         } else {
+-            done_.fetch_add(1, std::memory_order_release);
++            if (strata_job_trace::enabled()) {
++                const uint32_t jt_ordinal = done_.fetch_add(1, std::memory_order_release) + 1;
++                strata_job_trace::mark("JT done epoch=%u mode=%d task=%u who=%d ordinal=%u", epoch, mode_, i, id, jt_ordinal);
++            } else {
++                done_.fetch_add(1, std::memory_order_release);
++            }
+         }
+     }
+ }
+ 
+ void ExpertPool::run_phase(int mode, int n_tasks) {
++    const uint32_t jt_epoch = epoch_.load(std::memory_order_relaxed) + 1;
++    strata_job_trace::Span jt_phase("JT phase epoch=%u mode=%d tasks=%d rows=%lld per=%lld sliced=%d", jt_epoch, mode, n_tasks, (long long) mrows_, (long long) (mode >= 5 && nfmt_ ? (mode == 5 ? nfmt_->n_ff : nfmt_->n_embd) : 0), numa_n_);
++    { strata_job_trace::Span jt_park("JT park_before epoch=%u", jt_epoch);
+     wait_parked("before a phase");
++    }
+     mode_ = mode;
+     njobs_ = n_tasks;
+     const uint32_t e = begin_batch(n_tasks);
+-    if (host_works_) drain(-1, host_scratch_, e);
+-    wait_done(n_tasks);
+-    wait_parked("after a phase");
++    if (host_works_) { strata_job_trace::Span jt_host("JT host_drain epoch=%u", e); drain(-1, host_scratch_, e); }
++    { strata_job_trace::Span jt_wait("JT wait_done epoch=%u", e); wait_done(n_tasks); }
++    { strata_job_trace::Span jt_park("JT park_after epoch=%u", e); wait_parked("after a phase"); }
+     // Each slice's stamp is stored after its last `done` increment, so `wait_done` can return before it lands; the
+     // thread that stored it has parked again since (it left the park to claim), and that re-park is what the wait
+     // above acquired.  So the stamps are read here, not in `wait_done`.
+diff --git a/src/qwen35/q36_engine.cu b/src/qwen35/q36_engine.cu
+index 6a773837..69ad3d8c 100644
+--- a/src/qwen35/q36_engine.cu
++++ b/src/qwen35/q36_engine.cu
+@@ -18,6 +18,7 @@
+ // [--force IDS] [--dump-full-logits F] (tools/qwen35/kl.py's reference interface), --bench-pp N / --bench-tg N.
+ #include "strata/artifact/gguf_reader.hpp"
+ #include "strata/core/family_layout.hpp"
++#include "strata/core/job_trace.hpp"
+ #include "strata/kernels/fused_gdn.hpp"
+ #include "strata/kernels/iq_kernels.hpp"
+ #include "strata/kernels/native_mmvq.hpp"
+@@ -2079,6 +2080,7 @@ struct Engine {
+     /// final normed hidden; `heads` rows from the end get logits (rows [T - heads, T): logits row r - (T - heads)) and
+     /// their greedy picks (`pick`).  `verify`: a verify window (the GDN state left for commit()).
+     void forward(int T, int64_t p0, int heads, bool graph_mode, bool verify) {
++        strata_job_trace::Span jt_forward("JT forward id=%llu T=%d pos=%lld", (unsigned long long) strata_job_trace::next_forward(), T, (long long) p0);
+         const auto& g = m->g;
+         const int N = (int) g.n_embd;
+         if (main_hybrid && T > hybrid_t && use_mmq) {
+@@ -2223,6 +2225,7 @@ struct Engine {
+ 
+     /// The GPU half of a hybrid MoE: the routing to the host, the resident experts' entries grouped and run.
+     void moe_hybrid_gpu(const Layer& L, size_t li, int T) {
++        strata_job_trace::Span jt_gpu("JT gpu moe=%llu f=%llu li=%zu T=%d", (unsigned long long) strata_job_trace::next_moe(), (unsigned long long) strata_job_trace::forward_id, li, T);
+         const auto& g = m->g;
+         const int N = (int) g.n_embd, Kp = (int) m->top_k;
+         const int64_t n_ent = (int64_t) T * Kp;
+@@ -2237,6 +2240,7 @@ struct Engine {
+     /// The CPU half: the entries without a slot on the pool (ggml-cpu's arithmetic for the layer's formats), their
+     /// rows uploaded and merged into the entries' rows.
+     void moe_hybrid_cpu(size_t li, int T) {
++        strata_job_trace::Span jt_cpu("JT cpu moe=%llu f=%llu li=%zu T=%d", (unsigned long long) strata_job_trace::moe_id, (unsigned long long) strata_job_trace::forward_id, li, T);
+ #if defined(STRATA_Q36_CPU_POOL)
+         namespace C = strata::kernels::cpu;
+         const auto& g = m->g;
+@@ -2244,8 +2248,10 @@ struct Engine {
+         const int n_ent = T * Kp;
+         Hy& H = hy[li];
+         const Layer& L = layer_at((int) li);
++        { strata_job_trace::Span jt_route("JT route moe=%llu", (unsigned long long) strata_job_trace::moe_id);
+         while (cudaEventQuery(ev_route) == cudaErrorNotReady) {
+         }
++        }
+         const auto t0 = Clock::now();
+         // the missed entries per expert (up to MAXT tokens per job)
+         jobs.clear();
+@@ -2283,7 +2289,9 @@ struct Engine {
+         hy_cpu += n_miss;
+         hy_gpu += n_ent - n_miss;
+         if (n_miss == 0) return;
++        { strata_job_trace::Span jt_pool("JT pool moe=%llu experts=%zu miss=%d", (unsigned long long) strata_job_trace::moe_id, jobs.size(), n_miss);
+         pool->run_split_multi_native(H.fmt, jobs.data(), (int) jobs.size());
++        }
+         hy_cpu_ms += ms_since(t0);
+         CK(cudaMemcpyAsync(ecpu, cpu_out, (size_t) n_ent * N * 4, cudaMemcpyHostToDevice, st));
+         CK(cudaMemcpyAsync(d_miss, h_miss, (size_t) n_ent * 4, cudaMemcpyHostToDevice, st));
+@@ -3645,11 +3653,13 @@ struct Serve {
+                 continue;
+             }
+             if (E.pos + 1 > E.ctx) break;
++            { strata_job_trace::Span jt_token("JT token pos=%lld output=%lld", (long long) E.pos, (long long) produced);
+             const int32_t one = nx;
+             E.process(&one, 1, [](int64_t) {});
+             ss.live.push_back(nx);
+             fix.clear();
+             if (!smp.needs_logits()) nx = E.greedy();
++            }
+         }
+         E.sess[(size_t) E.cur].pos = E.pos;
+         const double decode_ms = ms_since(d0);

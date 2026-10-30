@@ -1,0 +1,11 @@
+*
+!.gitignore
+!*.md
+!*.py
+!*.hpp
+!*.patch
+!summary.json
+!critical-path.json
+!phase-ledger.csv
+!token-ledger.csv
+!timeline.png
