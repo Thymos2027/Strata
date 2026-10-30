@@ -63,3 +63,5 @@ python -u reports/tobeo-20261030/qwen36-copy3905/analyze.py
 只有一台Windows/CUDA机器、一个Q4模型、63slots/chunk2048和两长度各64输出；没有HIP/SYCL构建、动态换槽、并发、长稳、完整质量或其他布局结论。没有逐字节转储所有staging内存。CPU采样权限仍不足，完整CPU/关键路径归因保持未完成。不改默认、不组合#4335/#4347，也不另提交作者已有实现。
 
 原线程补充已于09:22:50[实际发布](https://github.com/Niko1221/Strata/pull/3905#issuecomment-6512596830)，脱敏证据固定在fork独立commit，详见[发布记录](PUBLICATION.md)与[实际评论](comment-3905.md)；先前英文草稿作为历史保留。复制方向不另写重复实现，也不自动扩展所有布局。完整CPU归因仍待有权限的会话；若继续已有GQA方案的16K验证，应另立范围、重新查重和做数值门禁，不与本次复制改动组合。
+
+2026-10-30午间补充：[正常工况CPU/IP与复制event证据](../qwen36-cpu-mechanism/README.md)已完成。管理员权限障碍解除，新增三份CPU/调度trace及同日输出参考；原off/on trace的320次staging现已逐步核对字节与双缓冲event依赖，并确认stream15实际priority=-5。设备event timestamp仍为0，不能报告设备等待时长或独立归因优先级收益；完整job级关键路径仍未完成。此前“待有权限会话”为早间状态，新材料尚未外发，原评论及其固定commit保持原样。
