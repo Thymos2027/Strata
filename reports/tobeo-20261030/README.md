@@ -9,3 +9,5 @@
 - [正常工况CPU IP/调度与复制依赖补充](qwen36-cpu-mechanism/README.md)：固定46c152a1与原配置，三份CPU trace及同日参考通过；补齐等待/算术样本、320步双缓冲依赖和stream优先级，完整job级因果仍未完成，新材料未发布。
 
 - [Qwen3.6 job级依赖与关键路径](qwen36-job-path/README.md)：两轮独立诊断及最终验收通过，10160个phase/243840个行任务的完成序号和wall账本核对；受控路径完成，GPU迟启动残差与原版全系统根因仍待。新材料未发布。
+
+- [PR3905补充发布与upstream870aedd9更新](qwen36-pr3905-followup/README.md)：新增评论和固定证据包发布/回读通过；本地main已合并指定上游、精确源码worktree已建立。原基线与日常服务保留，新0.1.54构建/验收为下一项。
