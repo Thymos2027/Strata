@@ -1,5 +1,7 @@
 # 正常工况CPU归因与PR3905复制依赖
 
+2026-10-30 18:00发布更新：本报告的新增补充已按授权发布到[PR3905跟进评论](https://github.com/Niko1221/Strata/pull/3905#issuecomment-6518999609)，脱敏证据和upstream870aedd9源码更新见[发布记录](../qwen36-pr3905-followup/README.md)。下文“未外发”及summary中的publication字段保留测量时状态；原始证据和结论不变。后续根因调查使用870aedd9独立重验。
+
 2026-10-30，北京时间。接续[已发布复制验证](../qwen36-copy3905/README.md)，[执行前协议](experiment-plan.md)保持46c152a1及原配置。**已完成正常HtoD下的CPU周期IP/调度采集，能区分专家算术、worker等待和CUDA查询；原始两条复制trace还补齐了320步字节守恒、双缓冲event依赖与stream优先级元数据。** 这不是精确CPU关键路径分解，不据样本比例修改等待策略或默认参数。本轮新证据尚未向上游发布。
 
 ## 配置、门槛与采集范围
