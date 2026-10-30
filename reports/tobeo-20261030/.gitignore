@@ -1,0 +1,6 @@
+*
+!.gitignore
+!README.md
+!git-branch-audit.md
+!qwen36-systems/
+!qwen36-copy3905/
