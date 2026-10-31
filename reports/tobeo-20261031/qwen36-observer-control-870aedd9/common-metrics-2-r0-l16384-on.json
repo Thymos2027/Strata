@@ -1,0 +1,61 @@
+{
+  "selected_kernels": 2520,
+  "prefill_tail_excluded": 40,
+  "native_NVTX_events": 286855,
+  "API_end_to_GPU_start": {
+    "min_ns": 200036,
+    "median_ns": 656530.0,
+    "p95_ns": 1594535,
+    "max_ns": 31768195,
+    "sum_ns": 2224537325,
+    "negative_count": 0
+  },
+  "visible_gap": {
+    "min_ns": 33376,
+    "median_ns": 364768.0,
+    "p95_ns": 500224,
+    "max_ns": 30689550,
+    "sum_ns": 1006332441,
+    "negative_count": 0
+  },
+  "timestamp_overlap_within_10us_count": 0,
+  "diagnostic_warnings": [
+    {
+      "timestamp": 9659798000,
+      "timestampType": 2,
+      "source": 3,
+      "severity": 2,
+      "text": "Not all NVTX events might have been collected.",
+      "globalPid": 281934001340416
+    },
+    {
+      "timestamp": 9659801000,
+      "timestampType": 2,
+      "source": 3,
+      "severity": 2,
+      "text": "CUDA profiling might have not been started correctly.",
+      "globalPid": 281934001340416
+    },
+    {
+      "timestamp": 9659801700,
+      "timestampType": 2,
+      "source": 3,
+      "severity": 2,
+      "text": "No CUDA events collected. Does the process use CUDA?",
+      "globalPid": 281934001340416
+    },
+    {
+      "timestamp": 38394592600,
+      "timestampType": 1,
+      "source": 2,
+      "severity": 2,
+      "text": "NVIDIA Nsight Systems requires that Windows Performance Toolkit be installed on the target machine to create a merged ETL file of the trace session. Could not detect Windows Performance Toolkit, therefore the session's merged ETL file was not created. To fix this, please install Windows Performance Toolkit on the target machine.",
+      "globalPid": 281474976710656
+    }
+  ],
+  "round": 2,
+  "case": "r0-l16384",
+  "arm": "on",
+  "sqlite_sha256": "af8396f339b77fa2a3c6866fe7f4bce7cbb9b82030296e09d4011d5865295120",
+  "selector_sha256": "ae6b2f6f3f809fee53fb8a466a4d16bda64dd58053b0b1dbb63d0f914246ab75"
+}

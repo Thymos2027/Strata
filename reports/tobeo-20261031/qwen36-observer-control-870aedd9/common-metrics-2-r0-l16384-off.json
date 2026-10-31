@@ -1,0 +1,69 @@
+{
+  "selected_kernels": 2520,
+  "prefill_tail_excluded": 40,
+  "native_NVTX_events": 0,
+  "API_end_to_GPU_start": {
+    "min_ns": 318781,
+    "median_ns": 631838.5,
+    "p95_ns": 1576508,
+    "max_ns": 8383013,
+    "sum_ns": 2132014125,
+    "negative_count": 0
+  },
+  "visible_gap": {
+    "min_ns": 131552,
+    "median_ns": 343280.0,
+    "p95_ns": 474175,
+    "max_ns": 7253109,
+    "sum_ns": 915846873,
+    "negative_count": 0
+  },
+  "timestamp_overlap_within_10us_count": 0,
+  "diagnostic_warnings": [
+    {
+      "timestamp": 7432880400,
+      "timestampType": 2,
+      "source": 3,
+      "severity": 2,
+      "text": "No NVTX events collected. Does the process use NVTX?",
+      "globalPid": 281891588538368
+    },
+    {
+      "timestamp": 7432885500,
+      "timestampType": 2,
+      "source": 3,
+      "severity": 2,
+      "text": "Not all NVTX events might have been collected.",
+      "globalPid": 281820721577984
+    },
+    {
+      "timestamp": 7432889900,
+      "timestampType": 2,
+      "source": 3,
+      "severity": 2,
+      "text": "CUDA profiling might have not been started correctly.",
+      "globalPid": 281820721577984
+    },
+    {
+      "timestamp": 7432890600,
+      "timestampType": 2,
+      "source": 3,
+      "severity": 2,
+      "text": "No CUDA events collected. Does the process use CUDA?",
+      "globalPid": 281820721577984
+    },
+    {
+      "timestamp": 37386958100,
+      "timestampType": 1,
+      "source": 2,
+      "severity": 2,
+      "text": "NVIDIA Nsight Systems requires that Windows Performance Toolkit be installed on the target machine to create a merged ETL file of the trace session. Could not detect Windows Performance Toolkit, therefore the session's merged ETL file was not created. To fix this, please install Windows Performance Toolkit on the target machine.",
+      "globalPid": 281474976710656
+    }
+  ],
+  "round": 2,
+  "case": "r0-l16384",
+  "arm": "off",
+  "sqlite_sha256": "6ff09660c342c1ea0217d6a5bc2832ba2d90b564843df3edb4aeb8b16beeeec8",
+  "selector_sha256": "ae6b2f6f3f809fee53fb8a466a4d16bda64dd58053b0b1dbb63d0f914246ab75"
+}
