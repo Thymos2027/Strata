@@ -1,0 +1,631 @@
+{
+  "passed": true,
+  "verified_at": "2026-10-31T00:35:52.131609+08:00",
+  "revision": "870aedd9e1ebe1c91f94da93b59af17729f6c5c0",
+  "selected_tests": 19,
+  "rounds": 2,
+  "new_numeric_dumps": 4,
+  "measured_requests": 16,
+  "traces": 4,
+  "observations": [
+    {
+      "round": 1,
+      "cases": {
+        "r0-l1024": {
+          "baseline": {
+            "prompt_ms": 823.5,
+            "decode_ms": 1787.2,
+            "output_sha256": "0b5a1ea52a88d40495085b558b6674fa7035a8697e8609ccc38b6391ac1e7908"
+          },
+          "off": {
+            "prompt_ms": 828.2,
+            "decode_ms": 1781.4,
+            "output_sha256": "0b5a1ea52a88d40495085b558b6674fa7035a8697e8609ccc38b6391ac1e7908"
+          },
+          "on": {
+            "prompt_ms": 818.5,
+            "decode_ms": 1805.0,
+            "output_sha256": "0b5a1ea52a88d40495085b558b6674fa7035a8697e8609ccc38b6391ac1e7908"
+          },
+          "trace": {
+            "prompt_ms": 823.3,
+            "decode_ms": 2127.1,
+            "output_sha256": "0b5a1ea52a88d40495085b558b6674fa7035a8697e8609ccc38b6391ac1e7908"
+          },
+          "ratios": {
+            "off_over_baseline": {
+              "prompt_ms": 1.0057073466909534,
+              "decode_ms": 0.9967547000895255
+            },
+            "marks_on_over_off": {
+              "prompt_ms": 0.9882878531755614,
+              "decode_ms": 1.0132480071853598
+            },
+            "trace_over_marks_on": {
+              "prompt_ms": 1.005864386072083,
+              "decode_ms": 1.1784487534626038
+            }
+          }
+        },
+        "r0-l16384": {
+          "baseline": {
+            "prompt_ms": 7280.8,
+            "decode_ms": 2408.1,
+            "output_sha256": "d9fa9d31b1fea2e0ebca46ef3ccb4bb03c7b33d7db49e48b28407f9d2f986a33"
+          },
+          "off": {
+            "prompt_ms": 7304.5,
+            "decode_ms": 2259.8,
+            "output_sha256": "d9fa9d31b1fea2e0ebca46ef3ccb4bb03c7b33d7db49e48b28407f9d2f986a33"
+          },
+          "on": {
+            "prompt_ms": 7277.2,
+            "decode_ms": 2301.3,
+            "output_sha256": "d9fa9d31b1fea2e0ebca46ef3ccb4bb03c7b33d7db49e48b28407f9d2f986a33"
+          },
+          "trace": {
+            "prompt_ms": 7290.6,
+            "decode_ms": 2655.3,
+            "output_sha256": "d9fa9d31b1fea2e0ebca46ef3ccb4bb03c7b33d7db49e48b28407f9d2f986a33"
+          },
+          "ratios": {
+            "off_over_baseline": {
+              "prompt_ms": 1.003255136798154,
+              "decode_ms": 0.9384161787301193
+            },
+            "marks_on_over_off": {
+              "prompt_ms": 0.9962625778629611,
+              "decode_ms": 1.0183644570315957
+            },
+            "trace_over_marks_on": {
+              "prompt_ms": 1.0018413675589513,
+              "decode_ms": 1.1538260982922697
+            }
+          }
+        }
+      },
+      "bandwidth": {
+        "bandwidth-before": {
+          "exit_code": 0,
+          "h2d_GBps": 24.881689,
+          "exe_sha256": "712995e1d2d12b0806eb621edc2c653b59b45a106118de7c5bfac577bf4972a8"
+        },
+        "bandwidth-after": {
+          "exit_code": 0,
+          "h2d_GBps": 24.995351,
+          "exe_sha256": "712995e1d2d12b0806eb621edc2c653b59b45a106118de7c5bfac577bf4972a8"
+        }
+      },
+      "service_restored_at": "2026-10-31T00:28:30.046087+08:00"
+    },
+    {
+      "round": 2,
+      "cases": {
+        "r0-l1024": {
+          "baseline": {
+            "prompt_ms": 818.6,
+            "decode_ms": 1719.1,
+            "output_sha256": "0b5a1ea52a88d40495085b558b6674fa7035a8697e8609ccc38b6391ac1e7908"
+          },
+          "off": {
+            "prompt_ms": 821.2,
+            "decode_ms": 1731.9,
+            "output_sha256": "0b5a1ea52a88d40495085b558b6674fa7035a8697e8609ccc38b6391ac1e7908"
+          },
+          "on": {
+            "prompt_ms": 816.8,
+            "decode_ms": 1760.9,
+            "output_sha256": "0b5a1ea52a88d40495085b558b6674fa7035a8697e8609ccc38b6391ac1e7908"
+          },
+          "trace": {
+            "prompt_ms": 820.9,
+            "decode_ms": 1947.7,
+            "output_sha256": "0b5a1ea52a88d40495085b558b6674fa7035a8697e8609ccc38b6391ac1e7908"
+          },
+          "ratios": {
+            "off_over_baseline": {
+              "prompt_ms": 1.0031761544099682,
+              "decode_ms": 1.0074457565004946
+            },
+            "marks_on_over_off": {
+              "prompt_ms": 0.9946419873356063,
+              "decode_ms": 1.0167446157399387
+            },
+            "trace_over_marks_on": {
+              "prompt_ms": 1.0050195886385898,
+              "decode_ms": 1.1060821170992106
+            }
+          }
+        },
+        "r0-l16384": {
+          "baseline": {
+            "prompt_ms": 7303.9,
+            "decode_ms": 2307.8,
+            "output_sha256": "d9fa9d31b1fea2e0ebca46ef3ccb4bb03c7b33d7db49e48b28407f9d2f986a33"
+          },
+          "off": {
+            "prompt_ms": 7292.1,
+            "decode_ms": 2257.4,
+            "output_sha256": "d9fa9d31b1fea2e0ebca46ef3ccb4bb03c7b33d7db49e48b28407f9d2f986a33"
+          },
+          "on": {
+            "prompt_ms": 7300.9,
+            "decode_ms": 2294.8,
+            "output_sha256": "d9fa9d31b1fea2e0ebca46ef3ccb4bb03c7b33d7db49e48b28407f9d2f986a33"
+          },
+          "trace": {
+            "prompt_ms": 7313.9,
+            "decode_ms": 2527.0,
+            "output_sha256": "d9fa9d31b1fea2e0ebca46ef3ccb4bb03c7b33d7db49e48b28407f9d2f986a33"
+          },
+          "ratios": {
+            "off_over_baseline": {
+              "prompt_ms": 0.9983844247593753,
+              "decode_ms": 0.9781610191524395
+            },
+            "marks_on_over_off": {
+              "prompt_ms": 1.0012067854253233,
+              "decode_ms": 1.0165677327899354
+            },
+            "trace_over_marks_on": {
+              "prompt_ms": 1.001780602391486,
+              "decode_ms": 1.1011852884782987
+            }
+          }
+        }
+      },
+      "bandwidth": {
+        "bandwidth-before": {
+          "exit_code": 0,
+          "h2d_GBps": 24.885906,
+          "exe_sha256": "712995e1d2d12b0806eb621edc2c653b59b45a106118de7c5bfac577bf4972a8"
+        },
+        "bandwidth-after": {
+          "exit_code": 0,
+          "h2d_GBps": 24.889249,
+          "exe_sha256": "712995e1d2d12b0806eb621edc2c653b59b45a106118de7c5bfac577bf4972a8"
+        }
+      },
+      "service_restored_at": "2026-10-31T00:35:15.427420+08:00"
+    }
+  ],
+  "paths": [
+    {
+      "round": 1,
+      "results": {
+        "verified_at": "2026-10-31T00:28:40.989120+08:00",
+        "scope": "all task completion ordinals validated; 63 native decode token iterations per fixed workload; observed timing, not pure CPU cycles or counterfactual speedup",
+        "cases": [
+          {
+            "case": "r0-l1024",
+            "tokens": 63,
+            "MoE_layers": 2520,
+            "phases": 5040,
+            "tasks": 120960,
+            "all_request_phases": 5040,
+            "all_request_tasks": 120960,
+            "GPU_half_first_kernel_names": {
+              "native_gu_kernel": 2520
+            },
+            "native_iteration_envelope_ns": 2126896154,
+            "between_token_control_ns": 566160,
+            "all_completion_ordinals_unique_and_tasks_matched": true,
+            "last_release_differs_from_last_body_phases": 83,
+            "host_wait_done_wall_ns": 287789645,
+            "host_park_before_wall_ns": 1181045,
+            "host_park_after_wall_ns": 5029470,
+            "all_task_ids_unique_and_rows_covered": true,
+            "all_token_ledgers_close": true,
+            "all_phase_fork_joins_close": true,
+            "last_completion_publisher_who_counts": {
+              "4": 610,
+              "1": 585,
+              "6": 658,
+              "0": 604,
+              "-1": 689,
+              "3": 767,
+              "2": 546,
+              "5": 581
+            },
+            "phase_last_body_ambiguous_1us": 1069,
+            "totals": {
+              "wall_ns": 2126329994,
+              "gpu_submit_ns": 134357131,
+              "route_wait_ns": 652568338,
+              "phase_pre_publish_ns": 4899382,
+              "critical_branch_job_body_ns": 904552934,
+              "critical_branch_queue_handoff_ns": 29993154,
+              "phase_tail_ns": 9015490,
+              "CPU_moe_other_ns": 114849065,
+              "token_other_ns": 276094500,
+              "gpu_union_ns": 626028103,
+              "gpu_uncovered_ns": 1500301891,
+              "host_late_interval_union_ns": 0,
+              "host_late_overlap_gpu_ns": 0,
+              "host_submission_later": 0,
+              "GPU_predecessor_later": 2520,
+              "within_10us_ambiguity": 0,
+              "GPU_half_start_after_pool": 2514,
+              "GPU_half_submit_to_start_ns": 1799097230,
+              "GPU_half_visible_gap_ns": 1107473883,
+              "GPU_half_gap_overlap_pool_ns": 956007700
+            },
+            "diagnostic_warnings": [
+              {
+                "timestamp": 6210352600,
+                "timestampType": 2,
+                "source": 3,
+                "severity": 2,
+                "text": "Not all NVTX events might have been collected.",
+                "globalPid": 282000841768960
+              },
+              {
+                "timestamp": 6210361800,
+                "timestampType": 2,
+                "source": 3,
+                "severity": 2,
+                "text": "CUDA profiling might have not been started correctly.",
+                "globalPid": 282000841768960
+              },
+              {
+                "timestamp": 6210363000,
+                "timestampType": 2,
+                "source": 3,
+                "severity": 2,
+                "text": "No CUDA events collected. Does the process use CUDA?",
+                "globalPid": 282000841768960
+              },
+              {
+                "timestamp": 29951928500,
+                "timestampType": 1,
+                "source": 2,
+                "severity": 2,
+                "text": "NVIDIA Nsight Systems requires that Windows Performance Toolkit be installed on the target machine to create a merged ETL file of the trace session. Could not detect Windows Performance Toolkit, therefore the session's merged ETL file was not created. To fix this, please install Windows Performance Toolkit on the target machine.",
+                "globalPid": 281474976710656
+              }
+            ],
+            "sqlite_sha256": "29653c97e3e7f3b13faf25a7ecb1ec6c6473471633f64ee663ba9219331caea3",
+            "classification_ambiguity_ns": 10000
+          },
+          {
+            "case": "r0-l16384",
+            "tokens": 63,
+            "MoE_layers": 2520,
+            "phases": 5040,
+            "tasks": 120960,
+            "all_request_phases": 5120,
+            "all_request_tasks": 122880,
+            "GPU_half_first_kernel_names": {
+              "native_gu_kernel": 2520
+            },
+            "native_iteration_envelope_ns": 2655201192,
+            "between_token_control_ns": 591719,
+            "all_completion_ordinals_unique_and_tasks_matched": true,
+            "last_release_differs_from_last_body_phases": 71,
+            "host_wait_done_wall_ns": 132824886,
+            "host_park_before_wall_ns": 1266956,
+            "host_park_after_wall_ns": 5215140,
+            "all_task_ids_unique_and_rows_covered": true,
+            "all_token_ledgers_close": true,
+            "all_phase_fork_joins_close": true,
+            "last_completion_publisher_who_counts": {
+              "0": 627,
+              "6": 537,
+              "1": 630,
+              "-1": 689,
+              "5": 813,
+              "4": 592,
+              "2": 532,
+              "3": 620
+            },
+            "phase_last_body_ambiguous_1us": 1034,
+            "totals": {
+              "wall_ns": 2654609473,
+              "gpu_submit_ns": 134051089,
+              "route_wait_ns": 1121838272,
+              "phase_pre_publish_ns": 5158840,
+              "critical_branch_job_body_ns": 871005345,
+              "critical_branch_queue_handoff_ns": 26393717,
+              "phase_tail_ns": 8570888,
+              "CPU_moe_other_ns": 119436273,
+              "token_other_ns": 368155049,
+              "gpu_union_ns": 1148284882,
+              "gpu_uncovered_ns": 1506324591,
+              "host_late_interval_union_ns": 0,
+              "host_late_overlap_gpu_ns": 0,
+              "host_submission_later": 0,
+              "GPU_predecessor_later": 2520,
+              "within_10us_ambiguity": 0,
+              "GPU_half_start_after_pool": 2520,
+              "GPU_half_submit_to_start_ns": 2245119365,
+              "GPU_half_visible_gap_ns": 1095263067,
+              "GPU_half_gap_overlap_pool_ns": 921133615
+            },
+            "diagnostic_warnings": [
+              {
+                "timestamp": 7542040500,
+                "timestampType": 2,
+                "source": 3,
+                "severity": 2,
+                "text": "Not all NVTX events might have been collected.",
+                "globalPid": 281525174140928
+              },
+              {
+                "timestamp": 7542049400,
+                "timestampType": 2,
+                "source": 3,
+                "severity": 2,
+                "text": "CUDA profiling might have not been started correctly.",
+                "globalPid": 281525174140928
+              },
+              {
+                "timestamp": 7542050100,
+                "timestampType": 2,
+                "source": 3,
+                "severity": 2,
+                "text": "No CUDA events collected. Does the process use CUDA?",
+                "globalPid": 281525174140928
+              },
+              {
+                "timestamp": 36670735200,
+                "timestampType": 1,
+                "source": 2,
+                "severity": 2,
+                "text": "NVIDIA Nsight Systems requires that Windows Performance Toolkit be installed on the target machine to create a merged ETL file of the trace session. Could not detect Windows Performance Toolkit, therefore the session's merged ETL file was not created. To fix this, please install Windows Performance Toolkit on the target machine.",
+                "globalPid": 281474976710656
+              }
+            ],
+            "sqlite_sha256": "3e5f8d987d2c7a325778e4fdcb849cc3b1f39fa33ffa892e4bd0cd7f6f3a55af",
+            "classification_ambiguity_ns": 10000
+          }
+        ],
+        "limits": [
+          "last completion identity is exact from atomic modification order; its timestamp is bounded by body-end and post-release marker",
+          "task wall spans can contain OS preemption; no CPU sampling in this trace",
+          "GPU operation timestamps and API submission bounds used; event device completion not fabricated",
+          "GPU-predecessor-later is completion order, not proof that GPU was continuously busy",
+          "n=1 instrumented requests; uninstrumented latency attribution not claimed"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "results": {
+        "verified_at": "2026-10-31T00:35:26.314337+08:00",
+        "scope": "all task completion ordinals validated; 63 native decode token iterations per fixed workload; observed timing, not pure CPU cycles or counterfactual speedup",
+        "cases": [
+          {
+            "case": "r0-l1024",
+            "tokens": 63,
+            "MoE_layers": 2520,
+            "phases": 5040,
+            "tasks": 120960,
+            "all_request_phases": 5040,
+            "all_request_tasks": 120960,
+            "GPU_half_first_kernel_names": {
+              "native_gu_kernel": 2520
+            },
+            "native_iteration_envelope_ns": 1947685410,
+            "between_token_control_ns": 567281,
+            "all_completion_ordinals_unique_and_tasks_matched": true,
+            "last_release_differs_from_last_body_phases": 66,
+            "host_wait_done_wall_ns": 81551144,
+            "host_park_before_wall_ns": 1609862,
+            "host_park_after_wall_ns": 4898280,
+            "all_task_ids_unique_and_rows_covered": true,
+            "all_token_ledgers_close": true,
+            "all_phase_fork_joins_close": true,
+            "last_completion_publisher_who_counts": {
+              "5": 690,
+              "4": 613,
+              "6": 674,
+              "1": 597,
+              "0": 546,
+              "-1": 710,
+              "2": 579,
+              "3": 631
+            },
+            "phase_last_body_ambiguous_1us": 1121,
+            "totals": {
+              "wall_ns": 1947118129,
+              "gpu_submit_ns": 136718785,
+              "route_wait_ns": 586072979,
+              "phase_pre_publish_ns": 4963481,
+              "critical_branch_job_body_ns": 686889005,
+              "critical_branch_queue_handoff_ns": 24565532,
+              "phase_tail_ns": 8097597,
+              "CPU_moe_other_ns": 112431474,
+              "token_other_ns": 387379276,
+              "gpu_union_ns": 623154099,
+              "gpu_uncovered_ns": 1323964030,
+              "host_late_interval_union_ns": 0,
+              "host_late_overlap_gpu_ns": 0,
+              "host_submission_later": 0,
+              "GPU_predecessor_later": 2520,
+              "within_10us_ambiguity": 0,
+              "GPU_half_start_after_pool": 2520,
+              "GPU_half_submit_to_start_ns": 1520460806,
+              "GPU_half_visible_gap_ns": 906324616,
+              "GPU_half_gap_overlap_pool_ns": 733692761
+            },
+            "diagnostic_warnings": [
+              {
+                "timestamp": 4953351600,
+                "timestampType": 2,
+                "source": 3,
+                "severity": 2,
+                "text": "Not all NVTX events might have been collected.",
+                "globalPid": 281834478895104
+              },
+              {
+                "timestamp": 4953360700,
+                "timestampType": 2,
+                "source": 3,
+                "severity": 2,
+                "text": "CUDA profiling might have not been started correctly.",
+                "globalPid": 281834478895104
+              },
+              {
+                "timestamp": 4953361500,
+                "timestampType": 2,
+                "source": 3,
+                "severity": 2,
+                "text": "No CUDA events collected. Does the process use CUDA?",
+                "globalPid": 281834478895104
+              },
+              {
+                "timestamp": 29252036600,
+                "timestampType": 1,
+                "source": 2,
+                "severity": 2,
+                "text": "NVIDIA Nsight Systems requires that Windows Performance Toolkit be installed on the target machine to create a merged ETL file of the trace session. Could not detect Windows Performance Toolkit, therefore the session's merged ETL file was not created. To fix this, please install Windows Performance Toolkit on the target machine.",
+                "globalPid": 281474976710656
+              }
+            ],
+            "sqlite_sha256": "e934f70b40fd514064757ef57408bb013258fd204a58060c6c2f70db2bcc7e43",
+            "classification_ambiguity_ns": 10000
+          },
+          {
+            "case": "r0-l16384",
+            "tokens": 63,
+            "MoE_layers": 2520,
+            "phases": 5040,
+            "tasks": 120960,
+            "all_request_phases": 5120,
+            "all_request_tasks": 122880,
+            "GPU_half_first_kernel_names": {
+              "native_gu_kernel": 2520
+            },
+            "native_iteration_envelope_ns": 2526826964,
+            "between_token_control_ns": 573561,
+            "all_completion_ordinals_unique_and_tasks_matched": true,
+            "last_release_differs_from_last_body_phases": 68,
+            "host_wait_done_wall_ns": 144885750,
+            "host_park_before_wall_ns": 1556080,
+            "host_park_after_wall_ns": 3990235,
+            "all_task_ids_unique_and_rows_covered": true,
+            "all_token_ledgers_close": true,
+            "all_phase_fork_joins_close": true,
+            "last_completion_publisher_who_counts": {
+              "0": 613,
+              "1": 532,
+              "6": 548,
+              "3": 844,
+              "4": 558,
+              "5": 659,
+              "2": 580,
+              "-1": 706
+            },
+            "phase_last_body_ambiguous_1us": 1072,
+            "totals": {
+              "wall_ns": 2526253403,
+              "gpu_submit_ns": 129022425,
+              "route_wait_ns": 1170784892,
+              "phase_pre_publish_ns": 5273495,
+              "critical_branch_job_body_ns": 791869849,
+              "critical_branch_queue_handoff_ns": 30036235,
+              "phase_tail_ns": 6390544,
+              "CPU_moe_other_ns": 114457463,
+              "token_other_ns": 278418500,
+              "gpu_union_ns": 1141348604,
+              "gpu_uncovered_ns": 1384904799,
+              "host_late_interval_union_ns": 0,
+              "host_late_overlap_gpu_ns": 0,
+              "host_submission_later": 0,
+              "GPU_predecessor_later": 2520,
+              "within_10us_ambiguity": 0,
+              "GPU_half_start_after_pool": 2520,
+              "GPU_half_submit_to_start_ns": 2199699551,
+              "GPU_half_visible_gap_ns": 992110503,
+              "GPU_half_gap_overlap_pool_ns": 842919494
+            },
+            "diagnostic_warnings": [
+              {
+                "timestamp": 9622697300,
+                "timestampType": 2,
+                "source": 3,
+                "severity": 2,
+                "text": "Not all NVTX events might have been collected.",
+                "globalPid": 281910983000064
+              },
+              {
+                "timestamp": 9622700500,
+                "timestampType": 2,
+                "source": 3,
+                "severity": 2,
+                "text": "CUDA profiling might have not been started correctly.",
+                "globalPid": 281910983000064
+              },
+              {
+                "timestamp": 9622703400,
+                "timestampType": 2,
+                "source": 3,
+                "severity": 2,
+                "text": "No CUDA events collected. Does the process use CUDA?",
+                "globalPid": 281910983000064
+              },
+              {
+                "timestamp": 38734235900,
+                "timestampType": 1,
+                "source": 2,
+                "severity": 2,
+                "text": "NVIDIA Nsight Systems requires that Windows Performance Toolkit be installed on the target machine to create a merged ETL file of the trace session. Could not detect Windows Performance Toolkit, therefore the session's merged ETL file was not created. To fix this, please install Windows Performance Toolkit on the target machine.",
+                "globalPid": 281474976710656
+              }
+            ],
+            "sqlite_sha256": "6ac73d47be57f1dabc8f69ec8879446165e48bcedb1442ae66899df90092b924",
+            "classification_ambiguity_ns": 10000
+          }
+        ],
+        "limits": [
+          "last completion identity is exact from atomic modification order; its timestamp is bounded by body-end and post-release marker",
+          "task wall spans can contain OS preemption; no CPU sampling in this trace",
+          "GPU operation timestamps and API submission bounds used; event device completion not fabricated",
+          "GPU-predecessor-later is completion order, not proof that GPU was continuously busy",
+          "n=1 instrumented requests; uninstrumented latency attribution not claimed"
+        ]
+      }
+    }
+  ],
+  "findings": {
+    "r0-l1024": {
+      "late_GPU_start_layers": [
+        2514,
+        2520
+      ],
+      "MoE_layers_per_trace": [
+        2520,
+        2520
+      ],
+      "late_start_observed_in_both_traces": true
+    },
+    "r0-l16384": {
+      "late_GPU_start_layers": [
+        2520,
+        2520
+      ],
+      "MoE_layers_per_trace": [
+        2520,
+        2520
+      ],
+      "late_start_observed_in_both_traces": true
+    }
+  },
+  "root_cause_confirmed": false,
+  "new_evidence_published": false,
+  "default_changed": false,
+  "current_health": {
+    "status": "ok",
+    "model": "qwen3.8-flash-next-iq3_s",
+    "loaded": true
+  },
+  "daily_config_sha256": "520c62f6c114743830be4c0f1fb6eb4b4b0a56cac85c4749f7f49e46ebc62d39",
+  "limits": [
+    "two repeats per cell; trace/marks perturbation reported, not isolated causal driver proof",
+    "baseline plain has no native pool boundaries; uninstrumented late-start occurrence not directly measured",
+    "no CPU sampling/kernel stacks; internal driver submission unknown",
+    "no optimization arm, counterfactual gain, default change or cross-backend validation"
+  ],
+  "evidence_files": 126,
+  "manifest_sha256": "ddfae18dea401f582110db9ae2d87f57c027caa42c6d021cd8674c09f46e9d50"
+}
