@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "verified_at": "2026-10-31T12:56:25.470891+08:00",
+  "probe_recording_passed": true,
+  "queue_attribution_ready": false,
+  "semantic_review_required": true,
+  "root_cause_confirmed": false,
+  "probe_pid": 25856,
+  "probe_exit_code": 0,
+  "probe_duration_s": 1.5705432,
+  "etl_bytes": 101711872,
+  "decoded_events": 565850,
+  "providers": {
+    "{9e814aad-3204-11d2-9a82-006008a86939}": 280353,
+    "unknown": 216579,
+    "Microsoft-Windows-DxgKrnl": 68525,
+    "Microsoft-Windows-Kernel-EventTracing": 343,
+    "Microsoft-Windows-Performance-Recorder-Control": 50
+  },
+  "direct_target_PID_candidates": {
+    "{9e814aad-3204-11d2-9a82-006008a86939}": 105,
+    "unknown": 333,
+    "Microsoft-Windows-DxgKrnl": 4499,
+    "Microsoft-Windows-Kernel-EventTracing": 156
+  },
+  "service_restored_at": "2026-10-31T12:55:40.135995+08:00",
+  "restore_errors": [],
+  "evidence_files": 17,
+  "manifest_sha256": "fa39820245a754ed377fd456f4f59401322b010917648e83922b44a386dcfeda",
+  "limits": [
+    "short transfer/compute probe, not model capture",
+    "provider/PID presence does not establish queue semantics or clock alignment",
+    "lost-event and context/queue fields require review",
+    "no CUDA kernel-level launch delay or driver root-cause claim",
+    "raw system ETL/XML remain local"
+  ]
+}
