@@ -1,0 +1,27 @@
+# 研究状态变更记录（截至2026-10-31）
+
+本文件原样保留总计划页首累积的阶段记录。它是历史，不是当前任务队列；各段中的“近期下一项”“未执行”“未外发”只代表写入时状态。当前以[总体状态](RESEARCH_STATUS.md)和[总计划](INFERENCE_RESEARCH_PLAN.md)的新入口及清单为准。
+
+## 当前执行入口（2026-10-31，优先于下文历史安排）
+
+2026-10-31最新收尾：[job标记off/on采集对照](tobeo-20261031/qwen36-observer-control-870aedd9/README.md)于10:50:59通过，回读106份静态证据和当前服务/配置通过。同一诊断二进制，16请求/八trace/八plain均输出与布局通过；八trace的20160个共同kernel/API关联和逐层形状匹配。off原生JT均0，但API→GPU启动中位数仍约566–632微秒，说明密集标记不是此类采集延迟出现的必要条件；全部trace仍用CUDA profiler，不能确认无profiler根因。第1轮16K off trace显著偏慢、两轮plain有漂移，全部保留，不据n=2宣称优化收益。**近期下一项：先准备[无CUDA profiler的系统GPU队列观测](tobeo-20261031/qwen36-observer-control-870aedd9/next-system-trace-plan.md)，短探针验证事件语义/PID和时钟关联后再做实模。** 只读预检已有系统WPR/GPU profile、无活动录制且管理员可用，WPA/GPUView未安装；尚未采新ETL或装工具。原证据/默认不改，新材料未外发。以下“准备off/on对照”为开跑前历史状态。
+
+2026-10-31最新收尾：[870aedd9迟启动复现与观察扰动报告](tobeo-20261031/qwen36-gpu-submit-870aedd9/README.md)已通过两轮受控采集和文件/账本验收，00:35:57后台完成，回读复核126份证据及当前服务通过。19测试、四份完整logits、16条请求/四trace通过；1K两轮2514/2520与2520/2520层、16K两轮均2520/2520层在GPU launch API已返回后、直到CPU pool结束后才启动。两轮合计20320 phase/487680行任务和252 token账本闭合。trace/on decode额外约10.1%–17.8%，无profiler路径无pool边界，仍无唯一根因。**近期下一项：补[同一诊断二进制标记off/on的CUDA采集对照](tobeo-20261031/qwen36-gpu-submit-870aedd9/observer-control-plan.md)，先核对共同API→kernel延迟及观察扰动，再决定系统/驱动观测。** 本轮新材料仅本地、默认未改，两轮已恢复日常服务且配置相同。以下开跑前和早期“尚未新trace”为历史状态。
+
+2026-10-30新基线收尾：[870aedd9验收报告](tobeo-20261030/qwen36-baseline-870aedd9/README.md)于20:09:49通过，回读复核32份证据、3608份依赖、源码/二进制/匹配DLL及日常服务通过。19项测试、两长度完整64行词表logits与旧数值参考逐位相同、四条输出/63slots/chunk2048/fresh/0草稿/0换槽请求通过。HtoD24.895941→24.895785GB/s，原日常服务恢复、配置未变。**近期下一项：按[新提交复现与观察扰动协议](tobeo-20261030/qwen36-baseline-870aedd9/next-investigation-plan.md)先确认870上的GPU迟启动是否复现，并区分诊断构建/标记/trace扰动，再选择能区分根因的单因素实验。** 本轮只完成基线门槛；尚未运行新job trace或确认新根因。下方“源码已更新但未构建”为当时历史状态。
+
+2026-10-30晚间最新：[CPU/复制机制/job补充发布及源码更新](tobeo-20261030/qwen36-pr3905-followup/README.md)已完成。18:00:16在[#3905新增跟进评论](https://github.com/Niko1221/Strata/pull/3905#issuecomment-6518999609)，固定证据commit b6a98dd9的9文件线上身份核对、68文件ZIP离线验收通过。随后按指定fetch并合并870aedd9到本地main，合并commit e1691cc8，另建精确870aedd9独立worktree；原46c基线及94/52/161文件旧证据保持。日常服务/配置未变。**近期下一项：先完成870aedd9的独立CUDA构建、数值/输出/布局与无profiler重复性门槛，再调查GPU已提交后的迟启动残差。** 本轮没有构建新引擎或进行新GPU测量，不沿用46c验收作为新提交通过。以下下午/午间段落是阶段历史，发布和源码状态以本段为准。
+
+2026-10-30下午最新：[job级依赖与关键路径报告](tobeo-20261030/qwen36-job-path/README.md)已正式收尾，后台验收及161份静态证据复核通过。保持46c152a1和原配置，两个63迭代路径、10160个phase/243840个行任务的完成序号、覆盖及phase/token账本通过；173个phase的最后发布者不同于最晚body，已按原子序号确定。trace使1K/16K decode较诊断on无profiler约慢22.1%/13.5%，故完成的是受控观测路径，原版无扰动的全系统根因仍未确认。下一项应收窄到已提交GPU分支的迟启动/执行提交残差，先立单因素诊断协议，不直接修改等待策略或恢复GQA。13:32:02已恢复日常服务、配置SHA相同，新材料未外发。以下早间/午间段落保留历史状态；当前完成范围以本段与正式报告为准。
+
+2026-10-30午间最新：[CPU IP/调度与PR3905机制补充](tobeo-20261030/qwen36-cpu-mechanism/README.md)已完成本机受控采集及离线归因，继续固定46c152a1/原Q4/63slots/chunk2048/7workers/MTP0/packed。管理员会话预检取得真实周期样本和调度事件；baseline的1K/16K及原复制切片on/16K各一条无profiler参考与一份CPU/CUDA/NVTX trace，共六条测量全部输出/布局一致。三个decode窗口周期样本9448/12093/11867，引擎image内IP均解析、七worker及提交主线程可定位；基线16K等待循环52.63%、算术/量化20.09%、内核态未解析13.45%（分母含注入线程，不是延迟）。2430个算术样本均在GPU空隙中；原复制trace另核对320次staging逐步字节守恒、event跨代依赖及实际stream优先级0/0/-5。HtoD前24.862111/后24.942329GB/s，12:05:08恢复原日常服务、配置SHA相同。本轮没有改引擎、默认、已发布计时或外发新材料；完整job级关键路径、内核态符号与全栈仍未完成，不能按样本比例改等待策略。采样权限障碍已解除，下文此前“待采样权限”为历史状态。
+
+2026-10-30新进展：[正常工况CUDA/NVTX采集](tobeo-20261030/qwen36-systems/README.md)已完成4条同日无profiler参考与4份trace、输出/布局/范围完整性验收及服务恢复；固定46c152a1，HtoD前24.843725/后24.890607GB/s。16K prefill的HtoD记录在chunk2048/4096下约157.13/78.57GB且大量与kernel重叠；16K decode的k_attn_part约占窗口21%–22%，另有1.36–1.49秒GPU未覆盖。CPU采样权限预检失败，完整CPU/关键路径归因仍未完成，不能将空隙称为CPU专家时间。
+
+2026-10-30早间收尾：[PR3905原复制提交独立切片验证](tobeo-20261030/qwen36-copy3905/README.md)已完成。查重发现xyehya已有实现，仅移植af08278c复制hunk并适配CLI；固定46c152a1、63slots/chunk2048，同一候选exe仅切换 `--split-stage-copy`。17项选定测试、六份完整logits逐位一致、4条自由生成门禁及20条正式请求通过；1K/16K各五对prefill与合计均5/5变快，合计A/B耗时比中位数1.0825/1.1457。两条16K机制trace确认HtoD约157.13→118.46GB，约38.67GB转为独立stream DtoD，专家staging总字节相同。08:24:20恢复原日常服务、配置SHA相同。保留首次数值入口DLL部署失败，未使用其性能数据；不改默认、不另提重复实现；后续已按授权[发布原PR评论与脱敏证据](tobeo-20261030/qwen36-copy3905/PUBLICATION.md)，完整CPU归因仍待采样权限，GQA仍须另立范围。
+
+三项最小验证（#4347、#4335、Flash-Next all/P/measure）和 DeepSeek Windows 单卡使用案例均已收尾；DeepSeek 问题与证据已发布，见[案例发布记录](tobeo-20261029/deepseek41-case/PUBLICATION.md)。这些结果不等于完整质量、跨后端或原创内核优化完成。
+
+2026-10-29已[固定并验收可复现的 Qwen3.6 源码基线](tobeo-20261029/qwen36-repro-baseline/README.md)：新提交独立构建、模型/依赖/二进制指纹、17项选定测试、四臂门禁及两次独立进程1K/16K重复性通过，日常服务已恢复。该次基线阶段没有启动profiling；10-30已另行完成上述CUDA/NVTX部分，chunk2048与显式4096分开记录，packed政策相同、实际槽位63/50。没有组合#4335/#4347或开发新内核。
+
+DeepSeek 仅保留有边界的问题跟进：[Engram direct 小对照](tobeo-20261029/deepseek41-case/edt-xx-check/README.md)未通过输出身份门槛，尚无 commit 回收或自动预算修复结论。若以后继续，先区分默认路径重复性与读取字节问题，不恢复性能矩阵或重跑长测。以下日期段落保留当时安排；当前进度以本节、实际报告及第11节清单的新记录为准。
