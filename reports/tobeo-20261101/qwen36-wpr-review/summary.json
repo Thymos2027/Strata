@@ -1,0 +1,34 @@
+{
+  "passed": true,
+  "verified_at": "2026-11-01T09:18:20.698828+08:00",
+  "new_GPU_capture": false,
+  "root_cause_confirmed": false,
+  "clock_alignment_ready": true,
+  "packet_mapping_ready": true,
+  "queue_attribution_ready": false,
+  "attribution_review_required": true,
+  "target_pid": 25856,
+  "device_count": 2,
+  "context_count": 14,
+  "complete_unique_packet_chains": 97,
+  "unmatched_render_keys": 0,
+  "owned_event_counts": {
+    "244": 30,
+    "179": 168,
+    "178": 97,
+    "180": 141,
+    "175": 97,
+    "177": 97,
+    "176": 97,
+    "245": 14
+  },
+  "events_lost": 0,
+  "original_manifest_sha256": "fa39820245a754ed377fd456f4f59401322b010917648e83922b44a386dcfeda",
+  "limits": [
+    "queue/DMA timestamps are recorded system events, not CUDA kernel entry times",
+    "synchronization packet types244/245 excluded from render178 chain checks",
+    "fragmented/ambiguous chains not forced into a single duration"
+  ],
+  "evidence_files": 7,
+  "manifest_sha256": "019ca9464a11c1da22abc5a25e4cbbce44d8d2e732107abcfdb9e3296fd4dd4f"
+}
