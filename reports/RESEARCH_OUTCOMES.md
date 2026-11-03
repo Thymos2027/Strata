@@ -1,8 +1,8 @@
 # 这轮推理实验的成果与收获
 
-2026-11-01。范围：本机Windows、i7-12700、RTX5060Ti16GB、128GB DDR4上的Strata推理研究。本文把实际成果、证据与未完成事项分开，供项目总结、GitHub文章及个人作品说明使用。实验依据各自固定revision，不混为一个版本或一份标准benchmark。
+初稿2026-11-01；2026-11-02补全Qwen3.8-Flash-Next亲和性独立成果及已发布记录。范围：本机Windows、i7-12700、RTX5060Ti16GB、128GB DDR4上的Strata推理研究。本文把实际成果、证据与未完成事项分开，供项目总结、GitHub文章及个人作品说明使用。实验依据各自固定revision，不混为一个版本或一份标准benchmark。
 
-## 可以交付的三个成果
+## 可以交付的四项成果
 
 ### 1. 已有优化的独立验证：结果、机制与适用边界
 
@@ -12,11 +12,27 @@
 
 [实际报告](tobeo-20261030/qwen36-copy3905/README.md)、[已发布原评论](https://github.com/Niko1221/Strata/pull/3905#issuecomment-6512596830)、[已发布补充](https://github.com/Niko1221/Strata/pull/3905#issuecomment-6518999609)。
 
-另一组有用成果是负结果和取舍：#4347释放约1.78GiB并使槽位63→89，仍可能prefill变慢、合计退化；#4335的4096 chunk在16K合计改善、1K合计及decode变慢。说明显存、驻留、上下文和请求长度会改变端到端结论，不能据单个分项替用户改默认。Flash-Next五轮45请求也未复现预定标准下的稳定亲和性错选，因此没有另写校准器。
+另一组有用成果是负结果和取舍：#4347释放约1.78GiB并使槽位63→89，仍可能prefill变慢、合计退化；#4335的4096 chunk在16K合计改善、1K合计及decode变慢。说明显存、驻留、上下文和请求长度会改变端到端结论，不能据单个分项替用户改默认。
 
-[#4347报告](tobeo-20261028/qwen36-pr4347/README.md)、[#4335报告](tobeo-20261028/qwen36-pr4335/README.md)、[Flash-Next负结果](tobeo-20261029/flash-next-affinity/README.md)。
+[#4347报告](tobeo-20261028/qwen36-pr4347/README.md)、[#4335报告](tobeo-20261028/qwen36-pr4335/README.md)。
 
-### 2. 有边界的性能诊断与观察扰动案例
+### 2. Qwen3.8-Flash-Next亲和性：延迟与CPU资源的取舍
+
+2026-10-29使用官方engine0.1.52、Qwen3.8-Flash-Next IQ3_S，在i7-12700混合核CPU上比较all、p-cores和measure三种现有策略。五轮共15次独立启动、45条正式请求，包含代码/英文/中文合成输入，各256输出。实际缓存固定3107slots/6092MiB，45条完整输出及草稿提出/接受数一致，小型确定性任务18/18通过。
+
+| 请求 | 五对合计耗时all/P比值中位数（>1为P快） | P核较快 |
+| --- | ---: | ---: |
+| 代码1025输入token | 1.0019 | 4/5 |
+| 英文4097输入token | 0.9996 | 2/5 |
+| 中文1025输入token | 1.0016 | 3/5 |
+
+这些配对中位数与1相差约0.2%以内，未达到预定的稳定提速/错选判据。另一方面，P核模式的累计进程CPU时间在每类5/5配对均较低，逐轮比值中位数对应约少29%–32%。因此得到一个可交付的资源结果：在这些请求上，P核模式减少累计CPU时间，同时没有测出稳定端到端加速。没有做能耗测量或统计等效性检验，不能写成省电29%–32%或延迟已被证明等价。
+
+measure五轮选择P核四次、all一次，符合既有10% P核偏好；没有充分证据另写校准器。all/P分别11/7workers加主线程，比较包含线程数策略，不是相同worker数下的纯绑核实验。spec4/min-p0、固定PCIe fraction、关闭lookup/suffix/adaptation等受控条件也区别于日常默认，不能搬用Qwen3.6的MTP0结论。
+
+这项成果已公开：[#1912原讨论评论](https://github.com/Niko1221/Strata/pull/1912#issuecomment-6494468322)，以及fork固定commit `d973440a29e6efc8106ea7d8f4ebe6d6cbc6035c`的[22份脱敏证据](https://github.com/Thymos2027/Strata/blob/d973440a29e6efc8106ea7d8f4ebe6d6cbc6035c/bench/results/2026-10-29-affinity-i7-12700/README.md)。2026-11-02再次只读回读原评论，配置、45请求、配对结果及CPU时间结论均可核对。本地完整[试验报告](tobeo-20261029/flash-next-affinity/README.md)保留失败批次与限制；不需要为相同结果再次开PR。
+
+### 3. 有边界的性能诊断与观察扰动案例
 
 先完成固定源码、模型/依赖/二进制身份及数值/布局门槛，再从CUDA时间线补CPU样本和job生命周期。CPU样本区分专家算术与epoch等待；job分析使用原done原子返回序号确定最后发布者，而不是仅凭最晚任务body结束。phase/token wall账本能闭合，主线程等待与并行分支不重复计时。
 
@@ -28,7 +44,7 @@ WPR工具探针及离线复核又建立原QPC和目标PID→device→context→p
 
 [新提交复现](tobeo-20261031/qwen36-gpu-submit-870aedd9/README.md)、[标记对照](tobeo-20261031/qwen36-observer-control-870aedd9/README.md)、[WPR/QPC复核](tobeo-20261101/qwen36-wpr-review/README.md)、[收尾决定](tobeo-20261101/qwen36-wpr-review/DECISION.md)。
 
-### 3. 真实部署与环境边界的案例
+### 4. 真实部署与环境边界的案例
 
 DeepSeek V4.1 Flash IST-DAS2.25bpw在Windows/16GB VRAM/128GB RAM上，自动RAM预算触发提交内存压力；显式64GB RAM store后，完成九次功能请求、1K/4K各三次、30分44秒36条连续请求。已把Windows commit问题、失败和成功配置作为#4605发布。
 
@@ -57,8 +73,9 @@ DeepSeek V4.1 Flash IST-DAS2.25bpw在Windows/16GB VRAM/128GB RAM上，自动RAM�
 
 当前建议优先把这篇总结和[英文研究文章草稿](tobeo-20261101/research-retrospective/PUBLIC_DRAFT.md)放到自己的研究目录/项目说明中，让读者能沿证据链接复核。标题建议：**《16GB Windows GPU上的混合推理：复制方案验证、端到端取舍与profiling边界》**。
 
-截至2026-11-01本轮GitHub只读回读：
+GitHub只读回读记录（#1912为2026-11-02，其余讨论状态沿用2026-11-01）：
 
+- [#1912原评论](https://github.com/Niko1221/Strata/pull/1912#issuecomment-6494468322)及固定版本证据已公开；亲和性资源/延迟结果应单独展示，不只归为一句负结果。
 - [#3905](https://github.com/Niko1221/Strata/pull/3905)仍open/unmerged，已有两条本账号验证评论；核心复制及原46c CPU/job证据已公开，不重复发送同一结果。
 - [报告PR #4577](https://github.com/Niko1221/Strata/pull/4577)closed/unmerged；[维护者回复](https://github.com/Niko1221/Strata/pull/4577#issuecomment-6495838098)感谢测量，并说明计划在社区benchmark网页发布时纳入这类结果，因此关闭报告PR。不能把它写成代码已合并、网页已上线或正式收录；也不为相同结果再开一份报告PR。
 - [DeepSeek #4605](https://github.com/Niko1221/Strata/issues/4605)仍open，已有问题与证据；没有新修复结论时不追加重复评论。

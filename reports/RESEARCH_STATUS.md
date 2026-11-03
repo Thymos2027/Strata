@@ -14,7 +14,8 @@
 
 | 工作 | 状态与结果 | 证据 |
 | --- | --- | --- |
-| #4347/#4335与Flash-Next亲和性三项最小验证 | 已收尾。记录显存/布局/长度取舍；Flash-Next没有复现稳定错选，不改校准器 | [选题复评及收尾](tobeo-20261028/topic-reassessment/README.md) |
+| #4347/#4335最小验证 | 已收尾。记录显存/布局/长度取舍 | [选题复评及收尾](tobeo-20261028/topic-reassessment/README.md) |
+| Qwen3.8-Flash-Next IQ3_S亲和性 | 已收尾并发布到#1912。all/P/measure五轮15启动45请求，未测出稳定提速/错选；P累计CPU时间少约29%–32%，不是能耗结论 | [实验与发布记录](tobeo-20261029/flash-next-affinity/README.md)、[成果独立小节](RESEARCH_OUTCOMES.md#2-qwen38-flash-next亲和性延迟与cpu资源的取舍) |
 | DeepSeek Windows单卡使用案例 | 已完成并发布，独立于Qwen主线，不继续扩成第三条优化线 | [发布记录](tobeo-20261029/deepseek41-case/PUBLICATION.md) |
 | PR3905原复制切片 | 正确性、五组无profiler配对、字节守恒与event机制通过；本机1K/16K合计A/B耗时比1.0825/1.1457。属于原作者实现的独立验证 | [验证报告](tobeo-20261030/qwen36-copy3905/README.md)、[补充发布](tobeo-20261030/qwen36-pr3905-followup/README.md) |
 | 可复现870aedd9基线 | 独立构建、19测试、完整logits、输出与实际63槽位/chunk2048门槛通过，原46c基线保留 | [基线报告](tobeo-20261030/qwen36-baseline-870aedd9/README.md) |

@@ -1,6 +1,6 @@
 # Hybrid inference on a 16GB Windows GPU: copy validation, tradeoffs, and profiling limits
 
-Draft prepared 2026-11-01; not newly posted. Measurements were made on an i7-12700, RTX 5060 Ti 16GB, 128GB DDR4 and Windows11. This is a research retrospective with bounded hardware evidence, not a standard benchmark or a new engine implementation.
+Draft prepared 2026-11-01; affinity section expanded 2026-11-02; not newly posted. Measurements were made on an i7-12700, RTX 5060 Ti 16GB, 128GB DDR4 and Windows11. This is a research retrospective with bounded hardware evidence, not a standard benchmark or a new engine implementation.
 
 ## A measurable result from an existing copy implementation
 
@@ -23,9 +23,23 @@ Public evidence: [original report and individual pairs](https://github.com/Thymo
 
 Separate tests of packed-copy memory policy and larger prompt chunks showed why a component-level win does not automatically improve the complete request. More resident experts can improve generation while hurting prefill; chunk 4096 helped the long-input total on this machine but hurt short-input totals and generation. Matching layouts also mattered when interpreting numerical differences.
 
-A separate Flash-Next all/P-core/automatic-policy comparison completed 45 requests across 15 launches. It did not reproduce a stable selection error under its predefined criteria, so I did not implement a replacement calibrator. Lower accumulated CPU time was not treated as proof of lower energy use.
-
 The [Qwen tradeoff report](https://github.com/Niko1221/Strata/pull/4577) was closed without merging; the maintainer [explained](https://github.com/Niko1221/Strata/pull/4577#issuecomment-6495838098) that community benchmark results were planned for a website. This is a publication history, not a claim that the site has launched or that an engine patch was accepted.
+
+## Qwen3.8-Flash-Next affinity: latency and CPU resource use
+
+Official engine 0.1.52 and the existing Qwen3.8-Flash-Next IQ3_S native pack were tested with all/P-core/measure policies. Five rounds covered 15 independent launches and 45 requests: synthetic code/English/Chinese prompts with 256 output tokens each. Actual cache was fixed at 3107 slots/6092MiB. Complete output IDs and offered/accepted draft counts matched; 18/18 small deterministic task checks passed.
+
+| Prompt | Median of five paired all/P total-time ratios (>1 favors P) | P faster |
+| --- | ---: | ---: |
+| Code, 1025 tokens | 1.0019 | 4/5 |
+| English, 4097 tokens | 0.9996 | 2/5 |
+| Chinese, 1025 tokens | 1.0016 | 3/5 |
+
+The ratios were within about 0.2% of 1, without a stable gain under the predefined criteria. P-core mode nevertheless used about 29–32% less accumulated process CPU time, based on median within-round CPU-time ratios; it was lower in 5/5 pairs for each input. This is a resource-use result, not an energy measurement or a statistical equivalence claim about latency.
+
+The measure policy selected P four times and all once, consistent with its existing 10% P preference. No stable end-to-end selection error was demonstrated, so no replacement calibrator was implemented. All/P used 11/7 workers plus the host: this includes worker-count policy, not just affinity. The controlled spec4/min-p0, fixed PCIe fraction and disabled lookup/suffix/adaptation settings differ from daily defaults and are not the Qwen3.6 MTP0 protocol.
+
+This result was already published in the [original #1912 discussion](https://github.com/Niko1221/Strata/pull/1912#issuecomment-6494468322), checked again read-only on 2026-11-02. The [fixed evidence commit](https://github.com/Thymos2027/Strata/blob/d973440a29e6efc8106ea7d8f4ebe6d6cbc6035c/bench/results/2026-10-29-affinity-i7-12700/README.md) includes 22 sanitized files and all 15 paired measurements. No duplicate upstream PR or default change is proposed.
 
 ## What the profiling branch established
 
