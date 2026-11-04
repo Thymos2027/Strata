@@ -1,0 +1,12 @@
+*.json
+*.jsonl
+*.log
+*.bin
+*.exe
+*.obj
+*.lib
+*.exp
+*.rsp
+*.bat
+*.csv
+__pycache__/
