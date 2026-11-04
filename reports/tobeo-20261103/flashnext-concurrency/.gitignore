@@ -1,0 +1,7 @@
+# Local experiment evidence remains on disk; version reports and scripts.
+*.json
+*.jsonl
+*.log
+*.pid
+launcher-pid.txt
+__pycache__/
