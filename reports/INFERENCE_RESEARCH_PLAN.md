@@ -513,3 +513,5 @@ upstream-notes.md         # 查重、相关讨论、拟提交范围
 - [x] 核对现有Flash-Next接口是否提供独立请求packed prefill直接测试入口（2026-11-04静态审查）。Prefill绑定单SessionState，现有HTTP并发矩阵未合并独立请求的输入；证据：[接口与实验范围](tobeo-20261104/packed-prefill-probe/README.md)。仅静态审查，无新端到端收益证据。
 - [x] 完成真实量化权重上分次/合并GEMM的正确性和性能可行性实验（2026-11-04 15:50复核）。证据：[首轮报告](tobeo-20261104/packed-prefill-probe/REVIEW.md)、review.py/review.json、逐工况CHECK/PAIR日志。真实第0层四矩阵、合成激活、24项数值门槛、48工况/240配对通过，配对比中位范围1.219–3.711；含重复反量化和可选权重上传成本，未隔离纯GEMM贡献、未调用生产grouped MoE路径。执行前日常服务已关闭，保持关闭；此为算子可行性，不是完整prefill或端到端收益。
 - [ ] 实现并验证真正独立会话的合并prefill，测量完整阶段时间、状态保存恢复及端到端收益。现有0.1.52多槽实验及本轮算子探针均不能代替此项；尚未实现分段QSA/GDN/PLE状态隔离。
+
+- [x] 梳理本session并发研究并保存至Obsidian日常开发记录（2026-11-07）。笔记：`C:\Users\tobeo\Documents\obsidian\lfppbVault\技术\日常开发记录\2026-11-07.md`的“Strata 并发研究复盘”主题，日常记录README已更新索引。按11月3日多槽服务与11月4日算子探针报告核对，区分整波计时/合并prefill、实测/因果假设及版本/资源边界；保留完整实现未完成和后续理解清单。本次仅文档归档，无新增GPU测试、服务改动或上游发布。
