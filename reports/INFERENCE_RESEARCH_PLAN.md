@@ -314,7 +314,8 @@ upstream-notes.md         # 查重、相关讨论、拟提交范围
 ### 2026-11-07 上游合并与三模型验收
 
 - [x] 合并 upstream/main `146df3c46` 至本地 main。合并提交 `c4d90462`，双亲为 `74f9ed31` 与 `146df3c46`；无冲突，CMake 源码版本为 0.1.58。仅完成源码合并，不代表构建或模型运行通过。
-- [ ] 使用本机 RTX 5060 Ti 构建合并提交的 CUDA 0.1.58 引擎，并分别验证 Qwen3.8-Flash-Next IQ3_S、Qwen3.6-35B-A3B UD-Q4_K_XL、DeepSeek V4.1-Flash IST-DAS 2.25bpw 能加载且完成短请求。后台流程于 2026-11-07 17:09 启动，状态与日志在 `build-native-baseline/merge-c4d90462/`；截至启动短检仅进入 CMake 配置，三个运行结果均未验收。
+- [x] 使用本机 RTX 5060 Ti 构建合并提交的 CUDA 0.1.58 引擎，并分别验证 Qwen3.8-Flash-Next IQ3_S、Qwen3.6-35B-A3B UD-Q4_K_XL、DeepSeek V4.1-Flash IST-DAS 2.25bpw 能加载且完成短请求。2026-11-07 17:21 完成；证据为 `build-native-baseline/merge-c4d90462/status.json`、`build.log`、两个版本日志和三份短请求响应。三个引擎构建目标退出码为 0，版本均为 0.1.58；三个模型分别生成 6、5、8 token，后台流程结束后清理测试进程。范围仅为本机 CUDA 构建、加载与一次短请求，不代表长上下文、并发、性能或跨后端验收。
+- [ ] 下载并校验 Unsloth Qwen3.8-Flash-Next Dynamic v3.1 `UD-IQ3_XXS` 四分片。2026-11-07 已核对魔搭文件大小及 SHA-256 与 `setup.py` 固定清单一致；魔搭直连约 0.12 MiB/s，用户因速度过慢要求暂停。后台 PID 35816 已停止，第一分片 10,946,618 字节已校验，第二分片保留 37,748,736 字节 `.part` 供断点续传；其余分片未下载。状态与日志位于 `D:\Models\Qwen\Qwen3.8-Flash-Next-Unsloth-UD-IQ3_XXS-v31`。文件未全量校验，模型未运行。
 
 2026-10-28 新增独立的[DeepSeek 社区使用案例](tobeo-20261028/deepseek41-community/README.md)，现已完成并发布；不替代上文 Qwen3.6 优化主线。10-21选题池、10-28接续与复评正文均保留为历史，当前执行排序统一看页首当前入口。
 
