@@ -1,6 +1,6 @@
 # HtoD 恢复后的研究取舍
 
-本文定位：环境恢复后提出的**早先方案与决策记录**，不是当前执行清单。随后实际执行的#4347/#4335验证依据是[topic-reassessment](../topic-reassessment/README.md)；已完成结果与未完成任务统一看[总计划第11节](../../INFERENCE_RESEARCH_PLAN.md#11-执行与收尾清单)。两项报告已于2026-10-29[发布](../qwen36-publication/README.md)。正文中的GQA优先顺序及“未完成”描述保留为当时快照，不代表现在的状态。
+本文定位：环境恢复后提出的**早先方案与决策记录**，不是当前执行清单。随后实际执行的#4347/#4335验证依据是[topic-reassessment](../topic-reassessment/README.md)；已完成结果与未完成任务见[执行记录](../../archive/EXECUTION_LOG.md)，当前研究取舍见[现行计划](../../INFERENCE_RESEARCH_PLAN.md)。两项报告已于2026-10-29[发布](../qwen36-publication/README.md)。正文中的GQA优先顺序及“未完成”描述保留为当时快照，不代表现在的状态。
 
 **同日后续复评已调整优先级：** 保留Qwen3.6和Flash-Next，先做Q36 hybrid显存取舍的 #4347/#4335 独立验证，Flash-Next布局校准升为P1，GQA降为条件性后续。以[最新模型与选题复评](../topic-reassessment/README.md)及[总计划](../../INFERENCE_RESEARCH_PLAN.md)为准。下文保留早先attention接续设计与升级记录，不代表要同时执行所有候选。
 

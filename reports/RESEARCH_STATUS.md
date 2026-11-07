@@ -1,16 +1,20 @@
 # 推理研究总体状态
 
-更新：2026-11-01（归档复核）。当前源码基线870aedd9 / engine0.1.54；原Qwen3.6-35B-A3B UD-Q4_K_XL，本机i7-12700、RTX5060Ti16GB、128GB DDR4、Windows。默认研究配置为32K/chunk2048/63固定槽位/7workers/MTP0/packed。日常Flash-Next服务独立保留。
+更新：2026-11-07（研究范围修订）。现有本机构建源码为合并提交 c4d90462 / engine0.1.58；本机 i7-12700、RTX 5060 Ti 16GB、128GB DDR4、Windows。Qwen3.8-Flash-Next、Qwen3.6-35B-A3B 和 DeepSeek V4.1-Flash 都是可选研究对象。此前 Qwen3.6 诊断固定的 870aedd9 / engine0.1.54、32K/chunk2048/63槽位/7workers/MTP0/packed 仅代表那组实验；本页不声明日常服务的实时运行状态。
 
 ## 整体要做什么
 
-解释这台16GB显卡机器上Qwen3.6 hybrid推理的端到端瓶颈，用证据选择一个足够小的改动，验证正确性、适用范围及无profiler下的真实收益，最后形成可复现的报告或开源贡献。实践构建、数值验证、profiling和性能实验设计也属于项目成果，但不能以更多trace代替改进证据。
+研究资源受限硬件上的高性能 AI 推理，借 Strata 的三个模型家族解决社区遇到的具体问题。选题根据用户影响、上游需求、本机可复现性和可交付证据决定，不固定为 Qwen3.6 或某种内核优化。性能工作验证端到端收益及适用范围；功能、资源和部署问题按相应的复现与正确性要求交付。构建、数值验证、profiling 和实验设计也是项目能力，但不能以更多 trace 代替改进证据。
 
 不要求一定原创内核或一定有加速。已有作者方案的独立验证、负结果和明确限制都是合格贡献；它们要标清归属，不能重新包装成原创实现。
 
 2026-11-01成果交付：[阶段成果与收获](RESEARCH_OUTCOMES.md)汇总可审阅结果、已有公开贡献及研究复盘；另有[英文研究文章草稿](tobeo-20261101/research-retrospective/PUBLIC_DRAFT.md)。本轮只读核对线上状态并整理本地材料，未新增采集或对外发布；建议优先作为本人GitHub研究文章，不重复开启同结果上游PR。
 
-## 已经完成了什么
+## 近期完成与边界
+
+2026-11-07 已在本机 RTX 5060 Ti 上构建合并后的 CUDA 0.1.58 引擎，并让 Qwen3.8、Qwen3.6 和 DeepSeek V4.1 各完成一次短请求，见[状态与日志入口](../build-native-baseline/merge-c4d90462/status.json)。这只验证构建、加载和短请求，不验证长上下文、并发或性能。Unsloth `UD-IQ3_XXS` 下载按用户要求暂停，未运行该模型。
+
+## 此前已完成的研究
 
 | 工作 | 状态与结果 | 证据 |
 | --- | --- | --- |
@@ -23,7 +27,7 @@
 | 新提交迟启动复现 | 四份插桩trace重复观察到，尚不是原版无扰动根因 | [复现报告](tobeo-20261031/qwen36-gpu-submit-870aedd9/README.md) |
 | job标记off/on采集对照 | 16请求/八trace通过。off仍有566–632us中位提交间隔，排除密集标记为该采集现象的必要条件；仍有CUDA profiler混杂 | [对照报告](tobeo-20261031/qwen36-observer-control-870aedd9/README.md) |
 
-## 当前到底到哪一步
+## 2026-11-01 的 Qwen3.6 诊断收尾
 
 当前这条连续采集分支已按[收尾决定](tobeo-20261101/qwen36-wpr-review/DECISION.md)收敛为有界验证与诊断成果。唯一系统根因仍未知，针对迟启动的新改动及收益验收未完成；不再将追踪所有未知点作为本阶段结束条件。
 
@@ -31,7 +35,7 @@
 
 目前仍分不清：未采CUDA trace时是否有同样现象；工作在CPU/用户态驱动里尚未真正提交，还是已进入系统/设备队列但未执行；其中哪些影响真实请求延迟。已明确的是不能把全部CPU on-CPU称算术，不能把GPU前驱较晚完成称连续繁忙，也不能据这些trace直接选flush/stream/等待修复。
 
-## 当前取舍与后续入口
+## 后续研究的进入条件
 
 当前不再新增采集。1K实模ETW/plain对照没有启动，作为未执行备选设计保留，不在默认执行队列。
 
@@ -46,4 +50,4 @@
 - 只有观测器下的现象，或没有可测的无profiler收益：不能为凑PR修改默认；可以以负结果/诊断限制收尾，再重新评估attention、MTP或Flash-Next中的独立问题。
 - 即使看到系统队列问题，也需一个单因素改动和真实端到端收益证据，不能把相关性直接变成修复。
 
-[系统探针任务](tobeo-20261031/qwen36-wpr-queue-probe/README.md)记录本轮状态；[总计划第11节](INFERENCE_RESEARCH_PLAN.md#11-执行与收尾清单)记录完成项；[历史状态](RESEARCH_STATUS_HISTORY_20261031.md)只作追溯。
+[系统探针任务](tobeo-20261031/qwen36-wpr-queue-probe/README.md)记录本轮状态；[计划收尾清单](INFERENCE_RESEARCH_PLAN.md#6-执行与收尾清单)记录近期完成项；[完整执行记录](archive/EXECUTION_LOG.md)与[历史状态](archive/RESEARCH_STATUS_HISTORY_20261031.md)只作追溯。
