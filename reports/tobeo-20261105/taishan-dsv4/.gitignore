@@ -1,0 +1,8 @@
+# Keep local run artifacts out of Git, except the small reviewed evidence files.
+*.json
+*.jsonl
+*.log
+*.txt
+!results.jsonl
+!status.json
+__pycache__/
